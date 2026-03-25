@@ -1,0 +1,168 @@
+{
+    "24": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "CSCO",
+                "DIS",
+                "JPM",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 410,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "CSCO": 58.409358978271484,
+                "DIS": 111.3499984741211,
+                "JPM": 237.0184326171875,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0
+                ],
+                "CSCO": [
+                    1,
+                    2,
+                    3
+                ],
+                "DIS": [
+                    4,
+                    5
+                ],
+                "JPM": [
+                    6
+                ],
+                "V": [
+                    7
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.603278478447717,
+                "CSCO": 0.0,
+                "DIS": 8.673617379884035e-17,
+                "JPM": 0.0,
+                "V": 0.3967215215522833
+            },
+            "allocation": {
+                "CAT": 1,
+                "CSCO": 0,
+                "DIS": 0,
+                "JPM": 0,
+                "V": 0
+            },
+            "value": 0.15387906692840303,
+            "left_overs": 48.565032950026364
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 0.6429194615387309,
+                "CSCO": 0.0,
+                "DIS": 0.0,
+                "JPM": 0.0,
+                "V": 0.41959853470099134
+            },
+            "allocation": {
+                "CAT": 1,
+                "CSCO": 0,
+                "DIS": 0,
+                "JPM": 0,
+                "V": 0
+            },
+            "value": 0.15387906692840303,
+            "left_overs": 48.565032947662644
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00001100",
+                "01101000"
+            ],
+            "final_expectation_value": -0.10888926798627575,
+            "params": [
+                1.6897778190803874,
+                1.5750499011712846,
+                1.8645283757076079,
+                4.911890473700561,
+                5.045205007321576,
+                4.06616714833906,
+                4.640125520934887,
+                0.0,
+                1.6145601459183738,
+                0.0,
+                2.403879082010012,
+                2.5405693615657015,
+                0.0,
+                0.0,
+                2.026401502843143,
+                0.9670202667600348
+            ],
+            "total_steps": 80,
+            "states_probs": [
+                0.02545239185917895,
+                0.026806102891240233
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "CSCO": 0,
+                    "DIS": 3,
+                    "JPM": 0,
+                    "V": 0
+                },
+                {
+                    "CAT": 0,
+                    "CSCO": 3,
+                    "DIS": 1,
+                    "JPM": 0,
+                    "V": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 80,
+                "evaluations": 1530,
+                "final_value": -0.10888926798627575,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 1118.6628918647766,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -3.625856391319583,
+                -6.11294535615985
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "CSCO": 0,
+                        "DIS": 3,
+                        "JPM": 0,
+                        "V": 0
+                    },
+                    "budget": 334.0499954223633,
+                    "difference": 75.95000457763672
+                },
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "CSCO": 3,
+                        "DIS": 1,
+                        "JPM": 0,
+                        "V": 0
+                    },
+                    "budget": 286.57807540893555,
+                    "difference": 123.42192459106445
+                }
+            ]
+        }
+    }
+}

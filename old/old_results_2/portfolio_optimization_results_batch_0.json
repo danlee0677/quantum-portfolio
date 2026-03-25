@@ -1,0 +1,2808 @@
+{
+    "0": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "JNJ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 2,
+            "budget": 143.4715576171875,
+            "log_encoding": true,
+            "layers": 2,
+            "prices_now": {
+                "HON": 224.6875,
+                "JNJ": 143.4715576171875
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0
+                ],
+                "JNJ": [
+                    1
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.4640331440885017,
+                "JNJ": 0.5359668559114983
+            },
+            "allocation": {
+                "JNJ": 1,
+                "HON": 0
+            },
+            "value": -2.6674420808246735,
+            "left_overs": -8.572726528655039e-09
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.6381737856697
+            ],
+            "smallest_bitstrings": [
+                "01"
+            ],
+            "first_excited_energy": -0.43359421397569975,
+            "optimized_portfolio": [
+                {
+                    "HON": 0,
+                    "JNJ": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "HON": 1,
+                    "JNJ": 0
+                }
+            ],
+            "spectrum": [
+                1.1102230246251565e-16,
+                -0.6381737856697,
+                -0.43359421397569975,
+                0.9282320003546006
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "JNJ": 1
+                    },
+                    "budget": 143.4715576171875,
+                    "difference": 0.0,
+                    "objective_value": -2.6674420808246735
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "HON": 1,
+                        "JNJ": 0
+                    },
+                    "budget": 224.6875,
+                    "difference": -81.2159423828125,
+                    "objective_value": -2.8987829907898126
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10",
+                "01"
+            ],
+            "final_expectation_value": -0.5985713629751594,
+            "params": [
+                19.36547649297657,
+                -48.671500447825814,
+                -14.508630228441094,
+                12.21438990978079
+            ],
+            "total_steps": 199,
+            "states_probs": [
+                0.1455935315330909,
+                0.8420951821765035
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 1,
+                    "JNJ": 0
+                },
+                {
+                    "HON": 0,
+                    "JNJ": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    19.36547649297657,
+                    -48.671500447825814,
+                    -14.508630228441094,
+                    12.21438990978079
+                ],
+                "fbest": -0.5985713629751594,
+                "evals_best": 1585,
+                "evaluations": 1592,
+                "iterations": 199,
+                "xfavorite": [
+                    19.365476533040447,
+                    -48.671500572208444,
+                    -14.50863015805599,
+                    12.21438987574227
+                ],
+                "stds": [
+                    1.8806917668121877e-07,
+                    1.5301064284706417e-07,
+                    8.796013074068012e-08,
+                    5.6015745748914945e-08
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -2.8987829907898126,
+                -2.6674420808246735
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 1,
+                        "JNJ": 0
+                    },
+                    "budget": 224.6875,
+                    "difference": -81.2159423828125
+                },
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "JNJ": 1
+                    },
+                    "budget": 143.4715576171875,
+                    "difference": 0.0
+                }
+            ]
+        }
+    },
+    "1": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "JPM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 3,
+            "budget": 534.5721893310547,
+            "log_encoding": true,
+            "layers": 3,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "JPM": 238.4783477783203
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0
+                ],
+                "JPM": [
+                    1,
+                    2
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.39070430528758154,
+                "JPM": 0.6092956947124184
+            },
+            "allocation": {
+                "AXP": 1,
+                "JPM": 1
+            },
+            "value": -29.798917675772532,
+            "left_overs": 2.215028871432878e-08
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.7451237954637467
+            ],
+            "smallest_bitstrings": [
+                "110"
+            ],
+            "first_excited_energy": -0.7364580676934359,
+            "optimized_portfolio": [
+                {
+                    "AXP": 1,
+                    "JPM": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "AXP": 0,
+                    "JPM": 2
+                }
+            ],
+            "spectrum": [
+                -1.5899824859499923e-16,
+                -0.7364580676934359,
+                -0.5166611747048482,
+                -0.6589040154418861,
+                -0.596986379945828,
+                -0.5959721890943673,
+                -0.7451237954637467,
+                -0.14876528824792304
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 1,
+                        "JPM": 1
+                    },
+                    "budget": 534.5721893310547,
+                    "difference": 0.0,
+                    "objective_value": -29.798917675772532
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "JPM": 2
+                    },
+                    "budget": 476.9566955566406,
+                    "difference": 57.61549377441406,
+                    "objective_value": -31.892094670733872
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "110",
+                "001"
+            ],
+            "final_expectation_value": -0.724843673686,
+            "params": [
+                -1.8676335703818854,
+                8.567210918681111,
+                4.897382813637648,
+                3.3679023108004387,
+                4.5544174270108435,
+                1.2246316917161177
+            ],
+            "total_steps": 453,
+            "states_probs": [
+                0.3987868364396552,
+                0.47443815968240644
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 1,
+                    "JPM": 1
+                },
+                {
+                    "AXP": 0,
+                    "JPM": 2
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -1.8676335703818854,
+                    8.567210918681111,
+                    4.897382813637648,
+                    3.3679023108004387,
+                    4.5544174270108435,
+                    1.2246316917161177
+                ],
+                "fbest": -0.724843673686,
+                "evals_best": 4063,
+                "evaluations": 4077,
+                "iterations": 453,
+                "xfavorite": [
+                    -1.8676345136103878,
+                    8.567210884799385,
+                    4.897382904560956,
+                    3.3679022354042503,
+                    4.55441730294906,
+                    1.2246316692560204
+                ],
+                "stds": [
+                    2.2079980355135845e-06,
+                    5.559864782884611e-06,
+                    2.008483965653385e-06,
+                    2.0002461618478953e-07,
+                    1.177239605136415e-07,
+                    1.4965064487165463e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -29.798917675772532,
+                -31.892094670733872
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 1,
+                        "JPM": 1
+                    },
+                    "budget": 534.5721893310547,
+                    "difference": 0.0
+                },
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "JPM": 2
+                    },
+                    "budget": 476.9566955566406,
+                    "difference": 57.61549377441406
+                }
+            ]
+        }
+    },
+    "2": {
+        "hyperparams": {
+            "stocks": [
+                "GS",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 4,
+            "budget": 672.0999984741211,
+            "log_encoding": true,
+            "layers": 4,
+            "prices_now": {
+                "GS": 569.7945556640625,
+                "MRK": 99.4800033569336
+            },
+            "assets_to_qubits": {
+                "GS": [
+                    0
+                ],
+                "MRK": [
+                    1,
+                    2,
+                    3
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "GS": 0.46616756361333456,
+                "MRK": 0.5338324363866654
+            },
+            "allocation": {
+                "GS": 1,
+                "MRK": 1
+            },
+            "value": -7.698284863708622,
+            "left_overs": 2.8254393697909563
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.7156160325728299
+            ],
+            "smallest_bitstrings": [
+                "1100"
+            ],
+            "first_excited_energy": -0.7037422320846408,
+            "optimized_portfolio": [
+                {
+                    "GS": 1,
+                    "MRK": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "GS": 0,
+                    "MRK": 7
+                }
+            ],
+            "spectrum": [
+                -2.0171454364150722e-17,
+                -0.5953587308271611,
+                -0.3609098557665941,
+                -0.7007407014255669,
+                -0.19616753942151033,
+                -0.6644138086036103,
+                -0.4940640706090585,
+                -0.7037422320846408,
+                -0.6990630321286021,
+                -0.5759210931205364,
+                -0.7007373970388803,
+                -0.32200012358625746,
+                -0.7156160325728299,
+                -0.4653299255393141,
+                -0.6542632379716623,
+                -0.14533350092407987
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "GS": 1,
+                        "MRK": 1
+                    },
+                    "budget": 669.2745590209961,
+                    "difference": 2.825439453125,
+                    "objective_value": -7.698284863708622
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "GS": 0,
+                        "MRK": 7
+                    },
+                    "budget": 696.3600234985352,
+                    "difference": -24.260025024414062,
+                    "objective_value": -2358.647833189995
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0111",
+                "1100"
+            ],
+            "final_expectation_value": -0.6925185493682711,
+            "params": [
+                -78.29557818746179,
+                -32.461022659689476,
+                83.87150605390688,
+                -15.947790711418763,
+                39.031388595138615,
+                -8.757735219864824,
+                71.09723746745979,
+                -12.787338274068178
+            ],
+            "total_steps": 1000,
+            "states_probs": [
+                0.2999376768483488,
+                0.37252280988461056
+            ],
+            "optimized_portfolios": [
+                {
+                    "GS": 0,
+                    "MRK": 7
+                },
+                {
+                    "GS": 1,
+                    "MRK": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -78.29557818746179,
+                    -32.461022659689476,
+                    83.87150605390688,
+                    -15.947790711418763,
+                    39.031388595138615,
+                    -8.757735219864824,
+                    71.09723746745979,
+                    -12.787338274068178
+                ],
+                "fbest": -0.6925185493682711,
+                "evals_best": 9904,
+                "evaluations": 10000,
+                "iterations": 1000,
+                "xfavorite": [
+                    -78.2955714942031,
+                    -32.46103411270284,
+                    83.87150617101298,
+                    -15.947816738864335,
+                    39.031389277420914,
+                    -8.757734438046167,
+                    71.0972373746931,
+                    -12.787345016076758
+                ],
+                "stds": [
+                    4.531665652959505e-05,
+                    5.249389813384225e-05,
+                    3.234231366717711e-05,
+                    5.382992149755902e-05,
+                    3.7892531074180312e-06,
+                    4.180491503744252e-06,
+                    3.17979208362769e-06,
+                    3.855044930129468e-06
+                ],
+                "stop": {
+                    "maxiter": 1000
+                }
+            },
+            "objective_values": [
+                -2358.647833189995,
+                -7.698284863708622
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "GS": 0,
+                        "MRK": 7
+                    },
+                    "budget": 696.3600234985352,
+                    "difference": -24.260025024414062
+                },
+                {
+                    "portfolio": {
+                        "GS": 1,
+                        "MRK": 1
+                    },
+                    "budget": 669.2745590209961,
+                    "difference": 2.825439453125
+                }
+            ]
+        }
+    },
+    "3": {
+        "hyperparams": {
+            "stocks": [
+                "JNJ",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 3,
+            "budget": 219.1415557861328,
+            "log_encoding": true,
+            "layers": 3,
+            "prices_now": {
+                "JNJ": 143.4715576171875,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "JNJ": [
+                    0
+                ],
+                "NKE": [
+                    1,
+                    2
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JNJ": 0.5185431245167907,
+                "NKE": 0.4814568754832093
+            },
+            "allocation": {
+                "JNJ": 1,
+                "NKE": 1
+            },
+            "value": -8.28848354335636,
+            "left_overs": 0.3810653668776922
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.6965622834627034
+            ],
+            "smallest_bitstrings": [
+                "110"
+            ],
+            "first_excited_energy": -0.6897144418364975,
+            "optimized_portfolio": [
+                {
+                    "JNJ": 1,
+                    "NKE": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "JNJ": 0,
+                    "NKE": 3
+                }
+            ],
+            "spectrum": [
+                -1.0585878961605344e-16,
+                -0.6272771663501359,
+                -0.3964488285280563,
+                -0.6897144418364975,
+                -0.6136525449726731,
+                -0.613723274700799,
+                -0.6965622834627034,
+                -0.3622906962509387
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JNJ": 1,
+                        "NKE": 1
+                    },
+                    "budget": 218.76049041748047,
+                    "difference": 0.38106536865234375,
+                    "objective_value": -8.28848354335636
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "JNJ": 0,
+                        "NKE": 3
+                    },
+                    "budget": 225.8667984008789,
+                    "difference": -6.725242614746094,
+                    "objective_value": -157.7915717820281
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "011",
+                "110"
+            ],
+            "final_expectation_value": -0.6613071143763847,
+            "params": [
+                3.7770874471959592,
+                4.057603117264087,
+                2.6163212572642185,
+                4.141711483424812,
+                -1.7988116152819136,
+                1.3061699361745465
+            ],
+            "total_steps": 259,
+            "states_probs": [
+                0.282802973931643,
+                0.30427877506256573
+            ],
+            "optimized_portfolios": [
+                {
+                    "JNJ": 0,
+                    "NKE": 3
+                },
+                {
+                    "JNJ": 1,
+                    "NKE": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    3.7770874471959592,
+                    4.057603117264087,
+                    2.6163212572642185,
+                    4.141711483424812,
+                    -1.7988116152819136,
+                    1.3061699361745465
+                ],
+                "fbest": -0.6613071143763847,
+                "evals_best": 2301,
+                "evaluations": 2331,
+                "iterations": 259,
+                "xfavorite": [
+                    3.7770877616737417,
+                    4.057603857283448,
+                    2.6163204942474403,
+                    4.141711459680515,
+                    -1.7988117556426702,
+                    1.306170060325972
+                ],
+                "stds": [
+                    1.0306774765182562e-06,
+                    6.835287133194258e-07,
+                    1.0768532364270994e-06,
+                    6.459345665426958e-08,
+                    2.4285360724165695e-07,
+                    1.5262530048188748e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -157.7915717820281,
+                -8.28848354335636
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JNJ": 0,
+                        "NKE": 3
+                    },
+                    "budget": 225.8667984008789,
+                    "difference": -6.725242614746094
+                },
+                {
+                    "portfolio": {
+                        "JNJ": 1,
+                        "NKE": 1
+                    },
+                    "budget": 218.76049041748047,
+                    "difference": 0.38106536865234375
+                }
+            ]
+        }
+    },
+    "4": {
+        "hyperparams": {
+            "stocks": [
+                "DIS",
+                "DOW"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 2,
+            "budget": 40.130001068115234,
+            "log_encoding": true,
+            "layers": 2,
+            "prices_now": {
+                "DIS": 111.3499984741211,
+                "DOW": 39.3990364074707
+            },
+            "assets_to_qubits": {
+                "DIS": [
+                    0
+                ],
+                "DOW": [
+                    1
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DIS": 0.6057945355372147,
+                "DOW": 0.3942054644627852
+            },
+            "allocation": {
+                "DOW": 1,
+                "DIS": 0
+            },
+            "value": -3.454117368625509,
+            "left_overs": 0.7309646589141181
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.15041056420314092
+            ],
+            "smallest_bitstrings": [
+                "01"
+            ],
+            "first_excited_energy": 0.0,
+            "optimized_portfolio": [
+                {
+                    "DIS": 0,
+                    "DOW": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "DIS": 0,
+                    "DOW": 0
+                }
+            ],
+            "spectrum": [
+                0.0,
+                -0.15041056420314092,
+                0.32531130969399036,
+                0.9999999999999998
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DIS": 0,
+                        "DOW": 1
+                    },
+                    "budget": 39.3990364074707,
+                    "difference": 0.7309646606445312,
+                    "objective_value": -3.454117368625509
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "DIS": 0,
+                        "DOW": 0
+                    },
+                    "budget": 0.0,
+                    "difference": 40.130001068115234,
+                    "objective_value": -0.0
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00",
+                "01"
+            ],
+            "final_expectation_value": -0.14557002687114434,
+            "params": [
+                3.876783391793058,
+                3.468660396732265,
+                3.5963307077291096,
+                -0.7780543357274078
+            ],
+            "total_steps": 172,
+            "states_probs": [
+                0.014654296610518942,
+                0.9804165740821726
+            ],
+            "optimized_portfolios": [
+                {
+                    "DIS": 0,
+                    "DOW": 0
+                },
+                {
+                    "DIS": 0,
+                    "DOW": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    3.876783391793058,
+                    3.468660396732265,
+                    3.5963307077291096,
+                    -0.7780543357274078
+                ],
+                "fbest": -0.14557002687114434,
+                "evals_best": 1334,
+                "evaluations": 1376,
+                "iterations": 172,
+                "xfavorite": [
+                    3.8767827663817496,
+                    3.468661055052294,
+                    3.5963306963152712,
+                    -0.7780543601123471
+                ],
+                "stds": [
+                    6.684355680039744e-07,
+                    5.036192100931515e-07,
+                    3.926137333905756e-07,
+                    1.1103990940688017e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -0.0,
+                -3.454117368625509
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DIS": 0,
+                        "DOW": 0
+                    },
+                    "budget": 0.0,
+                    "difference": 40.130001068115234
+                },
+                {
+                    "portfolio": {
+                        "DIS": 0,
+                        "DOW": 1
+                    },
+                    "budget": 39.3990364074707,
+                    "difference": 0.7309646606445312
+                }
+            ]
+        }
+    },
+    "5": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "HD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 2,
+            "budget": 388.989990234375,
+            "log_encoding": true,
+            "layers": 2,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "HD": 386.5369873046875
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0
+                ],
+                "HD": [
+                    1
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.6533484199564844,
+                "HD": 0.34665158004351565
+            },
+            "allocation": {
+                "AMGN": 1,
+                "HD": 0
+            },
+            "value": -2.0233186653723365,
+            "left_overs": 130.4388122345789
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.8149843103234811
+            ],
+            "smallest_bitstrings": [
+                "01"
+            ],
+            "first_excited_energy": -0.723393826165379,
+            "optimized_portfolio": [
+                {
+                    "AMGN": 0,
+                    "HD": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "AMGN": 1,
+                    "HD": 0
+                }
+            ],
+            "spectrum": [
+                5.551115123125783e-17,
+                -0.8149843103234811,
+                -0.723393826165379,
+                -0.4616218635111398
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "HD": 1
+                    },
+                    "budget": 386.5369873046875,
+                    "difference": 2.4530029296875,
+                    "objective_value": -3.9923582920661635
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "HD": 0
+                    },
+                    "budget": 258.5511779785156,
+                    "difference": 130.43881225585938,
+                    "objective_value": -2.0233186653723365
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10",
+                "01"
+            ],
+            "final_expectation_value": -0.7774813745989478,
+            "params": [
+                3.1386300778082217,
+                2.182277809238351,
+                2.0580024166107993,
+                5.461002624428358
+            ],
+            "total_steps": 219,
+            "states_probs": [
+                0.40254795825532425,
+                0.5958879730075602
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 1,
+                    "HD": 0
+                },
+                {
+                    "AMGN": 0,
+                    "HD": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    3.1386300778082217,
+                    2.182277809238351,
+                    2.0580024166107993,
+                    5.461002624428358
+                ],
+                "fbest": -0.7774813745989478,
+                "evals_best": 1750,
+                "evaluations": 1752,
+                "iterations": 219,
+                "xfavorite": [
+                    3.1386299755837617,
+                    2.1822778558189264,
+                    2.0580024139683513,
+                    5.461002643736842
+                ],
+                "stds": [
+                    2.7625573076638756e-07,
+                    2.834984452507298e-07,
+                    4.0089736916728875e-08,
+                    5.561827057073015e-08
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -2.0233186653723365,
+                -3.9923582920661635
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "HD": 0
+                    },
+                    "budget": 258.5511779785156,
+                    "difference": 130.43881225585938
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "HD": 1
+                    },
+                    "budget": 386.5369873046875,
+                    "difference": 2.4530029296875
+                }
+            ]
+        }
+    },
+    "6": {
+        "hyperparams": {
+            "stocks": [
+                "CSCO",
+                "DOW"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 2,
+            "budget": 58.79932403564453,
+            "log_encoding": true,
+            "layers": 2,
+            "prices_now": {
+                "CSCO": 58.79932403564453,
+                "DOW": 39.3990364074707
+            },
+            "assets_to_qubits": {
+                "CSCO": [
+                    0
+                ],
+                "DOW": [
+                    1
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CSCO": 0.5352810104031973,
+                "DOW": 0.4647189895968027
+            },
+            "allocation": {
+                "CSCO": 1,
+                "DOW": 0
+            },
+            "value": -3.2161411462624887,
+            "left_overs": -3.9940900364854315e-07
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.8220934400297863
+            ],
+            "smallest_bitstrings": [
+                "10"
+            ],
+            "first_excited_energy": -0.7322392626443646,
+            "optimized_portfolio": [
+                {
+                    "CSCO": 1,
+                    "DOW": 0
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "CSCO": 0,
+                    "DOW": 1
+                }
+            ],
+            "spectrum": [
+                -1.6653345369377348e-16,
+                -0.7322392626443646,
+                -0.8220934400297863,
+                -0.4456672973258493
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CSCO": 1,
+                        "DOW": 0
+                    },
+                    "budget": 58.79932403564453,
+                    "difference": 0.0,
+                    "objective_value": -3.2161411462624887
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "CSCO": 0,
+                        "DOW": 1
+                    },
+                    "budget": 39.3990364074707,
+                    "difference": 19.400287628173828,
+                    "objective_value": -3.454117368625509
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "01",
+                "10"
+            ],
+            "final_expectation_value": -0.7812803014074794,
+            "params": [
+                -12.362489689618284,
+                -2.1272896684150693,
+                -3.0349258943449335,
+                1.0621431487823485
+            ],
+            "total_steps": 193,
+            "states_probs": [
+                0.39742940185384046,
+                0.5917934054139656
+            ],
+            "optimized_portfolios": [
+                {
+                    "CSCO": 0,
+                    "DOW": 1
+                },
+                {
+                    "CSCO": 1,
+                    "DOW": 0
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -12.362489689618284,
+                    -2.1272896684150693,
+                    -3.0349258943449335,
+                    1.0621431487823485
+                ],
+                "fbest": -0.7812803014074794,
+                "evals_best": 1529,
+                "evaluations": 1544,
+                "iterations": 193,
+                "xfavorite": [
+                    -12.3624920526511,
+                    -2.127287510021405,
+                    -3.034925902112475,
+                    1.0621430277357566
+                ],
+                "stds": [
+                    2.9944571270097395e-06,
+                    2.8981958681550277e-06,
+                    6.938542777463432e-08,
+                    1.320601117510026e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -3.454117368625509,
+                -3.2161411462624887
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CSCO": 0,
+                        "DOW": 1
+                    },
+                    "budget": 39.3990364074707,
+                    "difference": 19.400287628173828
+                },
+                {
+                    "portfolio": {
+                        "CSCO": 1,
+                        "DOW": 0
+                    },
+                    "budget": 58.79932403564453,
+                    "difference": 0.0
+                }
+            ]
+        }
+    },
+    "7": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 3,
+            "budget": 361.4349670410156,
+            "log_encoding": true,
+            "layers": 3,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "MRK": 99.4800033569336
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0
+                ],
+                "MRK": [
+                    1,
+                    2
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.5298290253551505,
+                "MRK": 0.4701709746448494
+            },
+            "allocation": {
+                "CAT": 1,
+                "MRK": 0
+            },
+            "value": -1.8999956089882333,
+            "left_overs": -1.586945245435345e-06
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.772593188881078
+            ],
+            "smallest_bitstrings": [
+                "100"
+            ],
+            "first_excited_energy": -0.7476947119800326,
+            "optimized_portfolio": [
+                {
+                    "CAT": 1,
+                    "MRK": 0
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "CAT": 0,
+                    "MRK": 3
+                }
+            ],
+            "spectrum": [
+                -2.3767744499955668e-18,
+                -0.6161809685622022,
+                -0.3667467191981776,
+                -0.7476947119800326,
+                -0.772593188881078,
+                -0.5382187560687045,
+                -0.7140477850120779,
+                -0.24451787029772754
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "MRK": 0
+                    },
+                    "budget": 361.4349670410156,
+                    "difference": 0.0,
+                    "objective_value": -1.8999956089882333
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "MRK": 3
+                    },
+                    "budget": 298.4400100708008,
+                    "difference": 62.994956970214844,
+                    "objective_value": -90.30291714085017
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "011",
+                "100"
+            ],
+            "final_expectation_value": -0.7137692791566447,
+            "params": [
+                -6.839066324076501,
+                1.0814304140074835,
+                4.488382249655045,
+                3.789589264881689,
+                2.665707828676064,
+                0.3951968460217196
+            ],
+            "total_steps": 293,
+            "states_probs": [
+                0.21362891416231572,
+                0.38424991243971796
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "MRK": 3
+                },
+                {
+                    "CAT": 1,
+                    "MRK": 0
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -6.839066324076501,
+                    1.0814304140074835,
+                    4.488382249655045,
+                    3.789589264881689,
+                    2.665707828676064,
+                    0.3951968460217196
+                ],
+                "fbest": -0.7137692791566447,
+                "evals_best": 2599,
+                "evaluations": 2637,
+                "iterations": 293,
+                "xfavorite": [
+                    -6.839066533339356,
+                    1.0814293961575918,
+                    4.488382826904309,
+                    3.78958927382571,
+                    2.6657080988223267,
+                    0.39519683012878504
+                ],
+                "stds": [
+                    7.181310953252966e-07,
+                    9.394732042890891e-07,
+                    1.8814197256051356e-06,
+                    5.187623954979504e-07,
+                    4.623436325410069e-07,
+                    1.3961947214560954e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -90.30291714085017,
+                -1.8999956089882333
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "MRK": 3
+                    },
+                    "budget": 298.4400100708008,
+                    "difference": 62.994956970214844
+                },
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "MRK": 0
+                    },
+                    "budget": 361.4349670410156,
+                    "difference": 0.0
+                }
+            ]
+        }
+    },
+    "8": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "HD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 2,
+            "budget": 388.989990234375,
+            "log_encoding": true,
+            "layers": 2,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "HD": 386.5369873046875
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0
+                ],
+                "HD": [
+                    1
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.6538098794345859,
+                "HD": 0.34619012056541415
+            },
+            "allocation": {
+                "CAT": 1,
+                "HD": 0
+            },
+            "value": -1.8999956089882333,
+            "left_overs": 27.555023161894383
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.9331652396221678
+            ],
+            "smallest_bitstrings": [
+                "01"
+            ],
+            "first_excited_energy": -0.928553305855331,
+            "optimized_portfolio": [
+                {
+                    "CAT": 0,
+                    "HD": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "CAT": 1,
+                    "HD": 0
+                }
+            ],
+            "spectrum": [
+                0.0,
+                -0.9331652396221678,
+                -0.928553305855331,
+                -0.13828145452250107
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "HD": 1
+                    },
+                    "budget": 386.5369873046875,
+                    "difference": 2.4530029296875,
+                    "objective_value": -3.9923582920661635
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "HD": 0
+                    },
+                    "budget": 361.4349670410156,
+                    "difference": 27.555023193359375,
+                    "objective_value": -1.8999956089882333
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "01",
+                "10"
+            ],
+            "final_expectation_value": -0.9308470348884439,
+            "params": [
+                1.8176219850737463,
+                1.282924022408623,
+                -1.1766851921593653,
+                3.9282426428441894
+            ],
+            "total_steps": 202,
+            "states_probs": [
+                0.49735431767058275,
+                0.5026456397886838
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "HD": 1
+                },
+                {
+                    "CAT": 1,
+                    "HD": 0
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    1.8176219850737463,
+                    1.282924022408623,
+                    -1.1766851921593653,
+                    3.9282426428441894
+                ],
+                "fbest": -0.9308470348884439,
+                "evals_best": 1610,
+                "evaluations": 1616,
+                "iterations": 202,
+                "xfavorite": [
+                    1.8176222702303748,
+                    1.2829239603990659,
+                    -1.1766851539378371,
+                    3.928242589990831
+                ],
+                "stds": [
+                    1.192150706895453e-06,
+                    1.2874866454603917e-06,
+                    1.413478711846346e-07,
+                    2.9688608409066465e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -3.9923582920661635,
+                -1.8999956089882333
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "HD": 1
+                    },
+                    "budget": 386.5369873046875,
+                    "difference": 2.4530029296875
+                },
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "HD": 0
+                    },
+                    "budget": 361.4349670410156,
+                    "difference": 27.555023193359375
+                }
+            ]
+        }
+    },
+    "9": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 6,
+            "budget": 177.0,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "BA": 177.0,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0
+                ],
+                "WBA": [
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.49434997731682767,
+                "WBA": 0.5056500226831723
+            },
+            "allocation": {
+                "WBA": 14,
+                "BA": 0
+            },
+            "value": -57467.51289837089,
+            "left_overs": 46.38000106789764
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.007605081093244856
+            ],
+            "smallest_bitstrings": [
+                "100000"
+            ],
+            "first_excited_energy": -0.007582079285595967,
+            "optimized_portfolio": [
+                {
+                    "BA": 1,
+                    "WBA": 0
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "BA": 1,
+                    "WBA": 1
+                }
+            ],
+            "spectrum": [
+                1.973247953923618e-17,
+                0.06337176294901929,
+                -0.0006117635228296843,
+                0.3508080430106927,
+                -0.0025858295424042144,
+                0.16509558930008014,
+                0.01585747379287402,
+                0.6569028190556552,
+                -0.0015003299834619181,
+                0.10575132064013372,
+                0.0049316209892247154,
+                0.48627465180505836,
+                -0.0026347084110105346,
+                0.24533366159975575,
+                0.03444123635647495,
+                0.8682752886359206,
+                -0.0007793058407071746,
+                0.08267037227787875,
+                0.0016131863509956219,
+                0.41447892515541196,
+                -0.002794857392137644,
+                0.20234118276549598,
+                0.02403375232538352,
+                0.7571309456249646,
+                -0.002124106095096598,
+                0.13306698716958681,
+                0.009589213125342626,
+                0.566854308493753,
+                -0.001963063065696486,
+                0.2946287581368211,
+                0.047428951819792384,
+                0.9910982868228015,
+                -0.007605081093244856,
+                0.06707278992310063,
+                -0.0019741201333855997,
+                0.35714886146683256,
+                -0.006999896482331087,
+                0.170497226728296,
+                0.017251992287176134,
+                0.663265857712942,
+                -0.007502211734589778,
+                0.11038811080702336,
+                0.004994277046697271,
+                0.4927509211776544,
+                -0.005495786495723177,
+                0.25130978893274525,
+                0.037055025631336946,
+                0.874256973521063,
+                -0.007582079285595967,
+                0.08685943025073256,
+                0.0009737647642869131,
+                0.4209173391846831,
+                -0.006426861570892124,
+                0.20805507490473454,
+                0.026053195256066208,
+                0.7633380378673509,
+                -0.0073289422851925395,
+                0.13810878054764164,
+                0.010330659269196761,
+                0.5733062628017318,
+                -0.004066781901631674,
+                0.3008146709681556,
+                0.05060407916849853,
+                0.9967826732302243
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 1,
+                        "WBA": 0
+                    },
+                    "budget": 177.0,
+                    "difference": 0.0,
+                    "objective_value": -3.319143016612835
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "BA": 1,
+                        "WBA": 1
+                    },
+                    "budget": 186.32999992370605,
+                    "difference": -9.329999923706055,
+                    "objective_value": -7.67235543164394
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "100000",
+                "000000"
+            ],
+            "final_expectation_value": -0.004017850879555428,
+            "params": [
+                -2.7801230513656376,
+                1.0936860560968367,
+                -1.386915328456356,
+                4.107686429805423,
+                1.3635377908716448,
+                1.6165810445415334,
+                4.826066282050958,
+                0.3607158376329807,
+                -1.999470208295372,
+                3.6878844020008494,
+                0.4715892245812398,
+                2.0433435437814778
+            ],
+            "total_steps": 977,
+            "states_probs": [
+                0.18109910864375459,
+                0.18299641602667557
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 1,
+                    "WBA": 0
+                },
+                {
+                    "BA": 0,
+                    "WBA": 0
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -2.7801230513656376,
+                    1.0936860560968367,
+                    -1.386915328456356,
+                    4.107686429805423,
+                    1.3635377908716448,
+                    1.6165810445415334,
+                    4.826066282050958,
+                    0.3607158376329807,
+                    -1.999470208295372,
+                    3.6878844020008494,
+                    0.4715892245812398,
+                    2.0433435437814778
+                ],
+                "fbest": -0.004017850879555428,
+                "evals_best": 10711,
+                "evaluations": 10747,
+                "iterations": 977,
+                "xfavorite": [
+                    -2.7801124022905546,
+                    1.0936877277379538,
+                    -1.3869138699681471,
+                    4.107678878985058,
+                    1.3635296307052938,
+                    1.6165790816557026,
+                    4.826064088391999,
+                    0.3607195675751285,
+                    -1.9994707511204628,
+                    3.68788399298908,
+                    0.47158740819770956,
+                    2.0433477747882267
+                ],
+                "stds": [
+                    7.835782678830013e-06,
+                    7.072442004565514e-06,
+                    4.851762500827647e-06,
+                    6.604739394730133e-06,
+                    5.429812164245202e-06,
+                    2.356680537937238e-06,
+                    1.3058456779495445e-06,
+                    2.0913419919965514e-06,
+                    1.0625514655424808e-06,
+                    1.0210062055774054e-06,
+                    1.0172234813139893e-06,
+                    2.1944944435981664e-06
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -3.319143016612835,
+                -0.0
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 1,
+                        "WBA": 0
+                    },
+                    "budget": 177.0,
+                    "difference": 0.0
+                },
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "WBA": 0
+                    },
+                    "budget": 0.0,
+                    "difference": 177.0
+                }
+            ]
+        }
+    },
+    "10": {
+        "hyperparams": {
+            "stocks": [
+                "DIS",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 3,
+            "budget": 352.23999786376953,
+            "log_encoding": true,
+            "layers": 3,
+            "prices_now": {
+                "DIS": 111.3499984741211,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "DIS": [
+                    0,
+                    1
+                ],
+                "TRV": [
+                    2
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DIS": 0.6269990973988224,
+                "TRV": 0.37300090260117763
+            },
+            "allocation": {
+                "DIS": 1,
+                "TRV": 1
+            },
+            "value": -14.950250617525171,
+            "left_overs": 0.9815063519511682
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.6906833157682329
+            ],
+            "smallest_bitstrings": [
+                "101"
+            ],
+            "first_excited_energy": -0.6870742770244337,
+            "optimized_portfolio": [
+                {
+                    "DIS": 1,
+                    "TRV": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "DIS": 3,
+                    "TRV": 0
+                }
+            ],
+            "spectrum": [
+                -3.382710778154774e-17,
+                -0.6205539781898786,
+                -0.5970357874009351,
+                -0.6222424072073337,
+                -0.3677294746015654,
+                -0.6906833157682329,
+                -0.6870742770244337,
+                -0.4142976304430043
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DIS": 1,
+                        "TRV": 1
+                    },
+                    "budget": 351.2584915161133,
+                    "difference": 0.98150634765625,
+                    "objective_value": -14.950250617525171
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "DIS": 3,
+                        "TRV": 0
+                    },
+                    "budget": 334.0499954223633,
+                    "difference": 18.19000244140625,
+                    "objective_value": -123.36355452445795
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "101",
+                "110"
+            ],
+            "final_expectation_value": -0.6757833543811307,
+            "params": [
+                -10.87105841775985,
+                9.901439535372807,
+                3.512639059438693,
+                2.890177649655365,
+                -2.341889733781196,
+                2.7954769177288066
+            ],
+            "total_steps": 292,
+            "states_probs": [
+                0.39548524378246125,
+                0.43526649714162313
+            ],
+            "optimized_portfolios": [
+                {
+                    "DIS": 1,
+                    "TRV": 1
+                },
+                {
+                    "DIS": 3,
+                    "TRV": 0
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -10.87105841775985,
+                    9.901439535372807,
+                    3.512639059438693,
+                    2.890177649655365,
+                    -2.341889733781196,
+                    2.7954769177288066
+                ],
+                "fbest": -0.6757833543811307,
+                "evals_best": 2626,
+                "evaluations": 2628,
+                "iterations": 292,
+                "xfavorite": [
+                    -10.871058480391813,
+                    9.901439495558824,
+                    3.5126390669298675,
+                    2.8901776483817514,
+                    -2.34188973969587,
+                    2.7954769268155455
+                ],
+                "stds": [
+                    4.4908964227259387e-07,
+                    6.393189260827976e-07,
+                    6.251323617999163e-07,
+                    3.2332103402753556e-08,
+                    4.2375060392612907e-08,
+                    2.9683489007934802e-08
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -14.950250617525171,
+                -123.36355452445795
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DIS": 1,
+                        "TRV": 1
+                    },
+                    "budget": 351.2584915161133,
+                    "difference": 0.98150634765625
+                },
+                {
+                    "portfolio": {
+                        "DIS": 3,
+                        "TRV": 0
+                    },
+                    "budget": 334.0499954223633,
+                    "difference": 18.19000244140625
+                }
+            ]
+        }
+    },
+    "11": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "GS"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 5,
+            "budget": 572.6199951171875,
+            "log_encoding": true,
+            "layers": 5,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "GS": 569.7945556640625
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "GS": [
+                    4
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.3739466602353662,
+                "GS": 0.6260533397646338
+            },
+            "allocation": {
+                "GS": 1,
+                "DOW": 0
+            },
+            "value": -2.4329517620489276,
+            "left_overs": 2.8254386921563537
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.5230979264973827
+            ],
+            "smallest_bitstrings": [
+                "00001"
+            ],
+            "first_excited_energy": -0.5209176930948655,
+            "optimized_portfolio": [
+                {
+                    "DOW": 0,
+                    "GS": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "DOW": 1,
+                    "GS": 1
+                }
+            ],
+            "spectrum": [
+                3.680324274502045e-16,
+                -0.5230979264973827,
+                -0.38109849920287875,
+                -0.32223239721757135,
+                -0.24601405880847552,
+                -0.48128951246824936,
+                -0.32417430894498145,
+                0.04091964834950451,
+                -0.13391406099318112,
+                -0.5135301853691547,
+                -0.38381318872243075,
+                -0.17370439759408532,
+                -0.33122495904108107,
+                -0.42057997128278746,
+                -0.18361391313245704,
+                0.3409285894583499,
+                -0.06949836546553091,
+                -0.5209176930948655,
+                -0.38922131017565487,
+                -0.2551566168650241,
+                -0.292429602494919,
+                -0.4549873631650849,
+                -0.26530156393623794,
+                0.17891368723344356,
+                -0.19292894741516156,
+                -0.5005271513890764,
+                -0.36286938163375804,
+                -0.07578087343192272,
+                -0.3612386822583431,
+                -0.37681577786935316,
+                -0.07626329630336144,
+                0.5299025280178856
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DOW": 0,
+                        "GS": 1
+                    },
+                    "budget": 569.7945556640625,
+                    "difference": 2.825439453125,
+                    "objective_value": -2.4329517620489276
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "DOW": 1,
+                        "GS": 1
+                    },
+                    "budget": 609.1935920715332,
+                    "difference": -36.5735969543457,
+                    "objective_value": -17.703647389088474
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10001",
+                "00001"
+            ],
+            "final_expectation_value": -0.4496930291182016,
+            "params": [
+                -3.0626415158182474,
+                9.323402217669258,
+                -4.193583510320307,
+                5.969547178321316,
+                -2.4751574773025466,
+                -6.085498733957209,
+                4.877242646929536,
+                -0.37903302485334817,
+                -2.9978408465372413,
+                -1.9430300861519632
+            ],
+            "total_steps": 641,
+            "states_probs": [
+                0.17760191680000437,
+                0.20021865117277118
+            ],
+            "optimized_portfolios": [
+                {
+                    "DOW": 1,
+                    "GS": 1
+                },
+                {
+                    "DOW": 0,
+                    "GS": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -3.0626415158182474,
+                    9.323402217669258,
+                    -4.193583510320307,
+                    5.969547178321316,
+                    -2.4751574773025466,
+                    -6.085498733957209,
+                    4.877242646929536,
+                    -0.37903302485334817,
+                    -2.9978408465372413,
+                    -1.9430300861519632
+                ],
+                "fbest": -0.4496930291182016,
+                "evals_best": 6377,
+                "evaluations": 6410,
+                "iterations": 641,
+                "xfavorite": [
+                    -3.062640370612977,
+                    9.323400389646029,
+                    -4.193583668207882,
+                    5.969548584984546,
+                    -2.4751595244904223,
+                    -6.085498710501178,
+                    4.877242673112742,
+                    -0.3790331572954322,
+                    -2.9978409029808506,
+                    -1.9430299776450548
+                ],
+                "stds": [
+                    7.480404810086849e-07,
+                    1.055752157613655e-06,
+                    1.8259160230439106e-06,
+                    2.093732168419887e-06,
+                    1.804770984246075e-06,
+                    7.159225375264882e-08,
+                    7.973959738885559e-08,
+                    1.704184074750532e-07,
+                    1.1958197841183599e-07,
+                    1.4115077448120941e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -17.703647389088474,
+                -2.4329517620489276
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DOW": 1,
+                        "GS": 1
+                    },
+                    "budget": 609.1935920715332,
+                    "difference": -36.5735969543457
+                },
+                {
+                    "portfolio": {
+                        "DOW": 0,
+                        "GS": 1
+                    },
+                    "budget": 569.7945556640625,
+                    "difference": 2.825439453125
+                }
+            ]
+        }
+    },
+    "12": {
+        "hyperparams": {
+            "stocks": [
+                "MSFT",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 4,
+            "budget": 946.5273742675781,
+            "log_encoding": true,
+            "layers": 4,
+            "prices_now": {
+                "MSFT": 420.6565246582031,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "MSFT": [
+                    0,
+                    1
+                ],
+                "V": [
+                    2,
+                    3
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MSFT": 0.5616637307943576,
+                "V": 0.4383362692056424
+            },
+            "allocation": {
+                "MSFT": 1,
+                "V": 1
+            },
+            "value": -15.394199882992119,
+            "left_overs": 210.3617246289707
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.5120186322538378
+            ],
+            "smallest_bitstrings": [
+                "0011"
+            ],
+            "first_excited_energy": -0.5058379340068837,
+            "optimized_portfolio": [
+                {
+                    "MSFT": 0,
+                    "V": 3
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "MSFT": 2,
+                    "V": 0
+                }
+            ],
+            "spectrum": [
+                7.922214452374746e-17,
+                -0.45524896973036344,
+                -0.28455074217090337,
+                -0.5120186322538378,
+                -0.5058379340068837,
+                -0.35382590194731367,
+                -0.4868125066270421,
+                -0.10674435604370733,
+                -0.35409532762577894,
+                -0.5057626012456155,
+                -0.48687602583592754,
+                -0.410650146680575,
+                -0.4551677775131609,
+                0.0006676849270351863,
+                -0.28427688534792267,
+                0.3998285539854289
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "MSFT": 0,
+                        "V": 3
+                    },
+                    "budget": 946.5273742675781,
+                    "difference": 0.0,
+                    "objective_value": -110.55966959712286
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "MSFT": 2,
+                        "V": 0
+                    },
+                    "budget": 841.3130493164062,
+                    "difference": 105.21432495117188,
+                    "objective_value": -20.74644961871619
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0011",
+                "1010"
+            ],
+            "final_expectation_value": -0.4780709501072921,
+            "params": [
+                3.807042711564859,
+                3.0740652469729928,
+                3.413837908206795,
+                -1.165939828634078,
+                1.052207641330303,
+                7.502351217774493,
+                15.375984266253123,
+                -1.5250559702130266
+            ],
+            "total_steps": 419,
+            "states_probs": [
+                0.1547701634934606,
+                0.19600788003816708
+            ],
+            "optimized_portfolios": [
+                {
+                    "MSFT": 0,
+                    "V": 3
+                },
+                {
+                    "MSFT": 1,
+                    "V": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    3.807042711564859,
+                    3.0740652469729928,
+                    3.413837908206795,
+                    -1.165939828634078,
+                    1.052207641330303,
+                    7.502351217774493,
+                    15.375984266253123,
+                    -1.5250559702130266
+                ],
+                "fbest": -0.4780709501072921,
+                "evals_best": 4159,
+                "evaluations": 4190,
+                "iterations": 419,
+                "xfavorite": [
+                    3.8070431665980666,
+                    3.0740654254735973,
+                    3.4138391303775046,
+                    -1.1659368421975502,
+                    1.0522076261461877,
+                    7.502351227525212,
+                    15.375984555425774,
+                    -1.5250562973382231
+                ],
+                "stds": [
+                    7.171536728693153e-07,
+                    5.672513289055229e-07,
+                    1.355774662560204e-06,
+                    1.3861636790530725e-05,
+                    8.158054151735533e-08,
+                    1.1092896062106593e-07,
+                    7.184557527974961e-07,
+                    6.642744747234007e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -110.55966959712286,
+                -15.394199882992119
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "MSFT": 0,
+                        "V": 3
+                    },
+                    "budget": 946.5273742675781,
+                    "difference": 0.0
+                },
+                {
+                    "portfolio": {
+                        "MSFT": 1,
+                        "V": 1
+                    },
+                    "budget": 736.1656494140625,
+                    "difference": 210.36172485351562
+                }
+            ]
+        }
+    },
+    "13": {
+        "hyperparams": {
+            "stocks": [
+                "DIS",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 5,
+            "budget": 722.6699981689453,
+            "log_encoding": true,
+            "layers": 5,
+            "prices_now": {
+                "DIS": 111.3499984741211,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "DIS": [
+                    0,
+                    1,
+                    2
+                ],
+                "TRV": [
+                    3,
+                    4
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DIS": 0.6269990973988224,
+                "TRV": 0.37300090260117763
+            },
+            "allocation": {
+                "DIS": 4,
+                "TRV": 1
+            },
+            "value": -483.6895378654574,
+            "left_overs": 37.36151097796619
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.6064948867800327
+            ],
+            "smallest_bitstrings": [
+                "00011"
+            ],
+            "first_excited_energy": -0.6063533980336479,
+            "optimized_portfolio": [
+                {
+                    "DIS": 0,
+                    "TRV": 3
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "DIS": 2,
+                    "TRV": 2
+                }
+            ],
+            "spectrum": [
+                -2.806220154253497e-16,
+                -0.5386197831048342,
+                -0.33632699099659935,
+                -0.6064948867800327,
+                -0.5167035715122061,
+                -0.557125749692985,
+                -0.6041389274294162,
+                -0.37506517452690147,
+                -0.31658731856972355,
+                -0.6063533980336479,
+                -0.5285670951068321,
+                -0.5494550506898304,
+                -0.597516826774321,
+                -0.38780761366338956,
+                -0.5600619097280618,
+                -0.0800473876886262,
+                -0.17274953478711874,
+                -0.5869851600038819,
+                -0.44691827893757574,
+                -0.5925128448835308,
+                -0.5722740576588027,
+                -0.4877475572176925,
+                -0.5973167990236725,
+                -0.24291362490701862,
+                -0.4313369311663868,
+                -0.5965109154669135,
+                -0.5810784385500449,
+                -0.47708934169881734,
+                -0.5917819351434312,
+                -0.2566188137689548,
+                -0.49170573505435855,
+                0.1142392231622924
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DIS": 0,
+                        "TRV": 3
+                    },
+                    "budget": 719.7254791259766,
+                    "difference": 2.94451904296875,
+                    "objective_value": -275.6164277893004
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "DIS": 2,
+                        "TRV": 2
+                    },
+                    "budget": 702.5169830322266,
+                    "difference": 20.15301513671875,
+                    "objective_value": -180.963755011339
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00011",
+                "11010"
+            ],
+            "final_expectation_value": -0.5868080111386613,
+            "params": [
+                -12.266907063160327,
+                7.6804996979916105,
+                1.0789514178961215,
+                -11.208021434680902,
+                24.66862996754087,
+                -6.332028854690398,
+                -0.5172827847303113,
+                7.1499007501906835,
+                -3.0823865175116745,
+                3.0885563802021534
+            ],
+            "total_steps": 947,
+            "states_probs": [
+                0.09355377690107061,
+                0.09408776841736574
+            ],
+            "optimized_portfolios": [
+                {
+                    "DIS": 0,
+                    "TRV": 3
+                },
+                {
+                    "DIS": 3,
+                    "TRV": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    -12.266907063160327,
+                    7.6804996979916105,
+                    1.0789514178961215,
+                    -11.208021434680902,
+                    24.66862996754087,
+                    -6.332028854690398,
+                    -0.5172827847303113,
+                    7.1499007501906835,
+                    -3.0823865175116745,
+                    3.0885563802021534
+                ],
+                "fbest": -0.5868080111386613,
+                "evals_best": 9453,
+                "evaluations": 9470,
+                "iterations": 947,
+                "xfavorite": [
+                    -12.266900140790458,
+                    7.68049533409046,
+                    1.0789509400645583,
+                    -11.208020958100938,
+                    24.66862800718082,
+                    -6.332028875379043,
+                    -0.5172831265069536,
+                    7.149901194637904,
+                    -3.08238648679074,
+                    3.08855639774568
+                ],
+                "stds": [
+                    6.37651735679718e-06,
+                    5.774703429308339e-06,
+                    5.287578813012778e-07,
+                    3.432528572552955e-06,
+                    4.6202220151470985e-06,
+                    8.138809614789617e-08,
+                    4.043947715402469e-07,
+                    4.609459840623524e-07,
+                    4.268516717891333e-08,
+                    4.629863200570792e-08
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -275.6164277893004,
+                -182.07293552038436
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DIS": 0,
+                        "TRV": 3
+                    },
+                    "budget": 719.7254791259766,
+                    "difference": 2.94451904296875
+                },
+                {
+                    "portfolio": {
+                        "DIS": 3,
+                        "TRV": 1
+                    },
+                    "budget": 573.9584884643555,
+                    "difference": 148.71150970458984
+                }
+            ]
+        }
+    },
+    "14": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "CRM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 3,
+            "n_qubits": 3,
+            "budget": 722.8699340820312,
+            "log_encoding": true,
+            "layers": 3,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "CRM": 334.3299865722656
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0
+                ],
+                "CRM": [
+                    1,
+                    2
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.5388549228782549,
+                "CRM": 0.46114507712174513
+            },
+            "allocation": {
+                "CAT": 1,
+                "CRM": 1
+            },
+            "value": -5.249927873819397,
+            "left_overs": 27.10498062406714
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.7489057879750309
+            ],
+            "smallest_bitstrings": [
+                "110"
+            ],
+            "first_excited_energy": -0.7456217202571074,
+            "optimized_portfolio": [
+                {
+                    "CAT": 1,
+                    "CRM": 1
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "CAT": 0,
+                    "CRM": 2
+                }
+            ],
+            "spectrum": [
+                -1.1171602244631693e-16,
+                -0.7456217202571074,
+                -0.5332938877311622,
+                -0.6367002459882015,
+                -0.5624747767279775,
+                -0.6143806200596689,
+                -0.7489057879750309,
+                -0.15862296126085226
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "CRM": 1
+                    },
+                    "budget": 695.7649536132812,
+                    "difference": 27.10498046875,
+                    "objective_value": -5.249927873819397
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "CRM": 2
+                    },
+                    "budget": 668.6599731445312,
+                    "difference": 54.2099609375,
+                    "objective_value": -33.57281125134227
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001",
+                "110"
+            ],
+            "final_expectation_value": -0.7427254842675944,
+            "params": [
+                6.8117973981151465,
+                8.810737061816473,
+                -2.5859070641788726,
+                1.6416022736259954,
+                3.308055422252484,
+                -14.794206257955041
+            ],
+            "total_steps": 844,
+            "states_probs": [
+                0.47940693919726374,
+                0.488267558844558
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "CRM": 2
+                },
+                {
+                    "CAT": 1,
+                    "CRM": 1
+                }
+            ],
+            "training_history": {
+                "xbest": [
+                    6.8117973981151465,
+                    8.810737061816473,
+                    -2.5859070641788726,
+                    1.6416022736259954,
+                    3.308055422252484,
+                    -14.794206257955041
+                ],
+                "fbest": -0.7427254842675944,
+                "evals_best": 7580,
+                "evaluations": 7596,
+                "iterations": 844,
+                "xfavorite": [
+                    6.811797304851897,
+                    8.810741092622512,
+                    -2.585910887483047,
+                    1.641602270861061,
+                    3.308055472423163,
+                    -14.79420613368141
+                ],
+                "stds": [
+                    7.958521087412917e-07,
+                    4.211605501132566e-06,
+                    4.13681858190282e-06,
+                    7.340528139505001e-08,
+                    9.467555173377865e-08,
+                    1.695236831307497e-07
+                ],
+                "stop": {
+                    "tolfun": 1e-11
+                }
+            },
+            "objective_values": [
+                -33.57281125134227,
+                -5.249927873819397
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "CRM": 2
+                    },
+                    "budget": 668.6599731445312,
+                    "difference": 54.2099609375
+                },
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "CRM": 1
+                    },
+                    "budget": 695.7649536132812,
+                    "difference": 27.10498046875
+                }
+            ]
+        }
+    }
+}

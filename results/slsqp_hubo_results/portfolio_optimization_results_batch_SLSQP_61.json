@@ -1,0 +1,152 @@
+{
+    "61": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "MMM",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 2754,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "MMM": 128.4563446044922,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "MMM": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "UNH": [
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "MMM": 5.204170427930421e-17,
+                "UNH": 0.0
+            },
+            "allocation": {
+                "AAPL": 11,
+                "MMM": 0,
+                "UNH": 0
+            },
+            "value": -321.20663245422554,
+            "left_overs": 2.405286721234461
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "MMM": 0.0,
+                "UNH": 0.06727259236308104
+            },
+            "allocation": {
+                "AAPL": 11,
+                "MMM": 0,
+                "UNH": 0
+            },
+            "value": -321.20663245422554,
+            "left_overs": 2.405280074415259
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "110001100100",
+                "110011100100"
+            ],
+            "final_expectation_value": -0.10882160996469807,
+            "params": [
+                2.472971162272757,
+                3.365296568240613,
+                1.5226254419262706,
+                2.1430640628314532,
+                4.852140667238767,
+                6.283185307179552,
+                5.686255848256266,
+                6.283185307179586,
+                5.913585788507739,
+                2.137359045369643,
+                2.2997210548882596,
+                0.5450370790228762,
+                2.26950296583744,
+                0.062159313029749086,
+                2.9497175635158115,
+                0.0,
+                3.025092456350895,
+                3.195688093383023,
+                1.436098930883216,
+                1.6130142456007657
+            ],
+            "total_steps": 200,
+            "states_probs": [
+                0.0022314408798206897,
+                0.0022947416174015447
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 3,
+                    "MMM": 6,
+                    "UNH": 1
+                },
+                {
+                    "AAPL": 3,
+                    "MMM": 7,
+                    "UNH": 1
+                }
+            ],
+            "training_history": {
+                "iterations": 200,
+                "evaluations": 4225,
+                "final_value": -0.10882160996469807,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 18668.36169719696,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -177.22745074678397,
+                -309.5854831374905
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 3,
+                        "MMM": 6,
+                        "UNH": 1
+                    },
+                    "budget": 2024.8802947998047,
+                    "difference": 729.1197052001953
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 3,
+                        "MMM": 7,
+                        "UNH": 1
+                    },
+                    "budget": 2153.336639404297,
+                    "difference": 600.6633605957031
+                }
+            ]
+        }
+    }
+}

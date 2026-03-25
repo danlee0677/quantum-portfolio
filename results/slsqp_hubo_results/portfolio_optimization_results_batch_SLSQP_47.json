@@ -1,0 +1,191 @@
+{
+    "47": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "BA",
+                "CAT",
+                "IBM",
+                "UNH",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 804,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "BA": 177.0,
+                "CAT": 361.4349670410156,
+                "IBM": 218.37515258789062,
+                "UNH": 503.7073059082031,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1
+                ],
+                "BA": [
+                    2,
+                    3,
+                    4
+                ],
+                "CAT": [
+                    5,
+                    6
+                ],
+                "IBM": [
+                    7,
+                    8
+                ],
+                "UNH": [
+                    9
+                ],
+                "VZ": [
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.0,
+                "BA": 2.220446049250313e-16,
+                "CAT": 0.5364419399485907,
+                "IBM": 0.0,
+                "UNH": 0.4635580600514094,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "CAT": 2,
+                "VZ": 2,
+                "AXP": 0,
+                "BA": 0,
+                "IBM": 0,
+                "UNH": 0
+            },
+            "value": 0.5264897842310634,
+            "left_overs": 2.5426253747649525
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.0,
+                "BA": 0.0,
+                "CAT": 0.6007345404912513,
+                "IBM": 0.0,
+                "UNH": 0.4724935078932137,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "CAT": 2,
+                "VZ": 1,
+                "AXP": 0,
+                "BA": 0,
+                "IBM": 0,
+                "UNH": 0
+            },
+            "value": 0.3028284466999282,
+            "left_overs": 41.83634565470004
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000000000010000",
+                "000000000000000"
+            ],
+            "final_expectation_value": -0.022825156334379128,
+            "params": [
+                4.28428277428691,
+                2.7863645443606893,
+                3.8418221502459895,
+                1.6255441424369546,
+                3.7116272766099954,
+                0.436775989899132,
+                4.839427280884441,
+                3.3441775537109906,
+                2.9251390938439297,
+                0.0,
+                4.01914675827144,
+                5.082284824047199e-17,
+                2.354023995289925,
+                0.0,
+                1.5553686342642636,
+                1.516863561118166,
+                3.125610042451913,
+                3.164393952615237,
+                0.5280188107324657,
+                2.418433847446856
+            ],
+            "total_steps": 95,
+            "states_probs": [
+                0.009822444288005995,
+                0.01046517411610751
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 0,
+                    "BA": 0,
+                    "CAT": 0,
+                    "IBM": 0,
+                    "UNH": 0,
+                    "VZ": 1
+                },
+                {
+                    "AXP": 0,
+                    "BA": 0,
+                    "CAT": 0,
+                    "IBM": 0,
+                    "UNH": 0,
+                    "VZ": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 95,
+                "evaluations": 2008,
+                "final_value": -0.022825156334379128,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 36963.09780740738,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                0.010062161338754153,
+                -0.0
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "BA": 0,
+                        "CAT": 0,
+                        "IBM": 0,
+                        "UNH": 0,
+                        "VZ": 1
+                    },
+                    "budget": 39.29372024536133,
+                    "difference": 764.7062797546387
+                },
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "BA": 0,
+                        "CAT": 0,
+                        "IBM": 0,
+                        "UNH": 0,
+                        "VZ": 0
+                    },
+                    "budget": 0.0,
+                    "difference": 804.0
+                }
+            ]
+        }
+    }
+}

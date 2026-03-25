@@ -1,0 +1,139 @@
+{
+    "74": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 3229,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "VZ": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.8427332896837798,
+                "VZ": 0.15726671031622028
+            },
+            "allocation": {
+                "CRM": 8,
+                "VZ": 13
+            },
+            "value": -219.05397662883308,
+            "left_overs": 43.541737253127394
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CRM": 0.8455989134619265,
+                "VZ": 0.1830737130613827
+            },
+            "allocation": {
+                "CRM": 8,
+                "VZ": 14
+            },
+            "value": -335.7583198777975,
+            "left_overs": 4.248020714644099
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00011000000",
+                "00010000000"
+            ],
+            "final_expectation_value": -0.23212803772524768,
+            "params": [
+                2.9961604567760833,
+                -5.288869303270558,
+                2.6515262789424368,
+                0.16511444913558404,
+                4.530956454988177,
+                -0.5702682193845051,
+                3.954018372861683,
+                6.639830503301496,
+                3.118251954780435,
+                1.2858822797874438,
+                3.229080963927857,
+                -1.283487564451633,
+                1.5675187952138026,
+                0.17282187920454295,
+                2.3660917322613706,
+                2.0974246948184887,
+                1.7822301561721265,
+                3.1688872390396465,
+                1.3125123536106162,
+                1.8758880669931974
+            ],
+            "total_steps": 9523,
+            "states_probs": [
+                0.006823865832410253,
+                0.007105934593633497
+            ],
+            "optimized_portfolios": [
+                {
+                    "CRM": 8,
+                    "VZ": 1
+                },
+                {
+                    "CRM": 8,
+                    "VZ": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 9523,
+                "evaluations": 12157,
+                "final_value": -0.23212803772524768,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 38439.79413175583,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -227.96687291345583,
+                -246.77200267856537
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CRM": 8,
+                        "VZ": 1
+                    },
+                    "budget": 2713.9336128234863,
+                    "difference": 515.0663871765137
+                },
+                {
+                    "portfolio": {
+                        "CRM": 8,
+                        "VZ": 0
+                    },
+                    "budget": 2674.639892578125,
+                    "difference": 554.360107421875
+                }
+            ]
+        }
+    }
+}

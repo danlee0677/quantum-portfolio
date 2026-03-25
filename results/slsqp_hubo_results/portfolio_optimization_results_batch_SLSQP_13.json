@@ -1,0 +1,153 @@
+{
+    "13": {
+        "hyperparams": {
+            "stocks": [
+                "INTC",
+                "JNJ",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 1483,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "INTC": 20.049999237060547,
+                "JNJ": 143.4715576171875,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "INTC": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "JNJ": [
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "MSFT": [
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "INTC": 0.0,
+                "JNJ": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "INTC": 1,
+                "JNJ": 1,
+                "MSFT": 3
+            },
+            "value": -7.907342712492037,
+            "left_overs": 57.508868990419614
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "INTC": 0.0,
+                "JNJ": 0.010500852688271495,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "INTC": 1,
+                "JNJ": 1,
+                "MSFT": 3
+            },
+            "value": -7.907342712492037,
+            "left_overs": 57.508866547033904
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1000000000100",
+                "0000000000100"
+            ],
+            "final_expectation_value": -0.1003945213772533,
+            "params": [
+                0.8994717644437993,
+                0.6851323210545424,
+                3.9731080674408092,
+                0.9322989866783978,
+                1.3725170112632867,
+                0.6590627738173349,
+                4.595520916027207,
+                6.283185307179586,
+                6.283185307179586,
+                3.5195186782893093,
+                5.19028390081502,
+                0.8813220893262583,
+                1.491990211882374,
+                0.1524215599655828,
+                1.0443694803941492,
+                2.8938719443334455,
+                2.590968807626433,
+                3.0994318245405976,
+                1.4222781599151053,
+                1.596834728184718
+            ],
+            "total_steps": 118,
+            "states_probs": [
+                0.000967258542585351,
+                0.0009760317584054978
+            ],
+            "optimized_portfolios": [
+                {
+                    "INTC": 1,
+                    "JNJ": 8,
+                    "MSFT": 0
+                },
+                {
+                    "INTC": 0,
+                    "JNJ": 8,
+                    "MSFT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 118,
+                "evaluations": 2488,
+                "final_value": -0.1003945213772533,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 61622.22309589386,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -169.4661977462695,
+                -160.72657041581473
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "INTC": 1,
+                        "JNJ": 8,
+                        "MSFT": 0
+                    },
+                    "budget": 1167.8224601745605,
+                    "difference": 315.17753982543945
+                },
+                {
+                    "portfolio": {
+                        "INTC": 0,
+                        "JNJ": 8,
+                        "MSFT": 0
+                    },
+                    "budget": 1147.7724609375,
+                    "difference": 335.2275390625
+                }
+            ]
+        }
+    }
+}

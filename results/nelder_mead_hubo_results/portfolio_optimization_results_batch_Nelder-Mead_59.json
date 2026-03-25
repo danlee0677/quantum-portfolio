@@ -1,0 +1,154 @@
+{
+    "59": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "HON",
+                "JNJ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 1837,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "HON": 224.6875,
+                "JNJ": 143.4715576171875
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "HON": [
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "JNJ": [
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 2.7036500046967098e-17,
+                "HON": 0.7240110045784194,
+                "JNJ": 0.27598899542158056
+            },
+            "allocation": {
+                "DOW": 1,
+                "HON": 6,
+                "JNJ": 3
+            },
+            "value": -198.86791917642773,
+            "left_overs": 19.06128821659604
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "DOW": 0.0,
+                "HON": 0.7255258172310014,
+                "JNJ": 0.2586751342772933
+            },
+            "allocation": {
+                "DOW": 1,
+                "HON": 6,
+                "JNJ": 3
+            },
+            "value": -198.86791917642773,
+            "left_overs": 19.06128986618205
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "11110011001000",
+                "11100011001100"
+            ],
+            "final_expectation_value": -0.08766253679993706,
+            "params": [
+                3.1209826603400055,
+                -0.8537221827565198,
+                4.185925587395935,
+                0.19759323384814764,
+                5.559036542912709,
+                0.3005676038155044,
+                15.309858437268957,
+                3.0101870990521045,
+                -0.4007870991586845,
+                -0.1383883976285667,
+                3.3212325517100756,
+                1.253651202212332,
+                2.7191570922917845,
+                -0.2561039286521336,
+                2.6725020186347166,
+                -0.13153431856127423,
+                3.1082965882521703,
+                3.6840662260659998,
+                1.6965130613263741,
+                0.7760053558162553
+            ],
+            "total_steps": 5000,
+            "states_probs": [
+                0.0005667933140916452,
+                0.0005679380991200223
+            ],
+            "optimized_portfolios": [
+                {
+                    "DOW": 15,
+                    "HON": 3,
+                    "JNJ": 1
+                },
+                {
+                    "DOW": 7,
+                    "HON": 3,
+                    "JNJ": 3
+                }
+            ],
+            "training_history": {
+                "iterations": 5000,
+                "evaluations": 6412,
+                "final_value": -0.08766253679993706,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 68378.6941792965,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -4524.123305003859,
+                -513.395021047856
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DOW": 15,
+                        "HON": 3,
+                        "JNJ": 1
+                    },
+                    "budget": 1408.519603729248,
+                    "difference": 428.48039627075195
+                },
+                {
+                    "portfolio": {
+                        "DOW": 7,
+                        "HON": 3,
+                        "JNJ": 3
+                    },
+                    "budget": 1380.2704277038574,
+                    "difference": 456.7295722961426
+                }
+            ]
+        }
+    }
+}

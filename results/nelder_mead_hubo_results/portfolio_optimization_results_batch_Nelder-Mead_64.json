@@ -1,0 +1,152 @@
+{
+    "64": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "IBM",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 921,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "IBM": 218.37515258789062,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1
+                ],
+                "IBM": [
+                    2,
+                    3,
+                    4
+                ],
+                "WBA": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.7920127593278053,
+                "IBM": 0.2079872406721946,
+                "WBA": 0.0
+            },
+            "allocation": {
+                "CRM": 2,
+                "IBM": 1,
+                "WBA": 3
+            },
+            "value": 1.8550144176511574,
+            "left_overs": 5.974874462812068
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CRM": 0.7973318564356466,
+                "IBM": 0.23434164462415766,
+                "WBA": 0.0
+            },
+            "allocation": {
+                "CRM": 2,
+                "IBM": 1,
+                "WBA": 2
+            },
+            "value": 1.3988598536102594,
+            "left_overs": 15.30487441330547
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000011000000",
+                "000010000000"
+            ],
+            "final_expectation_value": -0.08942990861296465,
+            "params": [
+                -1.9185985509464372,
+                0.7550449323062864,
+                4.089185832431516,
+                -0.3462951350583028,
+                8.032714439855845,
+                0.7765776265244284,
+                -0.827660944787256,
+                11.33264818234937,
+                1.2685794975074662,
+                -0.7750012351224218,
+                0.7031771762989278,
+                0.9533694736381428,
+                2.7426975496434274,
+                -0.10657732844320184,
+                -1.1986831650663858,
+                4.914180515116506,
+                2.4468023575795588,
+                3.2412049605726074,
+                1.0066943805620374,
+                1.9225271497824237
+            ],
+            "total_steps": 7851,
+            "states_probs": [
+                0.00207691815448168,
+                0.00208131721247548
+            ],
+            "optimized_portfolios": [
+                {
+                    "CRM": 0,
+                    "IBM": 4,
+                    "WBA": 1
+                },
+                {
+                    "CRM": 0,
+                    "IBM": 4,
+                    "WBA": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 7851,
+                "evaluations": 10071,
+                "final_value": -0.08942990861296465,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 44003.141603946686,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -11.789662906335595,
+                -10.718549703450433
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CRM": 0,
+                        "IBM": 4,
+                        "WBA": 1
+                    },
+                    "budget": 882.8306102752686,
+                    "difference": 38.169389724731445
+                },
+                {
+                    "portfolio": {
+                        "CRM": 0,
+                        "IBM": 4,
+                        "WBA": 0
+                    },
+                    "budget": 873.5006103515625,
+                    "difference": 47.4993896484375
+                }
+            ]
+        }
+    }
+}

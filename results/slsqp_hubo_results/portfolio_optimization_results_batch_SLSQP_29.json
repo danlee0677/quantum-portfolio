@@ -1,0 +1,132 @@
+{
+    "29": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 716,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1
+                ],
+                "INTC": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.9984616971854576,
+                "INTC": 0.001538302814542409
+            },
+            "allocation": {
+                "CRM": 2,
+                "INTC": 1
+            },
+            "value": -0.8977749694967175,
+            "left_overs": 27.290026516289004
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CRM": 0.981376374732783,
+                "INTC": 0.0
+            },
+            "allocation": {
+                "CRM": 2,
+                "INTC": 0
+            },
+            "value": -0.5791471138055267,
+            "left_overs": 47.340025029662456
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10001100",
+                "10101100"
+            ],
+            "final_expectation_value": -0.220139356933211,
+            "params": [
+                1.16104231829315,
+                0.0,
+                2.783819620987787,
+                5.210542459870072,
+                0.0,
+                3.6779218038466817,
+                4.597720695115314,
+                3.428616343748934e-17,
+                1.3429417906880163,
+                1.0520393654606779,
+                2.7264446226787586,
+                1.3655316082744084,
+                1.5997658449307424,
+                0.0,
+                1.9625739052983384,
+                1.072844064326275
+            ],
+            "total_steps": 109,
+            "states_probs": [
+                0.01502403023432469,
+                0.015081519455578531
+            ],
+            "optimized_portfolios": [
+                {
+                    "CRM": 1,
+                    "INTC": 12
+                },
+                {
+                    "CRM": 1,
+                    "INTC": 13
+                }
+            ],
+            "training_history": {
+                "iterations": 109,
+                "evaluations": 1864,
+                "final_value": -0.220139356933211,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 1214.309798002243,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -1372.6929602990788,
+                -1881.485337858106
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CRM": 1,
+                        "INTC": 12
+                    },
+                    "budget": 574.9299774169922,
+                    "difference": 141.0700225830078
+                },
+                {
+                    "portfolio": {
+                        "CRM": 1,
+                        "INTC": 13
+                    },
+                    "budget": 594.9799766540527,
+                    "difference": 121.02002334594727
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "32": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 3786,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "BA": 177.0,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "MSFT": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 9,
+                "BA": 0
+            },
+            "value": -210.12030935006237,
+            "left_overs": 0.09126403223444868
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 9,
+                "BA": 0
+            },
+            "value": -210.12030935006237,
+            "left_overs": 0.09126403223444868
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "100000001",
+                "000000001"
+            ],
+            "final_expectation_value": -0.2395027806703033,
+            "params": [
+                1.915757112858317,
+                0.659558182965586,
+                5.112348815567856,
+                0.8786295888868698,
+                9.241545617152834,
+                10.128457181561654,
+                16.621828872721093,
+                4.501414990066525,
+                -4.513845698077945,
+                2.870326659306718,
+                -0.24868591484675667,
+                1.4827856465946185,
+                1.4357827770064948,
+                -0.12810820114744953,
+                -0.07332495487813305,
+                -0.05823900686670114,
+                1.5629848822524308,
+                1.5410115438139256
+            ],
+            "total_steps": 10000,
+            "states_probs": [
+                0.01570763085783494,
+                0.01618842958816098
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 1,
+                    "MSFT": 8
+                },
+                {
+                    "BA": 0,
+                    "MSFT": 8
+                }
+            ],
+            "training_history": {
+                "iterations": 10000,
+                "evaluations": 12915,
+                "final_value": -0.2395027806703033,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 11957.186728477478,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -165.6465462837765,
+                -130.52263084468854
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 1,
+                        "MSFT": 8
+                    },
+                    "budget": 3542.252197265625,
+                    "difference": 243.747802734375
+                },
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "MSFT": 8
+                    },
+                    "budget": 3365.252197265625,
+                    "difference": 420.747802734375
+                }
+            ]
+        }
+    }
+}

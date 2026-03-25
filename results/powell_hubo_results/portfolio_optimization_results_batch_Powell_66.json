@@ -1,0 +1,140 @@
+{
+    "66": {
+        "hyperparams": {
+            "stocks": [
+                "INTC",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1799,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "INTC": 20.049999237060547,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "INTC": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "WMT": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "Powell"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "INTC": 0.10216726499182364,
+                "WMT": 0.8978327350081764
+            },
+            "allocation": {
+                "INTC": 8,
+                "WMT": 18
+            },
+            "value": -9179.115657801813,
+            "left_overs": 16.753753573698532
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "INTC": 0.08383122395950025,
+                "WMT": 0.8949764046779347
+            },
+            "allocation": {
+                "INTC": 8,
+                "WMT": 18
+            },
+            "value": -9179.115657801813,
+            "left_overs": 16.753753791723057
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "011110011100",
+                "111110011100"
+            ],
+            "final_expectation_value": -0.22819448799780553,
+            "params": [
+                -3.8838891321209035,
+                0.3695997663229625,
+                -0.11616859228810743,
+                0.21858131220334334,
+                3.0666211959043728,
+                -0.6314460390002693,
+                -2.6877811499216646,
+                16.014261850428287,
+                -2.3201131834597377,
+                0.5102894163916616,
+                4.223600937107051,
+                1.1621425026703887,
+                1.9092389831382168,
+                0.3299766676050244,
+                1.9328398628941243,
+                1.7089202018916723,
+                1.910003615821059,
+                2.872350856976876,
+                2.1958276661911356,
+                1.1247391435004028
+            ],
+            "total_steps": 20,
+            "states_probs": [
+                0.0013169701295090265,
+                0.0013399763143647036
+            ],
+            "optimized_portfolios": [
+                {
+                    "INTC": 30,
+                    "WMT": 7
+                },
+                {
+                    "INTC": 31,
+                    "WMT": 7
+                }
+            ],
+            "training_history": {
+                "iterations": 20,
+                "evaluations": 4059,
+                "final_value": -0.22819448799780553,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 17691.461973190308,
+                "optimizer": "Powell"
+            },
+            "objective_values": [
+                -60758.583115242385,
+                -68789.46157648969
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "INTC": 30,
+                        "WMT": 7
+                    },
+                    "budget": 1232.2179641723633,
+                    "difference": 566.7820358276367
+                },
+                {
+                    "portfolio": {
+                        "INTC": 31,
+                        "WMT": 7
+                    },
+                    "budget": 1252.2679634094238,
+                    "difference": 546.7320365905762
+                }
+            ]
+        }
+    }
+}

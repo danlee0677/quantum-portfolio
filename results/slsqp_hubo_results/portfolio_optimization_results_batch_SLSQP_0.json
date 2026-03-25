@@ -1,0 +1,138 @@
+{
+    "0": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "JNJ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 3670,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "JNJ": 143.4715576171875
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "JNJ": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.6953666658534465,
+                "JNJ": 0.30463333414655347
+            },
+            "allocation": {
+                "HON": 11,
+                "JNJ": 8
+            },
+            "value": -2769.3603547076773,
+            "left_overs": 50.66503895760434
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "HON": 0.6936622528553001,
+                "JNJ": 0.3019992766199067
+            },
+            "allocation": {
+                "HON": 11,
+                "JNJ": 8
+            },
+            "value": -2769.3603547076773,
+            "left_overs": 50.66502708598182
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0000110000",
+                "0000100000"
+            ],
+            "final_expectation_value": -0.24105815264509511,
+            "params": [
+                1.3900871502219685,
+                3.171126802728711,
+                1.3625666165488721,
+                2.3987546669187814,
+                1.1982428111934247,
+                5.762258079701167,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                2.4183158957753186,
+                2.707651948827388,
+                0.0,
+                4.924039234929707e-16,
+                2.9492365313301443,
+                3.0359676107675284,
+                3.0713403974833664,
+                3.0947347306751642,
+                1.5135881201237646,
+                1.5893229094215178
+            ],
+            "total_steps": 174,
+            "states_probs": [
+                0.004933827508380525,
+                0.005449436394380969
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 16,
+                    "JNJ": 1
+                },
+                {
+                    "HON": 16,
+                    "JNJ": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 174,
+                "evaluations": 3670,
+                "final_value": -0.24105815264509511,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 8359.941636323929,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -3778.4518301785733,
+                -3405.8535251690582
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 16,
+                        "JNJ": 1
+                    },
+                    "budget": 3738.4715576171875,
+                    "difference": -68.4715576171875
+                },
+                {
+                    "portfolio": {
+                        "HON": 16,
+                        "JNJ": 0
+                    },
+                    "budget": 3595.0,
+                    "difference": 75.0
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,140 @@
+{
+    "68": {
+        "hyperparams": {
+            "stocks": [
+                "PG",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 5700,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "PG": 166.6339111328125,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "PG": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "WMT": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "PG": 0.3246530764598199,
+                "WMT": 0.6753469235401801
+            },
+            "allocation": {
+                "PG": 11,
+                "WMT": 42
+            },
+            "value": -292050.5601340255,
+            "left_overs": 82.7190299743088
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "PG": 0.33092272245396914,
+                "WMT": 0.6774473013715256
+            },
+            "allocation": {
+                "PG": 11,
+                "WMT": 42
+            },
+            "value": -292050.5601340255,
+            "left_overs": 82.7190492518148
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000001100000",
+                "000001000000"
+            ],
+            "final_expectation_value": -0.29042425506953745,
+            "params": [
+                2.406555868122482,
+                5.004503049705669,
+                1.101003108252362,
+                2.475814617207704,
+                4.382023934433069,
+                0.002189259276006175,
+                2.681540164855361e-14,
+                6.283185307179505,
+                6.028790514566757,
+                4.379350207929777,
+                2.661893424831056,
+                1.4805419126988488,
+                1.4323952650692147,
+                0.0,
+                2.051086345082106,
+                2.351229588411601,
+                1.7681529343876374,
+                3.0658391936711995,
+                2.2266817801806564e-15,
+                3.0639417162107088
+            ],
+            "total_steps": 134,
+            "states_probs": [
+                0.0023861783456472527,
+                0.0024773766285901173
+            ],
+            "optimized_portfolios": [
+                {
+                    "PG": 32,
+                    "WMT": 1
+                },
+                {
+                    "PG": 32,
+                    "WMT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 134,
+                "evaluations": 2824,
+                "final_value": -0.29042425506953745,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 12338.566681146622,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -57405.82849504299,
+                -54091.10445557435
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "PG": 32,
+                        "WMT": 1
+                    },
+                    "budget": 5422.387725830078,
+                    "difference": 277.6122741699219
+                },
+                {
+                    "portfolio": {
+                        "PG": 32,
+                        "WMT": 0
+                    },
+                    "budget": 5332.28515625,
+                    "difference": 367.71484375
+                }
+            ]
+        }
+    }
+}

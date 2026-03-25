@@ -1,0 +1,164 @@
+{
+    "60": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "CVX",
+                "GS",
+                "MCD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1861,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "CVX": 143.2510986328125,
+                "GS": 569.7945556640625,
+                "MCD": 288.22589111328125
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "CVX": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "GS": [
+                    7,
+                    8
+                ],
+                "MCD": [
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "CVX": 1.3877787807814457e-17,
+                "GS": 0.0,
+                "MCD": 0.0
+            },
+            "allocation": {
+                "AAPL": 7,
+                "CVX": 0,
+                "GS": 0,
+                "MCD": 0
+            },
+            "value": -51.43284560183686,
+            "left_overs": 109.9851807946277
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "CVX": 0.0,
+                "GS": 0.0,
+                "MCD": 0.0416198066293043
+            },
+            "allocation": {
+                "AAPL": 7,
+                "CVX": 0,
+                "GS": 0,
+                "MCD": 0
+            },
+            "value": -51.43284560183686,
+            "left_overs": 109.98518343233968
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000100000101",
+                "000110000001"
+            ],
+            "final_expectation_value": -0.10967359775475402,
+            "params": [
+                3.0250532759587285,
+                6.283185307179586,
+                1.8654471317473529,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                0.0,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                2.6688085126841887,
+                1.2740026624017644,
+                1.634067981065495,
+                0.0,
+                1.1146261242885807,
+                2.2553165047164114,
+                2.7708032730414796,
+                3.157673527989797,
+                0.035692298422097646,
+                3.028765652431737
+            ],
+            "total_steps": 215,
+            "states_probs": [
+                0.002597532624565872,
+                0.002597761824991522
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 0,
+                    "CVX": 1,
+                    "GS": 0,
+                    "MCD": 5
+                },
+                {
+                    "AAPL": 0,
+                    "CVX": 3,
+                    "GS": 0,
+                    "MCD": 4
+                }
+            ],
+            "training_history": {
+                "iterations": 215,
+                "evaluations": 4879,
+                "final_value": -0.10967359775475402,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+                "execution_time": 22117.047037363052,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -137.57368060080387,
+                -206.29168049581088
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 0,
+                        "CVX": 1,
+                        "GS": 0,
+                        "MCD": 5
+                    },
+                    "budget": 1584.3805541992188,
+                    "difference": 276.61944580078125
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 0,
+                        "CVX": 3,
+                        "GS": 0,
+                        "MCD": 4
+                    },
+                    "budget": 1582.6568603515625,
+                    "difference": 278.3431396484375
+                }
+            ]
+        }
+    }
+}

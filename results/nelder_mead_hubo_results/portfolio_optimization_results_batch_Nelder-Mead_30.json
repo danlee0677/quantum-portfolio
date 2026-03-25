@@ -1,0 +1,135 @@
+{
+    "30": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1209,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "INTC": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 1.0,
+                "INTC": 0.0
+            },
+            "allocation": {
+                "AMGN": 4,
+                "INTC": 5
+            },
+            "value": -77.45360910929071,
+            "left_overs": 74.54528954089983
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.9933073422245219,
+                "INTC": 0.0
+            },
+            "allocation": {
+                "AMGN": 4,
+                "INTC": 5
+            },
+            "value": -77.45360910929071,
+            "left_overs": 74.54528948631355
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001100000",
+                "001000000"
+            ],
+            "final_expectation_value": -0.3624547899834542,
+            "params": [
+                -2.8541350611765948,
+                0.45558043047156727,
+                2.1219716336927625,
+                4.218475137175975,
+                3.8502448501262903,
+                -0.5195515356325706,
+                4.644486142027892,
+                9.147103217976714,
+                0.3877651324901311,
+                0.10308161509324763,
+                0.28077811442522305,
+                1.2760465466624706,
+                1.3771063528037362,
+                0.6268091939989477,
+                0.7288328302315457,
+                -0.09907798064751189,
+                1.5256026187603853,
+                1.5239944780772792
+            ],
+            "total_steps": 10000,
+            "states_probs": [
+                0.012131748902682427,
+                0.012253648446063305
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 4,
+                    "INTC": 1
+                },
+                {
+                    "AMGN": 4,
+                    "INTC": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 10000,
+                "evaluations": 12836,
+                "final_value": -0.3624547899834542,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 13707.119553089142,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -7.584381890284069,
+                -6.191803662075238
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 4,
+                        "INTC": 1
+                    },
+                    "budget": 1054.254711151123,
+                    "difference": 154.74528884887695
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 4,
+                        "INTC": 0
+                    },
+                    "budget": 1034.2047119140625,
+                    "difference": 174.7952880859375
+                }
+            ]
+        }
+    }
+}

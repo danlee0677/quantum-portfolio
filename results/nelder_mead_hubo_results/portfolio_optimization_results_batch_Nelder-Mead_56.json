@@ -1,0 +1,154 @@
+{
+    "56": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "INTC",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 1597,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "INTC": 20.049999237060547,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "INTC": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "TRV": [
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.376647534457747,
+                "INTC": 0.08177930457946456,
+                "TRV": 0.5415731609627884
+            },
+            "allocation": {
+                "BA": 3,
+                "INTC": 5,
+                "TRV": 4
+            },
+            "value": -478.64440813539204,
+            "left_overs": 6.116027458008148
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.35253931263039845,
+                "INTC": 0.0,
+                "TRV": 0.5786337604291755
+            },
+            "allocation": {
+                "BA": 3,
+                "INTC": 5,
+                "TRV": 4
+            },
+            "value": -478.64440813539204,
+            "left_overs": 6.116031596274979
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00101000000010",
+                "00100000000010"
+            ],
+            "final_expectation_value": -0.08363013648142022,
+            "params": [
+                2.623655505383197,
+                1.7775540712070201,
+                -0.2732012126645911,
+                -1.941939141379879,
+                3.0660843761533725,
+                0.4085161668835544,
+                5.110944541158567,
+                12.459191723051369,
+                8.980433760580596,
+                3.6412653284443888,
+                0.8052134446634549,
+                0.6886630679497858,
+                5.590712075744724,
+                0.04710569743649812,
+                0.22017677104325628,
+                1.8427000368578033,
+                2.899608635062898,
+                3.019182626616157,
+                1.4499523713184126,
+                1.652610955569222
+            ],
+            "total_steps": 5000,
+            "states_probs": [
+                0.000613347993434246,
+                0.0006165281418529162
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 4,
+                    "INTC": 1,
+                    "TRV": 2
+                },
+                {
+                    "BA": 4,
+                    "INTC": 0,
+                    "TRV": 2
+                }
+            ],
+            "training_history": {
+                "iterations": 5000,
+                "evaluations": 6382,
+                "final_value": -0.08363013648142022,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 67641.21542215347,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -82.60396040667933,
+                -62.44263351261535
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 4,
+                        "INTC": 1,
+                        "TRV": 2
+                    },
+                    "budget": 1207.866985321045,
+                    "difference": 389.1330146789551
+                },
+                {
+                    "portfolio": {
+                        "BA": 4,
+                        "INTC": 0,
+                        "TRV": 2
+                    },
+                    "budget": 1187.8169860839844,
+                    "difference": 409.1830139160156
+                }
+            ]
+        }
+    }
+}

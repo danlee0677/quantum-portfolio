@@ -1,0 +1,126 @@
+{
+    "96": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "JPM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1788,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "JPM": 238.4783477783203
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "JPM": [
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "JPM": 0.0
+            },
+            "allocation": {
+                "AAPL": 7,
+                "JPM": 0
+            },
+            "value": -51.43272380557236,
+            "left_overs": 36.98518358878073
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "JPM": 0.05862806353036653
+            },
+            "allocation": {
+                "AAPL": 7,
+                "JPM": 0
+            },
+            "value": -51.43272380557236,
+            "left_overs": 36.985182139228755
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "110110",
+                "001001"
+            ],
+            "final_expectation_value": -0.6059884293263187,
+            "params": [
+                4.531685438235209,
+                1.4921767197199993,
+                -1.4381119693852675,
+                0.15200785224201585,
+                13.356627604377,
+                -12.496634883551428,
+                1.3916999920251014,
+                3.8537141603184777,
+                5.256601341788695,
+                -1.4875981409400145,
+                3.0572919755673684,
+                0.03187397127505562
+            ],
+            "total_steps": 3576,
+            "states_probs": [
+                0.04373050378134,
+                0.046965337131023945
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 3,
+                    "JPM": 3
+                },
+                {
+                    "AAPL": 4,
+                    "JPM": 4
+                }
+            ],
+            "training_history": {
+                "iterations": 3576,
+                "evaluations": 4930,
+                "final_value": -0.6059884293263187,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 247.8944137096405,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -22.891387336719955,
+                -74.59849055332194
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 3,
+                        "JPM": 3
+                    },
+                    "budget": 1465.8699645996094,
+                    "difference": 322.1300354003906
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 4,
+                        "JPM": 4
+                    },
+                    "budget": 1954.4932861328125,
+                    "difference": -166.4932861328125
+                }
+            ]
+        }
+    }
+}

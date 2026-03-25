@@ -1,0 +1,155 @@
+{
+    "43": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "HD",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 4139,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "HD": 386.5369873046875,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HD": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "VZ": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.7544190982301301,
+                "HD": 0.24558090176986963,
+                "VZ": 1.5612511283791264e-16
+            },
+            "allocation": {
+                "CAT": 8,
+                "HD": 3,
+                "VZ": 0
+            },
+            "value": -138.67909779794167,
+            "left_overs": 87.90930324406008
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 0.7933739067642875,
+                "HD": 0.26430159769016237,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "CAT": 9,
+                "HD": 2,
+                "VZ": 1
+            },
+            "value": -127.65799208455145,
+            "left_overs": 73.71757970015415
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000000011001000",
+                "100000010000000"
+            ],
+            "final_expectation_value": -0.12369172739365653,
+            "params": [
+                2.8835264467502943,
+                6.283185307179586,
+                0.949004588537569,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                1.2332497942950185,
+                6.283185307179586,
+                6.283185307179586,
+                4.128046312546217,
+                2.6245273558799673,
+                1.2199507696387644,
+                1.666588515899312,
+                0.0,
+                2.4149061159285132,
+                2.3290961430306885,
+                1.4021103579395269,
+                3.197397395498521,
+                1.4446083878950895,
+                1.6052360429424313
+            ],
+            "total_steps": 160,
+            "states_probs": [
+                0.0002658146390477399,
+                0.00026590972835558124
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "HD": 8,
+                    "VZ": 9
+                },
+                {
+                    "CAT": 1,
+                    "HD": 8,
+                    "VZ": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 160,
+                "evaluations": 3822,
+                "final_value": -0.12369172739365653,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 75232.34190583229,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -969.4991056643153,
+                -353.3507775279122
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "HD": 8,
+                        "VZ": 9
+                    },
+                    "budget": 3445.939380645752,
+                    "difference": 693.060619354248
+                },
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "HD": 8,
+                        "VZ": 0
+                    },
+                    "budget": 3453.7308654785156,
+                    "difference": 685.2691345214844
+                }
+            ]
+        }
+    }
+}

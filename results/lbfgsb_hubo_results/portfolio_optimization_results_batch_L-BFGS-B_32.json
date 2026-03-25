@@ -1,0 +1,135 @@
+{
+    "32": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 3786,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "BA": 177.0,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "MSFT": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 9,
+                "BA": 0
+            },
+            "value": -210.1212453899993,
+            "left_overs": 0.09126403223444868
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 9,
+                "BA": 0
+            },
+            "value": -210.1212453899993,
+            "left_overs": 0.09126403223444868
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "100000001",
+                "000000001"
+            ],
+            "final_expectation_value": -0.2323402642687465,
+            "params": [
+                2.4163766087743856,
+                2.1680362757792047,
+                3.9687099266785513,
+                3.6252474237789194,
+                3.4583747910457565,
+                2.11340657787498,
+                1.4803825720467982,
+                3.28584309239031,
+                4.665960508268594,
+                1.5506631307946377,
+                0.7425297003269498,
+                0.6774353607037658,
+                0.9654702842774944,
+                1.1419346605704273,
+                1.0034605328213202,
+                0.4006437883060006,
+                1.0966205058402856,
+                1.2486163004393258
+            ],
+            "total_steps": 715,
+            "states_probs": [
+                0.025411510614667867,
+                0.029199243694362036
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 1,
+                    "MSFT": 8
+                },
+                {
+                    "BA": 0,
+                    "MSFT": 8
+                }
+            ],
+            "training_history": {
+                "iterations": 715,
+                "evaluations": 15039,
+                "final_value": -0.2323402642687465,
+                "success": false,
+                "status": 1,
+                "message": "STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT",
+                "execution_time": 18821.413217782974,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -165.6472829404732,
+                -130.52321145761582
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 1,
+                        "MSFT": 8
+                    },
+                    "budget": 3542.252197265625,
+                    "difference": 243.747802734375
+                },
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "MSFT": 8
+                    },
+                    "budget": 3365.252197265625,
+                    "difference": 420.747802734375
+                }
+            ]
+        }
+    }
+}

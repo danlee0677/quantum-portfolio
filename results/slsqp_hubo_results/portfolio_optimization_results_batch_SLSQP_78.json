@@ -1,0 +1,175 @@
+{
+    "78": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "CRM",
+                "JNJ",
+                "JPM",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 869,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "CRM": 334.3299865722656,
+                "JNJ": 143.4715576171875,
+                "JPM": 238.4783477783203,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1
+                ],
+                "CRM": [
+                    2,
+                    3
+                ],
+                "JNJ": [
+                    4,
+                    5,
+                    6
+                ],
+                "JPM": [
+                    7,
+                    8
+                ],
+                "MSFT": [
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.0,
+                "CRM": 2.7755575615628914e-17,
+                "JNJ": 0.0,
+                "JPM": 1.0339864254442084e-16,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 2,
+                "AMGN": 0,
+                "CRM": 0,
+                "JNJ": 0,
+                "JPM": 0
+            },
+            "value": 0.006843265120486719,
+            "left_overs": 27.68694959598497
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.0,
+                "CRM": 0.05877257463312967,
+                "JNJ": 0.0,
+                "JPM": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 2,
+                "AMGN": 0,
+                "CRM": 0,
+                "JNJ": 0,
+                "JPM": 0
+            },
+            "value": 0.006843265120486719,
+            "left_overs": 27.686950435892527
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00010000000",
+                "00000010000"
+            ],
+            "final_expectation_value": -0.04651166479098165,
+            "params": [
+                3.187394242567285,
+                3.1352413573984985,
+                5.898590193491013,
+                3.781842652621301,
+                5.766396798901261,
+                2.4230146392644847,
+                6.283185307179586,
+                6.283185307179586,
+                5.997053287876123,
+                2.787122937162416,
+                4.674373412939026,
+                0.7007731860185371,
+                1.7476117576110926,
+                0.6932117237749088,
+                0.7844018257437129,
+                1.7965215548206421,
+                2.934779375806447,
+                3.21603572296258,
+                1.2448336826280304,
+                1.8342273818703678
+            ],
+            "total_steps": 115,
+            "states_probs": [
+                0.014423885579386436,
+                0.014773232227446129
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 0,
+                    "CRM": 2,
+                    "JNJ": 0,
+                    "JPM": 0,
+                    "MSFT": 0
+                },
+                {
+                    "AMGN": 0,
+                    "CRM": 0,
+                    "JNJ": 4,
+                    "JPM": 0,
+                    "MSFT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 115,
+                "evaluations": 2429,
+                "final_value": -0.04651166479098165,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 6535.574985027313,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -0.5791471138055267,
+                -9.925673166479879
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "CRM": 2,
+                        "JNJ": 0,
+                        "JPM": 0,
+                        "MSFT": 0
+                    },
+                    "budget": 668.6599731445312,
+                    "difference": 200.34002685546875
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "CRM": 0,
+                        "JNJ": 4,
+                        "JPM": 0,
+                        "MSFT": 0
+                    },
+                    "budget": 573.88623046875,
+                    "difference": 295.11376953125
+                }
+            ]
+        }
+    }
+}

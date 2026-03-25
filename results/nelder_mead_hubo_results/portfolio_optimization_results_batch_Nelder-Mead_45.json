@@ -1,0 +1,155 @@
+{
+    "45": {
+        "hyperparams": {
+            "stocks": [
+                "MCD",
+                "V",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 3633,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "MCD": 288.22589111328125,
+                "V": 315.5091247558594,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "MCD": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "V": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "VZ": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MCD": 0.0,
+                "V": 1.0,
+                "VZ": 7.45931094670027e-17
+            },
+            "allocation": {
+                "V": 11,
+                "VZ": 2,
+                "MCD": 0
+            },
+            "value": -658.9273372054878,
+            "left_overs": 83.81218361110314
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "MCD": 0.0,
+                "V": 1.0,
+                "VZ": 0.004275240136564062
+            },
+            "allocation": {
+                "V": 11,
+                "VZ": 2,
+                "MCD": 0
+            },
+            "value": -658.9273372054878,
+            "left_overs": 83.81218468385305
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "110011001110100",
+                "110011000110100"
+            ],
+            "final_expectation_value": -0.12549139699824052,
+            "params": [
+                0.09219870625015264,
+                3.6151162717735126,
+                -5.247105369778353,
+                0.27285167036223923,
+                5.64602661886256,
+                0.9864684934497925,
+                0.343108823563554,
+                10.65784528733218,
+                3.627814327234063,
+                0.0603137916378603,
+                3.324602670155162,
+                -0.39243620057020534,
+                3.026153639077375,
+                -0.21077426607670402,
+                0.42979357396369045,
+                6.337726154526472,
+                -0.884628489508497,
+                3.1326990424001426,
+                0.43844629260145584,
+                2.565072103711822
+            ],
+            "total_steps": 2500,
+            "states_probs": [
+                0.0002337669689277231,
+                0.00023378740838001286
+            ],
+            "optimized_portfolios": [
+                {
+                    "MCD": 3,
+                    "V": 3,
+                    "VZ": 23
+                },
+                {
+                    "MCD": 3,
+                    "V": 3,
+                    "VZ": 22
+                }
+            ],
+            "training_history": {
+                "iterations": 2500,
+                "evaluations": 3159,
+                "final_value": -0.12549139699824052,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 62627.59732222557,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -7033.308036888294,
+                -5912.45622121619
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "MCD": 3,
+                        "V": 3,
+                        "VZ": 23
+                    },
+                    "budget": 2714.9606132507324,
+                    "difference": 918.0393867492676
+                },
+                {
+                    "portfolio": {
+                        "MCD": 3,
+                        "V": 3,
+                        "VZ": 22
+                    },
+                    "budget": 2675.666893005371,
+                    "difference": 957.3331069946289
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,190 @@
+{
+    "49": {
+        "hyperparams": {
+            "stocks": [
+                "CSCO",
+                "MRK",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 3258,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CSCO": 58.79932403564453,
+                "MRK": 98.6279525756836,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "CSCO": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "MRK": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "MSFT": [
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "Powell"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CSCO": 1.5959455978986625e-16,
+                "MRK": 0.0,
+                "MSFT": 0.9999999999999999
+            },
+            "allocation": {
+                "CSCO": 2,
+                "MRK": 1,
+                "MSFT": 7
+            },
+            "value": -167.30029093604347,
+            "left_overs": 97.17772631926891
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CSCO": 0.0,
+                "MRK": 0.029003472289157957,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "CSCO": 1,
+                "MRK": 2,
+                "MSFT": 7
+            },
+            "value": -139.87792682993867,
+            "left_overs": 57.34908934222585
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.12968046129603694
+            ],
+            "smallest_bitstrings": [
+                "010000010000111"
+            ],
+            "first_excited_energy": null,
+            "optimized_portfolio": [
+                {
+                    "CSCO": 2,
+                    "MRK": 2,
+                    "MSFT": 7
+                }
+            ],
+            "second_optimized_portfolio": null,
+            "spectrum": [
+                -0.12968046129603694,
+                -0.1296798519956056,
+                -0.12967909206859
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CSCO": 2,
+                        "MRK": 2,
+                        "MSFT": 7
+                    },
+                    "budget": 3259.450225830078,
+                    "difference": -1.450225830078125,
+                    "objective_value": -191.2971952067719
+                }
+            ],
+            "result_with_budget_excited": null
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "011100111100100",
+                "111100011100100"
+            ],
+            "final_expectation_value": -0.12160517541425193,
+            "params": [
+                -1.4929995407563221,
+                1.4387019109751005,
+                -1.4701822110749194,
+                -1.3789300484193627,
+                2.1197666742373347,
+                -2.9479243581821577,
+                -0.29591202526848204,
+                16.992391823287775,
+                -42.83431761144486,
+                0.18645434537538527,
+                3.7984855908236375,
+                1.4832494268856562,
+                1.9803072441181795,
+                0.3220730821669282,
+                1.8158503114792575,
+                1.8893915516617084,
+                1.6368536130499907,
+                3.0244954139811155,
+                2.0814769813969067,
+                1.147354297867387
+            ],
+            "total_steps": 13,
+            "states_probs": [
+                0.000252811102018259,
+                0.00025286034127819574
+            ],
+            "optimized_portfolios": [
+                {
+                    "CSCO": 14,
+                    "MRK": 15,
+                    "MSFT": 1
+                },
+                {
+                    "CSCO": 15,
+                    "MRK": 14,
+                    "MSFT": 1
+                }
+            ],
+            "training_history": {
+                "iterations": 13,
+                "evaluations": 2679,
+                "final_value": -0.12160517541425193,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 50074.44759082794,
+                "optimizer": "Powell"
+            },
+            "objective_values": [
+                -5659.814026524153,
+                -5976.065137561159
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CSCO": 14,
+                        "MRK": 15,
+                        "MSFT": 1
+                    },
+                    "budget": 2723.2663497924805,
+                    "difference": 534.7336502075195
+                },
+                {
+                    "portfolio": {
+                        "CSCO": 15,
+                        "MRK": 14,
+                        "MSFT": 1
+                    },
+                    "budget": 2683.4377212524414,
+                    "difference": 574.5622787475586
+                }
+            ]
+        }
+    }
+}

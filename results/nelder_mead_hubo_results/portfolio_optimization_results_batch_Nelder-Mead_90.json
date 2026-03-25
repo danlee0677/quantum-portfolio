@@ -1,0 +1,150 @@
+{
+    "90": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "JNJ",
+                "JPM",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 366,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "JNJ": 143.4715576171875,
+                "JPM": 238.4783477783203,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0
+                ],
+                "JNJ": [
+                    1,
+                    2
+                ],
+                "JPM": [
+                    3
+                ],
+                "MRK": [
+                    4,
+                    5
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.0,
+                "JNJ": 1.0946531709932087e-16,
+                "JPM": 0.7589443141866589,
+                "MRK": 0.24105568581334116
+            },
+            "allocation": {
+                "JPM": 1,
+                "MRK": 1,
+                "AXP": 0,
+                "JNJ": 0
+            },
+            "value": 0.07008581521782382,
+            "left_overs": 28.893699291599262
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.2666913847451769,
+                "JNJ": 0.1197820595468796,
+                "JPM": 0.4032855856255774,
+                "MRK": 0.2659334858714805
+            },
+            "allocation": {
+                "JPM": 1,
+                "MRK": 1,
+                "AXP": 0,
+                "JNJ": 0
+            },
+            "value": 0.07008581521782382,
+            "left_overs": 28.893699499386685
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001000",
+                "100000"
+            ],
+            "final_expectation_value": -0.17873992773325048,
+            "params": [
+                2.284965714472715,
+                0.38429234743912044,
+                0.680182098915137,
+                0.037467515496373636,
+                6.732396025876354,
+                -0.6177767682976424,
+                4.147444249135044,
+                6.347736201477735,
+                -1.1823064466205557,
+                -0.3236022272094769,
+                2.438086566978013,
+                0.49871879990789064
+            ],
+            "total_steps": 2162,
+            "states_probs": [
+                0.06663558553971692,
+                0.06929502612333811
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 0,
+                    "JNJ": 2,
+                    "JPM": 0,
+                    "MRK": 0
+                },
+                {
+                    "AXP": 1,
+                    "JNJ": 0,
+                    "JPM": 0,
+                    "MRK": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 2162,
+                "evaluations": 3012,
+                "final_value": -0.17873992773325048,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 153.7597212791443,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -0.5264061547379808,
+                0.061545287283801556
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "JNJ": 2,
+                        "JPM": 0,
+                        "MRK": 0
+                    },
+                    "budget": 286.943115234375,
+                    "difference": 79.056884765625
+                },
+                {
+                    "portfolio": {
+                        "AXP": 1,
+                        "JNJ": 0,
+                        "JPM": 0,
+                        "MRK": 0
+                    },
+                    "budget": 296.0938415527344,
+                    "difference": 69.90615844726562
+                }
+            ]
+        }
+    }
+}

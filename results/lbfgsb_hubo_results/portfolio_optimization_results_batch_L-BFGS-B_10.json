@@ -1,0 +1,153 @@
+{
+    "10": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "GS",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 4550,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 295.1141357421875,
+                "GS": 569.7945556640625,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "GS": [
+                    4,
+                    5,
+                    6
+                ],
+                "MRK": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.24243740170984585,
+                "GS": 0.42876103044002434,
+                "MRK": 0.32880156785012987
+            },
+            "allocation": {
+                "AXP": 4,
+                "GS": 3,
+                "MRK": 16
+            },
+            "value": -2610.030387467972,
+            "left_overs": 82.1125297294584
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.24282911964211573,
+                "GS": 0.42743291644769754,
+                "MRK": 0.3622963930886821
+            },
+            "allocation": {
+                "AXP": 4,
+                "GS": 3,
+                "MRK": 16
+            },
+            "value": -2610.030387467972,
+            "left_overs": 82.1125486213532
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0100000000001",
+                "0000100000001"
+            ],
+            "final_expectation_value": -0.21252863966625202,
+            "params": [
+                2.779022052677001,
+                6.283185307179586,
+                1.530656203732499,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                3.0884652890882087,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                2.6753570968314286,
+                1.411136611564974,
+                1.4926553749387654,
+                0.0,
+                2.155714128071665,
+                2.4359286797200017,
+                1.5321877733553575,
+                3.2004902780486684,
+                1.4774268407609754,
+                1.618474505896308
+            ],
+            "total_steps": 205,
+            "states_probs": [
+                0.0010524409046157905,
+                0.0010537905108851508
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 2,
+                    "GS": 0,
+                    "MRK": 32
+                },
+                {
+                    "AXP": 0,
+                    "GS": 1,
+                    "MRK": 32
+                }
+            ],
+            "training_history": {
+                "iterations": 205,
+                "evaluations": 4790,
+                "final_value": -0.21252863966625202,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+                "execution_time": 36059.69561171532,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -33259.95265075561,
+                -33330.08820351309
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 2,
+                        "GS": 0,
+                        "MRK": 32
+                    },
+                    "budget": 3746.32275390625,
+                    "difference": 803.67724609375
+                },
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "GS": 1,
+                        "MRK": 32
+                    },
+                    "budget": 3725.8890380859375,
+                    "difference": 824.1109619140625
+                }
+            ]
+        }
+    }
+}

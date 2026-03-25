@@ -1,0 +1,135 @@
+{
+    "33": {
+        "hyperparams": {
+            "stocks": [
+                "MMM",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 2454,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "MMM": 128.4563446044922,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "MMM": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "TRV": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MMM": 0.42244313652278886,
+                "TRV": 0.5775568634772111
+            },
+            "allocation": {
+                "MMM": 7,
+                "TRV": 6
+            },
+            "value": -674.8981578119731,
+            "left_overs": 115.35462736880208
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "MMM": 0.40547825203146093,
+                "TRV": 0.5735819271453344
+            },
+            "allocation": {
+                "MMM": 7,
+                "TRV": 6
+            },
+            "value": -674.8981578119731,
+            "left_overs": 115.35462592994554
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000000001",
+                "000010000"
+            ],
+            "final_expectation_value": -0.23526991474850795,
+            "params": [
+                2.556797384379539,
+                3.996079192684226,
+                4.209987197836468,
+                1.4328178364503978,
+                1.5636263901830652,
+                0.4887434716530516,
+                1.219098079914068,
+                4.025815031730905,
+                4.542382162067618,
+                2.1913223257670236,
+                0.749993323482333,
+                1.0960700114807465,
+                0.0,
+                0.0,
+                1.107798892453546,
+                1.4393897632941066,
+                1.2736485713366128,
+                1.3027768178237045
+            ],
+            "total_steps": 269,
+            "states_probs": [
+                0.02189048340433542,
+                0.025507379961285548
+            ],
+            "optimized_portfolios": [
+                {
+                    "MMM": 0,
+                    "TRV": 8
+                },
+                {
+                    "MMM": 16,
+                    "TRV": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 269,
+                "evaluations": 5801,
+                "final_value": -0.23526991474850795,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 7450.719127416611,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -422.55688211416714,
+                -6841.971874295057
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "MMM": 0,
+                        "TRV": 8
+                    },
+                    "budget": 1919.2679443359375,
+                    "difference": 534.7320556640625
+                },
+                {
+                    "portfolio": {
+                        "MMM": 16,
+                        "TRV": 0
+                    },
+                    "budget": 2055.301513671875,
+                    "difference": 398.698486328125
+                }
+            ]
+        }
+    }
+}

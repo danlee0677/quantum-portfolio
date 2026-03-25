@@ -1,0 +1,154 @@
+{
+    "52": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "JPM",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 3442,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "JPM": 238.4783477783203,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "JPM": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.17723074981363554,
+                "JPM": 0.8227692501863645,
+                "NKE": 3.469446951953614e-18
+            },
+            "allocation": {
+                "AMGN": 2,
+                "JPM": 12,
+                "NKE": 0
+            },
+            "value": -1494.7976104668646,
+            "left_overs": 63.15746022398207
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.19328428788459995,
+                "JPM": 0.8181519633244073,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AMGN": 2,
+                "JPM": 12,
+                "NKE": 0
+            },
+            "value": -1494.7976104668646,
+            "left_overs": 63.15747033653906
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10001000010001",
+                "01000000010001"
+            ],
+            "final_expectation_value": -0.1717521302245716,
+            "params": [
+                3.3465474716337624,
+                -2.0765984566614306,
+                16.350493912682417,
+                0.36615124466624105,
+                9.774842522616023,
+                -1.3311656791534214,
+                2.107179402025092,
+                -0.31652356644174695,
+                -1.253558628456041,
+                1.3123090712051955,
+                2.030158916182278,
+                0.4916903345255758,
+                2.900237047329343,
+                0.10539948559474276,
+                -0.29240062434119407,
+                4.988472237147885,
+                1.1741444616807184,
+                5.053023794823419,
+                1.7907097913569054,
+                -0.2044202070123745
+            ],
+            "total_steps": 5000,
+            "states_probs": [
+                0.0004357788076047308,
+                0.0004359228052468145
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 1,
+                    "JPM": 1,
+                    "NKE": 34
+                },
+                {
+                    "AMGN": 2,
+                    "JPM": 0,
+                    "NKE": 34
+                }
+            ],
+            "training_history": {
+                "iterations": 5000,
+                "evaluations": 6397,
+                "final_value": -0.1717521302245716,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 67602.08921217918,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -79584.10804110319,
+                -78723.07519533197
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "JPM": 1,
+                        "NKE": 34
+                    },
+                    "budget": 3056.853240966797,
+                    "difference": 385.1467590332031
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 2,
+                        "JPM": 0,
+                        "NKE": 34
+                    },
+                    "budget": 3076.926071166992,
+                    "difference": 365.0739288330078
+                }
+            ]
+        }
+    }
+}

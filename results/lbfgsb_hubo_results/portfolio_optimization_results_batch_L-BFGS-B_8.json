@@ -1,0 +1,138 @@
+{
+    "8": {
+        "hyperparams": {
+            "stocks": [
+                "CVX",
+                "HD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 5704,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CVX": 143.2510986328125,
+                "HD": 386.5369873046875
+            },
+            "assets_to_qubits": {
+                "CVX": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "HD": [
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CVX": 0.05784533608692331,
+                "HD": 0.9421546639130767
+            },
+            "allocation": {
+                "CVX": 2,
+                "HD": 14
+            },
+            "value": -4314.055895172494,
+            "left_overs": 5.979979780076064
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CVX": 0.0024530210172470685,
+                "HD": 0.9366339437613309
+            },
+            "allocation": {
+                "CVX": 2,
+                "HD": 14
+            },
+            "value": -4314.055895172494,
+            "left_overs": 5.979965372547667
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0000010000",
+                "1000010000"
+            ],
+            "final_expectation_value": -0.3502567970718886,
+            "params": [
+                1.1099327869185855,
+                3.1078809707325212,
+                5.912984375638851,
+                3.066531325391166,
+                4.640528871322155,
+                6.283185307179586,
+                0.0,
+                6.283185307179586,
+                6.283185307179586,
+                2.4642133586597463,
+                2.268063919344605,
+                2.6688264218721423,
+                2.9457634929817567,
+                0.0,
+                3.0391763572976447,
+                2.5958267930948375,
+                0.48805829080651153,
+                3.1029926383073323,
+                1.5296333111132032,
+                1.5552229248041485
+            ],
+            "total_steps": 328,
+            "states_probs": [
+                0.005200883696460306,
+                0.005222943189465664
+            ],
+            "optimized_portfolios": [
+                {
+                    "CVX": 32,
+                    "HD": 0
+                },
+                {
+                    "CVX": 33,
+                    "HD": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 328,
+                "evaluations": 7806,
+                "final_value": -0.3502567970718886,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 18344.482410669327,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -102649.5678671616,
+                -116090.99544432497
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CVX": 32,
+                        "HD": 0
+                    },
+                    "budget": 4584.03515625,
+                    "difference": 1119.96484375
+                },
+                {
+                    "portfolio": {
+                        "CVX": 33,
+                        "HD": 0
+                    },
+                    "budget": 4727.2862548828125,
+                    "difference": 976.7137451171875
+                }
+            ]
+        }
+    }
+}

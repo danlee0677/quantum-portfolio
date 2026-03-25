@@ -1,0 +1,141 @@
+{
+    "11": {
+        "hyperparams": {
+            "stocks": [
+                "MMM",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 5710,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "MMM": 128.4563446044922,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "MMM": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "NKE": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MMM": 0.39544031255248957,
+                "NKE": 0.6045596874475104
+            },
+            "allocation": {
+                "MMM": 18,
+                "NKE": 45
+            },
+            "value": -333773.78647098335,
+            "left_overs": 9.783819123676949
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "MMM": 0.3892034060704859,
+                "NKE": 0.6004740520324481
+            },
+            "allocation": {
+                "MMM": 17,
+                "NKE": 46
+            },
+            "value": -351224.7827444625,
+            "left_overs": 62.951231185108554
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1000001000001",
+                "0100000000001"
+            ],
+            "final_expectation_value": -0.23423437710516132,
+            "params": [
+                2.3744328336151588,
+                5.444766455288342,
+                1.1836844792437824,
+                6.013599986453684,
+                2.9104336279760386,
+                0.0,
+                0.0,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                2.6477035950305017,
+                1.457514975727088,
+                1.4516653123830026,
+                0.0,
+                1.9146213041241966,
+                1.4379991284128357,
+                2.813457575119541,
+                3.126363998166474,
+                1.2097670025934508,
+                1.8598542051814748
+            ],
+            "total_steps": 251,
+            "states_probs": [
+                0.0006955905209222856,
+                0.0006971130311115468
+            ],
+            "optimized_portfolios": [
+                {
+                    "MMM": 1,
+                    "NKE": 65
+                },
+                {
+                    "MMM": 2,
+                    "NKE": 64
+                }
+            ],
+            "training_history": {
+                "iterations": 251,
+                "evaluations": 5695,
+                "final_value": -0.23423437710516132,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+                "execution_time": 43578.26015043259,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -1058901.5540949318,
+                -1003641.4756485964
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "MMM": 1,
+                        "NKE": 65
+                    },
+                    "budget": 5022.236976623535,
+                    "difference": 687.7630233764648
+                },
+                {
+                    "portfolio": {
+                        "MMM": 2,
+                        "NKE": 64
+                    },
+                    "budget": 5075.404388427734,
+                    "difference": 634.5956115722656
+                }
+            ]
+        }
+    }
+}

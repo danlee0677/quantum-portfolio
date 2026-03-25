@@ -1,0 +1,154 @@
+{
+    "50": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "GS",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4252,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "GS": 569.7945556640625,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "GS": [
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.0,
+                "GS": 0.8726721050383043,
+                "NKE": 0.12732789496169564
+            },
+            "allocation": {
+                "GS": 6,
+                "NKE": 10,
+                "BA": 0
+            },
+            "value": -1036.8112564029475,
+            "left_overs": 80.3433376024941
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.0,
+                "GS": 0.8713676574708759,
+                "NKE": 0.13381390070508048
+            },
+            "allocation": {
+                "GS": 6,
+                "NKE": 9,
+                "BA": 0
+            },
+            "value": -757.2756052546312,
+            "left_overs": 155.63226736848628
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00001000000100",
+                "00001100000000"
+            ],
+            "final_expectation_value": -0.1947353509366881,
+            "params": [
+                2.7629705196551577,
+                6.283185307179586,
+                1.6249234566619284,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                3.0652466091758823,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                2.6676090981015648,
+                1.3957004586172015,
+                1.501933367973049,
+                0.0,
+                2.131725598557067,
+                2.457401515072242,
+                1.5308688368531365,
+                3.20417179409546,
+                1.4798409749695165,
+                1.6233845482395166
+            ],
+            "total_steps": 283,
+            "states_probs": [
+                0.0005141498866218634,
+                0.0005150778378390569
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 16,
+                    "GS": 0,
+                    "NKE": 8
+                },
+                {
+                    "BA": 16,
+                    "GS": 1,
+                    "NKE": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 283,
+                "evaluations": 6501,
+                "final_value": -0.1947353509366881,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 76197.55168008804,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -10506.11709574869,
+                -5024.201925457143
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 16,
+                        "GS": 0,
+                        "NKE": 8
+                    },
+                    "budget": 3434.3114624023438,
+                    "difference": 817.6885375976562
+                },
+                {
+                    "portfolio": {
+                        "BA": 16,
+                        "GS": 1,
+                        "NKE": 0
+                    },
+                    "budget": 3401.7945556640625,
+                    "difference": 850.2054443359375
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,167 @@
+{
+    "46": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "AXP",
+                "HON",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 1417,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "AXP": 295.1141052246094,
+                "HON": 224.6875,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "AXP": [
+                    3,
+                    4,
+                    5
+                ],
+                "HON": [
+                    6,
+                    7,
+                    8
+                ],
+                "VZ": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.43842544723382476,
+                "AXP": 0.5615745527661753,
+                "HON": 2.6020852139652106e-18,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "AMGN": 2,
+                "AXP": 3,
+                "HON": 0,
+                "VZ": 0
+            },
+            "value": -14.337881068044167,
+            "left_overs": 14.555327288090439
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.45978081699607065,
+                "AXP": 0.5588105863913706,
+                "HON": 0.0,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "AMGN": 2,
+                "AXP": 3,
+                "HON": 0,
+                "VZ": 0
+            },
+            "value": -14.337881068044167,
+            "left_overs": 14.555326175078335
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000001000000000",
+                "000000000000001"
+            ],
+            "final_expectation_value": -0.04165405098750749,
+            "params": [
+                2.5542384782940264,
+                3.5261706283751355,
+                3.798251369761047,
+                -0.3148212903771259,
+                4.80575871671928,
+                0.004522037539105328,
+                -6.875996047924945,
+                5.696109133163311,
+                4.938295738210954,
+                -1.3354694953158552,
+                4.073863079353716,
+                0.39440383348868124,
+                3.119110055525657,
+                -0.08457305627909353,
+                1.408271129347666,
+                1.8805584140439398,
+                1.9856079319568378,
+                2.891237297497793,
+                2.532297226489886,
+                0.44513789655917213
+            ],
+            "total_steps": 2500,
+            "states_probs": [
+                0.0015242646042970816,
+                0.0015315938010327806
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 0,
+                    "AXP": 4,
+                    "HON": 0,
+                    "VZ": 0
+                },
+                {
+                    "AMGN": 0,
+                    "AXP": 0,
+                    "HON": 0,
+                    "VZ": 32
+                }
+            ],
+            "training_history": {
+                "iterations": 2500,
+                "evaluations": 3219,
+                "final_value": -0.04165405098750749,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 63459.86887741089,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -21.81788693591407,
+                -26615.930820489768
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "AXP": 4,
+                        "HON": 0,
+                        "VZ": 0
+                    },
+                    "budget": 1180.4564208984375,
+                    "difference": 236.5435791015625
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "AXP": 0,
+                        "HON": 0,
+                        "VZ": 32
+                    },
+                    "budget": 1257.3990478515625,
+                    "difference": 159.6009521484375
+                }
+            ]
+        }
+    }
+}

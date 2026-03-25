@@ -1,0 +1,141 @@
+{
+    "89": {
+        "hyperparams": {
+            "stocks": [
+                "DIS",
+                "PG",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 522,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "DIS": 111.3499984741211,
+                "PG": 166.6339111328125,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "DIS": [
+                    0,
+                    1,
+                    2
+                ],
+                "PG": [
+                    3,
+                    4
+                ],
+                "TRV": [
+                    5,
+                    6
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DIS": 0.0,
+                "PG": 0.6111444295521548,
+                "TRV": 0.3888555704478453
+            },
+            "allocation": {
+                "DIS": 1,
+                "PG": 1,
+                "TRV": 1
+            },
+            "value": -0.7320965099775248,
+            "left_overs": 4.107596365607378
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "DIS": 0.20133200822832228,
+                "PG": 0.47244714385868136,
+                "TRV": 0.3803209030529129
+            },
+            "allocation": {
+                "DIS": 1,
+                "PG": 1,
+                "TRV": 1
+            },
+            "value": -0.7320965099775248,
+            "left_overs": 4.1075950800346845
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0010000",
+                "0000001"
+            ],
+            "final_expectation_value": -0.12601054584256846,
+            "params": [
+                -0.17467880983139672,
+                -0.06791828799133019,
+                -1.0270839531339329,
+                5.195266880442972,
+                3.868688995169588,
+                3.3645440418821964,
+                6.133060584843067,
+                1.9685771860709607,
+                2.2903029278168603,
+                0.4653166996813376,
+                2.3715613482002356,
+                0.9467421945528266,
+                3.3197542673069926,
+                1.7379180828459397
+            ],
+            "total_steps": 4816,
+            "states_probs": [
+                0.09702004343946165,
+                0.09825192904211705
+            ],
+            "optimized_portfolios": [
+                {
+                    "DIS": 4,
+                    "PG": 0,
+                    "TRV": 0
+                },
+                {
+                    "DIS": 0,
+                    "PG": 0,
+                    "TRV": 2
+                }
+            ],
+            "training_history": {
+                "iterations": 4816,
+                "evaluations": 6530,
+                "final_value": -0.12601054584256846,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 1266.887526512146,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -11.670274246202922,
+                -1.577854486595362
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DIS": 4,
+                        "PG": 0,
+                        "TRV": 0
+                    },
+                    "budget": 445.3999938964844,
+                    "difference": 76.60000610351562
+                },
+                {
+                    "portfolio": {
+                        "DIS": 0,
+                        "PG": 0,
+                        "TRV": 2
+                    },
+                    "budget": 479.8169860839844,
+                    "difference": 42.183013916015625
+                }
+            ]
+        }
+    }
+}

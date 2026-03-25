@@ -1,0 +1,147 @@
+{
+    "38": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "GS",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1415,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "GS": 569.7945556640625,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "GS": [
+                    3,
+                    4
+                ],
+                "MRK": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 0.9999999999999998,
+                "GS": 2.914335439641036e-16,
+                "MRK": 7.632783294297951e-17
+            },
+            "allocation": {
+                "AAPL": 5,
+                "MRK": 1,
+                "GS": 0
+            },
+            "value": -14.234497585230006,
+            "left_overs": 65.6471782451963
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "GS": 0.040881351065993304,
+                "MRK": 0.0
+            },
+            "allocation": {
+                "AAPL": 5,
+                "GS": 0,
+                "MRK": 0
+            },
+            "value": -12.603832509544796,
+            "left_overs": 164.27513063257788
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000011000",
+                "000010100"
+            ],
+            "final_expectation_value": -0.1802369980068983,
+            "params": [
+                1.7388402533685663,
+                0.0945246274063084,
+                -8.087395828327592,
+                7.72391393297909,
+                -2.48788162378586,
+                0.19962049301964396,
+                8.720269206793088,
+                10.015599267845616,
+                -0.9174718362156039,
+                -2.600970056524663,
+                -0.8021880599465683,
+                3.0811831135523255,
+                -0.8888012413599427,
+                3.6860028360904478,
+                -0.16050023987725798,
+                -0.09229343642613308,
+                -0.3728438986561088,
+                3.423436069376385
+            ],
+            "total_steps": 10000,
+            "states_probs": [
+                0.010603316150280956,
+                0.010628196193630516
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 0,
+                    "GS": 2,
+                    "MRK": 1
+                },
+                {
+                    "AAPL": 0,
+                    "GS": 2,
+                    "MRK": 2
+                }
+            ],
+            "training_history": {
+                "iterations": 10000,
+                "evaluations": 12921,
+                "final_value": -0.1802369980068983,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 12535.85488152504,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -0.7058622079669208,
+                -1.6409793716205368
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 0,
+                        "GS": 2,
+                        "MRK": 1
+                    },
+                    "budget": 1238.2170639038086,
+                    "difference": 176.7829360961914
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 0,
+                        "GS": 2,
+                        "MRK": 2
+                    },
+                    "budget": 1336.8450164794922,
+                    "difference": 78.15498352050781
+                }
+            ]
+        }
+    }
+}

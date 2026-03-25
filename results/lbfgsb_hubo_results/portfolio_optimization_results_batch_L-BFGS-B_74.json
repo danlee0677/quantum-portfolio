@@ -1,0 +1,139 @@
+{
+    "74": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 3229,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "VZ": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.8427331923722471,
+                "VZ": 0.15726680762775286
+            },
+            "allocation": {
+                "CRM": 8,
+                "VZ": 13
+            },
+            "value": -219.06088476878074,
+            "left_overs": 43.54173725254259
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CRM": 0.8455988085879158,
+                "VZ": 0.1830737628749838
+            },
+            "allocation": {
+                "CRM": 8,
+                "VZ": 14
+            },
+            "value": -335.7667360366569,
+            "left_overs": 4.24802071467866
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00010101000",
+                "00011001000"
+            ],
+            "final_expectation_value": -0.23543569311707174,
+            "params": [
+                2.2708763786466966,
+                5.284024159539542,
+                1.090614999964595,
+                5.425228642618115,
+                3.2671204559021865,
+                0.0,
+                0.0,
+                6.283185307179586,
+                6.283185307179586,
+                1.1702977201410425,
+                2.652046476862351,
+                1.4748488445173296,
+                1.437893789956228,
+                0.0,
+                2.11115546217871,
+                2.4401517878232624,
+                1.614140937046626,
+                3.1243189015788513,
+                1.515798958940002,
+                1.5548358843881556
+            ],
+            "total_steps": 297,
+            "states_probs": [
+                0.0022966606943731174,
+                0.0022987087052924048
+            ],
+            "optimized_portfolios": [
+                {
+                    "CRM": 8,
+                    "VZ": 10
+                },
+                {
+                    "CRM": 8,
+                    "VZ": 9
+                }
+            ],
+            "training_history": {
+                "iterations": 297,
+                "evaluations": 6706,
+                "final_value": -0.23543569311707174,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 20101.49475669861,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -63.83049213703387,
+                -56.96204161564806
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CRM": 8,
+                        "VZ": 10
+                    },
+                    "budget": 3067.5770950317383,
+                    "difference": 161.42290496826172
+                },
+                {
+                    "portfolio": {
+                        "CRM": 8,
+                        "VZ": 9
+                    },
+                    "budget": 3028.283374786377,
+                    "difference": 200.71662521362305
+                }
+            ]
+        }
+    }
+}

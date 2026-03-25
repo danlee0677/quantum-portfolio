@@ -1,0 +1,207 @@
+{
+    "52": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "JPM",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 3442,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "JPM": 238.4783477783203,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "JPM": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "COBYLA"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.17723185622592902,
+                "JPM": 0.8227681437740709,
+                "NKE": 1.734723475976807e-18
+            },
+            "allocation": {
+                "AMGN": 2,
+                "JPM": 12,
+                "NKE": 0
+            },
+            "value": -1494.8020470688648,
+            "left_overs": 63.15746022191979
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.1932852940310606,
+                "JPM": 0.8181509009716534,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AMGN": 2,
+                "JPM": 12,
+                "NKE": 0
+            },
+            "value": -1494.8020470688648,
+            "left_overs": 63.15747033660091
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.17989620878171936
+            ],
+            "smallest_bitstrings": [
+                "10010100000100"
+            ],
+            "first_excited_energy": [
+                -0.17984680791158228
+            ],
+            "optimized_portfolio": [
+                {
+                    "AMGN": 9,
+                    "JPM": 2,
+                    "NKE": 8
+                }
+            ],
+            "second_optimized_portfolio": [
+                {
+                    "AMGN": 6,
+                    "JPM": 5,
+                    "NKE": 6
+                }
+            ],
+            "spectrum": [
+                -0.17989620878171936,
+                -0.17984680791158228
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 9,
+                        "JPM": 2,
+                        "NKE": 8
+                    },
+                    "budget": 3406.228759765625,
+                    "difference": 35.771240234375,
+                    "objective_value": -424.80374065664626
+                }
+            ],
+            "result_with_budget_excited": [
+                {
+                    "portfolio": {
+                        "AMGN": 6,
+                        "JPM": 5,
+                        "NKE": 6
+                    },
+                    "budget": 3195.432403564453,
+                    "difference": 246.56759643554688,
+                    "objective_value": -363.3981405320993
+                }
+            ]
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00000100000001",
+                "01000000000001"
+            ],
+            "final_expectation_value": -0.16428908737178327,
+            "params": [
+                2.301901031723935,
+                1.8256913139900692,
+                2.30850013960149,
+                1.152812251291424,
+                2.392385042519265,
+                0.1407363732007054,
+                3.070042751600524,
+                3.2672994589231408,
+                1.5076201837411463,
+                1.927314666878037,
+                3.867777959715039,
+                1.3725325305437008,
+                2.2856492229783845,
+                0.2815873333447838,
+                1.3038271591459611,
+                1.399407652358818,
+                2.8710234207841974,
+                3.1412946721692236,
+                1.5786455043678405,
+                1.3924628969221005
+            ],
+            "total_steps": 5050,
+            "states_probs": [
+                0.0003478366765769348,
+                0.00034830097454817215
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 0,
+                    "JPM": 2,
+                    "NKE": 32
+                },
+                {
+                    "AMGN": 2,
+                    "JPM": 0,
+                    "NKE": 32
+                }
+            ],
+            "training_history": {
+                "iterations": 5050,
+                "evaluations": 5050,
+                "final_value": -0.16428908737178327,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of function evaluations has been exceeded.",
+                "execution_time": 65613.68245458603,
+                "optimizer": "COBYLA"
+            },
+            "objective_values": [
+                -63332.36706873531,
+                -61777.68901915826
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "JPM": 2,
+                        "NKE": 32
+                    },
+                    "budget": 2886.2025451660156,
+                    "difference": 555.7974548339844
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 2,
+                        "JPM": 0,
+                        "NKE": 32
+                    },
+                    "budget": 2926.3482055664062,
+                    "difference": 515.6517944335938
+                }
+            ]
+        }
+    }
+}

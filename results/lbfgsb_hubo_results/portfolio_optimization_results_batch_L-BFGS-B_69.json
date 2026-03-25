@@ -1,0 +1,152 @@
+{
+    "69": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "INTC",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1696,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "INTC": 20.049999237060547,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2
+                ],
+                "INTC": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "UNH": [
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.03012967607460045,
+                "INTC": 6.385950795939621e-17,
+                "UNH": 0.9698703239253995
+            },
+            "allocation": {
+                "INTC": 6,
+                "UNH": 3,
+                "HON": 0
+            },
+            "value": -139.15753919154878,
+            "left_overs": 64.57808603089234
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "HON": 0.0280378841916674,
+                "INTC": 0.0,
+                "UNH": 0.9699209567230799
+            },
+            "allocation": {
+                "INTC": 4,
+                "UNH": 3,
+                "HON": 0
+            },
+            "value": -44.499875386237996,
+            "left_overs": 104.67808449920153
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000100000100",
+                "000000000100"
+            ],
+            "final_expectation_value": -0.18352461632978925,
+            "params": [
+                2.7093681430125978,
+                6.278763756069184,
+                1.271923244443705,
+                4.830638209144881,
+                6.265200059803485,
+                0.0,
+                0.9288595854521037,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                2.6513015510896474,
+                1.4208229254057358,
+                1.4757701742137104,
+                0.0,
+                2.3283164496684905,
+                2.291290507376569,
+                1.5386387796175234,
+                3.1526071854741082,
+                1.4918278916654548,
+                1.5932663686073363
+            ],
+            "total_steps": 249,
+            "states_probs": [
+                0.002598966824067667,
+                0.0026776156493134905
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 0,
+                    "INTC": 65,
+                    "UNH": 0
+                },
+                {
+                    "HON": 0,
+                    "INTC": 64,
+                    "UNH": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 249,
+                "evaluations": 5737,
+                "final_value": -0.18352461632978925,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 28419.474730730057,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -1114323.5777565488,
+                -1047370.6511068714
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "INTC": 65,
+                        "UNH": 0
+                    },
+                    "budget": 1303.2499504089355,
+                    "difference": 392.75004959106445
+                },
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "INTC": 64,
+                        "UNH": 0
+                    },
+                    "budget": 1283.199951171875,
+                    "difference": 412.800048828125
+                }
+            ]
+        }
+    }
+}

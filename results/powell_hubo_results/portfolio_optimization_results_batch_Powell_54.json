@@ -1,0 +1,189 @@
+{
+    "54": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "PG",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 3336,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "PG": 166.6339111328125,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "PG": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "TRV": [
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Powell"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 1.495123843050541e-17,
+                "PG": 0.611313887061741,
+                "TRV": 0.38868611293825905
+            },
+            "allocation": {
+                "PG": 12,
+                "TRV": 5,
+                "BA": 0
+            },
+            "value": -2114.2754985978963,
+            "left_overs": 136.85060014831743
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.0,
+                "PG": 0.6124259363427416,
+                "TRV": 0.3891532957941071
+            },
+            "allocation": {
+                "PG": 12,
+                "TRV": 5,
+                "BA": 0
+            },
+            "value": -2114.2754985978963,
+            "left_overs": 136.85060018483682
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.10297281541461947
+            ],
+            "smallest_bitstrings": [
+                "00100010100010"
+            ],
+            "first_excited_energy": null,
+            "optimized_portfolio": [
+                {
+                    "BA": 4,
+                    "PG": 10,
+                    "TRV": 4
+                }
+            ],
+            "second_optimized_portfolio": null,
+            "spectrum": [
+                -0.10297281541461947,
+                -0.10297263872703867,
+                -0.10297259111271011
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 4,
+                        "PG": 10,
+                        "TRV": 4
+                    },
+                    "budget": 3333.9730834960938,
+                    "difference": 2.02691650390625,
+                    "objective_value": -1728.9490960134058
+                }
+            ],
+            "result_with_budget_excited": null
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "11100101001100",
+                "10100111001100"
+            ],
+            "final_expectation_value": -0.09660701237319348,
+            "params": [
+                -3.745361291637671,
+                6.2924012470536095,
+                -1.888566225880188,
+                -4.767772495206474,
+                1.544845436312409,
+                -20.975413604859735,
+                6.477088196376388,
+                12.158696928817958,
+                -3.644490203112338,
+                1.0424191978450823,
+                1.460945918998236,
+                1.8081468361463369,
+                1.8059459716432191,
+                -0.10430896587514955,
+                1.9848461427914168,
+                1.7123338219387212,
+                1.6873007649906548,
+                2.7658668935061246,
+                2.094755788133327,
+                1.2510295160783553
+            ],
+            "total_steps": 18,
+            "states_probs": [
+                0.0009436583677021697,
+                0.0009441241565833503
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 7,
+                    "PG": 5,
+                    "TRV": 3
+                },
+                {
+                    "BA": 5,
+                    "PG": 7,
+                    "TRV": 3
+                }
+            ],
+            "training_history": {
+                "iterations": 18,
+                "evaluations": 3732,
+                "final_value": -0.09660701237319348,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 38193.80955076218,
+                "optimizer": "Powell"
+            },
+            "objective_values": [
+                -959.5707964381043,
+                -799.2832747469294
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 7,
+                        "PG": 5,
+                        "TRV": 3
+                    },
+                    "budget": 2791.895034790039,
+                    "difference": 544.1049652099609
+                },
+                {
+                    "portfolio": {
+                        "BA": 5,
+                        "PG": 7,
+                        "TRV": 3
+                    },
+                    "budget": 2771.162857055664,
+                    "difference": 564.8371429443359
+                }
+            ]
+        }
+    }
+}

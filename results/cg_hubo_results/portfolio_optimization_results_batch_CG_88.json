@@ -1,0 +1,129 @@
+{
+    "88": {
+        "hyperparams": {
+            "stocks": [
+                "KO",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 1283,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "KO": 61.80391311645508,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "KO": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "MSFT": [
+                    5,
+                    6
+                ]
+            },
+            "optimizer": "CG"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "KO": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 3,
+                "KO": 0
+            },
+            "value": -1.833557041728199,
+            "left_overs": 21.030425057332195
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "KO": 0.010888635987600988,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 3,
+                "KO": 0
+            },
+            "value": -1.833557041728199,
+            "left_overs": 21.03042158886342
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0000100",
+                "1000100"
+            ],
+            "final_expectation_value": -0.39880740809361914,
+            "params": [
+                3.501222424429381,
+                -9.373436477323986,
+                4.99377693660062,
+                1.5964225435822919,
+                5.355621844234441,
+                6.688125927199657,
+                4.938025858119622,
+                2.395802858755672,
+                1.6318386702327794,
+                -0.7509276505727137,
+                3.896962301638945,
+                0.9823746468313186,
+                2.88172103432577,
+                1.4576208631647443
+            ],
+            "total_steps": 1540,
+            "states_probs": [
+                0.06805125951057553,
+                0.06860764378644257
+            ],
+            "optimized_portfolios": [
+                {
+                    "KO": 16,
+                    "MSFT": 0
+                },
+                {
+                    "KO": 17,
+                    "MSFT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 1540,
+                "evaluations": 37816,
+                "final_value": -0.39880740809361914,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 12044.543828487396,
+                "optimizer": "CG"
+            },
+            "objective_values": [
+                -2820.9939783977347,
+                -3591.6403728501436
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "KO": 16,
+                        "MSFT": 0
+                    },
+                    "budget": 988.8626098632812,
+                    "difference": 294.13739013671875
+                },
+                {
+                    "portfolio": {
+                        "KO": 17,
+                        "MSFT": 0
+                    },
+                    "budget": 1050.6665229797363,
+                    "difference": 232.33347702026367
+                }
+            ]
+        }
+    }
+}

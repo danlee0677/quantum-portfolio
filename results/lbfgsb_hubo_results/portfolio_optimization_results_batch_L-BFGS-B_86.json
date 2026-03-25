@@ -1,0 +1,153 @@
+{
+    "86": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "KO",
+                "TRV",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 294,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "JPM": 237.0184326171875,
+                "KO": 61.80391311645508,
+                "TRV": 239.9084930419922,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0
+                ],
+                "KO": [
+                    1,
+                    2,
+                    3
+                ],
+                "TRV": [
+                    4
+                ],
+                "WMT": [
+                    5,
+                    6
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.6011550666748601,
+                "KO": 6.418476861114186e-17,
+                "TRV": 1.5785983631388945e-16,
+                "WMT": 0.39884493332513965
+            },
+            "allocation": {
+                "JPM": 1,
+                "KO": 0,
+                "TRV": 0,
+                "WMT": 0
+            },
+            "value": 0.12021852017964549,
+            "left_overs": 56.98156736934803
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "JPM": 0.6160004407287281,
+                "KO": 0.0,
+                "TRV": 0.0,
+                "WMT": 0.43115775232304754
+            },
+            "allocation": {
+                "JPM": 1,
+                "KO": 0,
+                "TRV": 0,
+                "WMT": 0
+            },
+            "value": 0.12021852017964549,
+            "left_overs": 56.98156737527245
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0000100",
+                "1000000"
+            ],
+            "final_expectation_value": -0.10961658690345705,
+            "params": [
+                0.559421471871603,
+                0.19328244228050168,
+                2.0893528190157595,
+                1.9874054591652148,
+                3.9917677408530317,
+                4.01377823615253,
+                3.5781441225661923,
+                1.7646335365070258,
+                2.8950453631306323,
+                0.06326812923283051,
+                2.3195262874498397,
+                0.9926993243721312,
+                3.23882795434091,
+                1.7217377585215827
+            ],
+            "total_steps": 85,
+            "states_probs": [
+                0.0865879996442804,
+                0.08665540502408152
+            ],
+            "optimized_portfolios": [
+                {
+                    "JPM": 0,
+                    "KO": 0,
+                    "TRV": 1,
+                    "WMT": 0
+                },
+                {
+                    "JPM": 1,
+                    "KO": 0,
+                    "TRV": 0,
+                    "WMT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 85,
+                "evaluations": 1531,
+                "final_value": -0.10961658690345705,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+                "execution_time": 436.8955388069153,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -0.014775958443687676,
+                0.12021852017964549
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JPM": 0,
+                        "KO": 0,
+                        "TRV": 1,
+                        "WMT": 0
+                    },
+                    "budget": 239.9084930419922,
+                    "difference": 54.09150695800781
+                },
+                {
+                    "portfolio": {
+                        "JPM": 1,
+                        "KO": 0,
+                        "TRV": 0,
+                        "WMT": 0
+                    },
+                    "budget": 237.0184326171875,
+                    "difference": 56.9815673828125
+                }
+            ]
+        }
+    }
+}

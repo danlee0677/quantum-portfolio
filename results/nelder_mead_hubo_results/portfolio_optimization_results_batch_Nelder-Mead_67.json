@@ -1,0 +1,152 @@
+{
+    "67": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "MCD",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1591,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JPM": 238.4783477783203,
+                "MCD": 288.22589111328125,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0,
+                    1,
+                    2
+                ],
+                "MCD": [
+                    3,
+                    4,
+                    5
+                ],
+                "VZ": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.8265901917733774,
+                "MCD": 0.1613577745463348,
+                "VZ": 0.012052033680287668
+            },
+            "allocation": {
+                "JPM": 5,
+                "MCD": 1,
+                "VZ": 2
+            },
+            "value": -73.51095909143143,
+            "left_overs": 31.794928758336482
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "JPM": 0.8267441737190012,
+                "MCD": 0.16106701868153062,
+                "VZ": 0.009874381081460095
+            },
+            "allocation": {
+                "JPM": 5,
+                "MCD": 1,
+                "VZ": 2
+            },
+            "value": -73.51095909143143,
+            "left_overs": 31.794928903051414
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000000110001",
+                "000000010001"
+            ],
+            "final_expectation_value": -0.12508792298199914,
+            "params": [
+                -2.7487112327797627,
+                1.927393153237762,
+                4.516895264971087,
+                0.4610494247281425,
+                4.954815512291965,
+                0.14576788475417155,
+                3.033853031693212,
+                -1.997496185769415,
+                3.848714947239535,
+                1.0861705011013614,
+                2.6278645832850698,
+                0.6554271098042415,
+                2.3991507484631263,
+                0.21439542357563662,
+                -2.095308881360121,
+                5.086558624320305,
+                3.6548998568201694,
+                2.6897507472500997,
+                1.4137406468898115,
+                1.4798646707643333
+            ],
+            "total_steps": 7833,
+            "states_probs": [
+                0.0017167301010140087,
+                0.0017183923144391713
+            ],
+            "optimized_portfolios": [
+                {
+                    "JPM": 0,
+                    "MCD": 0,
+                    "VZ": 35
+                },
+                {
+                    "JPM": 0,
+                    "MCD": 0,
+                    "VZ": 34
+                }
+            ],
+            "training_history": {
+                "iterations": 7833,
+                "evaluations": 9993,
+                "final_value": -0.12508792298199914,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 42534.262427806854,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -38100.180527051125,
+                -33926.15043385664
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JPM": 0,
+                        "MCD": 0,
+                        "VZ": 35
+                    },
+                    "budget": 1375.2802085876465,
+                    "difference": 215.71979141235352
+                },
+                {
+                    "portfolio": {
+                        "JPM": 0,
+                        "MCD": 0,
+                        "VZ": 34
+                    },
+                    "budget": 1335.9864883422852,
+                    "difference": 255.01351165771484
+                }
+            ]
+        }
+    }
+}

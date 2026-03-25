@@ -1,0 +1,147 @@
+{
+    "38": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "GS",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1415,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "GS": 569.7945556640625,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "GS": [
+                    3,
+                    4
+                ],
+                "MRK": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "GS": 0.0,
+                "MRK": 0.0
+            },
+            "allocation": {
+                "AAPL": 5,
+                "MRK": 1,
+                "GS": 0
+            },
+            "value": -14.234526710124856,
+            "left_overs": 65.64717824519607
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "GS": 0.04088138383690677,
+                "MRK": 0.0
+            },
+            "allocation": {
+                "AAPL": 5,
+                "GS": 0,
+                "MRK": 0
+            },
+            "value": -12.603839255093968,
+            "left_overs": 164.27513063400147
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000011000",
+                "000010000"
+            ],
+            "final_expectation_value": -0.1732080071940328,
+            "params": [
+                2.4958547023313207,
+                6.281474811548318,
+                1.531961943015747,
+                2.127215866607878,
+                2.168779252324999,
+                4.012959970340928,
+                1.96845996830934,
+                2.7033681462523957,
+                4.851141908912135,
+                2.479483530765905,
+                1.3228573986839642,
+                0.8215121709383906,
+                0.0,
+                2.150766539033299,
+                0.6002616415680994,
+                0.0,
+                1.1082483648318187,
+                1.2766707963758634
+            ],
+            "total_steps": 523,
+            "states_probs": [
+                0.020187967857692328,
+                0.02304613546424247
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 0,
+                    "GS": 2,
+                    "MRK": 1
+                },
+                {
+                    "AAPL": 0,
+                    "GS": 2,
+                    "MRK": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 523,
+                "evaluations": 10787,
+                "final_value": -0.1732080071940328,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 13311.503373622894,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -0.7058527230558713,
+                -0.38662567220497956
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 0,
+                        "GS": 2,
+                        "MRK": 1
+                    },
+                    "budget": 1238.2170639038086,
+                    "difference": 176.7829360961914
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 0,
+                        "GS": 2,
+                        "MRK": 0
+                    },
+                    "budget": 1139.589111328125,
+                    "difference": 275.410888671875
+                }
+            ]
+        }
+    }
+}

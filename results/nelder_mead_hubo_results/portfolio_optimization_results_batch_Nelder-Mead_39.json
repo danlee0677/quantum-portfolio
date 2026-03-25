@@ -1,0 +1,171 @@
+{
+    "39": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "IBM",
+                "JNJ",
+                "JPM",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 437,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "HON": 224.6875,
+                "IBM": 218.37515258789062,
+                "JNJ": 143.4715576171875,
+                "JPM": 238.4783477783203,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0
+                ],
+                "IBM": [
+                    1,
+                    2
+                ],
+                "JNJ": [
+                    3,
+                    4
+                ],
+                "JPM": [
+                    5
+                ],
+                "WMT": [
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.0,
+                "IBM": 0.0,
+                "JNJ": 7.207056536067937e-17,
+                "JPM": 0.6014354642407579,
+                "WMT": 0.3985645357592421
+            },
+            "allocation": {
+                "JPM": 1,
+                "WMT": 2,
+                "HON": 0,
+                "IBM": 0,
+                "JNJ": 0
+            },
+            "value": -1.0417304903318267,
+            "left_overs": 18.31651305990829
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "HON": 0.1613482413868003,
+                "IBM": 0.11131249091157568,
+                "JNJ": 0.08909003756988257,
+                "JPM": 0.35695831885562973,
+                "WMT": 0.35433465381343937
+            },
+            "allocation": {
+                "JPM": 1,
+                "WMT": 2,
+                "HON": 0,
+                "IBM": 0,
+                "JNJ": 0
+            },
+            "value": -1.0417304903318267,
+            "left_overs": 18.316513053286485
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000000001",
+                "001000000"
+            ],
+            "final_expectation_value": -0.058713824205362385,
+            "params": [
+                2.3734664294669834,
+                0.6191596205905749,
+                3.2004041807219887,
+                6.163588137618698,
+                2.836989047367389,
+                2.8225371209797787,
+                5.04980277400572,
+                -1.3896326369099423,
+                0.12555349497326163,
+                1.6817450685628583,
+                1.5541670133964756,
+                2.367346611538982,
+                -0.5726059823036987,
+                0.24254292092191976,
+                -0.1211362236963198,
+                -1.2588607647261325,
+                2.9982418512466524,
+                1.201140696125778
+            ],
+            "total_steps": 6245,
+            "states_probs": [
+                0.02788317312553488,
+                0.0289978760312114
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 0,
+                    "IBM": 0,
+                    "JNJ": 0,
+                    "JPM": 0,
+                    "WMT": 4
+                },
+                {
+                    "HON": 0,
+                    "IBM": 2,
+                    "JNJ": 0,
+                    "JPM": 0,
+                    "WMT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 6245,
+                "evaluations": 8091,
+                "final_value": -0.058713824205362385,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 7560.166401386261,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -16.03997765348164,
+                -0.5639056844043615
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "IBM": 0,
+                        "JNJ": 0,
+                        "JPM": 0,
+                        "WMT": 4
+                    },
+                    "budget": 360.4102783203125,
+                    "difference": 76.5897216796875
+                },
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "IBM": 2,
+                        "JNJ": 0,
+                        "JPM": 0,
+                        "WMT": 0
+                    },
+                    "budget": 436.75030517578125,
+                    "difference": 0.24969482421875
+                }
+            ]
+        }
+    }
+}

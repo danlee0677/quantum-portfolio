@@ -1,0 +1,153 @@
+{
+    "17": {
+        "hyperparams": {
+            "stocks": [
+                "CVX",
+                "DOW",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 1478,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CVX": 143.2510986328125,
+                "DOW": 39.3990364074707,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "CVX": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "DOW": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "HON": [
+                    10,
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CVX": 0.08986377434820579,
+                "DOW": 0.047136517670017704,
+                "HON": 0.8629997079817765
+            },
+            "allocation": {
+                "DOW": 3,
+                "HON": 6,
+                "CVX": 0
+            },
+            "value": -171.32567872532917,
+            "left_overs": 11.677889013082677
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CVX": 0.08309278850740767,
+                "DOW": 0.013769859547547478,
+                "HON": 0.8665407783603155
+            },
+            "allocation": {
+                "DOW": 3,
+                "HON": 6,
+                "CVX": 0
+            },
+            "value": -171.32567872532917,
+            "left_overs": 11.677888633734256
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1100111100100",
+                "1100011100100"
+            ],
+            "final_expectation_value": -0.10081380390971811,
+            "params": [
+                2.1796650252097756,
+                4.952266867158993,
+                0.7417526244335282,
+                -2.5838016553422047,
+                18.151150492965392,
+                -0.33816968025697813,
+                18.899141925532923,
+                5.731094873935326,
+                -1.654183141195379,
+                -1.665736953999717,
+                2.5504489817383336,
+                1.120709957595757,
+                1.4420075435758317,
+                0.19070079070126605,
+                -0.5269594444027923,
+                3.5238756864047476,
+                3.1237932273478304,
+                2.8411568904726323,
+                3.443871566740058,
+                -0.07350932536785885
+            ],
+            "total_steps": 7385,
+            "states_probs": [
+                0.0012368259797229985,
+                0.0012428912679368954
+            ],
+            "optimized_portfolios": [
+                {
+                    "CVX": 3,
+                    "DOW": 15,
+                    "HON": 1
+                },
+                {
+                    "CVX": 3,
+                    "DOW": 14,
+                    "HON": 1
+                }
+            ],
+            "training_history": {
+                "iterations": 7385,
+                "evaluations": 9505,
+                "final_value": -0.10081380390971811,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 60059.613958358765,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -5024.002115781395,
+                -3957.9184893617917
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CVX": 3,
+                        "DOW": 15,
+                        "HON": 1
+                    },
+                    "budget": 1245.426342010498,
+                    "difference": 232.57365798950195
+                },
+                {
+                    "portfolio": {
+                        "CVX": 3,
+                        "DOW": 14,
+                        "HON": 1
+                    },
+                    "budget": 1206.0273056030273,
+                    "difference": 271.97269439697266
+                }
+            ]
+        }
+    }
+}

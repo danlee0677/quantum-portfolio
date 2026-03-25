@@ -1,0 +1,179 @@
+{
+    "48": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "CSCO",
+                "MMM",
+                "MSFT",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 931,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "CSCO": 58.79932403564453,
+                "MMM": 128.4563446044922,
+                "MSFT": 420.6565246582031,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1
+                ],
+                "CSCO": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "MMM": [
+                    6,
+                    7,
+                    8
+                ],
+                "MSFT": [
+                    9,
+                    10
+                ],
+                "WMT": [
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.0,
+                "CSCO": 0.0,
+                "MMM": 0.0,
+                "MSFT": 0.9999999999999999,
+                "WMT": 2.498001805406602e-16
+            },
+            "allocation": {
+                "MSFT": 2,
+                "AXP": 0,
+                "CSCO": 0,
+                "MMM": 0,
+                "WMT": 0
+            },
+            "value": 0.006844985324450326,
+            "left_overs": 89.68695022702616
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.0,
+                "CSCO": 0.0,
+                "MMM": 0.0,
+                "MSFT": 1.0,
+                "WMT": 0.05038210323664986
+            },
+            "allocation": {
+                "MSFT": 2,
+                "AXP": 0,
+                "CSCO": 0,
+                "MMM": 0,
+                "WMT": 0
+            },
+            "value": 0.006844985324450326,
+            "left_overs": 89.68695028622403
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001000000010000",
+                "000000000010000"
+            ],
+            "final_expectation_value": -0.04138051739525846,
+            "params": [
+                3.4919304846806534,
+                2.881585303257667,
+                4.691869565706448,
+                3.399551845116769,
+                5.385138131292966,
+                2.7625469604339146,
+                6.283185307179586,
+                5.237901605702486,
+                4.836398583153291,
+                0.5734398919068543,
+                4.020763025429754,
+                5.53943623051244e-16,
+                2.4027660194731624,
+                0.0,
+                1.6622060885269891,
+                1.4230450022098027,
+                3.1667120092766003,
+                3.1755754993968397,
+                1.4013274651932977,
+                1.5680976497489467
+            ],
+            "total_steps": 108,
+            "states_probs": [
+                0.002415820016099916,
+                0.0029258574515349726
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 0,
+                    "CSCO": 1,
+                    "MMM": 0,
+                    "MSFT": 2,
+                    "WMT": 0
+                },
+                {
+                    "AXP": 0,
+                    "CSCO": 0,
+                    "MMM": 0,
+                    "MSFT": 2,
+                    "WMT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 108,
+                "evaluations": 2273,
+                "final_value": -0.04138051739525846,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 42128.74956870079,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -1.0268955426508672,
+                0.006844985324450326
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "CSCO": 1,
+                        "MMM": 0,
+                        "MSFT": 2,
+                        "WMT": 0
+                    },
+                    "budget": 900.1123733520508,
+                    "difference": 30.88762664794922
+                },
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "CSCO": 0,
+                        "MMM": 0,
+                        "MSFT": 2,
+                        "WMT": 0
+                    },
+                    "budget": 841.3130493164062,
+                    "difference": 89.68695068359375
+                }
+            ]
+        }
+    }
+}

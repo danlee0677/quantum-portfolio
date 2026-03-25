@@ -1,0 +1,154 @@
+{
+    "53": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "CVX",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4081,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "CVX": 143.2510986328125,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "CVX": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "HON": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.9999999999999999,
+                "CVX": 5.811323644522304e-17,
+                "HON": 1.3877787807814457e-17
+            },
+            "allocation": {
+                "CAT": 11,
+                "CVX": 0,
+                "HON": 0
+            },
+            "value": -260.44072791552463,
+            "left_overs": 105.2153621429452
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 1.0,
+                "CVX": 0.0,
+                "HON": 0.0358698065952399
+            },
+            "allocation": {
+                "CAT": 11,
+                "CVX": 0,
+                "HON": 0
+            },
+            "value": -260.44072791552463,
+            "left_overs": 105.21536031899768
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00101001001000",
+                "00100011000000"
+            ],
+            "final_expectation_value": -0.1055878029726701,
+            "params": [
+                2.8465512111478897,
+                5.957413690779745,
+                2.775699145872924,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                0.40562718846986645,
+                6.283185307179586,
+                6.283185307179586,
+                2.9082460945490745,
+                2.568221889186711,
+                1.2029087575097335,
+                1.6654559359666288,
+                0.0,
+                2.3055492118436134,
+                2.4966106875680163,
+                1.3531690561013425,
+                3.130728503644705,
+                1.398368536603838,
+                1.7066599147170238
+            ],
+            "total_steps": 263,
+            "states_probs": [
+                0.0005309620137161548,
+                0.000531882342680739
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 4,
+                    "CVX": 9,
+                    "HON": 2
+                },
+                {
+                    "CAT": 4,
+                    "CVX": 12,
+                    "HON": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 263,
+                "evaluations": 6143,
+                "final_value": -0.1055878029726701,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 73333.37725830078,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -1784.78928008057,
+                -3009.8037876491126
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 4,
+                        "CVX": 9,
+                        "HON": 2
+                    },
+                    "budget": 3184.374755859375,
+                    "difference": 896.625244140625
+                },
+                {
+                    "portfolio": {
+                        "CAT": 4,
+                        "CVX": 12,
+                        "HON": 0
+                    },
+                    "budget": 3164.7530517578125,
+                    "difference": 916.2469482421875
+                }
+            ]
+        }
+    }
+}

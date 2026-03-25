@@ -1,0 +1,153 @@
+{
+    "18": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "DOW",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 893,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "DOW": 39.3990364074707,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1
+                ],
+                "DOW": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "INTC": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.9809213027601751,
+                "DOW": 0.019078697239824857,
+                "INTC": 4.380176776841438e-17
+            },
+            "allocation": {
+                "AMGN": 3,
+                "DOW": 2,
+                "INTC": 1
+            },
+            "value": -15.543181675559328,
+            "left_overs": 18.49839321799402
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.9786356344694277,
+                "DOW": 0.014520055768727084,
+                "INTC": 0.0
+            },
+            "allocation": {
+                "AMGN": 3,
+                "DOW": 1,
+                "INTC": 2
+            },
+            "value": -11.802218385136607,
+            "left_overs": 37.84743098649119
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0001000000001",
+                "0011000000001"
+            ],
+            "final_expectation_value": -0.1497814554718434,
+            "params": [
+                2.7419897381974807,
+                6.283185307179586,
+                0.9521052164740086,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                0.6042067398542796,
+                6.283185307179586,
+                6.283185307179586,
+                3.2448223702780337,
+                2.6479776335879976,
+                1.3783193622535395,
+                1.5141144375348086,
+                0.0,
+                2.1081245408823928,
+                2.6357344011923347,
+                1.3979234203792033,
+                3.2104559575142573,
+                1.4608948561570436,
+                1.5738276339433452
+            ],
+            "total_steps": 191,
+            "states_probs": [
+                0.0009077649314706425,
+                0.0009109688788303487
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 0,
+                    "DOW": 2,
+                    "INTC": 32
+                },
+                {
+                    "AMGN": 0,
+                    "DOW": 3,
+                    "INTC": 32
+                }
+            ],
+            "training_history": {
+                "iterations": 191,
+                "evaluations": 4560,
+                "final_value": -0.1497814554718434,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 33688.82209444046,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -59972.39738576026,
+                -61652.69459659091
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "DOW": 2,
+                        "INTC": 32
+                    },
+                    "budget": 720.3980484008789,
+                    "difference": 172.6019515991211
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "DOW": 3,
+                        "INTC": 32
+                    },
+                    "budget": 759.7970848083496,
+                    "difference": 133.2029151916504
+                }
+            ]
+        }
+    }
+}

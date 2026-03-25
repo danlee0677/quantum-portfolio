@@ -1,0 +1,138 @@
+{
+    "93": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "MSFT",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 903,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "BA": 177.0,
+                "MSFT": 420.6565246582031,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2
+                ],
+                "MSFT": [
+                    3,
+                    4
+                ],
+                "UNH": [
+                    5
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 4.567036380160965e-16,
+                "MSFT": 0.9999999999999998,
+                "UNH": 0.0
+            },
+            "allocation": {
+                "MSFT": 2,
+                "BA": 0,
+                "UNH": 0
+            },
+            "value": 0.006843800787244114,
+            "left_overs": 61.68695027820263
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.0,
+                "MSFT": 1.0,
+                "UNH": 0.051387312366476375
+            },
+            "allocation": {
+                "MSFT": 2,
+                "BA": 0,
+                "UNH": 0
+            },
+            "value": 0.006843800787244114,
+            "left_overs": 61.68695015080516
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001000",
+                "000010"
+            ],
+            "final_expectation_value": -0.20728859163012434,
+            "params": [
+                2.0833450736542556,
+                2.7091991371394757,
+                -3.3186931576866394,
+                -0.08993501915442595,
+                12.48711019559385,
+                13.02999982545657,
+                2.628190283761448,
+                5.954590165430698,
+                -1.2517338393486748,
+                1.4115196222242692,
+                3.009709406599688,
+                -0.06879424200118056
+            ],
+            "total_steps": 4769,
+            "states_probs": [
+                0.06731442519521673,
+                0.0864806418732045
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 4,
+                    "MSFT": 0,
+                    "UNH": 0
+                },
+                {
+                    "BA": 0,
+                    "MSFT": 2,
+                    "UNH": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 4769,
+                "evaluations": 6539,
+                "final_value": -0.20728859163012434,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 329.2464919090271,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -17.194027654727567,
+                0.006843800787244114
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 4,
+                        "MSFT": 0,
+                        "UNH": 0
+                    },
+                    "budget": 708.0,
+                    "difference": 195.0
+                },
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "MSFT": 2,
+                        "UNH": 0
+                    },
+                    "budget": 841.3130493164062,
+                    "difference": 61.68695068359375
+                }
+            ]
+        }
+    }
+}

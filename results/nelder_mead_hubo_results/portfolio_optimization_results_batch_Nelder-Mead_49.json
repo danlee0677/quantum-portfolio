@@ -1,0 +1,155 @@
+{
+    "49": {
+        "hyperparams": {
+            "stocks": [
+                "CSCO",
+                "MRK",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 3258,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CSCO": 58.409358978271484,
+                "MRK": 98.6279525756836,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "CSCO": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "MRK": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "MSFT": [
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CSCO": 0.0,
+                "MRK": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "CSCO": 2,
+                "MRK": 1,
+                "MSFT": 7
+            },
+            "value": -167.30114958923195,
+            "left_overs": 97.95765644572384
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CSCO": 0.0,
+                "MRK": 0.029003330467978934,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "CSCO": 1,
+                "MRK": 2,
+                "MSFT": 7
+            },
+            "value": -139.878786057079,
+            "left_overs": 57.73905454699843
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "100000000001000",
+                "000000000001000"
+            ],
+            "final_expectation_value": -0.11872337415321231,
+            "params": [
+                2.3131325002650147,
+                6.2395646772006845,
+                -2.58711023587282,
+                0.16822353693198083,
+                8.285281809602857,
+                -0.9910798277512844,
+                -0.828633084201245,
+                1.6201108103215653,
+                1.0976649656716069,
+                -0.05810507307743225,
+                2.6495794146284792,
+                -0.9402689759437188,
+                3.618968699525313,
+                0.12414661399330879,
+                1.0806609987134426,
+                3.1175219825457976,
+                2.367508709188314,
+                2.982794235115772,
+                1.687285235022264,
+                1.2529674136275881
+            ],
+            "total_steps": 2500,
+            "states_probs": [
+                0.00022468807642698045,
+                0.00022494195345284412
+            ],
+            "optimized_portfolios": [
+                {
+                    "CSCO": 1,
+                    "MRK": 32,
+                    "MSFT": 0
+                },
+                {
+                    "CSCO": 0,
+                    "MRK": 32,
+                    "MSFT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 2500,
+                "evaluations": 3201,
+                "final_value": -0.11872337415321231,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 65901.28558063507,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -33491.01592270957,
+                -33270.334408652474
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CSCO": 1,
+                        "MRK": 32,
+                        "MSFT": 0
+                    },
+                    "budget": 3214.5038414001465,
+                    "difference": 43.496158599853516
+                },
+                {
+                    "portfolio": {
+                        "CSCO": 0,
+                        "MRK": 32,
+                        "MSFT": 0
+                    },
+                    "budget": 3156.094482421875,
+                    "difference": 101.905517578125
+                }
+            ]
+        }
+    }
+}

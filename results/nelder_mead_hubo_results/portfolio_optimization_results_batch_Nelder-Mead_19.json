@@ -1,0 +1,177 @@
+{
+    "19": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "CVX",
+                "DIS",
+                "INTC",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 547,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "CVX": 143.2510986328125,
+                "DIS": 111.3499984741211,
+                "INTC": 20.049999237060547,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1
+                ],
+                "CVX": [
+                    2,
+                    3
+                ],
+                "DIS": [
+                    4,
+                    5,
+                    6
+                ],
+                "INTC": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "V": [
+                    12
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.0,
+                "CVX": 7.45931094670027e-17,
+                "DIS": 0.0,
+                "INTC": 0.0,
+                "V": 1.0
+            },
+            "allocation": {
+                "INTC": 4,
+                "V": 1,
+                "BA": 0,
+                "CVX": 0,
+                "DIS": 0
+            },
+            "value": -20.972520207546946,
+            "left_overs": 151.2908782353935
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.0,
+                "CVX": 0.0,
+                "DIS": 0.0,
+                "INTC": 0.0,
+                "V": 1.0
+            },
+            "allocation": {
+                "INTC": 4,
+                "V": 1,
+                "BA": 0,
+                "CVX": 0,
+                "DIS": 0
+            },
+            "value": -20.972520207546946,
+            "left_overs": 151.2908782353935
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0000001010000",
+                "0000001100000"
+            ],
+            "final_expectation_value": -0.06537650260276873,
+            "params": [
+                2.562989704230437,
+                -18.34188843306301,
+                13.728481243021985,
+                -1.3786219082146045,
+                -2.4052236551563895,
+                1.0009293467374707,
+                1.4730075229492212,
+                25.158258877488343,
+                12.472371308712267,
+                -2.8615063118296984,
+                5.244673002312933,
+                3.1595840341313055,
+                0.31794951426414686,
+                0.08639067654535726,
+                -0.4450939901633421,
+                4.3640546313537225,
+                2.410317990821953,
+                3.067417374001238,
+                2.793880556484752,
+                0.2507238933750469
+            ],
+            "total_steps": 10000,
+            "states_probs": [
+                0.002368467270585423,
+                0.0023799418502948584
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 0,
+                    "CVX": 0,
+                    "DIS": 4,
+                    "INTC": 2,
+                    "V": 0
+                },
+                {
+                    "BA": 0,
+                    "CVX": 0,
+                    "DIS": 4,
+                    "INTC": 1,
+                    "V": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 10000,
+                "evaluations": 12732,
+                "final_value": -0.06537650260276873,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 76288.87598848343,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -19.952673038460397,
+                -14.204516976704708
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "CVX": 0,
+                        "DIS": 4,
+                        "INTC": 2,
+                        "V": 0
+                    },
+                    "budget": 485.49999237060547,
+                    "difference": 61.50000762939453
+                },
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "CVX": 0,
+                        "DIS": 4,
+                        "INTC": 1,
+                        "V": 0
+                    },
+                    "budget": 465.4499931335449,
+                    "difference": 81.55000686645508
+                }
+            ]
+        }
+    }
+}

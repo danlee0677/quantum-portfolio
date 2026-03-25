@@ -1,0 +1,5262 @@
+{
+    "0": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "JNJ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 3670,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "JNJ": 143.4715576171875
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "JNJ": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.6953656555757517,
+                "JNJ": 0.30463434442424836
+            },
+            "allocation": {
+                "HON": 11,
+                "JNJ": 8
+            },
+            "value": -2769.3511311796183,
+            "left_overs": 50.665038957594334
+        }
+    },
+    "1": {
+        "hyperparams": {
+            "stocks": [
+                "NKE",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 2969,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "NKE": 75.28893280029297,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "NKE": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "TRV": [
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "NKE": 0.5179449360219434,
+                "TRV": 0.48205506397805664
+            },
+            "allocation": {
+                "NKE": 20,
+                "TRV": 6
+            },
+            "value": -12544.080496559382,
+            "left_overs": 23.770386023859828
+        }
+    },
+    "10": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "GS",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 4550,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "GS": 569.7945556640625,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "GS": [
+                    4,
+                    5,
+                    6
+                ],
+                "MRK": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.24243839758868543,
+                "GS": 0.42875869949952256,
+                "MRK": 0.328802902911792
+            },
+            "allocation": {
+                "AXP": 4,
+                "GS": 3,
+                "MRK": 16
+            },
+            "value": -2610.0308923130983,
+            "left_overs": 78.1937064070571
+        }
+    },
+    "11": {
+        "hyperparams": {
+            "stocks": [
+                "MMM",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 5710,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "MMM": 128.4563446044922,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "MMM": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "NKE": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MMM": 0.3954402843044825,
+                "NKE": 0.6045597156955175
+            },
+            "allocation": {
+                "MMM": 18,
+                "NKE": 45
+            },
+            "value": -333772.6967615585,
+            "left_overs": 9.783819123698777
+        }
+    },
+    "12": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "VZ",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 622,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JPM": 238.4783477783203,
+                "VZ": 39.29372024536133,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0,
+                    1
+                ],
+                "VZ": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "WBA": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.9180595263023688,
+                "VZ": 0.08194047369763097,
+                "WBA": 3.4867941867133823e-16
+            },
+            "allocation": {
+                "JPM": 2,
+                "VZ": 2,
+                "WBA": 4
+            },
+            "value": -9.85988980145732,
+            "left_overs": 29.135863801838696
+        }
+    },
+    "13": {
+        "hyperparams": {
+            "stocks": [
+                "INTC",
+                "JNJ",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 1483,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "INTC": 20.049999237060547,
+                "JNJ": 143.4715576171875,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "INTC": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "JNJ": [
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "MSFT": [
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "INTC": 8.973825869789965e-16,
+                "JNJ": 4.718447854656915e-16,
+                "MSFT": 0.9999999999999987
+            },
+            "allocation": {
+                "INTC": 1,
+                "JNJ": 1,
+                "MSFT": 3
+            },
+            "value": -7.907371010811847,
+            "left_overs": 57.50886899041984
+        }
+    },
+    "14": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "MSFT",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 2213,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "MSFT": 420.6565246582031,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "MSFT": [
+                    6,
+                    7,
+                    8
+                ],
+                "TRV": [
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.0,
+                "MSFT": 0.9999999999999998,
+                "TRV": 4.440892098500626e-16
+            },
+            "allocation": {
+                "DOW": 1,
+                "MSFT": 5,
+                "TRV": 0
+            },
+            "value": -29.039054523001877,
+            "left_overs": 70.31833983830529
+        }
+    },
+    "15": {
+        "hyperparams": {
+            "stocks": [
+                "GS",
+                "JNJ",
+                "MSFT",
+                "UNH",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 747,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "GS": 569.7945556640625,
+                "JNJ": 143.4715576171875,
+                "MSFT": 420.6565246582031,
+                "UNH": 503.7073059082031,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "GS": [
+                    0
+                ],
+                "JNJ": [
+                    1,
+                    2,
+                    3
+                ],
+                "MSFT": [
+                    4
+                ],
+                "UNH": [
+                    5
+                ],
+                "WBA": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "GS": 0.0,
+                "JNJ": 0.0,
+                "MSFT": 1.0,
+                "UNH": 9.71445146547012e-17,
+                "WBA": 2.0829269855382137e-16
+            },
+            "allocation": {
+                "MSFT": 1,
+                "WBA": 11,
+                "GS": 0,
+                "JNJ": 0,
+                "UNH": 0
+            },
+            "value": -706.2107367506449,
+            "left_overs": 223.7134761334006
+        }
+    },
+    "16": {
+        "hyperparams": {
+            "stocks": [
+                "DIS",
+                "GS",
+                "IBM",
+                "JNJ",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 691,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DIS": 111.3499984741211,
+                "GS": 569.7945556640625,
+                "IBM": 218.37515258789062,
+                "JNJ": 143.4715576171875,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "DIS": [
+                    0,
+                    1,
+                    2
+                ],
+                "GS": [
+                    3
+                ],
+                "IBM": [
+                    4,
+                    5
+                ],
+                "JNJ": [
+                    6,
+                    7,
+                    8
+                ],
+                "NKE": [
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DIS": 4.2789773246889036e-17,
+                "GS": 0.844723632795446,
+                "IBM": 0.00883873017989125,
+                "JNJ": 0.07055429084991297,
+                "NKE": 0.07588334617474964
+            },
+            "allocation": {
+                "GS": 1,
+                "NKE": 1,
+                "DIS": 0,
+                "IBM": 0,
+                "JNJ": 0
+            },
+            "value": -0.036961615101813575,
+            "left_overs": 45.916508274364446
+        }
+    },
+    "17": {
+        "hyperparams": {
+            "stocks": [
+                "CVX",
+                "DOW",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 1478,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CVX": 143.2510986328125,
+                "DOW": 39.3990364074707,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "CVX": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "DOW": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "HON": [
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CVX": 0.08986385961206697,
+                "DOW": 0.04713745503778173,
+                "HON": 0.8629986853501512
+            },
+            "allocation": {
+                "DOW": 3,
+                "HON": 6,
+                "CVX": 0
+            },
+            "value": -171.32531346377584,
+            "left_overs": 11.677889013115873
+        }
+    },
+    "18": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "DOW",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 893,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "DOW": 39.3990364074707,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1
+                ],
+                "DOW": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "INTC": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.9809216357892194,
+                "DOW": 0.019078364210780394,
+                "INTC": 2.465475740232037e-16
+            },
+            "allocation": {
+                "AMGN": 3,
+                "DOW": 2,
+                "INTC": 1
+            },
+            "value": -15.543173094888761,
+            "left_overs": 18.498393217962303
+        }
+    },
+    "19": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "CVX",
+                "DIS",
+                "INTC",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 547,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "CVX": 143.2510986328125,
+                "DIS": 111.3499984741211,
+                "INTC": 20.049999237060547,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1
+                ],
+                "CVX": [
+                    2,
+                    3
+                ],
+                "DIS": [
+                    4,
+                    5,
+                    6
+                ],
+                "INTC": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "V": [
+                    12
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 2.2884657067786643e-17,
+                "CVX": 1.0234868508263162e-16,
+                "DIS": 0.0,
+                "INTC": 2.7230262797323453e-17,
+                "V": 0.9999999999999999
+            },
+            "allocation": {
+                "INTC": 4,
+                "V": 1,
+                "BA": 0,
+                "CVX": 0,
+                "DIS": 0
+            },
+            "value": -20.972557983262245,
+            "left_overs": 151.2908782353935
+        }
+    },
+    "2": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "MMM",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 1891,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "MMM": 128.4563446044922,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2
+                ],
+                "MMM": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "TRV": [
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.6476535017263174,
+                "MMM": 0.12938718349032194,
+                "TRV": 0.2229593147833606
+            },
+            "allocation": {
+                "AXP": 4,
+                "MMM": 1,
+                "TRV": 2
+            },
+            "value": -78.47421745428254,
+            "left_overs": 98.35130033245241
+        }
+    },
+    "20": {
+        "hyperparams": {
+            "stocks": [
+                "GS",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 2499,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "GS": 569.7945556640625,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "GS": [
+                    0,
+                    1,
+                    2
+                ],
+                "MRK": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "GS": 0.6478148510278523,
+                "MRK": 0.3521851489721477
+            },
+            "allocation": {
+                "GS": 3,
+                "MRK": 8
+            },
+            "value": -152.7045665942262,
+            "left_overs": 0.5927125832040474
+        }
+    },
+    "21": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "PG"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 2733,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "PG": 166.6339111328125
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2
+                ],
+                "PG": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.9861378669434089,
+                "PG": 0.013862133056591255
+            },
+            "allocation": {
+                "CAT": 7,
+                "PG": 1
+            },
+            "value": -41.825264690981975,
+            "left_overs": 36.32131908618658
+        }
+    },
+    "22": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 5324,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "MSFT": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 12,
+                "CRM": 0
+            },
+            "value": -668.7615394884981,
+            "left_overs": 276.1217032674458
+        }
+    },
+    "23": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 2544,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HON": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.5,
+                "HON": 0.5
+            },
+            "allocation": {
+                "AMGN": 5,
+                "HON": 5
+            },
+            "value": -137.48914255632255,
+            "left_overs": 127.80660171977888
+        }
+    },
+    "24": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "CSCO",
+                "DIS",
+                "JPM",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 410,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "CSCO": 58.79932403564453,
+                "DIS": 111.3499984741211,
+                "JPM": 238.4783477783203,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0
+                ],
+                "CSCO": [
+                    1,
+                    2,
+                    3
+                ],
+                "DIS": [
+                    4,
+                    5
+                ],
+                "JPM": [
+                    6
+                ],
+                "V": [
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.6032790290669323,
+                "CSCO": 1.3097162243624894e-16,
+                "DIS": 0.0,
+                "JPM": 0.0,
+                "V": 0.39672097093306796
+            },
+            "allocation": {
+                "CAT": 1,
+                "CSCO": 0,
+                "DIS": 0,
+                "JPM": 0,
+                "V": 0
+            },
+            "value": 0.15387909618225848,
+            "left_overs": 48.56503294997731
+        }
+    },
+    "25": {
+        "hyperparams": {
+            "stocks": [
+                "IBM",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 3441,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "IBM": 218.37515258789062,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "IBM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "TRV": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "IBM": 0.5994080491940709,
+                "TRV": 0.4005919508059291
+            },
+            "allocation": {
+                "IBM": 9,
+                "TRV": 6
+            },
+            "value": -1204.5043242237896,
+            "left_overs": 36.172668719568264
+        }
+    },
+    "26": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "HD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 3331,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "HD": 386.5369873046875
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HD": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.7555642337058072,
+                "HD": 0.24443576629419286
+            },
+            "allocation": {
+                "CAT": 7,
+                "HD": 2
+            },
+            "value": -64.43562206548498,
+            "left_overs": 27.88125521092843
+        }
+    },
+    "27": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 5385,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "UNH": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.5432070178128856,
+                "UNH": 0.4567929821871143
+            },
+            "allocation": {
+                "CAT": 7,
+                "UNH": 5
+            },
+            "value": -122.45055483871653,
+            "left_overs": 336.4187009593843
+        }
+    },
+    "28": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 2231,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2
+                ],
+                "NKE": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 1.0,
+                "NKE": 2.7755575615628914e-17
+            },
+            "allocation": {
+                "CAT": 6,
+                "NKE": 0
+            },
+            "value": -22.527982410288004,
+            "left_overs": 62.39019380097807
+        }
+    },
+    "29": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 716,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1
+                ],
+                "INTC": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.9984609892922093,
+                "INTC": 0.0015390107077908116
+            },
+            "allocation": {
+                "CRM": 2,
+                "INTC": 1
+            },
+            "value": -0.8977759011570606,
+            "left_overs": 27.29002651616929
+        }
+    },
+    "3": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "CAT",
+                "GS",
+                "MSFT",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 671,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "CAT": 361.4349670410156,
+                "GS": 569.7945556640625,
+                "MSFT": 420.6565246582031,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1
+                ],
+                "CAT": [
+                    2
+                ],
+                "GS": [
+                    3
+                ],
+                "MSFT": [
+                    4
+                ],
+                "VZ": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 3.2850932597960576e-16,
+                "CAT": 0.04437328470400967,
+                "GS": 9.258045695045224e-17,
+                "MSFT": 0.9556267152959897,
+                "VZ": 9.338341897220682e-17
+            },
+            "allocation": {
+                "MSFT": 1,
+                "VZ": 6,
+                "AMGN": 0,
+                "CAT": 0,
+                "GS": 0
+            },
+            "value": -31.71290263416695,
+            "left_overs": 14.581152730506801
+        }
+    },
+    "30": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1209,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "INTC": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 1.0,
+                "INTC": 2.7755575615628914e-17
+            },
+            "allocation": {
+                "AMGN": 4,
+                "INTC": 5
+            },
+            "value": -77.45325628996478,
+            "left_overs": 74.54528954089983
+        }
+    },
+    "31": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 4964,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "HON": 224.6875,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "V": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.0,
+                "V": 1.0
+            },
+            "allocation": {
+                "HON": 1,
+                "V": 15
+            },
+            "value": -2495.38207245923,
+            "left_overs": 6.675628613156732
+        }
+    },
+    "32": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 3786,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "BA": 177.0,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "MSFT": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 9,
+                "BA": 0
+            },
+            "value": -210.12112965969607,
+            "left_overs": 0.09126403223444868
+        }
+    },
+    "33": {
+        "hyperparams": {
+            "stocks": [
+                "MMM",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 2454,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "MMM": 128.4563446044922,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "MMM": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "TRV": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MMM": 0.422443424690191,
+                "TRV": 0.577556575309809
+            },
+            "allocation": {
+                "MMM": 7,
+                "TRV": 6
+            },
+            "value": -674.8991289561123,
+            "left_overs": 115.35462736875161
+        }
+    },
+    "34": {
+        "hyperparams": {
+            "stocks": [
+                "HD",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 5404,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "HD": 386.5369873046875,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "HD": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "TRV": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HD": 1.0,
+                "TRV": 8.326672684688674e-17
+            },
+            "allocation": {
+                "HD": 13,
+                "TRV": 1
+            },
+            "value": -2759.997375706789,
+            "left_overs": 139.11067391821234
+        }
+    },
+    "35": {
+        "hyperparams": {
+            "stocks": [
+                "HD",
+                "MMM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 3898,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "HD": 386.5369873046875,
+                "MMM": 128.4563446044922
+            },
+            "assets_to_qubits": {
+                "HD": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "MMM": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HD": 0.8025947336285545,
+                "MMM": 0.19740526637144556
+            },
+            "allocation": {
+                "HD": 8,
+                "MMM": 6
+            },
+            "value": -1108.8970536008403,
+            "left_overs": 34.96603359946903
+        }
+    },
+    "36": {
+        "hyperparams": {
+            "stocks": [
+                "IBM",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1025,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "IBM": 218.37515258789062,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "IBM": [
+                    0,
+                    1,
+                    2
+                ],
+                "INTC": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "IBM": 0.9161541939889852,
+                "INTC": 0.08384580601101473
+            },
+            "allocation": {
+                "IBM": 4,
+                "INTC": 6
+            },
+            "value": -155.99134055389152,
+            "left_overs": 31.19939305605544
+        }
+    },
+    "37": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1444,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1
+                ],
+                "INTC": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 1.0,
+                "INTC": 5.551115123125783e-17
+            },
+            "allocation": {
+                "CAT": 3,
+                "INTC": 10
+            },
+            "value": -726.8007462594885,
+            "left_overs": 159.19510632939296
+        }
+    },
+    "38": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "GS",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1415,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "GS": 569.7945556640625,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "GS": [
+                    3,
+                    4
+                ],
+                "MRK": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 0.9999999999999998,
+                "GS": 2.7755575615628914e-17,
+                "MRK": 2.706168622523819e-16
+            },
+            "allocation": {
+                "AAPL": 5,
+                "MRK": 1,
+                "GS": 0
+            },
+            "value": -14.234487411476252,
+            "left_overs": 65.6471782451963
+        }
+    },
+    "39": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "IBM",
+                "JNJ",
+                "JPM",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 437,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "HON": 224.6875,
+                "IBM": 218.37515258789062,
+                "JNJ": 143.4715576171875,
+                "JPM": 238.4783477783203,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0
+                ],
+                "IBM": [
+                    1,
+                    2
+                ],
+                "JNJ": [
+                    3,
+                    4
+                ],
+                "JPM": [
+                    5
+                ],
+                "WMT": [
+                    6,
+                    7,
+                    8
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.0,
+                "IBM": 7.578021020815082e-17,
+                "JNJ": 1.2920708314135877e-17,
+                "JPM": 0.6014347681050214,
+                "WMT": 0.39856523189497844
+            },
+            "allocation": {
+                "JPM": 1,
+                "WMT": 2,
+                "HON": 0,
+                "IBM": 0,
+                "JNJ": 0
+            },
+            "value": -1.0417285216846397,
+            "left_overs": 18.316513059903286
+        }
+    },
+    "4": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 1879,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "VZ": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.729744999044002,
+                "VZ": 0.270255000955998
+            },
+            "allocation": {
+                "HON": 6,
+                "VZ": 13
+            },
+            "value": -826.6557048120067,
+            "left_overs": 20.056634334553564
+        }
+    },
+    "40": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "DIS",
+                "DOW",
+                "VZ",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 483,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "DIS": 111.3499984741211,
+                "DOW": 39.3990364074707,
+                "VZ": 39.29372024536133,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0
+                ],
+                "DIS": [
+                    1,
+                    2,
+                    3
+                ],
+                "DOW": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "VZ": [
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "WMT": [
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.4739489373697832,
+                "DIS": 0.0,
+                "DOW": 6.938893903907228e-17,
+                "VZ": 2.7755575615628914e-17,
+                "WMT": 0.5260510626302167
+            },
+            "allocation": {
+                "AXP": 1,
+                "WMT": 2,
+                "DIS": 0,
+                "DOW": 0,
+                "VZ": 0
+            },
+            "value": -0.8504443721760323,
+            "left_overs": 6.701019267046945
+        }
+    },
+    "41": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "HD",
+                "JPM",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 1580,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "HD": 386.5369873046875,
+                "JPM": 238.4783477783203,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HD": [
+                    4,
+                    5,
+                    6
+                ],
+                "JPM": [
+                    7,
+                    8,
+                    9
+                ],
+                "MRK": [
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 1.687018580387445e-16,
+                "HD": 0.15626703801850314,
+                "JPM": 0.6853371666739846,
+                "MRK": 0.15839579530751213
+            },
+            "allocation": {
+                "HD": 1,
+                "JPM": 4,
+                "MRK": 2,
+                "BA": 0
+            },
+            "value": -44.051444257536424,
+            "left_overs": 42.29371564950293
+        }
+    },
+    "42": {
+        "hyperparams": {
+            "stocks": [
+                "CVX",
+                "HD",
+                "NKE",
+                "PG"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 1511,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CVX": 143.2510986328125,
+                "HD": 386.5369873046875,
+                "NKE": 75.28893280029297,
+                "PG": 166.6339111328125
+            },
+            "assets_to_qubits": {
+                "CVX": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HD": [
+                    4,
+                    5
+                ],
+                "NKE": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "PG": [
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CVX": 1.734723475976807e-17,
+                "HD": 0.6220877941634801,
+                "NKE": 3.4178942419638377e-17,
+                "PG": 0.3779122058365198
+            },
+            "allocation": {
+                "HD": 2,
+                "PG": 4,
+                "CVX": 0,
+                "NKE": 0
+            },
+            "value": -33.39022025356851,
+            "left_overs": 71.39037940102958
+        }
+    },
+    "43": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "HD",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 4139,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "HD": 386.5369873046875,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HD": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "VZ": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.7544184436576503,
+                "HD": 0.2455815563423497,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "CAT": 8,
+                "HD": 3,
+                "VZ": 0
+            },
+            "value": -138.67852590088035,
+            "left_overs": 87.90930324421151
+        }
+    },
+    "44": {
+        "hyperparams": {
+            "stocks": [
+                "GS",
+                "JPM",
+                "UNH",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 1734,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "GS": 569.7945556640625,
+                "JPM": 238.4783477783203,
+                "UNH": 503.7073059082031,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "GS": [
+                    0,
+                    1
+                ],
+                "JPM": [
+                    2,
+                    3,
+                    4
+                ],
+                "UNH": [
+                    5,
+                    6
+                ],
+                "WBA": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "GS": 2.973133121969014e-17,
+                "JPM": 0.377069663237728,
+                "UNH": 0.6229303367622719,
+                "WBA": 8.095376221225099e-18
+            },
+            "allocation": {
+                "JPM": 3,
+                "UNH": 2,
+                "GS": 0,
+                "WBA": 0
+            },
+            "value": -18.71726371302354,
+            "left_overs": 11.150344703855126
+        }
+    },
+    "45": {
+        "hyperparams": {
+            "stocks": [
+                "MCD",
+                "V",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 3633,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "MCD": 288.22589111328125,
+                "V": 315.5091247558594,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "MCD": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "V": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "VZ": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MCD": 0.0,
+                "V": 1.0,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "V": 11,
+                "VZ": 2,
+                "MCD": 0
+            },
+            "value": -658.924953214561,
+            "left_overs": 83.81218361110268
+        }
+    },
+    "46": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "AXP",
+                "HON",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 1417,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "AXP": 296.0938415527344,
+                "HON": 224.6875,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "AXP": [
+                    3,
+                    4,
+                    5
+                ],
+                "HON": [
+                    6,
+                    7,
+                    8
+                ],
+                "VZ": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.4384261772665546,
+                "AXP": 0.5615738227334454,
+                "HON": 1.3010426069826053e-17,
+                "VZ": 2.6020852139652106e-18
+            },
+            "allocation": {
+                "AMGN": 2,
+                "AXP": 3,
+                "HON": 0,
+                "VZ": 0
+            },
+            "value": -14.337886993166645,
+            "left_overs": 11.616118709072452
+        }
+    },
+    "47": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "BA",
+                "CAT",
+                "IBM",
+                "UNH",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 804,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "BA": 177.0,
+                "CAT": 361.4349670410156,
+                "IBM": 218.37515258789062,
+                "UNH": 503.7073059082031,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1
+                ],
+                "BA": [
+                    2,
+                    3,
+                    4
+                ],
+                "CAT": [
+                    5,
+                    6
+                ],
+                "IBM": [
+                    7,
+                    8
+                ],
+                "UNH": [
+                    9
+                ],
+                "VZ": [
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.0,
+                "BA": 0.0,
+                "CAT": 0.5364419976104444,
+                "IBM": 4.163336342344337e-17,
+                "UNH": 0.46355800238955563,
+                "VZ": 1.249000902703301e-16
+            },
+            "allocation": {
+                "CAT": 2,
+                "VZ": 2,
+                "AXP": 0,
+                "BA": 0,
+                "IBM": 0,
+                "UNH": 0
+            },
+            "value": 0.5264963758982866,
+            "left_overs": 2.542625374764725
+        }
+    },
+    "48": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "CSCO",
+                "MMM",
+                "MSFT",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 931,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "CSCO": 58.79932403564453,
+                "MMM": 128.4563446044922,
+                "MSFT": 420.6565246582031,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1
+                ],
+                "CSCO": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "MMM": [
+                    6,
+                    7,
+                    8
+                ],
+                "MSFT": [
+                    9,
+                    10
+                ],
+                "WMT": [
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.0,
+                "CSCO": 0.0,
+                "MMM": 2.367445804685286e-16,
+                "MSFT": 1.0,
+                "WMT": 0.0
+            },
+            "allocation": {
+                "MSFT": 2,
+                "AXP": 0,
+                "CSCO": 0,
+                "MMM": 0,
+                "WMT": 0
+            },
+            "value": 0.006843975253605694,
+            "left_overs": 89.68695022702593
+        }
+    },
+    "49": {
+        "hyperparams": {
+            "stocks": [
+                "CSCO",
+                "MRK",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 3258,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CSCO": 58.79932403564453,
+                "MRK": 98.6279525756836,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "CSCO": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "MRK": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ],
+                "MSFT": [
+                    12,
+                    13,
+                    14
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CSCO": 3.469446951953614e-17,
+                "MRK": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "CSCO": 2,
+                "MRK": 1,
+                "MSFT": 7
+            },
+            "value": -167.30037522560798,
+            "left_overs": 97.17772631926982
+        }
+    },
+    "5": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 5354,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "TRV": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.7191369544380831,
+                "TRV": 0.2808630455619169
+            },
+            "allocation": {
+                "AXP": 13,
+                "TRV": 6
+            },
+            "value": -6513.473434561035,
+            "left_overs": 65.32908475659497
+        }
+    },
+    "50": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "GS",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4252,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "GS": 569.7945556640625,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "GS": [
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.0,
+                "GS": 0.8726710797549825,
+                "NKE": 0.12732892024501752
+            },
+            "allocation": {
+                "GS": 6,
+                "NKE": 10,
+                "BA": 0
+            },
+            "value": -1036.8094378363182,
+            "left_overs": 80.34333760250502
+        }
+    },
+    "51": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4867,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "NKE": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.5292068183208644,
+                "NKE": 0.4707931816791357
+            },
+            "allocation": {
+                "DOW": 66,
+                "NKE": 30
+            },
+            "value": -1901560.9916286338,
+            "left_overs": 7.995613911965847
+        }
+    },
+    "52": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "JPM",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 3442,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "JPM": 238.4783477783203,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "JPM": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.17723213491096715,
+                "JPM": 0.8227678650890329,
+                "NKE": 1.734723475976807e-18
+            },
+            "allocation": {
+                "AMGN": 2,
+                "JPM": 12,
+                "NKE": 0
+            },
+            "value": -1494.8018888243441,
+            "left_overs": 63.15746022140138
+        }
+    },
+    "53": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "CVX",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4081,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "CVX": 143.2510986328125,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "CVX": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "HON": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 1.0,
+                "CVX": 8.500145032286355e-17,
+                "HON": 4.683753385137379e-17
+            },
+            "allocation": {
+                "CAT": 11,
+                "CVX": 0,
+                "HON": 0
+            },
+            "value": -260.4405101729321,
+            "left_overs": 105.21536214294474
+        }
+    },
+    "54": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "PG",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 3336,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "PG": 166.6339111328125,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "PG": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "TRV": [
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 4.492562284838241e-17,
+                "PG": 0.6113140487409316,
+                "TRV": 0.3886859512590683
+            },
+            "allocation": {
+                "PG": 12,
+                "TRV": 5,
+                "BA": 0
+            },
+            "value": -2114.2699685826333,
+            "left_overs": 136.8506001483256
+        }
+    },
+    "55": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "CAT",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4593,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "CAT": 361.4349670410156,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "CAT": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.10680032390353224,
+                "CAT": 0.8931996760964678,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AXP": 2,
+                "CAT": 11,
+                "NKE": 0
+            },
+            "value": -367.646362732001,
+            "left_overs": 25.02767958066488
+        }
+    },
+    "56": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "INTC",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 1597,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "INTC": 20.049999237060547,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "INTC": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "TRV": [
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.37664899493481957,
+                "INTC": 0.08177893696309328,
+                "TRV": 0.5415720681020872
+            },
+            "allocation": {
+                "BA": 3,
+                "INTC": 5,
+                "TRV": 4
+            },
+            "value": -478.6454149963856,
+            "left_overs": 6.116027432817646
+        }
+    },
+    "57": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "CAT",
+                "IBM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 5497,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "CAT": 361.4349670410156,
+                "IBM": 218.37515258789062
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "CAT": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "IBM": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.10588234339614125,
+                "CAT": 0.8941176566038589,
+                "IBM": 0.0
+            },
+            "allocation": {
+                "AXP": 2,
+                "CAT": 13,
+                "IBM": 0
+            },
+            "value": -671.8205425970751,
+            "left_overs": 206.1577439661487
+        }
+    },
+    "58": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "GS",
+                "PG"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4835,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "GS": 569.7945556640625,
+                "PG": 166.6339111328125
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "GS": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "PG": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 2.0030861316495595e-18,
+                "GS": 0.7968629376575381,
+                "PG": 0.20313706234246184
+            },
+            "allocation": {
+                "GS": 7,
+                "PG": 5,
+                "BA": 0
+            },
+            "value": -490.6230280111354,
+            "left_overs": 13.268555376783297
+        }
+    },
+    "59": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "HON",
+                "JNJ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 1837,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "HON": 224.6875,
+                "JNJ": 143.4715576171875
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "HON": [
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "JNJ": [
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 1.6024689053196368e-17,
+                "HON": 0.7240130915578322,
+                "JNJ": 0.27598690844216783
+            },
+            "allocation": {
+                "DOW": 1,
+                "HON": 6,
+                "JNJ": 3
+            },
+            "value": -198.86796544217134,
+            "left_overs": 19.061288217211768
+        }
+    },
+    "6": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 2147,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "TRV": [
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.2521600428034145,
+                "TRV": 0.7478399571965856
+            },
+            "allocation": {
+                "DOW": 11,
+                "TRV": 7
+            },
+            "value": -4381.686815631606,
+            "left_overs": 34.25114876298312
+        }
+    },
+    "60": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "CVX",
+                "GS",
+                "MCD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1861,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "CVX": 143.2510986328125,
+                "GS": 569.7945556640625,
+                "MCD": 288.22589111328125
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "CVX": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "GS": [
+                    7,
+                    8
+                ],
+                "MCD": [
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "CVX": 1.3877787807814457e-17,
+                "GS": 0.0,
+                "MCD": 1.734723475976807e-17
+            },
+            "allocation": {
+                "AAPL": 7,
+                "CVX": 0,
+                "GS": 0,
+                "MCD": 0
+            },
+            "value": -51.43289694555872,
+            "left_overs": 109.98518079462792
+        }
+    },
+    "61": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "MMM",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 2754,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "MMM": 128.4563446044922,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "MMM": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "UNH": [
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 0.9999999999999998,
+                "MMM": 4.683753385137379e-16,
+                "UNH": 0.0
+            },
+            "allocation": {
+                "AAPL": 11,
+                "MMM": 0,
+                "UNH": 0
+            },
+            "value": -321.20757581870157,
+            "left_overs": 2.405286721234461
+        }
+    },
+    "62": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "KO"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 5390,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "KO": 61.80391311645508
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "KO": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "KO": 0.0
+            },
+            "allocation": {
+                "AAPL": 21,
+                "KO": 1
+            },
+            "value": -4546.330506473564,
+            "left_overs": 75.1516311965388
+        }
+    },
+    "63": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "GS",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 3861,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "GS": 569.7945556640625,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "GS": [
+                    4,
+                    5,
+                    6
+                ],
+                "TRV": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.9554472014143304,
+                "GS": 0.04455279858566963,
+                "TRV": 0.0
+            },
+            "allocation": {
+                "CAT": 10,
+                "TRV": 1,
+                "GS": 0
+            },
+            "value": -189.57688168842247,
+            "left_overs": 6.741815164709351
+        }
+    },
+    "64": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "IBM",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 921,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "IBM": 218.37515258789062,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1
+                ],
+                "IBM": [
+                    2,
+                    3,
+                    4
+                ],
+                "WBA": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.7920124648362401,
+                "IBM": 0.20798753516375987,
+                "WBA": 9.280770596475918e-17
+            },
+            "allocation": {
+                "CRM": 2,
+                "IBM": 1,
+                "WBA": 3
+            },
+            "value": 1.8550112512356471,
+            "left_overs": 5.974874462812636
+        }
+    },
+    "65": {
+        "hyperparams": {
+            "stocks": [
+                "CVX",
+                "DIS",
+                "HON",
+                "JPM",
+                "MCD",
+                "PG"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 540,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CVX": 143.2510986328125,
+                "DIS": 111.3499984741211,
+                "HON": 224.6875,
+                "JPM": 238.4783477783203,
+                "MCD": 288.22589111328125,
+                "PG": 166.6339111328125
+            },
+            "assets_to_qubits": {
+                "CVX": [
+                    0,
+                    1
+                ],
+                "DIS": [
+                    2,
+                    3,
+                    4
+                ],
+                "HON": [
+                    5,
+                    6
+                ],
+                "JPM": [
+                    7,
+                    8
+                ],
+                "MCD": [
+                    9
+                ],
+                "PG": [
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CVX": 7.577717460397161e-17,
+                "DIS": 0.0,
+                "HON": 0.0,
+                "JPM": 0.771665790023505,
+                "MCD": 0.12273879499031169,
+                "PG": 0.1055954149861834
+            },
+            "allocation": {
+                "JPM": 2,
+                "CVX": 0,
+                "DIS": 0,
+                "HON": 0,
+                "MCD": 0,
+                "PG": 0
+            },
+            "value": -0.5401936299405936,
+            "left_overs": 63.04330396290857
+        }
+    },
+    "66": {
+        "hyperparams": {
+            "stocks": [
+                "INTC",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1799,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "INTC": 20.049999237060547,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "INTC": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "WMT": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "INTC": 0.10216755808811036,
+                "WMT": 0.8978324419118896
+            },
+            "allocation": {
+                "INTC": 8,
+                "WMT": 18
+            },
+            "value": -9179.121278007595,
+            "left_overs": 16.75375357370649
+        }
+    },
+    "67": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "MCD",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1591,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JPM": 238.4783477783203,
+                "MCD": 288.22589111328125,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0,
+                    1,
+                    2
+                ],
+                "MCD": [
+                    3,
+                    4,
+                    5
+                ],
+                "VZ": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.8265915627169587,
+                "MCD": 0.1613583990207354,
+                "VZ": 0.012050038262305931
+            },
+            "allocation": {
+                "JPM": 5,
+                "MCD": 1,
+                "VZ": 2
+            },
+            "value": -73.5112028427973,
+            "left_overs": 31.79492875838946
+        }
+    },
+    "68": {
+        "hyperparams": {
+            "stocks": [
+                "PG",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 5700,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "PG": 166.6339111328125,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "PG": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "WMT": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "PG": 0.32465252034979375,
+                "WMT": 0.6753474796502061
+            },
+            "allocation": {
+                "PG": 11,
+                "WMT": 42
+            },
+            "value": -292049.5401545719,
+            "left_overs": 82.71902996895915
+        }
+    },
+    "69": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "INTC",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 1696,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "INTC": 20.049999237060547,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2
+                ],
+                "INTC": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ],
+                "UNH": [
+                    10,
+                    11
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.03013024252737747,
+                "INTC": 2.1206994493816467e-16,
+                "UNH": 0.9698697574726223
+            },
+            "allocation": {
+                "INTC": 6,
+                "UNH": 3,
+                "HON": 0
+            },
+            "value": -139.1577219898849,
+            "left_overs": 64.57808603111903
+        }
+    },
+    "7": {
+        "hyperparams": {
+            "stocks": [
+                "HD",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 5913,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HD": 386.5369873046875,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "HD": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "MRK": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HD": 0.5492552971571173,
+                "MRK": 0.45074470284288265
+            },
+            "allocation": {
+                "HD": 8,
+                "MRK": 28
+            },
+            "value": -27188.569915098295,
+            "left_overs": 59.12142891502663
+        }
+    },
+    "70": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 3474,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "HON": [
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.06209899183713007,
+                "HON": 0.93790100816287
+            },
+            "allocation": {
+                "DOW": 7,
+                "HON": 14
+            },
+            "value": -5044.132880616688,
+            "left_overs": 52.58174161054876
+        }
+    },
+    "71": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 2283,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "INTC": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "INTC": 0.0
+            },
+            "allocation": {
+                "AAPL": 9,
+                "INTC": 1
+            },
+            "value": -174.0026442664584,
+            "left_overs": 11.645230933760104
+        }
+    },
+    "72": {
+        "hyperparams": {
+            "stocks": [
+                "JNJ",
+                "MSFT",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 2786,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JNJ": 143.4715576171875,
+                "MSFT": 420.6565246582031,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "JNJ": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "MSFT": [
+                    5,
+                    6,
+                    7
+                ],
+                "UNH": [
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JNJ": 1.0416047884577638e-16,
+                "MSFT": 1.0,
+                "UNH": 0.0
+            },
+            "allocation": {
+                "JNJ": 1,
+                "MSFT": 6,
+                "UNH": 0
+            },
+            "value": -51.79054881113161,
+            "left_overs": 118.58928335972996
+        }
+    },
+    "73": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "UNH",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 2900,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "UNH": 503.7073059082031,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "UNH": [
+                    4,
+                    5,
+                    6
+                ],
+                "V": [
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 2.2898349882893854e-16,
+                "UNH": 0.5286831786464355,
+                "V": 0.47131682135356423
+            },
+            "allocation": {
+                "UNH": 3,
+                "V": 4,
+                "HON": 0
+            },
+            "value": -67.64482615697871,
+            "left_overs": 126.8415812390067
+        }
+    },
+    "74": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 3229,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "VZ": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.8427328420515214,
+                "VZ": 0.15726715794847845
+            },
+            "allocation": {
+                "CRM": 8,
+                "VZ": 13
+            },
+            "value": -219.0583271955399,
+            "left_overs": 43.54173725043529
+        }
+    },
+    "75": {
+        "hyperparams": {
+            "stocks": [
+                "CSCO",
+                "CVX"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 3752,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CSCO": 58.79932403564453,
+                "CVX": 143.2510986328125
+            },
+            "assets_to_qubits": {
+                "CSCO": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "CVX": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CSCO": 0.7118909079838625,
+                "CVX": 0.2881090920161375
+            },
+            "allocation": {
+                "CSCO": 46,
+                "CVX": 7
+            },
+            "value": -271654.98999679374,
+            "left_overs": 44.47340377276123
+        }
+    },
+    "76": {
+        "hyperparams": {
+            "stocks": [
+                "TRV",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 1617,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "TRV": 239.9084930419922,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "TRV": [
+                    0,
+                    1,
+                    2
+                ],
+                "WBA": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "TRV": 0.82184630074292,
+                "WBA": 0.1781536992570801
+            },
+            "allocation": {
+                "TRV": 6,
+                "WBA": 19
+            },
+            "value": -5877.986807310485,
+            "left_overs": 0.2790422097477858
+        }
+    },
+    "77": {
+        "hyperparams": {
+            "stocks": [
+                "JNJ",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 5296,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JNJ": 143.4715576171875,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "JNJ": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "V": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JNJ": 0.0,
+                "V": 1.0
+            },
+            "allocation": {
+                "JNJ": 1,
+                "V": 16
+            },
+            "value": -2963.071274814786,
+            "left_overs": 104.38243899708232
+        }
+    },
+    "78": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "CRM",
+                "JNJ",
+                "JPM",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 869,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "CRM": 334.3299865722656,
+                "JNJ": 143.4715576171875,
+                "JPM": 238.4783477783203,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1
+                ],
+                "CRM": [
+                    2,
+                    3
+                ],
+                "JNJ": [
+                    4,
+                    5,
+                    6
+                ],
+                "JPM": [
+                    7,
+                    8
+                ],
+                "MSFT": [
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 7.447602459741819e-17,
+                "CRM": 0.0,
+                "JNJ": 2.896409593566458e-17,
+                "JPM": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 2,
+                "AMGN": 0,
+                "CRM": 0,
+                "JNJ": 0,
+                "JPM": 0
+            },
+            "value": 0.006843975253605694,
+            "left_overs": 27.686949595984515
+        }
+    },
+    "79": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "CSCO",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 1598,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "CSCO": 58.79932403564453,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "CSCO": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "TRV": [
+                    8,
+                    9,
+                    10
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.3431766258904141,
+                "CSCO": 0.455558255834129,
+                "TRV": 0.20126511827545693
+            },
+            "allocation": {
+                "AMGN": 2,
+                "CSCO": 13,
+                "TRV": 1
+            },
+            "value": -1722.3502451525806,
+            "left_overs": 76.59793368366104
+        }
+    },
+    "8": {
+        "hyperparams": {
+            "stocks": [
+                "CVX",
+                "HD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 5704,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CVX": 143.2510986328125,
+                "HD": 386.5369873046875
+            },
+            "assets_to_qubits": {
+                "CVX": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "HD": [
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CVX": 0.05784636923771373,
+                "HD": 0.9421536307622863
+            },
+            "allocation": {
+                "CVX": 2,
+                "HD": 14
+            },
+            "value": -4314.063126084253,
+            "left_overs": 5.97997978035437
+        }
+    },
+    "80": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "KO",
+                "PG",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 407,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "HON": 224.6875,
+                "KO": 61.80391311645508,
+                "PG": 166.6339111328125,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0
+                ],
+                "KO": [
+                    1,
+                    2,
+                    3
+                ],
+                "PG": [
+                    4,
+                    5
+                ],
+                "TRV": [
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.3732977405897677,
+                "KO": 5.551115123125783e-17,
+                "PG": 0.3995929928873479,
+                "TRV": 0.22710926652288432
+            },
+            "allocation": {
+                "HON": 1,
+                "PG": 1,
+                "KO": 0,
+                "TRV": 0
+            },
+            "value": -0.186222536967463,
+            "left_overs": 15.678588829881562
+        }
+    },
+    "81": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "IBM",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 1366,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "IBM": 218.37515258789062,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1
+                ],
+                "IBM": [
+                    2,
+                    3,
+                    4
+                ],
+                "UNH": [
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.5432980310390718,
+                "IBM": 8.586881206085195e-17,
+                "UNH": 0.45670196896092824
+            },
+            "allocation": {
+                "CAT": 2,
+                "UNH": 1,
+                "IBM": 0
+            },
+            "value": 0.046074992516223816,
+            "left_overs": 139.42275911015622
+        }
+    },
+    "82": {
+        "hyperparams": {
+            "stocks": [
+                "JNJ",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 1299,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "JNJ": 143.4715576171875,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "JNJ": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "TRV": [
+                    4,
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JNJ": 0.5528828137288324,
+                "TRV": 0.4471171862711676
+            },
+            "allocation": {
+                "JNJ": 5,
+                "TRV": 2
+            },
+            "value": -46.039577669017135,
+            "left_overs": 101.82522402844461
+        }
+    },
+    "83": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "MMM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 1054,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "BA": 177.0,
+                "MMM": 128.4563446044922
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2
+                ],
+                "MMM": [
+                    3,
+                    4,
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.5344931107072673,
+                "MMM": 0.4655068892927327
+            },
+            "allocation": {
+                "BA": 3,
+                "MMM": 4
+            },
+            "value": -54.15375222516717,
+            "left_overs": 9.17462146906746
+        }
+    },
+    "84": {
+        "hyperparams": {
+            "stocks": [
+                "GS",
+                "MCD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 4467,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "GS": 569.7945556640625,
+                "MCD": 288.22589111328125
+            },
+            "assets_to_qubits": {
+                "GS": [
+                    0,
+                    1,
+                    2
+                ],
+                "MCD": [
+                    3,
+                    4,
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "GS": 0.7518339398202336,
+                "MCD": 0.24816606017976642
+            },
+            "allocation": {
+                "GS": 6,
+                "MCD": 3
+            },
+            "value": -239.0210200313755,
+            "left_overs": 183.55499200718896
+        }
+    },
+    "85": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 2584,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2
+                ],
+                "V": [
+                    3,
+                    4,
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.60103740896851,
+                "V": 0.39896259103149007
+            },
+            "allocation": {
+                "CAT": 4,
+                "V": 3
+            },
+            "value": -21.092779712078418,
+            "left_overs": 191.73275221844142
+        }
+    },
+    "86": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "KO",
+                "TRV",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 294,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "JPM": 238.4783477783203,
+                "KO": 61.80391311645508,
+                "TRV": 239.9084930419922,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0
+                ],
+                "KO": [
+                    1,
+                    2,
+                    3
+                ],
+                "TRV": [
+                    4
+                ],
+                "WMT": [
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.6011554667220522,
+                "KO": 1.9081958235744878e-17,
+                "TRV": 2.0816681711721685e-17,
+                "WMT": 0.3988445332779479
+            },
+            "allocation": {
+                "JPM": 1,
+                "KO": 0,
+                "TRV": 0,
+                "WMT": 0
+            },
+            "value": 0.12021855619060401,
+            "left_overs": 55.521652207186065
+        }
+    },
+    "87": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 924,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "JPM": 238.4783477783203,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0,
+                    1
+                ],
+                "VZ": [
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.918255011773366,
+                "VZ": 0.08174498822663412
+            },
+            "allocation": {
+                "JPM": 3,
+                "VZ": 3
+            },
+            "value": -10.50527385015524,
+            "left_overs": 90.68379539990133
+        }
+    },
+    "88": {
+        "hyperparams": {
+            "stocks": [
+                "KO",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 1283,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "KO": 61.80391311645508,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "KO": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "MSFT": [
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "KO": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 3,
+                "KO": 0
+            },
+            "value": -1.8335559839901971,
+            "left_overs": 21.030425057332195
+        }
+    },
+    "89": {
+        "hyperparams": {
+            "stocks": [
+                "DIS",
+                "PG",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 522,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "DIS": 111.3499984741211,
+                "PG": 166.6339111328125,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "DIS": [
+                    0,
+                    1,
+                    2
+                ],
+                "PG": [
+                    3,
+                    4
+                ],
+                "TRV": [
+                    5,
+                    6
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DIS": 0.0,
+                "PG": 0.6111447814173705,
+                "TRV": 0.3888552185826295
+            },
+            "allocation": {
+                "PG": 1,
+                "TRV": 1,
+                "DIS": 0
+            },
+            "value": -0.22720735550285337,
+            "left_overs": 115.45759579455722
+        }
+    },
+    "9": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 3186,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "NKE": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AAPL": 12,
+                "NKE": 1
+            },
+            "value": -498.2036826595846,
+            "left_overs": 108.97136348960339
+        }
+    },
+    "90": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "JNJ",
+                "JPM",
+                "MRK"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 366,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "JNJ": 143.4715576171875,
+                "JPM": 238.4783477783203,
+                "MRK": 98.6279525756836
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0
+                ],
+                "JNJ": [
+                    1,
+                    2
+                ],
+                "JPM": [
+                    3
+                ],
+                "MRK": [
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 1.1167282376600696e-16,
+                "JNJ": 0.0,
+                "JPM": 0.7589451760678793,
+                "MRK": 0.24105482393212063
+            },
+            "allocation": {
+                "JPM": 1,
+                "MRK": 1,
+                "AXP": 0,
+                "JNJ": 0
+            },
+            "value": 0.0700858836867773,
+            "left_overs": 28.89369929164394
+        }
+    },
+    "91": {
+        "hyperparams": {
+            "stocks": [
+                "MSFT",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1700,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "MSFT": 420.6565246582031,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "MSFT": [
+                    0,
+                    1,
+                    2
+                ],
+                "TRV": [
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MSFT": 1.0,
+                "TRV": 0.0
+            },
+            "allocation": {
+                "MSFT": 4,
+                "TRV": 0
+            },
+            "value": -7.231981866507494,
+            "left_overs": 17.37389862862483
+        }
+    },
+    "92": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "DIS",
+                "HD",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 509,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "DIS": 111.3499984741211,
+                "HD": 386.5369873046875,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0
+                ],
+                "DIS": [
+                    1,
+                    2,
+                    3
+                ],
+                "HD": [
+                    4
+                ],
+                "UNH": [
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.1292563535794522,
+                "DIS": 0.0,
+                "HD": 4.0332320816460765e-17,
+                "UNH": 0.8707436464205479
+            },
+            "allocation": {
+                "UNH": 1,
+                "AXP": 0,
+                "DIS": 0,
+                "HD": 0
+            },
+            "value": 0.14000925035603964,
+            "left_overs": 5.292694013168159
+        }
+    },
+    "93": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "MSFT",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 903,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "BA": 177.0,
+                "MSFT": 420.6565246582031,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2
+                ],
+                "MSFT": [
+                    3,
+                    4
+                ],
+                "UNH": [
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.0,
+                "MSFT": 0.9999999999999998,
+                "UNH": 2.7755575615628914e-16
+            },
+            "allocation": {
+                "MSFT": 2,
+                "BA": 0,
+                "UNH": 0
+            },
+            "value": 0.006843975253605694,
+            "left_overs": 61.6869502782024
+        }
+    },
+    "94": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "JPM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1059,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "JPM": 238.4783477783203
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "JPM": [
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.1780488822443109,
+                "JPM": 0.8219511177556892
+            },
+            "allocation": {
+                "AMGN": 1,
+                "JPM": 3
+            },
+            "value": -6.636729003180307,
+            "left_overs": 85.01377329281479
+        }
+    },
+    "95": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1474,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "V": [
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 0.9999999999999999,
+                "V": 8.326672684688674e-17
+            },
+            "allocation": {
+                "AAPL": 5,
+                "V": 0
+            },
+            "value": -12.603826091505582,
+            "left_overs": 223.2751311692773
+        }
+    },
+    "96": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "JPM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1788,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "JPM": 238.4783477783203
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "JPM": [
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "JPM": 0.0
+            },
+            "allocation": {
+                "AAPL": 7,
+                "JPM": 0
+            },
+            "value": -51.43266999450491,
+            "left_overs": 36.98518358878073
+        }
+    },
+    "97": {
+        "hyperparams": {
+            "stocks": [
+                "MCD",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1869,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "MCD": 288.22589111328125,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "MCD": [
+                    0,
+                    1,
+                    2
+                ],
+                "TRV": [
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MCD": 0.6582640104908734,
+                "TRV": 0.34173598950912676
+            },
+            "allocation": {
+                "MCD": 4,
+                "TRV": 2
+            },
+            "value": -103.19746832627652,
+            "left_overs": 236.27944874923492
+        }
+    },
+    "98": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "HD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 2166,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "HD": 386.5369873046875
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2
+                ],
+                "HD": [
+                    3,
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.5,
+                "HD": 0.5
+            },
+            "allocation": {
+                "AXP": 3,
+                "HD": 3
+            },
+            "value": -59.17237198583613,
+            "left_overs": 118.10750934471298
+        }
+    },
+    "99": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "AMGN",
+                "AXP"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 848,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "AMGN": 258.5511779785156,
+                "AXP": 296.0938415527344
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1
+                ],
+                "AMGN": [
+                    2,
+                    3
+                ],
+                "AXP": [
+                    4,
+                    5
+                ]
+            }
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "AMGN": 0.0,
+                "AXP": 4.163336342344337e-17
+            },
+            "allocation": {
+                "AAPL": 3,
+                "AMGN": 0,
+                "AXP": 0
+            },
+            "value": -1.0386238345855772,
+            "left_overs": 97.56507826137931
+        }
+    }
+}

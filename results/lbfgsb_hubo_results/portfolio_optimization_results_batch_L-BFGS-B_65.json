@@ -1,0 +1,188 @@
+{
+    "65": {
+        "hyperparams": {
+            "stocks": [
+                "CVX",
+                "DIS",
+                "HON",
+                "JPM",
+                "MCD",
+                "PG"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 540,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CVX": 143.2510986328125,
+                "DIS": 111.3499984741211,
+                "HON": 224.6875,
+                "JPM": 237.0184326171875,
+                "MCD": 288.22589111328125,
+                "PG": 166.6339111328125
+            },
+            "assets_to_qubits": {
+                "CVX": [
+                    0,
+                    1
+                ],
+                "DIS": [
+                    2,
+                    3,
+                    4
+                ],
+                "HON": [
+                    5,
+                    6
+                ],
+                "JPM": [
+                    7,
+                    8
+                ],
+                "MCD": [
+                    9
+                ],
+                "PG": [
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CVX": 0.0,
+                "DIS": 0.0,
+                "HON": 0.0,
+                "JPM": 0.7716667480951241,
+                "MCD": 0.12273770627294474,
+                "PG": 0.10559554563193128
+            },
+            "allocation": {
+                "JPM": 2,
+                "CVX": 0,
+                "DIS": 0,
+                "HON": 0,
+                "MCD": 0,
+                "PG": 0
+            },
+            "value": -0.5401926033537346,
+            "left_overs": 65.96313440992657
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CVX": 0.0,
+                "DIS": 0.0,
+                "HON": 0.0,
+                "JPM": 0.7709357326411171,
+                "MCD": 0.12391615594662377,
+                "PG": 0.11288879536217837
+            },
+            "allocation": {
+                "JPM": 2,
+                "CVX": 0,
+                "DIS": 0,
+                "HON": 0,
+                "MCD": 0,
+                "PG": 0
+            },
+            "value": -0.5401926033537346,
+            "left_overs": 65.96313432843681
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000000100000",
+                "000000001000"
+            ],
+            "final_expectation_value": -0.03204975166002971,
+            "params": [
+                3.40374388258006,
+                2.8738907706602954,
+                4.001264735462379,
+                6.283185307179586,
+                6.283185307179586,
+                1.8404047044872778,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                3.565543860566576,
+                3.981370857284814,
+                0.0,
+                2.3931241717162166,
+                0.0,
+                1.7095414524816641,
+                1.3434502600717335,
+                3.166610290696521,
+                3.181860111685292,
+                1.4198297080565152,
+                1.5544412575929016
+            ],
+            "total_steps": 208,
+            "states_probs": [
+                0.013489824503241894,
+                0.014449982337778902
+            ],
+            "optimized_portfolios": [
+                {
+                    "CVX": 0,
+                    "DIS": 0,
+                    "HON": 2,
+                    "JPM": 0,
+                    "MCD": 0,
+                    "PG": 0
+                },
+                {
+                    "CVX": 0,
+                    "DIS": 0,
+                    "HON": 0,
+                    "JPM": 2,
+                    "MCD": 0,
+                    "PG": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 208,
+                "evaluations": 4858,
+                "final_value": -0.03204975166002971,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+                "execution_time": 23347.397032260895,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -0.6094938396486835,
+                -0.5401926033537346
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CVX": 0,
+                        "DIS": 0,
+                        "HON": 2,
+                        "JPM": 0,
+                        "MCD": 0,
+                        "PG": 0
+                    },
+                    "budget": 449.375,
+                    "difference": 90.625
+                },
+                {
+                    "portfolio": {
+                        "CVX": 0,
+                        "DIS": 0,
+                        "HON": 0,
+                        "JPM": 2,
+                        "MCD": 0,
+                        "PG": 0
+                    },
+                    "budget": 474.036865234375,
+                    "difference": 65.963134765625
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,151 @@
+{
+    "79": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "CSCO",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 1598,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "CSCO": 58.79932403564453,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "CSCO": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "TRV": [
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.3431766912050347,
+                "CSCO": 0.4555580726477211,
+                "TRV": 0.2012652361472443
+            },
+            "allocation": {
+                "AMGN": 2,
+                "CSCO": 13,
+                "TRV": 1
+            },
+            "value": -1722.345253066443,
+            "left_overs": 76.59793368347937
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.3694288851660363,
+                "CSCO": 0.4545252809328992,
+                "TRV": 0.20277903116203777
+            },
+            "allocation": {
+                "AMGN": 2,
+                "CSCO": 14,
+                "TRV": 1
+            },
+            "value": -2274.66793349963,
+            "left_overs": 17.79861156153129
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00101100000",
+                "00101000100"
+            ],
+            "final_expectation_value": -0.1980982696213192,
+            "params": [
+                1.7226698551097337e-17,
+                1.8243936859037635,
+                4.096385478815271,
+                1.6413309263663296,
+                4.196589299363865,
+                1.85127396841083,
+                6.283185307179586,
+                5.287383230182051,
+                4.918742135983897,
+                2.5862307563727946,
+                2.9245098805258554,
+                0.8781931169344961,
+                2.574090080286532,
+                0.0,
+                1.6819648790193111,
+                1.3496882441471036,
+                3.068537969258236,
+                3.1795568340073785,
+                1.4781254779205413,
+                1.5581009522073803
+            ],
+            "total_steps": 94,
+            "states_probs": [
+                0.002842044523120855,
+                0.0028426602995003537
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 4,
+                    "CSCO": 6,
+                    "TRV": 0
+                },
+                {
+                    "AMGN": 4,
+                    "CSCO": 2,
+                    "TRV": 1
+                }
+            ],
+            "training_history": {
+                "iterations": 94,
+                "evaluations": 1982,
+                "final_value": -0.1980982696213192,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 5197.127239704132,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -132.77105016327846,
+                -18.33172770505661
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 4,
+                        "CSCO": 6,
+                        "TRV": 0
+                    },
+                    "budget": 1387.0006561279297,
+                    "difference": 210.9993438720703
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 4,
+                        "CSCO": 2,
+                        "TRV": 1
+                    },
+                    "budget": 1391.7118530273438,
+                    "difference": 206.28814697265625
+                }
+            ]
+        }
+    }
+}

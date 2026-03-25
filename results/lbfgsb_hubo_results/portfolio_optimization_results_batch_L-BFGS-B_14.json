@@ -1,0 +1,153 @@
+{
+    "14": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "MSFT",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 2213,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "MSFT": 420.6565246582031,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "MSFT": [
+                    6,
+                    7,
+                    8
+                ],
+                "TRV": [
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.0,
+                "MSFT": 1.0,
+                "TRV": 0.0
+            },
+            "allocation": {
+                "DOW": 1,
+                "MSFT": 5,
+                "TRV": 0
+            },
+            "value": -29.039074801235152,
+            "left_overs": 70.31833983830575
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "DOW": 0.0,
+                "MSFT": 1.0,
+                "TRV": 0.013729078690924604
+            },
+            "allocation": {
+                "DOW": 2,
+                "MSFT": 5,
+                "TRV": 0
+            },
+            "value": -48.767554246816175,
+            "left_overs": 30.91929433793257
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1000000000001",
+                "0000000000001"
+            ],
+            "final_expectation_value": -0.10826990440964773,
+            "params": [
+                2.8392994215431506,
+                6.283185307179586,
+                0.1349572881218442,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                2.2347713932676307,
+                6.283185307179586,
+                6.283185307179586,
+                6.2476116883925235,
+                2.606400239522503,
+                1.1700563032789781,
+                1.697154015154491,
+                0.0,
+                2.178197072377515,
+                2.5222316839729557,
+                1.4390079011950248,
+                3.182907234198623,
+                1.4701309209061602,
+                1.6095600645124248
+            ],
+            "total_steps": 222,
+            "states_probs": [
+                0.0012493345559632502,
+                0.0012714412558781666
+            ],
+            "optimized_portfolios": [
+                {
+                    "DOW": 1,
+                    "MSFT": 0,
+                    "TRV": 8
+                },
+                {
+                    "DOW": 0,
+                    "MSFT": 0,
+                    "TRV": 8
+                }
+            ],
+            "training_history": {
+                "iterations": 222,
+                "evaluations": 5343,
+                "final_value": -0.10826990440964773,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 46677.567924022675,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -482.47776757606266,
+                -381.31271699932665
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DOW": 1,
+                        "MSFT": 0,
+                        "TRV": 8
+                    },
+                    "budget": 1958.6669807434082,
+                    "difference": 254.3330192565918
+                },
+                {
+                    "portfolio": {
+                        "DOW": 0,
+                        "MSFT": 0,
+                        "TRV": 8
+                    },
+                    "budget": 1919.2679443359375,
+                    "difference": 293.7320556640625
+                }
+            ]
+        }
+    }
+}

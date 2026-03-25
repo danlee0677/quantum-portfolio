@@ -1,0 +1,135 @@
+{
+    "36": {
+        "hyperparams": {
+            "stocks": [
+                "IBM",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1025,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "IBM": 218.37515258789062,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "IBM": [
+                    0,
+                    1,
+                    2
+                ],
+                "INTC": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "IBM": 0.9161547714455226,
+                "INTC": 0.0838452285544773
+            },
+            "allocation": {
+                "IBM": 4,
+                "INTC": 6
+            },
+            "value": -155.99092101698807,
+            "left_overs": 31.199393056015197
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "IBM": 0.9174850039674771,
+                "INTC": 0.04566352992441762
+            },
+            "allocation": {
+                "IBM": 4,
+                "INTC": 5
+            },
+            "value": -93.04528565582561,
+            "left_overs": 51.24939309665365
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001011000",
+                "001111000"
+            ],
+            "final_expectation_value": -0.30809726947380156,
+            "params": [
+                3.474670200971089,
+                0.10385788866689351,
+                3.1641836577130347,
+                -1.4015950330113647,
+                -3.5766757682389505,
+                -11.774402233877042,
+                5.8593832257794745,
+                7.728564203031652,
+                0.9224531840015686,
+                2.382306342637845,
+                0.39805010410873165,
+                0.38967009137110253,
+                2.4019366185606437,
+                0.3743707089663485,
+                0.10382228756838363,
+                -0.004444809724365936,
+                1.4646938472618753,
+                1.5939969956085878
+            ],
+            "total_steps": 6399,
+            "states_probs": [
+                0.007444835365779614,
+                0.007489328229737807
+            ],
+            "optimized_portfolios": [
+                {
+                    "IBM": 4,
+                    "INTC": 6
+                },
+                {
+                    "IBM": 4,
+                    "INTC": 7
+                }
+            ],
+            "training_history": {
+                "iterations": 6399,
+                "evaluations": 8375,
+                "final_value": -0.30809726947380156,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 8403.718538045883,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -155.99092101698807,
+                -251.99519199854734
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "IBM": 4,
+                        "INTC": 6
+                    },
+                    "budget": 993.8006057739258,
+                    "difference": 31.19939422607422
+                },
+                {
+                    "portfolio": {
+                        "IBM": 4,
+                        "INTC": 7
+                    },
+                    "budget": 1013.8506050109863,
+                    "difference": 11.149394989013672
+                }
+            ]
+        }
+    }
+}

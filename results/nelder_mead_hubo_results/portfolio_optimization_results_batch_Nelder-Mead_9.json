@@ -1,0 +1,138 @@
+{
+    "9": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 3186,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "NKE": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AAPL": 12,
+                "NKE": 1
+            },
+            "value": -498.2026521946835,
+            "left_overs": 108.97136348960339
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "NKE": 0.013585995423233703
+            },
+            "allocation": {
+                "AAPL": 12,
+                "NKE": 2
+            },
+            "value": -552.5823724253869,
+            "left_overs": 33.68243432467125
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1110111100",
+                "1110011100"
+            ],
+            "final_expectation_value": -0.32433586657789815,
+            "params": [
+                2.288695868577468,
+                4.177732485297829,
+                -7.264367356022885,
+                1.8548075762013825,
+                1.5518522653098747,
+                1.2741586385806922,
+                -0.010036150479901857,
+                9.406216354263993,
+                1.4971904194592591,
+                -2.951907213625668,
+                1.2468019960613463,
+                1.9997020882538432,
+                -0.14627049298301628,
+                0.011035743567704204,
+                3.6575034814110317,
+                -0.5578872176068571,
+                3.8744803073627776,
+                4.462006606808455,
+                -0.06381429144344243,
+                1.7643501131259858
+            ],
+            "total_steps": 7950,
+            "states_probs": [
+                0.003835508303241311,
+                0.0038597613341746035
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 7,
+                    "NKE": 15
+                },
+                {
+                    "AAPL": 7,
+                    "NKE": 14
+                }
+            ],
+            "training_history": {
+                "iterations": 7950,
+                "evaluations": 10218,
+                "final_value": -0.32433586657789815,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 22246.197964906693,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -4191.741560557487,
+                -3290.2843230126955
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 7,
+                        "NKE": 15
+                    },
+                    "budget": 2880.348808288574,
+                    "difference": 305.6511917114258
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 7,
+                        "NKE": 14
+                    },
+                    "budget": 2805.0598754882812,
+                    "difference": 380.94012451171875
+                }
+            ]
+        }
+    }
+}

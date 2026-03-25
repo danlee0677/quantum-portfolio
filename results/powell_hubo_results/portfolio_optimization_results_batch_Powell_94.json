@@ -1,0 +1,126 @@
+{
+    "94": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "JPM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1059,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "JPM": 237.0184326171875
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "JPM": [
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "optimizer": "Powell"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.17805095775477192,
+                "JPM": 0.821949042245228
+            },
+            "allocation": {
+                "AMGN": 1,
+                "JPM": 3
+            },
+            "value": -6.636762287756849,
+            "left_overs": 89.39351968317283
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.1932857068414715,
+                "JPM": 0.8181505323973903
+            },
+            "allocation": {
+                "AMGN": 1,
+                "JPM": 3
+            },
+            "value": -6.636762287756849,
+            "left_overs": 89.39352021635477
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000001",
+                "001000"
+            ],
+            "final_expectation_value": -0.21357205074107094,
+            "params": [
+                1.4687286358469722,
+                1.8215785953261494,
+                4.248994522794681,
+                1.0927195814094337,
+                7.232988348476088,
+                -0.31212885493072606,
+                -0.4015944650077737,
+                2.938447038404723,
+                1.521922193856855,
+                1.4480861914271888,
+                2.570580747606366,
+                0.46060129207885925
+            ],
+            "total_steps": 29,
+            "states_probs": [
+                0.05532550224129612,
+                0.06575139504079022
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 0,
+                    "JPM": 4
+                },
+                {
+                    "AMGN": 4,
+                    "JPM": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 29,
+                "evaluations": 3668,
+                "final_value": -0.21357205074107094,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 785.8315558433533,
+                "optimizer": "Powell"
+            },
+            "objective_values": [
+                -13.78492864798334,
+                -6.19179205857088
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 0,
+                        "JPM": 4
+                    },
+                    "budget": 948.07373046875,
+                    "difference": 110.92626953125
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 4,
+                        "JPM": 0
+                    },
+                    "budget": 1034.2047119140625,
+                    "difference": 24.7952880859375
+                }
+            ]
+        }
+    }
+}

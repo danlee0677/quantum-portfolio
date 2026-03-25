@@ -1,0 +1,132 @@
+{
+    "23": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 2544,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HON": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            },
+            "optimizer": "CG"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.5,
+                "HON": 0.5
+            },
+            "allocation": {
+                "AMGN": 5,
+                "HON": 5
+            },
+            "value": -137.48877416666215,
+            "left_overs": 127.80660171977888
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.5179999333635671,
+                "HON": 0.5013045143611956
+            },
+            "allocation": {
+                "AMGN": 5,
+                "HON": 5
+            },
+            "value": -137.48877416666215,
+            "left_overs": 127.80660944469855
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10010000",
+                "00011000"
+            ],
+            "final_expectation_value": -0.2921840958537513,
+            "params": [
+                2.1559989755895135,
+                4.922679162498301,
+                8.09799756975526,
+                11.054517969462207,
+                -1.3209746460175487,
+                14.1819707845691,
+                15.654146619501,
+                -0.17106813783597818,
+                2.6570741340251223,
+                -0.23434618758929796,
+                2.9925254154636742,
+                1.5183058374250753,
+                1.5154890110040034,
+                -0.08160334667995926,
+                2.378659294914236,
+                0.7034886102842565
+            ],
+            "total_steps": 2182,
+            "states_probs": [
+                0.02656329413942901,
+                0.02722669236405626
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 9,
+                    "HON": 0
+                },
+                {
+                    "AMGN": 8,
+                    "HON": 1
+                }
+            ],
+            "training_history": {
+                "iterations": 2182,
+                "evaluations": 56808,
+                "final_value": -0.2921840958537513,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 39959.838453531265,
+                "optimizer": "CG"
+            },
+            "objective_values": [
+                -170.327323162397,
+                -116.12318523528117
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 9,
+                        "HON": 0
+                    },
+                    "budget": 2326.9606018066406,
+                    "difference": 217.03939819335938
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 8,
+                        "HON": 1
+                    },
+                    "budget": 2293.096923828125,
+                    "difference": 250.903076171875
+                }
+            ]
+        }
+    }
+}

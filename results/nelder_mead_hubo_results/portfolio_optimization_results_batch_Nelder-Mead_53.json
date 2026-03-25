@@ -1,0 +1,154 @@
+{
+    "53": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "CVX",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4081,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "CVX": 143.2510986328125,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "CVX": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "HON": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 1.0,
+                "CVX": 6.071532165918825e-18,
+                "HON": 3.8163916471489756e-17
+            },
+            "allocation": {
+                "CAT": 11,
+                "CVX": 0,
+                "HON": 0
+            },
+            "value": -260.4413289024706,
+            "left_overs": 105.2153621429452
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 1.0,
+                "CVX": 0.0,
+                "HON": 0.03586976612447001
+            },
+            "allocation": {
+                "CAT": 11,
+                "CVX": 0,
+                "HON": 0
+            },
+            "value": -260.4413289024706,
+            "left_overs": 105.2153603189995
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00001000000001",
+                "00000000000001"
+            ],
+            "final_expectation_value": -0.1064154170237398,
+            "params": [
+                3.8734778446260485,
+                3.6667351745831276,
+                0.042631195223708285,
+                -4.984244044643855,
+                13.185565007841518,
+                0.06416995514623419,
+                23.796175500737576,
+                7.084712088213614,
+                -0.39574835213206727,
+                -1.9659430572552843,
+                2.4805293747196053,
+                1.3679863851701901,
+                1.5073624357634055,
+                0.21984165233149044,
+                1.7707777277601169,
+                1.2341315954161391,
+                3.0667939191180444,
+                3.5982421536712383,
+                2.4504094132349294,
+                0.17973310013637112
+            ],
+            "total_steps": 5000,
+            "states_probs": [
+                0.0007191672569057435,
+                0.0007307321175229068
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "CVX": 1,
+                    "HON": 16
+                },
+                {
+                    "CAT": 0,
+                    "CVX": 0,
+                    "HON": 16
+                }
+            ],
+            "training_history": {
+                "iterations": 5000,
+                "evaluations": 6332,
+                "final_value": -0.1064154170237398,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 66553.23695921898,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -4160.614659070086,
+                -3405.8494508431468
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "CVX": 1,
+                        "HON": 16
+                    },
+                    "budget": 3738.2510986328125,
+                    "difference": 342.7489013671875
+                },
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "CVX": 0,
+                        "HON": 16
+                    },
+                    "budget": 3595.0,
+                    "difference": 486.0
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,138 @@
+{
+    "0": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "JNJ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 3670,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "JNJ": 143.4715576171875
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "JNJ": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.6953653466052064,
+                "JNJ": 0.30463465339479356
+            },
+            "allocation": {
+                "HON": 11,
+                "JNJ": 8
+            },
+            "value": -2769.3421696443907,
+            "left_overs": 50.665038957590696
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "HON": 0.6936609096519517,
+                "JNJ": 0.3020008787875458
+            },
+            "allocation": {
+                "HON": 11,
+                "JNJ": 8
+            },
+            "value": -2769.3421696443907,
+            "left_overs": 50.66502709763972
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0001000010",
+                "0000100000"
+            ],
+            "final_expectation_value": -0.23250880772135957,
+            "params": [
+                3.4528567605199467,
+                3.2115388023294567,
+                6.163231479406306,
+                -0.2151561637883335,
+                2.6486254385457286,
+                -1.1315924358635039,
+                3.417579026671369,
+                3.5572607762293336,
+                1.8320163110757504,
+                0.4647329421820263,
+                2.2513721001968325,
+                0.9489790576469443,
+                1.4077675484397902,
+                0.07002046629390195,
+                2.472308920330561,
+                1.3437344279378949,
+                2.467118039381038,
+                3.5528239806749267,
+                1.0094403239236003,
+                1.9449532046933253
+            ],
+            "total_steps": 9099,
+            "states_probs": [
+                0.005876012995827712,
+                0.0061156247016620644
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 8,
+                    "JNJ": 8
+                },
+                {
+                    "HON": 16,
+                    "JNJ": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 9099,
+                "evaluations": 11624,
+                "final_value": -0.23250880772135957,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 26356.344111680984,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -1270.9258726538842,
+                -3405.8494508431468
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 8,
+                        "JNJ": 8
+                    },
+                    "budget": 2945.2724609375,
+                    "difference": 724.7275390625
+                },
+                {
+                    "portfolio": {
+                        "HON": 16,
+                        "JNJ": 0
+                    },
+                    "budget": 3595.0,
+                    "difference": 75.0
+                }
+            ]
+        }
+    }
+}

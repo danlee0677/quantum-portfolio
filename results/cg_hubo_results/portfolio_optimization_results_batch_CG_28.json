@@ -1,0 +1,132 @@
+{
+    "28": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 2231,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2
+                ],
+                "NKE": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            },
+            "optimizer": "CG"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.9999999999999999,
+                "NKE": 1.1102230246251565e-16
+            },
+            "allocation": {
+                "CAT": 6,
+                "NKE": 0
+            },
+            "value": -22.52798013236634,
+            "left_overs": 62.39019380097807
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 1.0,
+                "NKE": 0.026854406391241144
+            },
+            "allocation": {
+                "CAT": 6,
+                "NKE": 0
+            },
+            "value": -22.52798013236634,
+            "left_overs": 62.39019649557531
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "11001110",
+                "11011110"
+            ],
+            "final_expectation_value": -0.5038529274881081,
+            "params": [
+                2.242131932028653,
+                4.194917114426804,
+                4.889034706049878,
+                6.033753613208773,
+                4.861645890312458,
+                5.694730350321958,
+                6.752481081872058,
+                11.746880650607979,
+                2.6253527961356764,
+                1.235305843869356,
+                2.8221804144420113,
+                1.2319488720173575,
+                1.2965657127690398,
+                -0.1900393330624831,
+                3.049907936051269,
+                1.5360938225295073
+            ],
+            "total_steps": 1944,
+            "states_probs": [
+                0.01636869103789852,
+                0.01867083726186329
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 3,
+                    "NKE": 14
+                },
+                {
+                    "CAT": 3,
+                    "NKE": 15
+                }
+            ],
+            "training_history": {
+                "iterations": 1944,
+                "evaluations": 52035,
+                "final_value": -0.5038529274881081,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 36808.275196790695,
+                "optimizer": "CG"
+            },
+            "objective_values": [
+                -2273.3167157247512,
+                -2994.0232302571103
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 3,
+                        "NKE": 14
+                    },
+                    "budget": 2138.3499603271484,
+                    "difference": 92.65003967285156
+                },
+                {
+                    "portfolio": {
+                        "CAT": 3,
+                        "NKE": 15
+                    },
+                    "budget": 2213.6388931274414,
+                    "difference": 17.361106872558594
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,139 @@
+{
+    "71": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 2283,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "INTC": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "INTC": 0.0
+            },
+            "allocation": {
+                "AAPL": 9,
+                "INTC": 1
+            },
+            "value": -174.0018957433535,
+            "left_overs": 11.645230933760104
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "INTC": 0.0
+            },
+            "allocation": {
+                "AAPL": 9,
+                "INTC": 1
+            },
+            "value": -174.0018957433535,
+            "left_overs": 11.645230933760104
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00011000000",
+                "00010000000"
+            ],
+            "final_expectation_value": -0.2817321523915264,
+            "params": [
+                2.460773753393304,
+                5.4934505950901436,
+                1.2081509333766665,
+                2.9463108044101567,
+                5.381532625052588,
+                0.0,
+                0.0,
+                6.283185307179586,
+                6.283185307179586,
+                2.679656874460637,
+                2.6817251791029544,
+                1.4965263592034925,
+                1.4264036263677138,
+                0.0,
+                2.210823324745503,
+                2.3298347218881337,
+                1.6276922708014763,
+                3.1123215232860697,
+                1.5125857752203773,
+                1.5529365157513229
+            ],
+            "total_steps": 229,
+            "states_probs": [
+                0.003342377544720131,
+                0.0033627764620831734
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 8,
+                    "INTC": 1
+                },
+                {
+                    "AAPL": 8,
+                    "INTC": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 229,
+                "evaluations": 5195,
+                "final_value": -0.2817321523915264,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 16520.743849754333,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -111.00039150069196,
+                -88.69572309586624
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 8,
+                        "INTC": 1
+                    },
+                    "budget": 2021.209789276123,
+                    "difference": 261.79021072387695
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 8,
+                        "INTC": 0
+                    },
+                    "budget": 2001.1597900390625,
+                    "difference": 281.8402099609375
+                }
+            ]
+        }
+    }
+}

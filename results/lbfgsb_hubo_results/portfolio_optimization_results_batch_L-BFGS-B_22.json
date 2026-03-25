@@ -1,0 +1,132 @@
+{
+    "22": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 5324,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "MSFT": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 12,
+                "CRM": 0
+            },
+            "value": -668.7629977553529,
+            "left_overs": 276.1217032674458
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CRM": 0.05877240365863093,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 12,
+                "CRM": 0
+            },
+            "value": -668.7629977553529,
+            "left_overs": 276.12169880181864
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "11101110",
+                "00010001"
+            ],
+            "final_expectation_value": -0.526629346791201,
+            "params": [
+                3.753786323842359,
+                4.1937082124083584,
+                2.960237647442312,
+                3.177891851922151,
+                5.2161522333342605,
+                2.552628222179958,
+                3.320194269317085,
+                6.283185307179586,
+                2.541573699414236,
+                1.2762233237223526,
+                2.8146895618959027,
+                1.2018990189670378,
+                1.2270884678152356,
+                0.0,
+                2.9977915933131594,
+                1.5025006935672858
+            ],
+            "total_steps": 322,
+            "states_probs": [
+                0.013728134342866285,
+                0.01594703258245808
+            ],
+            "optimized_portfolios": [
+                {
+                    "CRM": 7,
+                    "MSFT": 7
+                },
+                {
+                    "CRM": 8,
+                    "MSFT": 8
+                }
+            ],
+            "training_history": {
+                "iterations": 322,
+                "evaluations": 6058,
+                "final_value": -0.526629346791201,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 4590.730813026428,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -566.9392366341517,
+                -967.6326487015895
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CRM": 7,
+                        "MSFT": 7
+                    },
+                    "budget": 5284.905578613281,
+                    "difference": 39.09442138671875
+                },
+                {
+                    "portfolio": {
+                        "CRM": 8,
+                        "MSFT": 8
+                    },
+                    "budget": 6039.89208984375,
+                    "difference": -715.89208984375
+                }
+            ]
+        }
+    }
+}

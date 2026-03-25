@@ -1,0 +1,154 @@
+{
+    "55": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "CAT",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4593,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "CAT": 361.4349670410156,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "CAT": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.10680092476620075,
+                "CAT": 0.8931990752337993,
+                "NKE": 6.245004513516506e-17
+            },
+            "allocation": {
+                "AXP": 2,
+                "CAT": 11,
+                "NKE": 0
+            },
+            "value": -367.64746232225497,
+            "left_overs": 25.027679580679433
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.1364778680240993,
+                "CAT": 0.9129955722353252,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AXP": 2,
+                "CAT": 11,
+                "NKE": 0
+            },
+            "value": -367.64746232225497,
+            "left_overs": 25.02766211884864
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "01001001101000",
+                "11001001100000"
+            ],
+            "final_expectation_value": -0.21612074915850105,
+            "params": [
+                2.53930180541974,
+                6.042814230560769,
+                3.3003512327653715,
+                1.7437574216048826,
+                -5.790092116557361,
+                0.5288029941483738,
+                22.764232690518007,
+                -3.0872289344148243,
+                2.028616805900516,
+                -2.0163983958095866,
+                2.628339607187267,
+                2.210031843782944,
+                0.3204960208335924,
+                -0.153930446006532,
+                0.48066173095480924,
+                3.1243933698918216,
+                3.071402279169164,
+                4.405013662049967,
+                2.9313648880565486,
+                -1.1396609253626062
+            ],
+            "total_steps": 5000,
+            "states_probs": [
+                0.0003424821256867502,
+                0.000342546452638819
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 2,
+                    "CAT": 9,
+                    "NKE": 5
+                },
+                {
+                    "AXP": 3,
+                    "CAT": 9,
+                    "NKE": 1
+                }
+            ],
+            "training_history": {
+                "iterations": 5000,
+                "evaluations": 6367,
+                "final_value": -0.21612074915850105,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 66754.36077666283,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -278.8720958009234,
+                -262.4678868237013
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 2,
+                        "CAT": 9,
+                        "NKE": 5
+                    },
+                    "budget": 4221.547050476074,
+                    "difference": 371.4529495239258
+                },
+                {
+                    "portfolio": {
+                        "AXP": 3,
+                        "CAT": 9,
+                        "NKE": 1
+                    },
+                    "budget": 4216.485160827637,
+                    "difference": 376.5148391723633
+                }
+            ]
+        }
+    }
+}

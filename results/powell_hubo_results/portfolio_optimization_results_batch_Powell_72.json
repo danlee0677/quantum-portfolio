@@ -1,0 +1,151 @@
+{
+    "72": {
+        "hyperparams": {
+            "stocks": [
+                "JNJ",
+                "MSFT",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 2786,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JNJ": 143.4715576171875,
+                "MSFT": 420.6565246582031,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "JNJ": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "MSFT": [
+                    5,
+                    6,
+                    7
+                ],
+                "UNH": [
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "Powell"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JNJ": 0.0,
+                "MSFT": 1.0,
+                "UNH": 5.551115123125783e-17
+            },
+            "allocation": {
+                "JNJ": 1,
+                "MSFT": 6,
+                "UNH": 0
+            },
+            "value": -51.790803265510895,
+            "left_overs": 118.58928335972996
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "JNJ": 0.0,
+                "MSFT": 1.0,
+                "UNH": 0.05138718958542513
+            },
+            "allocation": {
+                "MSFT": 6,
+                "JNJ": 0,
+                "UNH": 0
+            },
+            "value": -40.367191979864245,
+            "left_overs": 262.0608350720995
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "11000110100",
+                "11100110000"
+            ],
+            "final_expectation_value": -0.12459294310578936,
+            "params": [
+                2.2153452459041274,
+                3.408322379233555,
+                1.615461405071312,
+                2.8683577441731773,
+                1.6387738563727448,
+                -1.6838919472130156,
+                -2.3097199954956698,
+                21.70229859095826,
+                -2.9530728868225027,
+                0.5954056207689505,
+                2.5096189130651636,
+                1.2446427637289723,
+                2.095613363346588,
+                0.34788201613140324,
+                1.8554198222198108,
+                1.8164031420167748,
+                1.8727015229532162,
+                2.8157117474109805,
+                2.180062237664521,
+                1.1843604882535903
+            ],
+            "total_steps": 25,
+            "states_probs": [
+                0.004331948166807893,
+                0.004335242653128574
+            ],
+            "optimized_portfolios": [
+                {
+                    "JNJ": 3,
+                    "MSFT": 3,
+                    "UNH": 1
+                },
+                {
+                    "JNJ": 7,
+                    "MSFT": 3,
+                    "UNH": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 25,
+                "evaluations": 5168,
+                "final_value": -0.12459294310578936,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 15601.604906082153,
+                "optimizer": "Powell"
+            },
+            "objective_values": [
+                -27.835650508445344,
+                -171.97347910873526
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JNJ": 3,
+                        "MSFT": 3,
+                        "UNH": 1
+                    },
+                    "budget": 2196.091552734375,
+                    "difference": 589.908447265625
+                },
+                {
+                    "portfolio": {
+                        "JNJ": 7,
+                        "MSFT": 3,
+                        "UNH": 0
+                    },
+                    "budget": 2266.270477294922,
+                    "difference": 519.7295227050781
+                }
+            ]
+        }
+    }
+}

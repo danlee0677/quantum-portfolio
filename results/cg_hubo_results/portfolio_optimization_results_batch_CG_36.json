@@ -1,0 +1,135 @@
+{
+    "36": {
+        "hyperparams": {
+            "stocks": [
+                "IBM",
+                "INTC"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 1025,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "IBM": 218.37515258789062,
+                "INTC": 20.049999237060547
+            },
+            "assets_to_qubits": {
+                "IBM": [
+                    0,
+                    1,
+                    2
+                ],
+                "INTC": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "CG"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "IBM": 0.9161541787950976,
+                "INTC": 0.0838458212049023
+            },
+            "allocation": {
+                "IBM": 4,
+                "INTC": 6
+            },
+            "value": -155.99099256610623,
+            "left_overs": 31.199393056056692
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "IBM": 0.917484436418291,
+                "INTC": 0.045664042961264376
+            },
+            "allocation": {
+                "IBM": 4,
+                "INTC": 5
+            },
+            "value": -93.04535618758571,
+            "left_overs": 51.24939309668275
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001110000",
+                "001010000"
+            ],
+            "final_expectation_value": -0.31142540523335505,
+            "params": [
+                1.4782027908700297,
+                4.127277626262871,
+                5.373468811046117,
+                0.7406851524009486,
+                4.379422965331564,
+                3.872942529115577,
+                9.854028370536062,
+                13.16831823860714,
+                2.374781983701197,
+                2.567446104604336,
+                -0.3776729501632669,
+                1.787615917323668,
+                -0.5980990865365431,
+                1.2928417105866168,
+                1.3168685999328806,
+                -0.11547348522243008,
+                1.5115701657688643,
+                1.5674115890475817
+            ],
+            "total_steps": 1658,
+            "states_probs": [
+                0.015335962371041213,
+                0.01535349554929326
+            ],
+            "optimized_portfolios": [
+                {
+                    "IBM": 4,
+                    "INTC": 3
+                },
+                {
+                    "IBM": 4,
+                    "INTC": 2
+                }
+            ],
+            "training_history": {
+                "iterations": 1658,
+                "evaluations": 48058,
+                "final_value": -0.31142540523335505,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 59468.9433658123,
+                "optimizer": "CG"
+            },
+            "objective_values": [
+                -31.73845097383814,
+                -19.814539649910387
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "IBM": 4,
+                        "INTC": 3
+                    },
+                    "budget": 933.6506080627441,
+                    "difference": 91.34939193725586
+                },
+                {
+                    "portfolio": {
+                        "IBM": 4,
+                        "INTC": 2
+                    },
+                    "budget": 913.6006088256836,
+                    "difference": 111.3993911743164
+                }
+            ]
+        }
+    }
+}

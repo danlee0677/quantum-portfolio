@@ -1,0 +1,140 @@
+{
+    "75": {
+        "hyperparams": {
+            "stocks": [
+                "CSCO",
+                "CVX"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 3752,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CSCO": 58.409358978271484,
+                "CVX": 143.2510986328125
+            },
+            "assets_to_qubits": {
+                "CSCO": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "CVX": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CSCO": 0.7118911017331429,
+                "CVX": 0.28810889826685715
+            },
+            "allocation": {
+                "CSCO": 46,
+                "CVX": 7
+            },
+            "value": -271654.52228175465,
+            "left_overs": 62.41179615813462
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CSCO": 0.7108060892703015,
+                "CVX": 0.2843395936429526
+            },
+            "allocation": {
+                "CSCO": 46,
+                "CVX": 7
+            },
+            "value": -271654.52228175465,
+            "left_overs": 62.411787797890156
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "100000100000",
+                "000000100000"
+            ],
+            "final_expectation_value": -0.22828229887779417,
+            "params": [
+                1.3659422385973181,
+                3.1148466712792926,
+                4.854717523588726,
+                0.6702873976570047,
+                5.844894302532141,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                2.4231913484172574,
+                2.703583660620897,
+                2.9341446931115307,
+                0.0,
+                3.024321894401284,
+                3.075187643918848,
+                3.090445299499663,
+                3.0986629211203773,
+                1.5243005068182875,
+                1.5901332076903936
+            ],
+            "total_steps": 298,
+            "states_probs": [
+                0.001442556164417724,
+                0.0015118718646262767
+            ],
+            "optimized_portfolios": [
+                {
+                    "CSCO": 65,
+                    "CVX": 0
+                },
+                {
+                    "CSCO": 64,
+                    "CVX": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 298,
+                "evaluations": 6727,
+                "final_value": -0.22828229887779417,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+                "execution_time": 31023.44867515564,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -852454.2478389498,
+                -801215.9620535198
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CSCO": 65,
+                        "CVX": 0
+                    },
+                    "budget": 3796.6083335876465,
+                    "difference": -44.608333587646484
+                },
+                {
+                    "portfolio": {
+                        "CSCO": 64,
+                        "CVX": 0
+                    },
+                    "budget": 3738.198974609375,
+                    "difference": 13.801025390625
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,138 @@
+{
+    "99": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "AMGN",
+                "AXP"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 848,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "AMGN": 258.5511779785156,
+                "AXP": 296.0938415527344
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1
+                ],
+                "AMGN": [
+                    2,
+                    3
+                ],
+                "AXP": [
+                    4,
+                    5
+                ]
+            },
+            "optimizer": "CG"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "AMGN": 0.0,
+                "AXP": 1.457167719820518e-16
+            },
+            "allocation": {
+                "AAPL": 3,
+                "AMGN": 0,
+                "AXP": 0
+            },
+            "value": -1.0386205879749586,
+            "left_overs": 97.5650782613792
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "AMGN": 0.0,
+                "AXP": 0.04287380545343039
+            },
+            "allocation": {
+                "AAPL": 3,
+                "AMGN": 0,
+                "AXP": 0
+            },
+            "value": -1.0386205879749586,
+            "left_overs": 97.56507861289356
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "100001",
+                "101010"
+            ],
+            "final_expectation_value": -0.2922638411648148,
+            "params": [
+                1.4449468871284987,
+                2.89484723963245,
+                5.783072674827603,
+                -18.741866698022456,
+                29.64590400124246,
+                18.729341087701798,
+                2.2947160277048817,
+                2.714693853468067,
+                3.012641086847326,
+                0.07136319485757481,
+                3.0673760518532496,
+                -0.05040284472564476
+            ],
+            "total_steps": 3318,
+            "states_probs": [
+                0.06315049806459767,
+                0.0763931221492054
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 1,
+                    "AMGN": 0,
+                    "AXP": 2
+                },
+                {
+                    "AAPL": 1,
+                    "AMGN": 1,
+                    "AXP": 1
+                }
+            ],
+            "training_history": {
+                "iterations": 3318,
+                "evaluations": 69443,
+                "final_value": -0.2922638411648148,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 16721.13052201271,
+                "optimizer": "CG"
+            },
+            "objective_values": [
+                -2.056121476095306,
+                -0.32187384171451355
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 1,
+                        "AMGN": 0,
+                        "AXP": 2
+                    },
+                    "budget": 842.3326568603516,
+                    "difference": 5.6673431396484375
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 1,
+                        "AMGN": 1,
+                        "AXP": 1
+                    },
+                    "budget": 804.7899932861328,
+                    "difference": 43.21000671386719
+                }
+            ]
+        }
+    }
+}

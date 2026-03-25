@@ -1,0 +1,132 @@
+{
+    "22": {
+        "hyperparams": {
+            "stocks": [
+                "CRM",
+                "MSFT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 5324,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CRM": 334.3299865722656,
+                "MSFT": 420.6565246582031
+            },
+            "assets_to_qubits": {
+                "CRM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "MSFT": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CRM": 0.0,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 12,
+                "CRM": 0
+            },
+            "value": -668.7619648403168,
+            "left_overs": 276.1217032674458
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CRM": 0.058772384995353165,
+                "MSFT": 1.0
+            },
+            "allocation": {
+                "MSFT": 12,
+                "CRM": 0
+            },
+            "value": -668.7619648403168,
+            "left_overs": 276.1216988018268
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "01101110",
+                "11101110"
+            ],
+            "final_expectation_value": -0.5295161735481002,
+            "params": [
+                5.26347015523762,
+                -4.663950671867967,
+                2.629876990819029,
+                5.210285524795814,
+                12.755588431775317,
+                -1.1282554844732346,
+                4.595345848147587,
+                0.46580494272894896,
+                1.6758809823072571,
+                0.622529571339442,
+                2.51383821476454,
+                1.1830806109093306,
+                0.30401692335968533,
+                1.1611610668628698,
+                3.1506591209095123,
+                1.5240710031794764
+            ],
+            "total_steps": 7380,
+            "states_probs": [
+                0.013911447774163043,
+                0.015688625744038554
+            ],
+            "optimized_portfolios": [
+                {
+                    "CRM": 6,
+                    "MSFT": 7
+                },
+                {
+                    "CRM": 7,
+                    "MSFT": 7
+                }
+            ],
+            "training_history": {
+                "iterations": 7380,
+                "evaluations": 9747,
+                "final_value": -0.5295161735481002,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 6080.542169332504,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -411.3886776079795,
+                -566.9390951645958
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CRM": 6,
+                        "MSFT": 7
+                    },
+                    "budget": 4950.575592041016,
+                    "difference": 373.4244079589844
+                },
+                {
+                    "portfolio": {
+                        "CRM": 7,
+                        "MSFT": 7
+                    },
+                    "budget": 5284.905578613281,
+                    "difference": 39.09442138671875
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "33": {
+        "hyperparams": {
+            "stocks": [
+                "MMM",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 2454,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "MMM": 128.4563446044922,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "MMM": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "TRV": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "MMM": 0.4224438113059803,
+                "TRV": 0.5775561886940197
+            },
+            "allocation": {
+                "MMM": 7,
+                "TRV": 6
+            },
+            "value": -674.8996123794403,
+            "left_overs": 115.3546273686834
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "MMM": 0.4054789088169558,
+                "TRV": 0.5735812308375298
+            },
+            "allocation": {
+                "MMM": 7,
+                "TRV": 6
+            },
+            "value": -674.8996123794403,
+            "left_overs": 115.35462592959539
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000011000",
+                "010010000"
+            ],
+            "final_expectation_value": -0.23215884822656016,
+            "params": [
+                -1.656249849927222,
+                -1.2462160276962437,
+                0.12494645876166778,
+                3.6007581826586024,
+                -4.705650377746814,
+                2.1307641003168607,
+                2.8346699016162153,
+                2.6784488589575264,
+                -1.0901315391092643,
+                0.5514110829655117,
+                1.867069289589379,
+                1.959149636464585,
+                0.6186594310701495,
+                -0.07577634597300076,
+                1.6553278503146145,
+                -0.05029040471579485,
+                0.597624195369453,
+                1.9811385773107748
+            ],
+            "total_steps": 6571,
+            "states_probs": [
+                0.007481755368701362,
+                0.007492108270396871
+            ],
+            "optimized_portfolios": [
+                {
+                    "MMM": 16,
+                    "TRV": 1
+                },
+                {
+                    "MMM": 18,
+                    "TRV": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 6571,
+                "evaluations": 8553,
+                "final_value": -0.23215884822656016,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 9214.470116853714,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -7022.470207803081,
+                -10969.878328508046
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "MMM": 16,
+                        "TRV": 1
+                    },
+                    "budget": 2295.210006713867,
+                    "difference": 158.7899932861328
+                },
+                {
+                    "portfolio": {
+                        "MMM": 18,
+                        "TRV": 0
+                    },
+                    "budget": 2312.2142028808594,
+                    "difference": 141.78579711914062
+                }
+            ]
+        }
+    }
+}

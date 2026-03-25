@@ -1,0 +1,177 @@
+{
+    "15": {
+        "hyperparams": {
+            "stocks": [
+                "GS",
+                "JNJ",
+                "MSFT",
+                "UNH",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 747,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "GS": 569.7945556640625,
+                "JNJ": 143.4715576171875,
+                "MSFT": 420.6565246582031,
+                "UNH": 503.7073059082031,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "GS": [
+                    0
+                ],
+                "JNJ": [
+                    1,
+                    2,
+                    3
+                ],
+                "MSFT": [
+                    4
+                ],
+                "UNH": [
+                    5
+                ],
+                "WBA": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "GS": 0.0,
+                "JNJ": 0.0,
+                "MSFT": 0.9999999999999999,
+                "UNH": 2.498001805406602e-16,
+                "WBA": 2.656414741716728e-16
+            },
+            "allocation": {
+                "MSFT": 1,
+                "WBA": 11,
+                "GS": 0,
+                "JNJ": 0,
+                "UNH": 0
+            },
+            "value": -706.2105179349566,
+            "left_overs": 223.7134761334006
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "GS": 0.0,
+                "JNJ": 0.0,
+                "MSFT": 1.0,
+                "UNH": 0.05138735145238129,
+                "WBA": 0.0
+            },
+            "allocation": {
+                "MSFT": 1,
+                "WBA": 10,
+                "GS": 0,
+                "JNJ": 0,
+                "UNH": 0
+            },
+            "value": -481.6083016756855,
+            "left_overs": 233.043475098435
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0110000101000",
+                "0110001001000"
+            ],
+            "final_expectation_value": -0.050941822595203544,
+            "params": [
+                3.9009043485403643,
+                3.3688698882245998,
+                5.454050699963933,
+                1.5845261442555234,
+                3.0285230435864054,
+                0.34103603404779115,
+                5.0564975258643425,
+                -12.421970009074244,
+                3.439561243229597,
+                -1.4475177553941179,
+                2.6665224583114506,
+                1.7337676490194647,
+                2.3841409699159217,
+                0.1835128442925852,
+                1.9327705420699683,
+                0.3296203071179322,
+                2.9765184670130944,
+                3.8156150618009397,
+                0.6160391341305691,
+                2.056088925508125
+            ],
+            "total_steps": 5944,
+            "states_probs": [
+                0.001981139632174583,
+                0.0019825564915448035
+            ],
+            "optimized_portfolios": [
+                {
+                    "GS": 0,
+                    "JNJ": 3,
+                    "MSFT": 0,
+                    "UNH": 0,
+                    "WBA": 10
+                },
+                {
+                    "GS": 0,
+                    "JNJ": 3,
+                    "MSFT": 0,
+                    "UNH": 0,
+                    "WBA": 9
+                }
+            ],
+            "training_history": {
+                "iterations": 5944,
+                "evaluations": 7668,
+                "final_value": -0.050941822595203544,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 54106.34863233566,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -519.6038016065729,
+                -346.09938801740253
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "GS": 0,
+                        "JNJ": 3,
+                        "MSFT": 0,
+                        "UNH": 0,
+                        "WBA": 10
+                    },
+                    "budget": 523.714672088623,
+                    "difference": 223.28532791137695
+                },
+                {
+                    "portfolio": {
+                        "GS": 0,
+                        "JNJ": 3,
+                        "MSFT": 0,
+                        "UNH": 0,
+                        "WBA": 9
+                    },
+                    "budget": 514.384672164917,
+                    "difference": 232.615327835083
+                }
+            ]
+        }
+    }
+}

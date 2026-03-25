@@ -1,0 +1,141 @@
+{
+    "81": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "IBM",
+                "UNH"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 1366,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "IBM": 218.37515258789062,
+                "UNH": 503.7073059082031
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1
+                ],
+                "IBM": [
+                    2,
+                    3,
+                    4
+                ],
+                "UNH": [
+                    5,
+                    6
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.5432976097430723,
+                "IBM": 4.2999458160775106e-16,
+                "UNH": 0.4567023902569272
+            },
+            "allocation": {
+                "CAT": 2,
+                "UNH": 1,
+                "IBM": 0
+            },
+            "value": 0.046078125988943994,
+            "left_overs": 139.42275910814533
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 0.6007294221874878,
+                "IBM": 0.0,
+                "UNH": 0.4724979233422887
+            },
+            "allocation": {
+                "CAT": 2,
+                "UNH": 1,
+                "IBM": 0
+            },
+            "value": 0.046078125988943994,
+            "left_overs": 139.4227598053617
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0010001",
+                "0000001"
+            ],
+            "final_expectation_value": -0.2505271237106878,
+            "params": [
+                1.8602356186277333,
+                3.350607734399304,
+                2.3820089488568716,
+                6.283185307179586,
+                6.283185307179586,
+                6.282490884517902,
+                3.857706804587408,
+                0.8502835612028844,
+                1.1082413148887196,
+                1.3849048818144587,
+                3.0127468664157115,
+                1.497609195770796,
+                3.122166003643189,
+                1.6579910559063653
+            ],
+            "total_steps": 279,
+            "states_probs": [
+                0.04132316391785524,
+                0.04942112968367888
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "IBM": 1,
+                    "UNH": 2
+                },
+                {
+                    "CAT": 0,
+                    "IBM": 0,
+                    "UNH": 2
+                }
+            ],
+            "training_history": {
+                "iterations": 279,
+                "evaluations": 4801,
+                "final_value": -0.2505271237106878,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 1604.950526714325,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -1.4737173917044728,
+                -0.4182238487270885
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "IBM": 1,
+                        "UNH": 2
+                    },
+                    "budget": 1225.7897644042969,
+                    "difference": 140.21023559570312
+                },
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "IBM": 0,
+                        "UNH": 2
+                    },
+                    "budget": 1007.4146118164062,
+                    "difference": 358.58538818359375
+                }
+            ]
+        }
+    }
+}

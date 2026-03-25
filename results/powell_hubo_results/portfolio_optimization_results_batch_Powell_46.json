@@ -1,0 +1,167 @@
+{
+    "46": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "AXP",
+                "HON",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 15,
+            "budget": 1417,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "AXP": 296.0938415527344,
+                "HON": 224.6875,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2
+                ],
+                "AXP": [
+                    3,
+                    4,
+                    5
+                ],
+                "HON": [
+                    6,
+                    7,
+                    8
+                ],
+                "VZ": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13,
+                    14
+                ]
+            },
+            "optimizer": "Powell"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.4384257164450788,
+                "AXP": 0.5615742835549212,
+                "HON": 0.0,
+                "VZ": 6.071532165918825e-18
+            },
+            "allocation": {
+                "AMGN": 2,
+                "AXP": 3,
+                "HON": 0,
+                "VZ": 0
+            },
+            "value": -14.337881018093555,
+            "left_overs": 11.616118709105649
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.45978112017068806,
+                "AXP": 0.558810333258886,
+                "HON": 0.0,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "AMGN": 2,
+                "AXP": 3,
+                "HON": 0,
+                "VZ": 0
+            },
+            "value": -14.337881018093555,
+            "left_overs": 11.616118348522605
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "100000100111100",
+                "100100100111000"
+            ],
+            "final_expectation_value": -0.045650181699736295,
+            "params": [
+                3.6295233434008787,
+                11.712869224764486,
+                -0.1451919197919633,
+                -2.204481044283486,
+                1.7256217895805228,
+                -2.2971204364998314,
+                -1.2598797976126268,
+                40.02224150250183,
+                -8.275928832026826,
+                0.8998027339757684,
+                2.491810976844856,
+                1.3466681741555036,
+                1.8474761725997835,
+                0.003526140184522544,
+                1.9837258187192912,
+                1.8943155210624407,
+                1.8945527835117377,
+                2.8545655656413342,
+                2.144456899958433,
+                1.1624008111943727
+            ],
+            "total_steps": 17,
+            "states_probs": [
+                0.0010607024137398743,
+                0.0010656049529415052
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 1,
+                    "AXP": 0,
+                    "HON": 1,
+                    "VZ": 15
+                },
+                {
+                    "AMGN": 1,
+                    "AXP": 1,
+                    "HON": 1,
+                    "VZ": 7
+                }
+            ],
+            "training_history": {
+                "iterations": 17,
+                "evaluations": 3602,
+                "final_value": -0.045650181699736295,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 72355.89332914352,
+                "optimizer": "Powell"
+            },
+            "objective_values": [
+                -1216.3188557617686,
+                -47.482455110681315
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "AXP": 0,
+                        "HON": 1,
+                        "VZ": 15
+                    },
+                    "budget": 1072.6444816589355,
+                    "difference": 344.35551834106445
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "AXP": 1,
+                        "HON": 1,
+                        "VZ": 7
+                    },
+                    "budget": 1054.3885612487793,
+                    "difference": 362.6114387512207
+                }
+            ]
+        }
+    }
+}

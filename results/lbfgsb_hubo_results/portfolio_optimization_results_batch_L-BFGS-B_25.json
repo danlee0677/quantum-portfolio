@@ -1,0 +1,132 @@
+{
+    "25": {
+        "hyperparams": {
+            "stocks": [
+                "IBM",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 3441,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "IBM": 218.37515258789062,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "IBM": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "TRV": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "IBM": 0.5994071163520672,
+                "TRV": 0.40059288364793283
+            },
+            "allocation": {
+                "IBM": 9,
+                "TRV": 6
+            },
+            "value": -1204.4988981575875,
+            "left_overs": 36.17266871681113
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "IBM": 0.590752217844861,
+                "TRV": 0.39862521462568135
+            },
+            "allocation": {
+                "IBM": 9,
+                "TRV": 6
+            },
+            "value": -1204.4988981575875,
+            "left_overs": 36.172667426059434
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00010001",
+                "11101110"
+            ],
+            "final_expectation_value": -0.6052225778348952,
+            "params": [
+                2.922888379209966,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                4.60049049164864,
+                6.042860296884365,
+                6.283185307179586,
+                2.747616762704452,
+                1.4051906906847806,
+                1.4795571290945342,
+                1.5188492128036963,
+                1.5086043767873007,
+                0.0,
+                3.097945919658353,
+                1.5353113476046396
+            ],
+            "total_steps": 114,
+            "states_probs": [
+                0.020690447791209793,
+                0.020830467515941954
+            ],
+            "optimized_portfolios": [
+                {
+                    "IBM": 8,
+                    "TRV": 8
+                },
+                {
+                    "IBM": 7,
+                    "TRV": 7
+                }
+            ],
+            "training_history": {
+                "iterations": 114,
+                "evaluations": 2211,
+                "final_value": -0.6052225778348952,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 1653.8655037879944,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -1792.109746385374,
+                -1052.9032627778934
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "IBM": 8,
+                        "TRV": 8
+                    },
+                    "budget": 3666.2691650390625,
+                    "difference": -225.2691650390625
+                },
+                {
+                    "portfolio": {
+                        "IBM": 7,
+                        "TRV": 7
+                    },
+                    "budget": 3207.9855194091797,
+                    "difference": 233.0144805908203
+                }
+            ]
+        }
+    }
+}

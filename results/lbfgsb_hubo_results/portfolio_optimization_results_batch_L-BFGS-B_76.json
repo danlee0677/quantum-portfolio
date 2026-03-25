@@ -1,0 +1,139 @@
+{
+    "76": {
+        "hyperparams": {
+            "stocks": [
+                "TRV",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 1617,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "TRV": 239.9084930419922,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "TRV": [
+                    0,
+                    1,
+                    2
+                ],
+                "WBA": [
+                    3,
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "TRV": 0.8218464980592785,
+                "WBA": 0.17815350194072152
+            },
+            "allocation": {
+                "TRV": 6,
+                "WBA": 19
+            },
+            "value": -5877.986443443852,
+            "left_overs": 0.2790422098214549
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "TRV": 0.8196423258741852,
+                "WBA": 0.1000976598523548
+            },
+            "allocation": {
+                "TRV": 6,
+                "WBA": 19
+            },
+            "value": -5877.986443443852,
+            "left_overs": 0.27904316853505406
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "11101111000",
+                "11111111000"
+            ],
+            "final_expectation_value": -0.09560625683562925,
+            "params": [
+                1.241543913206284,
+                1.7188152075685854,
+                2.466267691174039,
+                3.38027357919057,
+                2.5195136629365202,
+                1.038836281012143,
+                5.108914562955017,
+                1.572721375161048,
+                1.5739642596056518,
+                5.413866759799251,
+                1.7587183365241836,
+                2.017473187954228,
+                1.805955186337054,
+                0.7792959915592317,
+                2.6143628781348456,
+                1.038129632775008,
+                2.0833586733667944,
+                2.8379717094551857,
+                1.1726053747158913,
+                1.3551891887850458
+            ],
+            "total_steps": 414,
+            "states_probs": [
+                0.013892076618253923,
+                0.015566725336841886
+            ],
+            "optimized_portfolios": [
+                {
+                    "TRV": 7,
+                    "WBA": 30
+                },
+                {
+                    "TRV": 7,
+                    "WBA": 31
+                }
+            ],
+            "training_history": {
+                "iterations": 414,
+                "evaluations": 9585,
+                "final_value": -0.09560625683562925,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 29593.61795949936,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -36764.200165520175,
+                -41981.16627094719
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "TRV": 7,
+                        "WBA": 30
+                    },
+                    "budget": 1959.259449005127,
+                    "difference": -342.25944900512695
+                },
+                {
+                    "portfolio": {
+                        "TRV": 7,
+                        "WBA": 31
+                    },
+                    "budget": 1968.589448928833,
+                    "difference": -351.589448928833
+                }
+            ]
+        }
+    }
+}

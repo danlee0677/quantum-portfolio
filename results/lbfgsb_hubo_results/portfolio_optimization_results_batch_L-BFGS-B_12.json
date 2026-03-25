@@ -1,0 +1,153 @@
+{
+    "12": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "VZ",
+                "WBA"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 13,
+            "budget": 622,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JPM": 237.0184326171875,
+                "VZ": 39.29372024536133,
+                "WBA": 9.329999923706055
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0,
+                    1
+                ],
+                "VZ": [
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "WBA": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.9180592695278347,
+                "VZ": 0.08194073047216531,
+                "WBA": 7.676151381197371e-17
+            },
+            "allocation": {
+                "JPM": 2,
+                "VZ": 2,
+                "WBA": 4
+            },
+            "value": -9.859959235970168,
+            "left_overs": 32.05569432609457
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "JPM": 0.9189472028827329,
+                "VZ": 0.07881635142483508,
+                "WBA": 0.0
+            },
+            "allocation": {
+                "JPM": 2,
+                "VZ": 2,
+                "WBA": 4
+            },
+            "value": -9.859959235970168,
+            "left_overs": 32.055694276941836
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1011101000000",
+                "1011100000000"
+            ],
+            "final_expectation_value": -0.07761226707941773,
+            "params": [
+                3.5239202584512888,
+                2.1000474945425096,
+                2.4012913191492182,
+                4.0177806828037275,
+                3.8176695344663263,
+                3.8204008337115183,
+                3.526411894054,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                2.1257733998830384,
+                1.806619849078323,
+                0.735520874525675,
+                0.8587083738745916,
+                1.0197477005068951,
+                2.573399600729783,
+                2.5268932379914744,
+                2.979329111327339,
+                1.9775001559425365,
+                1.050561391518163
+            ],
+            "total_steps": 336,
+            "states_probs": [
+                0.001047478926415114,
+                0.0010518889478459898
+            ],
+            "optimized_portfolios": [
+                {
+                    "JPM": 1,
+                    "VZ": 7,
+                    "WBA": 1
+                },
+                {
+                    "JPM": 1,
+                    "VZ": 7,
+                    "WBA": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 336,
+                "evaluations": 7927,
+                "final_value": -0.07761226707941773,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 59675.26027011871,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -51.27400798732845,
+                -58.89292207841092
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JPM": 1,
+                        "VZ": 7,
+                        "WBA": 1
+                    },
+                    "budget": 521.4044742584229,
+                    "difference": 100.59552574157715
+                },
+                {
+                    "portfolio": {
+                        "JPM": 1,
+                        "VZ": 7,
+                        "WBA": 0
+                    },
+                    "budget": 512.0744743347168,
+                    "difference": 109.9255256652832
+                }
+            ]
+        }
+    }
+}

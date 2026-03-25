@@ -1,0 +1,151 @@
+{
+    "73": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "UNH",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 2900,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "HON": 224.6875,
+                "UNH": 503.7073059082031,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "UNH": [
+                    4,
+                    5,
+                    6
+                ],
+                "V": [
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.0,
+                "UNH": 0.5286823365891758,
+                "V": 0.47131766341082415
+            },
+            "allocation": {
+                "UNH": 3,
+                "V": 4,
+                "HON": 0
+            },
+            "value": -67.64464960753388,
+            "left_overs": 126.84158123917769
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "HON": 0.0,
+                "UNH": 0.5347530925831208,
+                "V": 0.4912372099871841
+            },
+            "allocation": {
+                "UNH": 3,
+                "V": 4,
+                "HON": 0
+            },
+            "value": -67.64464960753388,
+            "left_overs": 126.84157917433504
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00100000010",
+                "00000100010"
+            ],
+            "final_expectation_value": -0.11326910400427984,
+            "params": [
+                0.019973300835300814,
+                2.3924238014569275,
+                4.075138440407387,
+                1.1267486914770524,
+                1.1541136551492246,
+                2.4372929426256102,
+                4.522695962159988,
+                4.701939105667482,
+                4.599133148760897,
+                4.284780491354897,
+                0.2720659725917318,
+                4.0768256695129885,
+                2.0102980189099977,
+                2.300797855952762e-18,
+                3.128347370889288e-18,
+                2.952526186781435,
+                3.045981281556268,
+                3.1151954005171842,
+                1.4297528330629579,
+                1.7008725765192096
+            ],
+            "total_steps": 111,
+            "states_probs": [
+                0.004070583287646385,
+                0.004104391735915272
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 4,
+                    "UNH": 0,
+                    "V": 4
+                },
+                {
+                    "HON": 0,
+                    "UNH": 2,
+                    "V": 4
+                }
+            ],
+            "training_history": {
+                "iterations": 111,
+                "evaluations": 2345,
+                "final_value": -0.11326910400427984,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 6762.383470535278,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -131.61499733118507,
+                -36.81636849254284
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 4,
+                        "UNH": 0,
+                        "V": 4
+                    },
+                    "budget": 2160.7864990234375,
+                    "difference": 739.2135009765625
+                },
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "UNH": 2,
+                        "V": 4
+                    },
+                    "budget": 2269.4511108398438,
+                    "difference": 630.5488891601562
+                }
+            ]
+        }
+    }
+}

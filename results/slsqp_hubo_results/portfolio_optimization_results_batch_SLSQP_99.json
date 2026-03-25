@@ -1,0 +1,138 @@
+{
+    "99": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "AMGN",
+                "AXP"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 848,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "AMGN": 258.5511779785156,
+                "AXP": 296.0938415527344
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1
+                ],
+                "AMGN": [
+                    2,
+                    3
+                ],
+                "AXP": [
+                    4,
+                    5
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 1.0,
+                "AMGN": 1.8214596497756474e-17,
+                "AXP": 0.0
+            },
+            "allocation": {
+                "AAPL": 3,
+                "AMGN": 0,
+                "AXP": 0
+            },
+            "value": -1.038622383091139,
+            "left_overs": 97.56507826137931
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "AMGN": 0.0,
+                "AXP": 0.04287373582013208
+            },
+            "allocation": {
+                "AAPL": 3,
+                "AMGN": 0,
+                "AXP": 0
+            },
+            "value": -1.038622383091139,
+            "left_overs": 97.5650786128931
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "001001",
+                "100001"
+            ],
+            "final_expectation_value": -0.2851840340964338,
+            "params": [
+                2.098410373839173,
+                5.119553076916644,
+                4.441595236951604,
+                1.142321196803519,
+                6.283185307179586,
+                2.4093896624021536,
+                2.7164404419801524,
+                2.9672583495973277,
+                1.6093802310359913,
+                1.482368540291566,
+                3.0668626610298357,
+                0.0
+            ],
+            "total_steps": 64,
+            "states_probs": [
+                0.051738436642184436,
+                0.052192279692247684
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 0,
+                    "AMGN": 1,
+                    "AXP": 2
+                },
+                {
+                    "AAPL": 1,
+                    "AMGN": 0,
+                    "AXP": 2
+                }
+            ],
+            "training_history": {
+                "iterations": 64,
+                "evaluations": 835,
+                "final_value": -0.2851840340964338,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 152.27517318725586,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                -1.9924826560122697,
+                -2.0561229912860526
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 0,
+                        "AMGN": 1,
+                        "AXP": 2
+                    },
+                    "budget": 850.7388610839844,
+                    "difference": -2.738861083984375
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 1,
+                        "AMGN": 0,
+                        "AXP": 2
+                    },
+                    "budget": 842.3326568603516,
+                    "difference": 5.6673431396484375
+                }
+            ]
+        }
+    }
+}

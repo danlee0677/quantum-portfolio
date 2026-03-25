@@ -1,0 +1,189 @@
+{
+    "57": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "CAT",
+                "IBM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 5497,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "CAT": 361.4349670410156,
+                "IBM": 218.37515258789062
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "CAT": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "IBM": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "COBYLA"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.10588033492729529,
+                "CAT": 0.8941196650727048,
+                "IBM": 0.0
+            },
+            "allocation": {
+                "AXP": 2,
+                "CAT": 13,
+                "IBM": 0
+            },
+            "value": -671.8180428920822,
+            "left_overs": 206.15774396557572
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.13648464457519704,
+                "CAT": 0.9129891306362241,
+                "IBM": 0.0
+            },
+            "allocation": {
+                "AXP": 1,
+                "CAT": 14,
+                "IBM": 0
+            },
+            "value": -764.2013112647638,
+            "left_overs": 140.81661679012996
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.13623554366469132
+            ],
+            "smallest_bitstrings": [
+                "01000101110000"
+            ],
+            "first_excited_energy": null,
+            "optimized_portfolio": [
+                {
+                    "AXP": 2,
+                    "CAT": 13,
+                    "IBM": 1
+                }
+            ],
+            "second_optimized_portfolio": null,
+            "spectrum": [
+                -0.13623554366469132,
+                -0.136235241512872,
+                -0.13623515038689366
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 2,
+                        "CAT": 13,
+                        "IBM": 1
+                    },
+                    "budget": 5509.2174072265625,
+                    "difference": -12.2174072265625,
+                    "objective_value": -742.3194661002817
+                }
+            ],
+            "result_with_budget_excited": null
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00000000010001",
+                "00000000000001"
+            ],
+            "final_expectation_value": -0.12030353438086093,
+            "params": [
+                0.830145940803466,
+                1.8900140232894236,
+                3.211989859049028,
+                1.0555357802236534,
+                1.8343464934179068,
+                0.7505198657270666,
+                4.126708743379967,
+                3.267015843908055,
+                1.1506477635388859,
+                1.104213584642502,
+                3.183691864788984,
+                2.0427744858962997,
+                1.9507210156069152,
+                0.0013997319034195171,
+                1.3658709934327453,
+                2.375607801316768,
+                2.555851133771919,
+                3.0716495834022552,
+                1.5282308672183433,
+                1.4143827047574555
+            ],
+            "total_steps": 5050,
+            "states_probs": [
+                0.0004449454742928988,
+                0.000451876228863254
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 0,
+                    "CAT": 0,
+                    "IBM": 17
+                },
+                {
+                    "AXP": 0,
+                    "CAT": 0,
+                    "IBM": 16
+                }
+            ],
+            "training_history": {
+                "iterations": 5050,
+                "evaluations": 5050,
+                "final_value": -0.12030353438086093,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of function evaluations has been exceeded.",
+                "execution_time": 66191.73048853874,
+                "optimizer": "COBYLA"
+            },
+            "objective_values": [
+                -3476.2436283184406,
+                -2729.236836882124
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "CAT": 0,
+                        "IBM": 17
+                    },
+                    "budget": 3712.3775939941406,
+                    "difference": 1784.6224060058594
+                },
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "CAT": 0,
+                        "IBM": 16
+                    },
+                    "budget": 3494.00244140625,
+                    "difference": 2002.99755859375
+                }
+            ]
+        }
+    }
+}

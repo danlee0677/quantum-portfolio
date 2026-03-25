@@ -1,0 +1,154 @@
+{
+    "56": {
+        "hyperparams": {
+            "stocks": [
+                "BA",
+                "INTC",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 1597,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "BA": 177.0,
+                "INTC": 20.049999237060547,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "BA": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "INTC": [
+                    4,
+                    5,
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ],
+                "TRV": [
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "BA": 0.3766481197128407,
+                "INTC": 0.08177879993031752,
+                "TRV": 0.5415730803568419
+            },
+            "allocation": {
+                "BA": 3,
+                "INTC": 5,
+                "TRV": 4
+            },
+            "value": -478.64489201316826,
+            "left_overs": 6.116027443928942
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "BA": 0.3525395304938975,
+                "INTC": 0.0,
+                "TRV": 0.5786335482383955
+            },
+            "allocation": {
+                "BA": 3,
+                "INTC": 5,
+                "TRV": 4
+            },
+            "value": -478.64489201316826,
+            "left_overs": 6.1160315962824825
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00001000000010",
+                "00000000000010"
+            ],
+            "final_expectation_value": -0.07547714287090572,
+            "params": [
+                1.4430084137274917,
+                1.2459792173214999,
+                2.9168812938741655,
+                0.4696994292079405,
+                2.178772007115874,
+                0.0,
+                2.532267577931298,
+                2.413172642471994,
+                2.033173690443515,
+                0.34774768921840665,
+                2.6716768830943285,
+                1.3452702830703083,
+                1.768281644756173,
+                0.0015304250159270353,
+                1.9080468360564868,
+                2.2440845192586103,
+                2.1969711841459145,
+                3.2071438214029597,
+                0.8003066437542459,
+                2.088815063327223
+            ],
+            "total_steps": 35,
+            "states_probs": [
+                0.0007683377980119296,
+                0.0007709770836675781
+            ],
+            "optimized_portfolios": [
+                {
+                    "BA": 0,
+                    "INTC": 1,
+                    "TRV": 2
+                },
+                {
+                    "BA": 0,
+                    "INTC": 0,
+                    "TRV": 2
+                }
+            ],
+            "training_history": {
+                "iterations": 35,
+                "evaluations": 861,
+                "final_value": -0.07547714287090572,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 10324.53955578804,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -3.7589371266201606,
+                -1.5778470076159716
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "INTC": 1,
+                        "TRV": 2
+                    },
+                    "budget": 499.8669853210449,
+                    "difference": 1097.133014678955
+                },
+                {
+                    "portfolio": {
+                        "BA": 0,
+                        "INTC": 0,
+                        "TRV": 2
+                    },
+                    "budget": 479.8169860839844,
+                    "difference": 1117.1830139160156
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,153 @@
+{
+    "80": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "KO",
+                "PG",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 407,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "HON": 224.6875,
+                "KO": 61.80391311645508,
+                "PG": 166.6339111328125,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0
+                ],
+                "KO": [
+                    1,
+                    2,
+                    3
+                ],
+                "PG": [
+                    4,
+                    5
+                ],
+                "TRV": [
+                    6
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.37329687847472365,
+                "KO": 0.0,
+                "PG": 0.39959318382625103,
+                "TRV": 0.2271099376990254
+            },
+            "allocation": {
+                "HON": 1,
+                "PG": 1,
+                "KO": 0,
+                "TRV": 0
+            },
+            "value": -0.18622485884227297,
+            "left_overs": 15.678588829917999
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "HON": 0.31166563723342094,
+                "KO": 0.14701412662128863,
+                "PG": 0.3269595948023858,
+                "TRV": 0.24068656394392798
+            },
+            "allocation": {
+                "HON": 1,
+                "PG": 1,
+                "KO": 0,
+                "TRV": 0
+            },
+            "value": -0.18622485884227297,
+            "left_overs": 15.67858882916471
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1000100",
+                "0000010"
+            ],
+            "final_expectation_value": -0.18628270167879646,
+            "params": [
+                -2.0117464223199937,
+                0.5330498772399427,
+                -5.872550203813296,
+                6.1853074565152255,
+                5.669176062083391,
+                -2.3407691331705323,
+                11.452827493727863,
+                7.704128176443536,
+                -2.590275043421638,
+                0.08904293016963802,
+                2.4457711194233602,
+                0.18818926769287886,
+                4.050332936768587,
+                1.6670509167454084
+            ],
+            "total_steps": 6771,
+            "states_probs": [
+                0.03699592973282545,
+                0.04320717572036157
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 1,
+                    "KO": 0,
+                    "PG": 1,
+                    "TRV": 0
+                },
+                {
+                    "HON": 0,
+                    "KO": 0,
+                    "PG": 2,
+                    "TRV": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 6771,
+                "evaluations": 9014,
+                "final_value": -0.18628270167879646,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 933.108776807785,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -0.18622485884227297,
+                -0.616554052785135
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 1,
+                        "KO": 0,
+                        "PG": 1,
+                        "TRV": 0
+                    },
+                    "budget": 391.3214111328125,
+                    "difference": 15.6785888671875
+                },
+                {
+                    "portfolio": {
+                        "HON": 0,
+                        "KO": 0,
+                        "PG": 2,
+                        "TRV": 0
+                    },
+                    "budget": 333.267822265625,
+                    "difference": 73.732177734375
+                }
+            ]
+        }
+    }
+}

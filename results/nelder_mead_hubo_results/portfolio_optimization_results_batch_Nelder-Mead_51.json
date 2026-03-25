@@ -1,0 +1,142 @@
+{
+    "51": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4867,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "NKE": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.5292064793629846,
+                "NKE": 0.47079352063701546
+            },
+            "allocation": {
+                "DOW": 66,
+                "NKE": 30
+            },
+            "value": -1901559.5292147547,
+            "left_overs": 7.995613911449254
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "DOW": 0.518777719861666,
+                "NKE": 0.44579463895504556
+            },
+            "allocation": {
+                "DOW": 67,
+                "NKE": 29
+            },
+            "value": -1966857.6572194416,
+            "left_overs": 43.88550893193133
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10000010000010",
+                "00000010000010"
+            ],
+            "final_expectation_value": -0.23649771372859477,
+            "params": [
+                1.9117111748660913,
+                0.4641248864163534,
+                3.6330005138846246,
+                0.5599439174620355,
+                2.8637613492733918,
+                0.4218892658676079,
+                3.9173716769656792,
+                1.958927556903915,
+                3.230266247013965,
+                0.75533975734422,
+                2.884811510748987,
+                -0.14853742876790993,
+                2.362833574060999,
+                0.009530303892869095,
+                2.9907669463648308,
+                1.1261579791078087,
+                1.5882399474023696,
+                3.5474154033159664,
+                1.025233169687425,
+                1.8010846431726906
+            ],
+            "total_steps": 5000,
+            "states_probs": [
+                0.00024885725060580516,
+                0.00025804066702911127
+            ],
+            "optimized_portfolios": [
+                {
+                    "DOW": 65,
+                    "NKE": 32
+                },
+                {
+                    "DOW": 64,
+                    "NKE": 32
+                }
+            ],
+            "training_history": {
+                "iterations": 5000,
+                "evaluations": 6396,
+                "final_value": -0.23649771372859477,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 68562.34826016426,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -1874930.452218578,
+                -1779491.025720969
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DOW": 65,
+                        "NKE": 32
+                    },
+                    "budget": 4970.183216094971,
+                    "difference": -103.1832160949707
+                },
+                {
+                    "portfolio": {
+                        "DOW": 64,
+                        "NKE": 32
+                    },
+                    "budget": 4930.7841796875,
+                    "difference": -63.7841796875
+                }
+            ]
+        }
+    }
+}

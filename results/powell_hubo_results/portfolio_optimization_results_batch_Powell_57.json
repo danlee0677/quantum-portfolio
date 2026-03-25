@@ -1,0 +1,154 @@
+{
+    "57": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "CAT",
+                "IBM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 5497,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "CAT": 361.4349670410156,
+                "IBM": 218.37515258789062
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "CAT": [
+                    5,
+                    6,
+                    7,
+                    8
+                ],
+                "IBM": [
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "Powell"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.1058810673188902,
+                "CAT": 0.8941189326811098,
+                "IBM": 3.469446951953614e-17
+            },
+            "allocation": {
+                "AXP": 2,
+                "CAT": 13,
+                "IBM": 0
+            },
+            "value": -671.8182981136724,
+            "left_overs": 206.15774396578308
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.13648543385792777,
+                "CAT": 0.9129883193977344,
+                "IBM": 0.0
+            },
+            "allocation": {
+                "AXP": 1,
+                "CAT": 14,
+                "IBM": 0
+            },
+            "value": -764.202002075638,
+            "left_overs": 140.81661678752243
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "11100010011100",
+                "01100110011100"
+            ],
+            "final_expectation_value": -0.12731829368698608,
+            "params": [
+                -0.03572391264122512,
+                1.9595459734373921,
+                -1.4447359339060555,
+                -0.5751181577918246,
+                1.912280634713186,
+                -3.474711637529487,
+                -0.6576891676014601,
+                19.525634300628738,
+                -5.039063902455379,
+                1.034763544020051,
+                1.025411453743628,
+                1.2193322296680673,
+                1.8876004534805186,
+                0.13489703596383054,
+                1.9321166531745984,
+                1.8076076134905232,
+                1.775757300754845,
+                2.808128927307292,
+                2.149431702676225,
+                1.1805728276216514
+            ],
+            "total_steps": 15,
+            "states_probs": [
+                0.0005394571718731964,
+                0.0005397788619732185
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 7,
+                    "CAT": 2,
+                    "IBM": 7
+                },
+                {
+                    "AXP": 6,
+                    "CAT": 3,
+                    "IBM": 7
+                }
+            ],
+            "training_history": {
+                "iterations": 15,
+                "evaluations": 3174,
+                "final_value": -0.12731829368698608,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 37679.96960401535,
+                "optimizer": "Powell"
+            },
+            "objective_values": [
+                -1375.1711108133472,
+                -1124.5905106601126
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 7,
+                        "CAT": 2,
+                        "IBM": 7
+                    },
+                    "budget": 4324.152893066406,
+                    "difference": 1172.8471069335938
+                },
+                {
+                    "portfolio": {
+                        "AXP": 6,
+                        "CAT": 3,
+                        "IBM": 7
+                    },
+                    "budget": 4389.4940185546875,
+                    "difference": 1107.5059814453125
+                }
+            ]
+        }
+    }
+}

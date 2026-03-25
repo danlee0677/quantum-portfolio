@@ -1,0 +1,168 @@
+{
+    "24": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "CSCO",
+                "DIS",
+                "JPM",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 410,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "CSCO": 58.79932403564453,
+                "DIS": 111.3499984741211,
+                "JPM": 238.4783477783203,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0
+                ],
+                "CSCO": [
+                    1,
+                    2,
+                    3
+                ],
+                "DIS": [
+                    4,
+                    5
+                ],
+                "JPM": [
+                    6
+                ],
+                "V": [
+                    7
+                ]
+            },
+            "optimizer": "SLSQP"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.603278131754777,
+                "CSCO": 3.7990444123892075e-16,
+                "DIS": 1.474514954580286e-17,
+                "JPM": 0.0,
+                "V": 0.39672186824522276
+            },
+            "allocation": {
+                "CAT": 1,
+                "CSCO": 0,
+                "DIS": 0,
+                "JPM": 0,
+                "V": 0
+            },
+            "value": 0.15387907365046793,
+            "left_overs": 48.56503294997725
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 0.6429190886367063,
+                "CSCO": 0.0,
+                "DIS": 0.0,
+                "JPM": 0.0,
+                "V": 0.41959893131888554
+            },
+            "allocation": {
+                "CAT": 1,
+                "CSCO": 0,
+                "DIS": 0,
+                "JPM": 0,
+                "V": 0
+            },
+            "value": 0.15387907365046793,
+            "left_overs": 48.56503294759341
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00000001",
+                "10000000"
+            ],
+            "final_expectation_value": -0.10659862066187206,
+            "params": [
+                0.5211977598786052,
+                2.25335950469903,
+                2.5411125737336158,
+                4.047488469483914,
+                3.3768429639832354,
+                2.1924340815536,
+                3.2059454643130723,
+                0.13646526304417825,
+                1.5092553142248788,
+                0.0,
+                2.3283810007959413,
+                0.9443610917133344,
+                0.15483153331859162,
+                0.0,
+                1.6848302536485544,
+                0.04281660463046526
+            ],
+            "total_steps": 63,
+            "states_probs": [
+                0.06013464608867406,
+                0.060784136698998736
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 0,
+                    "CSCO": 0,
+                    "DIS": 0,
+                    "JPM": 0,
+                    "V": 1
+                },
+                {
+                    "CAT": 1,
+                    "CSCO": 0,
+                    "DIS": 0,
+                    "JPM": 0,
+                    "V": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 63,
+                "evaluations": 1075,
+                "final_value": -0.10659862066187206,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully",
+                "execution_time": 733.1449785232544,
+                "optimizer": "SLSQP"
+            },
+            "objective_values": [
+                0.1366321926379762,
+                0.15387907365046793
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 0,
+                        "CSCO": 0,
+                        "DIS": 0,
+                        "JPM": 0,
+                        "V": 1
+                    },
+                    "budget": 315.5091247558594,
+                    "difference": 94.49087524414062
+                },
+                {
+                    "portfolio": {
+                        "CAT": 1,
+                        "CSCO": 0,
+                        "DIS": 0,
+                        "JPM": 0,
+                        "V": 0
+                    },
+                    "budget": 361.4349670410156,
+                    "difference": 48.565032958984375
+                }
+            ]
+        }
+    }
+}

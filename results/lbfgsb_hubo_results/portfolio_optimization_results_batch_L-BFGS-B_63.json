@@ -1,0 +1,152 @@
+{
+    "63": {
+        "hyperparams": {
+            "stocks": [
+                "CAT",
+                "GS",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 3861,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "CAT": 361.4349670410156,
+                "GS": 569.7945556640625,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "CAT": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "GS": [
+                    4,
+                    5,
+                    6
+                ],
+                "TRV": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "CAT": 0.9554473946351215,
+                "GS": 0.04455260536487859,
+                "TRV": 0.0
+            },
+            "allocation": {
+                "CAT": 10,
+                "TRV": 1,
+                "GS": 0
+            },
+            "value": -189.57749141483126,
+            "left_overs": 6.741815164394666
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "CAT": 0.9622514842550514,
+                "GS": 0.06335964229682058,
+                "TRV": 0.020621484973034888
+            },
+            "allocation": {
+                "CAT": 10,
+                "TRV": 1,
+                "GS": 0
+            },
+            "value": -189.57749141483126,
+            "left_overs": 6.741835372922651
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "110010001100",
+                "110010011100"
+            ],
+            "final_expectation_value": -0.08916259985710481,
+            "params": [
+                2.6960362093155017,
+                1.4553361093704507,
+                3.6988252718535217,
+                4.946512243051116,
+                3.418135723932435,
+                4.207093301759131,
+                4.687416499613179,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                2.0971679435699695,
+                1.2695547306255415,
+                0.9011267714803202,
+                0.6872017995320626,
+                0.5602017220171039,
+                3.7743625663597786,
+                2.1220482220479115,
+                2.8828586832146836,
+                0.056656352362930325,
+                2.9850528439191986
+            ],
+            "total_steps": 662,
+            "states_probs": [
+                0.003219317668301744,
+                0.003243133848341568
+            ],
+            "optimized_portfolios": [
+                {
+                    "CAT": 3,
+                    "GS": 1,
+                    "TRV": 6
+                },
+                {
+                    "CAT": 3,
+                    "GS": 1,
+                    "TRV": 7
+                }
+            ],
+            "training_history": {
+                "iterations": 662,
+                "evaluations": 15037,
+                "final_value": -0.08916259985710481,
+                "success": false,
+                "status": 1,
+                "message": "STOP: TOTAL NO. of f AND g EVALUATIONS EXCEEDS LIMIT",
+                "execution_time": 69485.62503623962,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -255.28016601971086,
+                -430.07009882272007
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "CAT": 3,
+                        "GS": 1,
+                        "TRV": 6
+                    },
+                    "budget": 3093.5504150390625,
+                    "difference": 767.4495849609375
+                },
+                {
+                    "portfolio": {
+                        "CAT": 3,
+                        "GS": 1,
+                        "TRV": 7
+                    },
+                    "budget": 3333.4589080810547,
+                    "difference": 527.5410919189453
+                }
+            ]
+        }
+    }
+}

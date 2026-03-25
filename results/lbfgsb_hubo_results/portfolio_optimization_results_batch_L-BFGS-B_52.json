@@ -1,0 +1,154 @@
+{
+    "52": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "JPM",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 3442,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "JPM": 237.0184326171875,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "JPM": [
+                    4,
+                    5,
+                    6,
+                    7
+                ],
+                "NKE": [
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.1772323708409622,
+                "JPM": 0.8227676291590378,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AMGN": 2,
+                "JPM": 12,
+                "NKE": 1
+            },
+            "value": -1587.001517495814,
+            "left_overs": 5.387519421437446
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.19328555185233917,
+                "JPM": 0.8181504850748009,
+                "NKE": 0.0
+            },
+            "allocation": {
+                "AMGN": 2,
+                "JPM": 12,
+                "NKE": 1
+            },
+            "value": -1587.001517495814,
+            "left_overs": 5.387501505262662
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10000000110001",
+                "10001000000001"
+            ],
+            "final_expectation_value": -0.17346638286020724,
+            "params": [
+                2.794577380400067,
+                6.283185307179586,
+                1.4318683829489847,
+                6.2538898337492626,
+                6.176523660233632,
+                0.0,
+                0.0,
+                6.283185307179586,
+                6.283185307179586,
+                5.293371644163399,
+                2.6489884341890537,
+                1.3615931184510193,
+                1.5280597959916804,
+                0.0,
+                1.1005446694640086,
+                2.6128166881137194,
+                2.4367230267759257,
+                3.1549720178012146,
+                0.00023722351587639166,
+                3.061461848706158
+            ],
+            "total_steps": 143,
+            "states_probs": [
+                0.0005082641289811073,
+                0.0005088581258265065
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 1,
+                    "JPM": 0,
+                    "NKE": 35
+                },
+                {
+                    "AMGN": 1,
+                    "JPM": 1,
+                    "NKE": 32
+                }
+            ],
+            "training_history": {
+                "iterations": 143,
+                "evaluations": 3490,
+                "final_value": -0.17346638286020724,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 40770.591946840286,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -88378.88717215987,
+                -62498.15639974088
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "JPM": 0,
+                        "NKE": 35
+                    },
+                    "budget": 2893.6638259887695,
+                    "difference": 548.3361740112305
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "JPM": 1,
+                        "NKE": 32
+                    },
+                    "budget": 2904.815460205078,
+                    "difference": 537.1845397949219
+                }
+            ]
+        }
+    }
+}

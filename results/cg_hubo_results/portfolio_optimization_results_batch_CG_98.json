@@ -1,0 +1,126 @@
+{
+    "98": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "HD"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 2166,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "HD": 386.5369873046875
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2
+                ],
+                "HD": [
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "optimizer": "CG"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.5,
+                "HD": 0.5
+            },
+            "allocation": {
+                "AXP": 3,
+                "HD": 3
+            },
+            "value": -59.17231178390458,
+            "left_overs": 118.10750934471298
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.4889166489062491,
+                "HD": 0.49487296199798336
+            },
+            "allocation": {
+                "AXP": 3,
+                "HD": 3
+            },
+            "value": -59.17231178390458,
+            "left_overs": 118.10750509596687
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000101",
+                "110110"
+            ],
+            "final_expectation_value": -0.5129511470920626,
+            "params": [
+                2.340953554147144,
+                4.936642308824476,
+                6.411121162142444,
+                7.61879909184723,
+                8.844991808738344,
+                10.501541676250735,
+                2.7405065962417146,
+                2.9515425115720366,
+                3.0151647276708884,
+                3.0508037074757794,
+                3.067160422619153,
+                -0.05776021174644641
+            ],
+            "total_steps": 553,
+            "states_probs": [
+                0.06151957923690723,
+                0.0739957929064866
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 0,
+                    "HD": 5
+                },
+                {
+                    "AXP": 3,
+                    "HD": 3
+                }
+            ],
+            "training_history": {
+                "iterations": 553,
+                "evaluations": 11651,
+                "final_value": -0.5129511470920626,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 2826.659014940262,
+                "optimizer": "CG"
+            },
+            "objective_values": [
+                -47.66165487066485,
+                -59.17231178390458
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "HD": 5
+                    },
+                    "budget": 1932.6849365234375,
+                    "difference": 233.3150634765625
+                },
+                {
+                    "portfolio": {
+                        "AXP": 3,
+                        "HD": 3
+                    },
+                    "budget": 2047.8924865722656,
+                    "difference": 118.10751342773438
+                }
+            ]
+        }
+    }
+}

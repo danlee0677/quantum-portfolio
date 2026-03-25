@@ -1,0 +1,140 @@
+{
+    "68": {
+        "hyperparams": {
+            "stocks": [
+                "PG",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 12,
+            "budget": 5700,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "PG": 166.6339111328125,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "PG": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "WMT": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10,
+                    11
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "PG": 0.32465218440495264,
+                "WMT": 0.6753478155950473
+            },
+            "allocation": {
+                "PG": 11,
+                "WMT": 42
+            },
+            "value": -292050.28099117434,
+            "left_overs": 82.71902996572499
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "PG": 0.33092177956700464,
+                "WMT": 0.6774481919151057
+            },
+            "allocation": {
+                "PG": 11,
+                "WMT": 42
+            },
+            "value": -292050.28099117434,
+            "left_overs": 82.71904924063347
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000001100000",
+                "000001000000"
+            ],
+            "final_expectation_value": -0.28611961362844895,
+            "params": [
+                -4.253958612238688,
+                8.25026907551893,
+                1.03813954539616,
+                0.4850762628982294,
+                10.508048676714154,
+                -0.07531653140411523,
+                3.82610315667716,
+                -1.8356909942048574,
+                3.659837537527082,
+                4.190345776695798,
+                3.3693442876136555,
+                0.9165085726908857,
+                2.488057840933852,
+                -0.3459345556189064,
+                3.565332244182418,
+                1.0108578350221353,
+                1.9290824235642487,
+                2.7697829075518743,
+                1.4965219667921419,
+                1.6597646586220645
+            ],
+            "total_steps": 8734,
+            "states_probs": [
+                0.0022935707419595454,
+                0.0023841417081436915
+            ],
+            "optimized_portfolios": [
+                {
+                    "PG": 32,
+                    "WMT": 1
+                },
+                {
+                    "PG": 32,
+                    "WMT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 8734,
+                "evaluations": 11182,
+                "final_value": -0.28611961362844895,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 48296.852519750595,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -57405.98428189448,
+                -54091.24738993124
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "PG": 32,
+                        "WMT": 1
+                    },
+                    "budget": 5422.387725830078,
+                    "difference": 277.6122741699219
+                },
+                {
+                    "portfolio": {
+                        "PG": 32,
+                        "WMT": 0
+                    },
+                    "budget": 5332.28515625,
+                    "difference": 367.71484375
+                }
+            ]
+        }
+    }
+}

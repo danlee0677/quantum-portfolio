@@ -1,0 +1,126 @@
+{
+    "96": {
+        "hyperparams": {
+            "stocks": [
+                "AAPL",
+                "JPM"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 6,
+            "budget": 1788,
+            "log_encoding": true,
+            "layers": 6,
+            "prices_now": {
+                "AAPL": 250.1449737548828,
+                "JPM": 237.0184326171875
+            },
+            "assets_to_qubits": {
+                "AAPL": [
+                    0,
+                    1,
+                    2
+                ],
+                "JPM": [
+                    3,
+                    4,
+                    5
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AAPL": 0.9999999999999999,
+                "JPM": 0.0
+            },
+            "allocation": {
+                "AAPL": 7,
+                "JPM": 0
+            },
+            "value": -51.43269487066137,
+            "left_overs": 36.98518359010359
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AAPL": 1.0,
+                "JPM": 0.05862817427498715
+            },
+            "allocation": {
+                "AAPL": 7,
+                "JPM": 0
+            },
+            "value": -51.43269487066137,
+            "left_overs": 36.98518213561283
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "110110",
+                "001001"
+            ],
+            "final_expectation_value": -0.6062186022550673,
+            "params": [
+                2.8993848771145236,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                6.283185307179586,
+                0.0,
+                2.76700658825306,
+                2.9980969643663866,
+                1.4984767651087734,
+                1.5307658759265743,
+                2.3217847960035822,
+                0.7731308092157418
+            ],
+            "total_steps": 105,
+            "states_probs": [
+                0.04256604850108107,
+                0.05723104684775617
+            ],
+            "optimized_portfolios": [
+                {
+                    "AAPL": 3,
+                    "JPM": 3
+                },
+                {
+                    "AAPL": 4,
+                    "JPM": 4
+                }
+            ],
+            "training_history": {
+                "iterations": 105,
+                "evaluations": 1796,
+                "final_value": -0.6062186022550673,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL",
+                "execution_time": 267.4695506095886,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -22.891258424371873,
+                -74.59808268678506
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AAPL": 3,
+                        "JPM": 3
+                    },
+                    "budget": 1461.490219116211,
+                    "difference": 326.50978088378906
+                },
+                {
+                    "portfolio": {
+                        "AAPL": 4,
+                        "JPM": 4
+                    },
+                    "budget": 1948.6536254882812,
+                    "difference": -160.65362548828125
+                }
+            ]
+        }
+    }
+}

@@ -1,0 +1,135 @@
+{
+    "31": {
+        "hyperparams": {
+            "stocks": [
+                "HON",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 9,
+            "budget": 4964,
+            "log_encoding": true,
+            "layers": 9,
+            "prices_now": {
+                "HON": 224.6875,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "HON": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4
+                ],
+                "V": [
+                    5,
+                    6,
+                    7,
+                    8
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "HON": 0.0,
+                "V": 1.0
+            },
+            "allocation": {
+                "HON": 1,
+                "V": 15
+            },
+            "value": -2495.3808181232444,
+            "left_overs": 6.675628613156732
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "HON": 0.0006042702203208307,
+                "V": 1.0
+            },
+            "allocation": {
+                "HON": 1,
+                "V": 15
+            },
+            "value": -2495.3808181232444,
+            "left_overs": 6.675628604473786
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "000110000",
+                "000010001"
+            ],
+            "final_expectation_value": -0.4214524964192908,
+            "params": [
+                3.576113522417733,
+                1.7092013475306627,
+                4.822532166932224,
+                5.3698040800580635,
+                -1.545870802360982,
+                3.706447936676826,
+                -3.257837463166573,
+                -2.2977596119376074,
+                0.8096690579231018,
+                1.276145432553181,
+                1.2101308070515444,
+                0.4769716457306319,
+                1.6488807963366754,
+                -0.22300200206891269,
+                1.777306053964642,
+                -0.6380774547113167,
+                0.8531559449096182,
+                2.4125639368746365
+            ],
+            "total_steps": 6326,
+            "states_probs": [
+                0.006453065533875884,
+                0.007473547208553944
+            ],
+            "optimized_portfolios": [
+                {
+                    "HON": 24,
+                    "V": 0
+                },
+                {
+                    "HON": 16,
+                    "V": 8
+                }
+            ],
+            "training_history": {
+                "iterations": 6326,
+                "evaluations": 8230,
+                "final_value": -0.4214524964192908,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 8792.900158882141,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -17253.602761017384,
+                -11938.162300631224
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "HON": 24,
+                        "V": 0
+                    },
+                    "budget": 5392.5,
+                    "difference": -428.5
+                },
+                {
+                    "portfolio": {
+                        "HON": 16,
+                        "V": 8
+                    },
+                    "budget": 6119.072998046875,
+                    "difference": -1155.072998046875
+                }
+            ]
+        }
+    }
+}

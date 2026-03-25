@@ -1,0 +1,174 @@
+{
+    "3": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "CAT",
+                "GS",
+                "MSFT",
+                "VZ"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 671,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "CAT": 361.4349670410156,
+                "GS": 569.7945556640625,
+                "MSFT": 420.6565246582031,
+                "VZ": 39.29372024536133
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1
+                ],
+                "CAT": [
+                    2
+                ],
+                "GS": [
+                    3
+                ],
+                "MSFT": [
+                    4
+                ],
+                "VZ": [
+                    5,
+                    6,
+                    7,
+                    8,
+                    9
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.0,
+                "CAT": 0.044372691250618164,
+                "GS": 0.0,
+                "MSFT": 0.955627308749382,
+                "VZ": 1.0035071238629612e-16
+            },
+            "allocation": {
+                "MSFT": 1,
+                "VZ": 6,
+                "AMGN": 0,
+                "CAT": 0,
+                "GS": 0
+            },
+            "value": -31.712851184639796,
+            "left_overs": 14.581152730528174
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.0,
+                "CAT": 0.12118223234732348,
+                "GS": 0.0,
+                "MSFT": 0.9487591028910133,
+                "VZ": 0.0
+            },
+            "allocation": {
+                "MSFT": 1,
+                "VZ": 3,
+                "AMGN": 0,
+                "CAT": 0,
+                "GS": 0
+            },
+            "value": -1.7632543456702883,
+            "left_overs": 132.46231406698985
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "1000011100",
+                "1000001100"
+            ],
+            "final_expectation_value": -0.060624782620007076,
+            "params": [
+                3.6281043373342503,
+                0.183905417787331,
+                5.011209421336345,
+                -5.929258667516134,
+                25.770717984101086,
+                -2.9400014946082385,
+                0.5240102750930719,
+                5.324311160811858,
+                8.471925305314544,
+                -1.6289176833472947,
+                6.010307834199937,
+                -3.3981886449807863,
+                2.7796809173846126,
+                0.1495307370656804,
+                0.20036882801709943,
+                4.6220393351496085,
+                1.4836416402549089,
+                3.0084570242626043,
+                -0.3318663244136971,
+                3.4117726840471336
+            ],
+            "total_steps": 8140,
+            "states_probs": [
+                0.012378240761341775,
+                0.012382737966671348
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 1,
+                    "CAT": 0,
+                    "GS": 0,
+                    "MSFT": 0,
+                    "VZ": 7
+                },
+                {
+                    "AMGN": 1,
+                    "CAT": 0,
+                    "GS": 0,
+                    "MSFT": 0,
+                    "VZ": 6
+                }
+            ],
+            "training_history": {
+                "iterations": 8140,
+                "evaluations": 10471,
+                "final_value": -0.060624782620007076,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 25636.989891767502,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -57.534228527677776,
+                -30.63381292759132
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "CAT": 0,
+                        "GS": 0,
+                        "MSFT": 0,
+                        "VZ": 7
+                    },
+                    "budget": 533.6072196960449,
+                    "difference": 137.39278030395508
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 1,
+                        "CAT": 0,
+                        "GS": 0,
+                        "MSFT": 0,
+                        "VZ": 6
+                    },
+                    "budget": 494.3134994506836,
+                    "difference": 176.6865005493164
+                }
+            ]
+        }
+    }
+}

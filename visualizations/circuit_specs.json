@@ -1,0 +1,3126 @@
+{
+    "HUBO": {
+        "0": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16620,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16620
+                },
+                "depth": 16867,
+                "num_wires": 10,
+                "num_gates": 20580,
+                "num_params": 4336
+            }
+        },
+        "1": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16440,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16440
+                },
+                "depth": 16967,
+                "num_wires": 10,
+                "num_gates": 20400,
+                "num_params": 4336
+            }
+        },
+        "2": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16200,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16200
+                },
+                "depth": 16438,
+                "num_wires": 10,
+                "num_gates": 20160,
+                "num_params": 4336
+            }
+        },
+        "3": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16740,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16740
+                },
+                "depth": 17008,
+                "num_wires": 10,
+                "num_gates": 20700,
+                "num_params": 4336
+            }
+        },
+        "4": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16500,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16500
+                },
+                "depth": 17038,
+                "num_wires": 10,
+                "num_gates": 20460,
+                "num_params": 4336
+            }
+        },
+        "5": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16060,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16060
+                },
+                "depth": 16547,
+                "num_wires": 10,
+                "num_gates": 20020,
+                "num_params": 4336
+            }
+        },
+        "6": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16500,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16500
+                },
+                "depth": 16936,
+                "num_wires": 10,
+                "num_gates": 20460,
+                "num_params": 4336
+            }
+        },
+        "7": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16520,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16520
+                },
+                "depth": 16647,
+                "num_wires": 10,
+                "num_gates": 20480,
+                "num_params": 4336
+            }
+        },
+        "8": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 16440,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 16440
+                },
+                "depth": 16629,
+                "num_wires": 10,
+                "num_gates": 20400,
+                "num_params": 4336
+            }
+        },
+        "9": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 10,
+                    "RZ": 3850,
+                    "CNOT": 17880,
+                    "RX": 100
+                },
+                "gate_sizes": {
+                    "1": 3960,
+                    "2": 17880
+                },
+                "depth": 18238,
+                "num_wires": 10,
+                "num_gates": 21840,
+                "num_params": 4336
+            }
+        },
+        "10": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 50740,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 50740
+                },
+                "depth": 52358,
+                "num_wires": 13,
+                "num_gates": 61803,
+                "num_params": 12143
+            }
+        },
+        "11": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 49960,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 49960
+                },
+                "depth": 50798,
+                "num_wires": 13,
+                "num_gates": 61023,
+                "num_params": 12143
+            }
+        },
+        "12": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 52880,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 52880
+                },
+                "depth": 53555,
+                "num_wires": 13,
+                "num_gates": 63943,
+                "num_params": 12143
+            }
+        },
+        "13": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 51060,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 51060
+                },
+                "depth": 49296,
+                "num_wires": 13,
+                "num_gates": 62123,
+                "num_params": 12143
+            }
+        },
+        "14": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 52740,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 52740
+                },
+                "depth": 52567,
+                "num_wires": 13,
+                "num_gates": 63803,
+                "num_params": 12143
+            }
+        },
+        "15": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 48920,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 48920
+                },
+                "depth": 52555,
+                "num_wires": 13,
+                "num_gates": 59983,
+                "num_params": 12143
+            }
+        },
+        "16": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 48660,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 48660
+                },
+                "depth": 50487,
+                "num_wires": 13,
+                "num_gates": 59723,
+                "num_params": 12143
+            }
+        },
+        "17": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 51520,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 51520
+                },
+                "depth": 51367,
+                "num_wires": 13,
+                "num_gates": 62583,
+                "num_params": 12143
+            }
+        },
+        "18": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 55320,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 55320
+                },
+                "depth": 55538,
+                "num_wires": 13,
+                "num_gates": 66383,
+                "num_params": 12143
+            }
+        },
+        "19": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 13,
+                    "RZ": 10920,
+                    "CNOT": 53120,
+                    "RX": 130
+                },
+                "gate_sizes": {
+                    "1": 11063,
+                    "2": 53120
+                },
+                "depth": 53689,
+                "num_wires": 13,
+                "num_gates": 64183,
+                "num_params": 12143
+            }
+        },
+        "20": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5488,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5488
+                },
+                "depth": 5651,
+                "num_wires": 8,
+                "num_gates": 6856,
+                "num_params": 1523
+            }
+        },
+        "21": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5008,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5008
+                },
+                "depth": 5162,
+                "num_wires": 8,
+                "num_gates": 6376,
+                "num_params": 1523
+            }
+        },
+        "22": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 4880,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 4880
+                },
+                "depth": 5043,
+                "num_wires": 8,
+                "num_gates": 6248,
+                "num_params": 1523
+            }
+        },
+        "23": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5120,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5120
+                },
+                "depth": 5284,
+                "num_wires": 8,
+                "num_gates": 6488,
+                "num_params": 1523
+            }
+        },
+        "24": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5104,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5104
+                },
+                "depth": 5346,
+                "num_wires": 8,
+                "num_gates": 6472,
+                "num_params": 1523
+            }
+        },
+        "25": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5440,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5440
+                },
+                "depth": 5524,
+                "num_wires": 8,
+                "num_gates": 6808,
+                "num_params": 1523
+            }
+        },
+        "26": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 4928,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 4928
+                },
+                "depth": 5106,
+                "num_wires": 8,
+                "num_gates": 6296,
+                "num_params": 1523
+            }
+        },
+        "27": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5168,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5168
+                },
+                "depth": 5282,
+                "num_wires": 8,
+                "num_gates": 6536,
+                "num_params": 1523
+            }
+        },
+        "28": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5408,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5408
+                },
+                "depth": 5540,
+                "num_wires": 8,
+                "num_gates": 6776,
+                "num_params": 1523
+            }
+        },
+        "29": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 8,
+                    "RZ": 1296,
+                    "CNOT": 5552,
+                    "RX": 64
+                },
+                "gate_sizes": {
+                    "1": 1368,
+                    "2": 5552
+                },
+                "depth": 5677,
+                "num_wires": 8,
+                "num_gates": 6920,
+                "num_params": 1523
+            }
+        },
+        "30": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9774,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9774
+                },
+                "depth": 9862,
+                "num_wires": 9,
+                "num_gates": 12159,
+                "num_params": 2632
+            }
+        },
+        "31": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9792,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9792
+                },
+                "depth": 9925,
+                "num_wires": 9,
+                "num_gates": 12177,
+                "num_params": 2632
+            }
+        },
+        "32": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9306,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9306
+                },
+                "depth": 9293,
+                "num_wires": 9,
+                "num_gates": 11691,
+                "num_params": 2632
+            }
+        },
+        "33": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 10242,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 10242
+                },
+                "depth": 10050,
+                "num_wires": 9,
+                "num_gates": 12627,
+                "num_params": 2632
+            }
+        },
+        "34": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 10404,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 10404
+                },
+                "depth": 10402,
+                "num_wires": 9,
+                "num_gates": 12789,
+                "num_params": 2632
+            }
+        },
+        "35": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9576,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9576
+                },
+                "depth": 9581,
+                "num_wires": 9,
+                "num_gates": 11961,
+                "num_params": 2632
+            }
+        },
+        "36": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9846,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9846
+                },
+                "depth": 9922,
+                "num_wires": 9,
+                "num_gates": 12231,
+                "num_params": 2632
+            }
+        },
+        "37": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9792,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9792
+                },
+                "depth": 10066,
+                "num_wires": 9,
+                "num_gates": 12177,
+                "num_params": 2632
+            }
+        },
+        "38": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9540,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9540
+                },
+                "depth": 9698,
+                "num_wires": 9,
+                "num_gates": 11925,
+                "num_params": 2632
+            }
+        },
+        "39": {
+            "specs": {
+                "gate_types": {
+                    "Hadamard": 9,
+                    "RZ": 2295,
+                    "CNOT": 9774,
+                    "RX": 81
+                },
+                "gate_sizes": {
+                    "1": 2385,
+                    "2": 9774
+                },
+                "depth": 10014,
+                "num_wires": 9,
+                "num_gates": 12159,
+                "num_params": 2632
+            }
+        },
+        "40": {
+            "specs": {
+                "gate_types": {
+                    "cx": 91060,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 91833,
+                "num_wires": 15,
+                "num_gates": 110640,
+                "num_params": 19550
+            }
+        },
+        "41": {
+            "specs": {
+                "gate_types": {
+                    "cx": 95340,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 96544,
+                "num_wires": 15,
+                "num_gates": 114920,
+                "num_params": 19550
+            }
+        },
+        "42": {
+            "specs": {
+                "gate_types": {
+                    "cx": 96800,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 94134,
+                "num_wires": 15,
+                "num_gates": 116380,
+                "num_params": 19550
+            }
+        },
+        "43": {
+            "specs": {
+                "gate_types": {
+                    "cx": 92780,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 95024,
+                "num_wires": 15,
+                "num_gates": 112360,
+                "num_params": 19550
+            }
+        },
+        "44": {
+            "specs": {
+                "gate_types": {
+                    "cx": 91940,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 96145,
+                "num_wires": 15,
+                "num_gates": 111520,
+                "num_params": 19550
+            }
+        },
+        "45": {
+            "specs": {
+                "gate_types": {
+                    "cx": 88980,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 91734,
+                "num_wires": 15,
+                "num_gates": 108560,
+                "num_params": 19550
+            }
+        },
+        "46": {
+            "specs": {
+                "gate_types": {
+                    "cx": 89380,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 93844,
+                "num_wires": 15,
+                "num_gates": 108960,
+                "num_params": 19550
+            }
+        },
+        "47": {
+            "specs": {
+                "gate_types": {
+                    "cx": 91740,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 91263,
+                "num_wires": 15,
+                "num_gates": 111320,
+                "num_params": 19550
+            }
+        },
+        "48": {
+            "specs": {
+                "gate_types": {
+                    "cx": 93660,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 90865,
+                "num_wires": 15,
+                "num_gates": 113240,
+                "num_params": 19550
+            }
+        },
+        "49": {
+            "specs": {
+                "gate_types": {
+                    "cx": 97680,
+                    "rz": 19400,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 96134,
+                "num_wires": 15,
+                "num_gates": 117260,
+                "num_params": 19550
+            }
+        },
+        "50": {
+            "specs": {
+                "gate_types": {
+                    "cx": 70400,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 71589,
+                "num_wires": 14,
+                "num_gates": 85268,
+                "num_params": 14840
+            }
+        },
+        "51": {
+            "specs": {
+                "gate_types": {
+                    "cx": 71060,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 73162,
+                "num_wires": 14,
+                "num_gates": 85928,
+                "num_params": 14840
+            }
+        },
+        "52": {
+            "specs": {
+                "gate_types": {
+                    "cx": 67300,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 69022,
+                "num_wires": 14,
+                "num_gates": 82168,
+                "num_params": 14840
+            }
+        },
+        "53": {
+            "specs": {
+                "gate_types": {
+                    "cx": 72200,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 72951,
+                "num_wires": 14,
+                "num_gates": 87068,
+                "num_params": 14840
+            }
+        },
+        "54": {
+            "specs": {
+                "gate_types": {
+                    "cx": 73440,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 73190,
+                "num_wires": 14,
+                "num_gates": 88308,
+                "num_params": 14840
+            }
+        },
+        "55": {
+            "specs": {
+                "gate_types": {
+                    "cx": 73560,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 72850,
+                "num_wires": 14,
+                "num_gates": 88428,
+                "num_params": 14840
+            }
+        },
+        "56": {
+            "specs": {
+                "gate_types": {
+                    "cx": 72340,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 74089,
+                "num_wires": 14,
+                "num_gates": 87208,
+                "num_params": 14840
+            }
+        },
+        "57": {
+            "specs": {
+                "gate_types": {
+                    "cx": 72180,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 71783,
+                "num_wires": 14,
+                "num_gates": 87048,
+                "num_params": 14840
+            }
+        },
+        "58": {
+            "specs": {
+                "gate_types": {
+                    "cx": 71460,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 71921,
+                "num_wires": 14,
+                "num_gates": 86328,
+                "num_params": 14840
+            }
+        },
+        "59": {
+            "specs": {
+                "gate_types": {
+                    "cx": 69260,
+                    "rz": 14700,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 69041,
+                "num_wires": 14,
+                "num_gates": 84128,
+                "num_params": 14840
+            }
+        },
+        "60": {
+            "specs": {
+                "gate_types": {
+                    "cx": 36560,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 36624,
+                "num_wires": 12,
+                "num_gates": 44634,
+                "num_params": 8050
+            }
+        },
+        "61": {
+            "specs": {
+                "gate_types": {
+                    "cx": 35960,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 35545,
+                "num_wires": 12,
+                "num_gates": 44034,
+                "num_params": 8050
+            }
+        },
+        "62": {
+            "specs": {
+                "gate_types": {
+                    "cx": 34860,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 36446,
+                "num_wires": 12,
+                "num_gates": 42934,
+                "num_params": 8050
+            }
+        },
+        "63": {
+            "specs": {
+                "gate_types": {
+                    "cx": 35420,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 36455,
+                "num_wires": 12,
+                "num_gates": 43494,
+                "num_params": 8050
+            }
+        },
+        "64": {
+            "specs": {
+                "gate_types": {
+                    "cx": 36560,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 37475,
+                "num_wires": 12,
+                "num_gates": 44634,
+                "num_params": 8050
+            }
+        },
+        "65": {
+            "specs": {
+                "gate_types": {
+                    "cx": 36720,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 35365,
+                "num_wires": 12,
+                "num_gates": 44794,
+                "num_params": 8050
+            }
+        },
+        "66": {
+            "specs": {
+                "gate_types": {
+                    "cx": 38040,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 38985,
+                "num_wires": 12,
+                "num_gates": 46114,
+                "num_params": 8050
+            }
+        },
+        "67": {
+            "specs": {
+                "gate_types": {
+                    "cx": 35580,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 37095,
+                "num_wires": 12,
+                "num_gates": 43654,
+                "num_params": 8050
+            }
+        },
+        "68": {
+            "specs": {
+                "gate_types": {
+                    "cx": 36720,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 37904,
+                "num_wires": 12,
+                "num_gates": 44794,
+                "num_params": 8050
+            }
+        },
+        "69": {
+            "specs": {
+                "gate_types": {
+                    "cx": 36640,
+                    "rz": 7930,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 37984,
+                "num_wires": 12,
+                "num_gates": 44714,
+                "num_params": 8050
+            }
+        },
+        "70": {
+            "specs": {
+                "gate_types": {
+                    "cx": 23520,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 24573,
+                "num_wires": 11,
+                "num_gates": 29262,
+                "num_params": 5720
+            }
+        },
+        "71": {
+            "specs": {
+                "gate_types": {
+                    "cx": 25200,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 26413,
+                "num_wires": 11,
+                "num_gates": 30942,
+                "num_params": 5720
+            }
+        },
+        "72": {
+            "specs": {
+                "gate_types": {
+                    "cx": 26760,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 27031,
+                "num_wires": 11,
+                "num_gates": 32502,
+                "num_params": 5720
+            }
+        },
+        "73": {
+            "specs": {
+                "gate_types": {
+                    "cx": 27020,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 26553,
+                "num_wires": 11,
+                "num_gates": 32762,
+                "num_params": 5720
+            }
+        },
+        "74": {
+            "specs": {
+                "gate_types": {
+                    "cx": 24520,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 25382,
+                "num_wires": 11,
+                "num_gates": 30262,
+                "num_params": 5720
+            }
+        },
+        "75": {
+            "specs": {
+                "gate_types": {
+                    "cx": 25900,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 26421,
+                "num_wires": 11,
+                "num_gates": 31642,
+                "num_params": 5720
+            }
+        },
+        "76": {
+            "specs": {
+                "gate_types": {
+                    "cx": 25620,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 26941,
+                "num_wires": 11,
+                "num_gates": 31362,
+                "num_params": 5720
+            }
+        },
+        "77": {
+            "specs": {
+                "gate_types": {
+                    "cx": 26220,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 26753,
+                "num_wires": 11,
+                "num_gates": 31962,
+                "num_params": 5720
+            }
+        },
+        "78": {
+            "specs": {
+                "gate_types": {
+                    "cx": 24800,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 24322,
+                "num_wires": 11,
+                "num_gates": 30542,
+                "num_params": 5720
+            }
+        },
+        "79": {
+            "specs": {
+                "gate_types": {
+                    "cx": 25660,
+                    "rz": 5610,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 26003,
+                "num_wires": 11,
+                "num_gates": 31402,
+                "num_params": 5720
+            }
+        },
+        "80": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2380,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2530,
+                "num_wires": 7,
+                "num_gates": 3129,
+                "num_params": 735
+            }
+        },
+        "81": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2492,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2578,
+                "num_wires": 7,
+                "num_gates": 3241,
+                "num_params": 735
+            }
+        },
+        "82": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2576,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2670,
+                "num_wires": 7,
+                "num_gates": 3325,
+                "num_params": 735
+            }
+        },
+        "83": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2618,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2726,
+                "num_wires": 7,
+                "num_gates": 3367,
+                "num_params": 735
+            }
+        },
+        "84": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2380,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2465,
+                "num_wires": 7,
+                "num_gates": 3129,
+                "num_params": 735
+            }
+        },
+        "85": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2688,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2818,
+                "num_wires": 7,
+                "num_gates": 3437,
+                "num_params": 735
+            }
+        },
+        "86": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2674,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2794,
+                "num_wires": 7,
+                "num_gates": 3423,
+                "num_params": 735
+            }
+        },
+        "87": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2660,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2789,
+                "num_wires": 7,
+                "num_gates": 3409,
+                "num_params": 735
+            }
+        },
+        "88": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2688,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2760,
+                "num_wires": 7,
+                "num_gates": 3437,
+                "num_params": 735
+            }
+        },
+        "89": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2590,
+                    "rz": 686,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 2692,
+                "num_wires": 7,
+                "num_gates": 3339,
+                "num_params": 735
+            }
+        },
+        "90": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1164,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1231,
+                "num_wires": 6,
+                "num_gates": 1548,
+                "num_params": 372
+            }
+        },
+        "91": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1116,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1218,
+                "num_wires": 6,
+                "num_gates": 1500,
+                "num_params": 372
+            }
+        },
+        "92": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1188,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1243,
+                "num_wires": 6,
+                "num_gates": 1572,
+                "num_params": 372
+            }
+        },
+        "93": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1164,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1235,
+                "num_wires": 6,
+                "num_gates": 1548,
+                "num_params": 372
+            }
+        },
+        "94": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1152,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1255,
+                "num_wires": 6,
+                "num_gates": 1536,
+                "num_params": 372
+            }
+        },
+        "95": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1152,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1250,
+                "num_wires": 6,
+                "num_gates": 1536,
+                "num_params": 372
+            }
+        },
+        "96": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1152,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1237,
+                "num_wires": 6,
+                "num_gates": 1536,
+                "num_params": 372
+            }
+        },
+        "97": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1188,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1290,
+                "num_wires": 6,
+                "num_gates": 1572,
+                "num_params": 372
+            }
+        },
+        "98": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1176,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1280,
+                "num_wires": 6,
+                "num_gates": 1560,
+                "num_params": 372
+            }
+        },
+        "99": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1104,
+                    "rz": 336,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 1153,
+                "num_wires": 6,
+                "num_gates": 1488,
+                "num_params": 372
+            }
+        }
+    },
+    "QUBO": {
+        "0": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 385,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "1": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 373,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "2": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 374,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "3": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 364,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "4": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 364,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "5": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 373,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "6": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 383,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "7": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 343,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "8": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 353,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "9": {
+            "specs": {
+                "gate_types": {
+                    "cx": 900,
+                    "rz": 550,
+                    "rx": 100,
+                    "h": 10,
+                    "measure": 10
+                },
+                "depth": 363,
+                "num_wires": 10,
+                "num_gates": 1570,
+                "num_params": 650
+            }
+        },
+        "10": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 462,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "11": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 462,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "12": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 462,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "13": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 442,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "14": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 472,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "15": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 453,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "16": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 473,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "17": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 462,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "18": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 462,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "19": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1560,
+                    "rz": 910,
+                    "rx": 130,
+                    "h": 13,
+                    "measure": 13
+                },
+                "depth": 452,
+                "num_wires": 13,
+                "num_gates": 2626,
+                "num_params": 1040
+            }
+        },
+        "20": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 233,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "21": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 242,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "22": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 233,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "23": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 241,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "24": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 233,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "25": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 251,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "26": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 241,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "27": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 249,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "28": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 233,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "29": {
+            "specs": {
+                "gate_types": {
+                    "cx": 448,
+                    "rz": 288,
+                    "rx": 64,
+                    "h": 8,
+                    "measure": 8
+                },
+                "depth": 233,
+                "num_wires": 8,
+                "num_gates": 816,
+                "num_params": 352
+            }
+        },
+        "30": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 291,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "31": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 299,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "32": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 281,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "33": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 290,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "34": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 281,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "35": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 281,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "36": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 291,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "37": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 299,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "38": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 309,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "39": {
+            "specs": {
+                "gate_types": {
+                    "cx": 648,
+                    "rz": 405,
+                    "rx": 81,
+                    "h": 9,
+                    "measure": 9
+                },
+                "depth": 299,
+                "num_wires": 9,
+                "num_gates": 1152,
+                "num_params": 486
+            }
+        },
+        "40": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 529,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "41": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 518,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "42": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 538,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "43": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 538,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "44": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 518,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "45": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 519,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "46": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 538,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "47": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 529,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "48": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 534,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "49": {
+            "specs": {
+                "gate_types": {
+                    "cx": 2100,
+                    "rz": 1200,
+                    "rx": 150,
+                    "h": 15,
+                    "measure": 15
+                },
+                "depth": 508,
+                "num_wires": 15,
+                "num_gates": 3480,
+                "num_params": 1350
+            }
+        },
+        "50": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 485,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "51": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 515,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "52": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 511,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "53": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 505,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "54": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 485,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "55": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 495,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "56": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 485,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "57": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 495,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "58": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 485,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "59": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1820,
+                    "rz": 1050,
+                    "rx": 140,
+                    "h": 14,
+                    "measure": 14
+                },
+                "depth": 505,
+                "num_wires": 14,
+                "num_gates": 3038,
+                "num_params": 1190
+            }
+        },
+        "60": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 439,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "61": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 429,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "62": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 439,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "63": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 439,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "64": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 419,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "65": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 431,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "66": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 409,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "67": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 429,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "68": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 439,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "69": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 449,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "70": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 416,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "71": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 397,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "72": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 396,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "73": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 406,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "74": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 386,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "75": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1320,
+                    "rz": 780,
+                    "rx": 120,
+                    "h": 12,
+                    "measure": 12
+                },
+                "depth": 419,
+                "num_wires": 12,
+                "num_gates": 2244,
+                "num_params": 900
+            }
+        },
+        "76": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 396,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "77": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 406,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "78": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 397,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "79": {
+            "specs": {
+                "gate_types": {
+                    "cx": 1100,
+                    "rz": 660,
+                    "rx": 110,
+                    "h": 11,
+                    "measure": 11
+                },
+                "depth": 399,
+                "num_wires": 11,
+                "num_gates": 1892,
+                "num_params": 770
+            }
+        },
+        "80": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 184,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "81": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 184,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "82": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 189,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "83": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 175,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "84": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 183,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "85": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 191,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "86": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 183,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "87": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 182,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "88": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 182,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "89": {
+            "specs": {
+                "gate_types": {
+                    "cx": 294,
+                    "rz": 196,
+                    "rx": 49,
+                    "h": 7,
+                    "measure": 7
+                },
+                "depth": 189,
+                "num_wires": 7,
+                "num_gates": 553,
+                "num_params": 245
+            }
+        },
+        "90": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 131,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "91": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 137,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "92": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 138,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "93": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 137,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "94": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 139,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "95": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 145,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "96": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 143,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "97": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 131,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "98": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 143,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        },
+        "99": {
+            "specs": {
+                "gate_types": {
+                    "cx": 180,
+                    "rz": 126,
+                    "rx": 36,
+                    "h": 6,
+                    "measure": 6
+                },
+                "depth": 137,
+                "num_wires": 6,
+                "num_gates": 354,
+                "num_params": 162
+            }
+        }
+    }
+}

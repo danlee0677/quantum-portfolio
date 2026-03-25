@@ -1,0 +1,150 @@
+{
+    "2": {
+        "hyperparams": {
+            "stocks": [
+                "AXP",
+                "MMM",
+                "TRV"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 10,
+            "budget": 1891,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "AXP": 296.0938415527344,
+                "MMM": 128.4563446044922,
+                "TRV": 239.9084930419922
+            },
+            "assets_to_qubits": {
+                "AXP": [
+                    0,
+                    1,
+                    2
+                ],
+                "MMM": [
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "TRV": [
+                    7,
+                    8,
+                    9
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AXP": 0.6476535296809106,
+                "MMM": 0.12938671660632756,
+                "TRV": 0.2229597537127619
+            },
+            "allocation": {
+                "AXP": 4,
+                "MMM": 1,
+                "TRV": 2
+            },
+            "value": -78.47405208494628,
+            "left_overs": 98.35130033266387
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AXP": 0.6509708830683401,
+                "MMM": 0.11451517653970873,
+                "TRV": 0.22056846678505826
+            },
+            "allocation": {
+                "AXP": 4,
+                "MMM": 1,
+                "TRV": 2
+            },
+            "value": -78.47405208494628,
+            "left_overs": 98.35130101728873
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0010100100",
+                "0000001001"
+            ],
+            "final_expectation_value": -0.24798478535479448,
+            "params": [
+                2.7236797114585527,
+                11.042550588801422,
+                1.0509428920921544,
+                -2.704927949416439,
+                1.88404787264384,
+                -1.9325664906317708,
+                7.903132126048202,
+                22.222161657097345,
+                8.725664623423189,
+                -0.1482674156824635,
+                2.69265958089571,
+                1.5548576552230298,
+                1.6617690517076595,
+                -0.7561027546188914,
+                -0.1207715679442335,
+                3.771248780704288,
+                3.021784837700368,
+                3.087208446511565,
+                -1.9991211232084458,
+                5.116339530201371
+            ],
+            "total_steps": 10000,
+            "states_probs": [
+                0.0053520487836863076,
+                0.005718875860214378
+            ],
+            "optimized_portfolios": [
+                {
+                    "AXP": 4,
+                    "MMM": 2,
+                    "TRV": 1
+                },
+                {
+                    "AXP": 0,
+                    "MMM": 8,
+                    "TRV": 4
+                }
+            ],
+            "training_history": {
+                "iterations": 10000,
+                "evaluations": 12730,
+                "final_value": -0.24798478535479448,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 28476.28382587433,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -65.36629032357017,
+                -627.0926249904734
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AXP": 4,
+                        "MMM": 2,
+                        "TRV": 1
+                    },
+                    "budget": 1681.196548461914,
+                    "difference": 209.80345153808594
+                },
+                {
+                    "portfolio": {
+                        "AXP": 0,
+                        "MMM": 8,
+                        "TRV": 4
+                    },
+                    "budget": 1987.2847290039062,
+                    "difference": -96.28472900390625
+                }
+            ]
+        }
+    }
+}

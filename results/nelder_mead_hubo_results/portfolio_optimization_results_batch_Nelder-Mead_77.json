@@ -1,0 +1,139 @@
+{
+    "77": {
+        "hyperparams": {
+            "stocks": [
+                "JNJ",
+                "V"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 11,
+            "budget": 5296,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "JNJ": 143.4715576171875,
+                "V": 315.5091247558594
+            },
+            "assets_to_qubits": {
+                "JNJ": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5
+                ],
+                "V": [
+                    6,
+                    7,
+                    8,
+                    9,
+                    10
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JNJ": 0.0,
+                "V": 1.0
+            },
+            "allocation": {
+                "JNJ": 1,
+                "V": 16
+            },
+            "value": -2963.070701399505,
+            "left_overs": 104.38243899708232
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "JNJ": 0.0009660387694716145,
+                "V": 1.0
+            },
+            "allocation": {
+                "JNJ": 1,
+                "V": 16
+            },
+            "value": -2963.070701399505,
+            "left_overs": 104.38244262886019
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10000100000",
+                "00000100000"
+            ],
+            "final_expectation_value": -0.16214685376239188,
+            "params": [
+                4.054695994282799,
+                1.9101862000405299,
+                0.15163463489592016,
+                -0.13304771889362516,
+                3.781237814731801,
+                0.6498556236400195,
+                9.46866011814944,
+                2.4803893169739712,
+                3.3217288346943823,
+                1.2329822571812716,
+                1.3038010941217424,
+                0.26843083310216587,
+                3.8225561667913297,
+                -0.02736548493787156,
+                3.617079451734779,
+                0.47472951214804304,
+                1.8860217241014654,
+                3.034989844898865,
+                1.8475049231629708,
+                1.3984588880149098
+            ],
+            "total_steps": 10000,
+            "states_probs": [
+                0.013990206384727796,
+                0.017030472693618782
+            ],
+            "optimized_portfolios": [
+                {
+                    "JNJ": 33,
+                    "V": 0
+                },
+                {
+                    "JNJ": 32,
+                    "V": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 10000,
+                "evaluations": 12637,
+                "final_value": -0.16214685376239188,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of iterations has been exceeded.",
+                "execution_time": 39126.57919430733,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -46375.161928658534,
+                -41006.659222381095
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JNJ": 33,
+                        "V": 0
+                    },
+                    "budget": 4734.5614013671875,
+                    "difference": 561.4385986328125
+                },
+                {
+                    "portfolio": {
+                        "JNJ": 32,
+                        "V": 0
+                    },
+                    "budget": 4591.08984375,
+                    "difference": 704.91015625
+                }
+            ]
+        }
+    }
+}

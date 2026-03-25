@@ -1,0 +1,132 @@
+{
+    "23": {
+        "hyperparams": {
+            "stocks": [
+                "AMGN",
+                "HON"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 8,
+            "budget": 2544,
+            "log_encoding": true,
+            "layers": 8,
+            "prices_now": {
+                "AMGN": 258.5511779785156,
+                "HON": 224.6875
+            },
+            "assets_to_qubits": {
+                "AMGN": [
+                    0,
+                    1,
+                    2,
+                    3
+                ],
+                "HON": [
+                    4,
+                    5,
+                    6,
+                    7
+                ]
+            },
+            "optimizer": "L-BFGS-B"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "AMGN": 0.5,
+                "HON": 0.5
+            },
+            "allocation": {
+                "AMGN": 5,
+                "HON": 5
+            },
+            "value": -137.4886877581556,
+            "left_overs": 127.80660171977888
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "AMGN": 0.5179990433569475,
+                "HON": 0.5013053273652548
+            },
+            "allocation": {
+                "AMGN": 5,
+                "HON": 5
+            },
+            "value": -137.4886877581556,
+            "left_overs": 127.80660944466035
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "00011000",
+                "00010000"
+            ],
+            "final_expectation_value": -0.28684359663143183,
+            "params": [
+                2.2017373303288297,
+                0.8386573646500546,
+                4.362557845120507,
+                6.283185307179586,
+                0.8391174566338526,
+                4.471881495244497,
+                5.307212641819419,
+                6.283185307179586,
+                1.0165043595299528,
+                1.6797444519935134,
+                2.944529846499454,
+                1.455462437122529,
+                1.5616693357902642,
+                0.0,
+                1.4846833749759847,
+                1.5888265830175998
+            ],
+            "total_steps": 326,
+            "states_probs": [
+                0.01667387761416076,
+                0.016912547220087722
+            ],
+            "optimized_portfolios": [
+                {
+                    "AMGN": 8,
+                    "HON": 1
+                },
+                {
+                    "AMGN": 8,
+                    "HON": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 326,
+                "evaluations": 6024,
+                "final_value": -0.28684359663143183,
+                "success": true,
+                "status": 0,
+                "message": "CONVERGENCE: REL_REDUCTION_OF_F_<=_FACTR*EPSMCH",
+                "execution_time": 4408.415973186493,
+                "optimizer": "L-BFGS-B"
+            },
+            "objective_values": [
+                -116.12326971200108,
+                -105.86481957054916
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "AMGN": 8,
+                        "HON": 1
+                    },
+                    "budget": 2293.096923828125,
+                    "difference": 250.903076171875
+                },
+                {
+                    "portfolio": {
+                        "AMGN": 8,
+                        "HON": 0
+                    },
+                    "budget": 2068.409423828125,
+                    "difference": 475.590576171875
+                }
+            ]
+        }
+    }
+}

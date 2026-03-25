@@ -1,0 +1,175 @@
+{
+    "51": {
+        "hyperparams": {
+            "stocks": [
+                "DOW",
+                "NKE"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 14,
+            "budget": 4867,
+            "log_encoding": true,
+            "layers": 10,
+            "prices_now": {
+                "DOW": 39.3990364074707,
+                "NKE": 75.28893280029297
+            },
+            "assets_to_qubits": {
+                "DOW": [
+                    0,
+                    1,
+                    2,
+                    3,
+                    4,
+                    5,
+                    6
+                ],
+                "NKE": [
+                    7,
+                    8,
+                    9,
+                    10,
+                    11,
+                    12,
+                    13
+                ]
+            },
+            "optimizer": "COBYLA"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "DOW": 0.5292066627094716,
+                "NKE": 0.47079333729052836
+            },
+            "allocation": {
+                "DOW": 66,
+                "NKE": 30
+            },
+            "value": -1901558.113823141,
+            "left_overs": 7.99561391172756
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "DOW": 0.5187779031137757,
+                "NKE": 0.44579441419601057
+            },
+            "allocation": {
+                "DOW": 67,
+                "NKE": 29
+            },
+            "value": -1966856.102869701,
+            "left_overs": 43.885508932276935
+        },
+        "exact_solution": {
+            "smallest_eigenvalues": [
+                -0.26143551088146416
+            ],
+            "smallest_bitstrings": [
+                "11011000100110"
+            ],
+            "first_excited_energy": null,
+            "optimized_portfolio": [
+                {
+                    "DOW": 27,
+                    "NKE": 50
+                }
+            ],
+            "second_optimized_portfolio": null,
+            "spectrum": [
+                -0.26143551088146416,
+                -0.2614337985739828,
+                -0.2614320184280051
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DOW": 27,
+                        "NKE": 50
+                    },
+                    "budget": 4828.220623016357,
+                    "difference": 38.77937698364258,
+                    "objective_value": -558273.5290819365
+                }
+            ],
+            "result_with_budget_excited": null
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "10000000000001",
+                "00000000000001"
+            ],
+            "final_expectation_value": -0.22978472528360416,
+            "params": [
+                2.1894137994422422,
+                2.48704708451729,
+                2.3468295904491137,
+                1.002333651435789,
+                2.5904137662795086,
+                0.3159388751075627,
+                2.5805090580124026,
+                2.810082373829861,
+                1.4810207499150472,
+                0.9209182853946415,
+                2.6109023658576604,
+                3.0006923993828427,
+                1.4236670904260154,
+                -0.14234582251320332,
+                2.4130072886215146,
+                1.8127069808905458,
+                1.628400065899438,
+                3.0288488980529036,
+                1.5541792050014784,
+                1.413530441050652
+            ],
+            "total_steps": 5050,
+            "states_probs": [
+                0.0009182399675466612,
+                0.000939126344497291
+            ],
+            "optimized_portfolios": [
+                {
+                    "DOW": 1,
+                    "NKE": 64
+                },
+                {
+                    "DOW": 0,
+                    "NKE": 64
+                }
+            ],
+            "training_history": {
+                "iterations": 5050,
+                "evaluations": 5050,
+                "final_value": -0.22978472528360416,
+                "success": false,
+                "status": 2,
+                "message": "Maximum number of function evaluations has been exceeded.",
+                "execution_time": 63920.268038749695,
+                "optimizer": "COBYLA"
+            },
+            "objective_values": [
+                -952275.778574368,
+                -948185.6993150598
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "DOW": 1,
+                        "NKE": 64
+                    },
+                    "budget": 4857.890735626221,
+                    "difference": 9.109264373779297
+                },
+                {
+                    "portfolio": {
+                        "DOW": 0,
+                        "NKE": 64
+                    },
+                    "budget": 4818.49169921875,
+                    "difference": 48.50830078125
+                }
+            ]
+        }
+    }
+}

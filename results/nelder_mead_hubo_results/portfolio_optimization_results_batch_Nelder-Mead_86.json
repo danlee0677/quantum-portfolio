@@ -1,0 +1,153 @@
+{
+    "86": {
+        "hyperparams": {
+            "stocks": [
+                "JPM",
+                "KO",
+                "TRV",
+                "WMT"
+            ],
+            "start": "2015-01-01",
+            "end": "2025-01-01",
+            "risk_aversion": 0.1,
+            "n_qubits": 7,
+            "budget": 294,
+            "log_encoding": true,
+            "layers": 7,
+            "prices_now": {
+                "JPM": 238.4783477783203,
+                "KO": 61.80391311645508,
+                "TRV": 239.9084930419922,
+                "WMT": 90.10256958007812
+            },
+            "assets_to_qubits": {
+                "JPM": [
+                    0
+                ],
+                "KO": [
+                    1,
+                    2,
+                    3
+                ],
+                "TRV": [
+                    4
+                ],
+                "WMT": [
+                    5,
+                    6
+                ]
+            },
+            "optimizer": "Nelder-Mead"
+        },
+        "continuous_variables_solution": {
+            "weights": {
+                "JPM": 0.6011555915845666,
+                "KO": 4.163336342344337e-17,
+                "TRV": 1.0148132334464322e-16,
+                "WMT": 0.3988444084154334
+            },
+            "allocation": {
+                "JPM": 1,
+                "KO": 0,
+                "TRV": 0,
+                "WMT": 0
+            },
+            "value": 0.1202185813006782,
+            "left_overs": 55.52165220718604
+        },
+        "continuous_variables_solution_unconstrained": {
+            "weights": {
+                "JPM": 0.6160009398654649,
+                "KO": 0.0,
+                "TRV": 0.0,
+                "WMT": 0.43115717623743227
+            },
+            "allocation": {
+                "JPM": 1,
+                "KO": 0,
+                "TRV": 0,
+                "WMT": 0
+            },
+            "value": 0.1202185813006782,
+            "left_overs": 55.521652210275704
+        },
+        "qaoa_solution": {
+            "two_most_probable_states": [
+                "0000100",
+                "0001000"
+            ],
+            "final_expectation_value": -0.11170230349542241,
+            "params": [
+                1.5414974843727336,
+                0.2333793217111288,
+                3.1624067898009764,
+                3.9836466764172203,
+                4.40421256719525,
+                11.092362825931993,
+                9.574219892529927,
+                -0.6380671497865701,
+                5.668116410968285,
+                -0.6882245870309887,
+                2.7365742593613502,
+                -0.30894564043642947,
+                4.624866063589758,
+                1.6415923825173215
+            ],
+            "total_steps": 8034,
+            "states_probs": [
+                0.06056097924626596,
+                0.06058402443629369
+            ],
+            "optimized_portfolios": [
+                {
+                    "JPM": 0,
+                    "KO": 0,
+                    "TRV": 1,
+                    "WMT": 0
+                },
+                {
+                    "JPM": 0,
+                    "KO": 4,
+                    "TRV": 0,
+                    "WMT": 0
+                }
+            ],
+            "training_history": {
+                "iterations": 8034,
+                "evaluations": 10741,
+                "final_value": -0.11170230349542241,
+                "success": true,
+                "status": 0,
+                "message": "Optimization terminated successfully.",
+                "execution_time": 1699.6486947536469,
+                "optimizer": "Nelder-Mead"
+            },
+            "objective_values": [
+                -0.014775977649045036,
+                -11.333208283056992
+            ],
+            "result_with_budget": [
+                {
+                    "portfolio": {
+                        "JPM": 0,
+                        "KO": 0,
+                        "TRV": 1,
+                        "WMT": 0
+                    },
+                    "budget": 239.9084930419922,
+                    "difference": 54.09150695800781
+                },
+                {
+                    "portfolio": {
+                        "JPM": 0,
+                        "KO": 4,
+                        "TRV": 0,
+                        "WMT": 0
+                    },
+                    "budget": 247.2156524658203,
+                    "difference": 46.78434753417969
+                }
+            ]
+        }
+    }
+}
