@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def coskewness(X):
     n = X.shape[0]
     means = np.mean(X, axis=0)
