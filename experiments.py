@@ -1,7 +1,7 @@
 import json
 import yfinance as yf
 from coskweness_cokurtosis import coskewness, cokurtosis
-from portfolio_hubo_qaoa_light import HigherOrderPortfolioQAOA
+from portfolio_hubo_qaoa_solver import HigherOrderPortfolioQAOA
 import os
 import sys
 import argparse
