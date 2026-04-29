@@ -173,3 +173,4 @@ old/*
 .vscode/*
 .vscode/
 CLAUDE.md
+data/*

@@ -8,6 +8,7 @@ from qiskit.circuit.library import PauliEvolutionGate
 from pypfopt import EfficientFrontier
 from pypfopt.discrete_allocation import DiscreteAllocation
 from scipy.optimize import minimize, approx_fprime
+import pennylane as qml
 
 from portfolio_higher_moments_classical import HigherMomentPortfolioOptimizer
 from portfolio_utils import basis_vector_to_bitstring, bitstrings_to_optimized_portfolios, int_to_bitstring, normalize_hamiltonian, smallest_eigenpairs, smallest_sparse_eigenpairs
@@ -544,6 +545,16 @@ class HigherOrderPortfolioQAOA:
             "stop": result.stop  # Already a dictionary
         }
 
+    def _get_probs_pl(self, cost_ham_pl, mixer_ham_pl, dev, params):
+        @qml.qnode(dev)
+        def probs_circuit(params):
+            for wire in range(self.n_qubits):
+                qml.Hadamard(wires=wire)
+            for layer in range(self.layers):
+                qml.qaoa.cost_layer(params[layer], cost_ham_pl)
+                qml.qaoa.mixer_layer(params[self.layers + layer], mixer_ham_pl)
+            return qml.probs(wires=range(self.n_qubits))
+        return np.array(probs_circuit(params))
 
     def solve_with_qaoa_cma_es(self):
         maxiter = 800
@@ -551,20 +562,35 @@ class HigherOrderPortfolioQAOA:
             maxiter = 300
 
         cost_hamiltonian = self.get_cost_hamiltonian()
-        qc, gammas, alphas = self._build_qaoa_circuit(cost_hamiltonian, self.n_qubits, self.layers)
+        cost_ham_pl = qml.from_qiskit_op(cost_hamiltonian)
+
+        # mixer is standard X-mixer: use Pennylane's built in
+        mixer_ham_pl = qml.qaoa.x_mixer(range(self.n_qubits))
+
+        dev = qml.device('lightning.qubit', wires=self.n_qubits)
+
+        @qml.qnode(dev)
+        def qaoa_circuit(params):
+            for wire in range(self.n_qubits):
+                qml.Hadamard(wires=wire)
+            for layer in range(self.layers):
+                qml.qaoa.cost_layer(params[layer], cost_ham_pl)
+                qml.qaoa.mixer_layer(params[self.layers + layer], mixer_ham_pl)
+            return qml.expval(cost_ham_pl)
 
         def objective_function(params):
-            return self._evaluate_qaoa(qc, gammas, alphas, params, cost_hamiltonian)
+            return float(qaoa_circuit(params))
 
-        initial_params = np.pi*np.random.rand(2, self.layers)
-        # Make initial params 1-D array
-        initial_params = np.concatenate((initial_params[0], initial_params[1]))
-        print("Initial params: ", initial_params)
+        initial_params = np.pi * np.random.rand(2 * self.layers)
+        
         es = cma.CMAEvolutionStrategy(initial_params, sigma0=0.1, options={"maxiter": maxiter})
+        
         result = es.optimize(objective_function)
+        
         optimized_params = result.result.xbest
-        final_expectation_value = self._evaluate_qaoa(qc, gammas, alphas, optimized_params, cost_hamiltonian)
-        probs = self._get_probs(qc, gammas, alphas, optimized_params)
+        final_expectation_value = objective_function(optimized_params)
+        probs = self._get_probs_pl(cost_ham_pl, mixer_ham_pl, dev, optimized_params)
+        
         two_most_probable = np.argsort(probs)[-2:]
         states_probs = [probs[i] for i in two_most_probable]
         two_most_probable_states = [int_to_bitstring(i, self.n_qubits) for i in two_most_probable]
@@ -582,6 +608,7 @@ class HigherOrderPortfolioQAOA:
                 objective_values,
                 result1)
 
+    # todo: implement same estimator injection pattern
     def solve_with_qaoa_scipy(self, optimizer='COBYLA'):
         """
         Solve the optimization problem using QAOA with a specified SciPy optimizer.

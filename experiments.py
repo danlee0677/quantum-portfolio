@@ -35,7 +35,7 @@ with open("experiments_data.json", "r") as f:
 classical_optimizer = "CMAES"
 lambda_budget = 0.001
 
-output_file = f"portfolio_optimization_batch_{classical_optimizer}_{str(lambda_budget)}_{args.batch_num}.json"
+output_file = f"data/portfolio_optimization_batch_{classical_optimizer}_{str(lambda_budget)}_{args.batch_num}.json"
 
 # Find files with portfolio_optimization_results_batch_ in the name
 previous_output_files = [f for f in os.listdir() if f"portfolio_optimization_results_batch_{classical_optimizer}" in f]
@@ -62,6 +62,23 @@ existing_results = {}
 if os.path.exists(output_file):
     with open(output_file, 'r') as f:
         existing_results = json.load(f)
+
+# *****************************************************************
+# To run with actual backend:
+# from qiskit_ibm_runtime import QiskitRuntimeService, EstimatorV2 as IBMEstimatorV2
+# from qiskit.transpiler.preset_passmanagers import generate_preset_pass_manager
+
+# service = QiskitRuntimeService()
+# backend = service.backend("ibm_brisbane")
+
+# # Transpile for hardware (replaces the AerSimulator transpile inside solve_with_qaoa_cma_es)
+# pm = generate_preset_pass_manager(optimization_level=1, backend=backend)
+# qc_isa = pm.run(portfolio_hubo._build_qaoa_circuit(...)[0])  # ISA circuit
+
+# portfolio_hubo.solve_with_qaoa_cma_es(estimator=IBMEstimatorV2(backend))
+# # ↑ pass transpile_backend=None so the method skips internal transpilation
+# *****************************************************************
+
 
 # Process only the experiments for this batch
 for i, experiment in enumerate(experiments[start_idx:end_idx]):
@@ -154,7 +171,7 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
                 optimized_portfolio, 
                 second_optimized_portfolio,
                 eigenvalues,
-                result1, 
+                result1,
                 result2
             ) = portfolio_hubo.solve_exactly_with_lobpcg()
 
