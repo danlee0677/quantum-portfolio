@@ -174,3 +174,4 @@ old/*
 .vscode/
 CLAUDE.md
 data/*
+*.pdf

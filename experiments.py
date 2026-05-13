@@ -7,6 +7,7 @@ import sys
 import argparse
 from pypfopt.expected_returns import mean_historical_return
 from pypfopt.risk_models import sample_cov
+import datetime
 
 # Parse command-line arguments
 parser = argparse.ArgumentParser(description='Run portfolio optimization experiments in batches')
@@ -34,8 +35,12 @@ with open("experiments_data.json", "r") as f:
 
 classical_optimizer = "CMAES"
 lambda_budget = 0.001
+warm_start_epsilon = 0.25
 
-output_file = f"data/portfolio_optimization_batch_{classical_optimizer}_{str(lambda_budget)}_{args.batch_num}.json"
+def get_time_str():
+    return datetime.datetime.now().strftime("%Y%m%d_%H-%M-%S")
+
+output_file = f"data/portfolio_optimization_batch_{classical_optimizer}_{str(lambda_budget)}_{str(warm_start_epsilon)}_{args.batch_num}_{get_time_str()}.json"
 
 # Find files with portfolio_optimization_results_batch_ in the name
 previous_output_files = [f for f in os.listdir() if f"portfolio_optimization_results_batch_{classical_optimizer}" in f]
@@ -135,13 +140,14 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
     }
     
     continuous_variables_solution_unconstrained = None
+    unconstrained_weights = None
 
     if coskewness_tensor is not None and cokurtosis_tensor is not None:
-        
-        weights, allocation, value, left_overs = portfolio_hubo.solve_with_continuous_variables_unconstrained()
+
+        unconstrained_weights, allocation, value, left_overs = portfolio_hubo.solve_with_continuous_variables_unconstrained()
 
         continuous_variables_solution_unconstrained = {
-            "weights": weights,
+            "weights": unconstrained_weights,
             "allocation": allocation,
             "value": value,
             "left_overs": left_overs
@@ -232,7 +238,72 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
     for key, value in qaoa_solution.items():
         if key != "training_history":
             print(f"{key}: {value}")
- 
+
+    (
+        ws_two_most_probable_states,
+        ws_final_expectation_value,
+        ws_params,
+        ws_total_steps,
+        ws_states_probs,
+        ws_optimized_portfolios,
+        ws_training_history,
+        ws_objective_values,
+        ws_result1,
+        ws_thetas
+    ) = portfolio_hubo.solve_with_qaoa_cma_es_warm_start(epsilon=warm_start_epsilon, weights=unconstrained_weights)
+
+    qaoa_warm_start_solution = {
+        "epsilon": warm_start_epsilon,
+        "thetas": [float(t) for t in ws_thetas],
+        "two_most_probable_states": ws_two_most_probable_states,
+        "final_expectation_value": float(ws_final_expectation_value),
+        "params": ws_params.tolist(),
+        "total_steps": ws_total_steps,
+        "states_probs": [float(v) for v in ws_states_probs],
+        "optimized_portfolios": ws_optimized_portfolios,
+        "training_history": ws_training_history,
+        "objective_values": ws_objective_values,
+        "result_with_budget": ws_result1
+    }
+
+    for key, value in qaoa_warm_start_solution.items():
+        if key != "training_history":
+            print(f"warm_start.{key}: {value}")
+
+    # Second warm-start run seeded from the budget-feasible constrained allocation.
+    constrained_allocation = continuous_variables_solution["allocation"]
+    (
+        wsc_two_most_probable_states,
+        wsc_final_expectation_value,
+        wsc_params,
+        wsc_total_steps,
+        wsc_states_probs,
+        wsc_optimized_portfolios,
+        wsc_training_history,
+        wsc_objective_values,
+        wsc_result1,
+        wsc_thetas
+    ) = portfolio_hubo.solve_with_qaoa_cma_es_warm_start(epsilon=warm_start_epsilon, allocation=constrained_allocation)
+
+    qaoa_warm_start_constrained_solution = {
+        "epsilon": warm_start_epsilon,
+        "seed_allocation": {str(k): int(v) for k, v in constrained_allocation.items()},
+        "thetas": [float(t) for t in wsc_thetas],
+        "two_most_probable_states": wsc_two_most_probable_states,
+        "final_expectation_value": float(wsc_final_expectation_value),
+        "params": wsc_params.tolist(),
+        "total_steps": wsc_total_steps,
+        "states_probs": [float(v) for v in wsc_states_probs],
+        "optimized_portfolios": wsc_optimized_portfolios,
+        "training_history": wsc_training_history,
+        "objective_values": wsc_objective_values,
+        "result_with_budget": wsc_result1
+    }
+
+    for key, value in qaoa_warm_start_constrained_solution.items():
+        if key != "training_history":
+            print(f"warm_start_constrained.{key}: {value}")
+
     n_qubits = portfolio_hubo.get_n_qubits()
     n_layers = portfolio_hubo.get_layers()
     hyperparams = {
@@ -247,7 +318,8 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
         "prices_now": {str(k): float(v) for k, v in prices_now.items()},
         "assets_to_qubits": {str(k): v for k, v in assets_to_qubits.items()},
         "optimizer": classical_optimizer,
-        "lambda_budget": lambda_budget
+        "lambda_budget": lambda_budget,
+        "warm_start_epsilon": warm_start_epsilon
     }
 
     results_for_experiment["hyperparams"] = hyperparams
@@ -255,6 +327,8 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
     results_for_experiment["continuous_variables_solution_unconstrained"] = continuous_variables_solution_unconstrained
     results_for_experiment["exact_solution"] = exact_solution
     results_for_experiment["qaoa_solution"] = qaoa_solution
+    results_for_experiment["qaoa_warm_start_solution"] = qaoa_warm_start_solution
+    results_for_experiment["qaoa_warm_start_constrained_solution"] = qaoa_warm_start_constrained_solution
 
     # Add to existing_results
     existing_results[str(experiment_id)] = results_for_experiment

@@ -608,6 +608,161 @@ class HigherOrderPortfolioQAOA:
                 objective_values,
                 result1)
 
+    def _compute_warm_start_thetas(self, epsilon):
+        """Build per-qubit RY angles from the continuous (unconstrained) relaxation.
+
+        For each asset, the continuous integer share count z* is converted into a per-qubit
+        bias c*_{i,n} in [0, 1]. Under log encoding (z_i = sum_n 2^n y_{i,n}) we use the binary
+        representation of round(clip(z*, 0, z_max)) so each bit-qubit gets its own warm-start.
+        Under linear encoding (z_i = sum_n y_{i,n}) the first round(z*) qubits are set to 1.
+        Each bit is then regularized into [epsilon, 1 - epsilon] (Sec. 2.3 of arXiv:2009.10095)
+        and mapped to theta = 2 arcsin(sqrt(c*_{i,n})).
+        """
+        weights, _, _, _ = self.solve_with_continuous_variables_unconstrained()
+        return self._thetas_from_weights(weights, epsilon)
+
+    def _thetas_from_weights(self, weights, epsilon):
+        c_star = np.zeros(self.n_qubits)
+        for asset in self.stocks:
+            qubits = self.assets_to_qubits[asset]
+            N_i = len(qubits)
+            if self.log_encoding:
+                z_max = 2 ** N_i - 1
+            else:
+                z_max = N_i
+            z_star = float(weights[asset]) * self.budget / float(self.prices_now[asset])
+            z_int = int(np.clip(round(z_star), 0, z_max))
+            if self.log_encoding:
+                for n, q in enumerate(qubits):
+                    bit = (z_int >> n) & 1
+                    c_star[q] = np.clip(float(bit), epsilon, 1.0 - epsilon)
+            else:
+                for n, q in enumerate(qubits):
+                    bit = 1.0 if n < z_int else 0.0
+                    c_star[q] = np.clip(bit, epsilon, 1.0 - epsilon)
+        return 2.0 * np.arcsin(np.sqrt(c_star))
+
+    def _thetas_from_allocation(self, allocation, epsilon):
+        """Build per-qubit RY angles from an integer share allocation (e.g. the
+        budget-feasible output of `solve_with_continuous_variables`). Avoids the
+        weights -> z_star -> round round-trip in `_thetas_from_weights`, which can
+        reintroduce budget infeasibility.
+        """
+        c_star = np.zeros(self.n_qubits)
+        for asset in self.stocks:
+            qubits = self.assets_to_qubits[asset]
+            N_i = len(qubits)
+            if self.log_encoding:
+                z_max = 2 ** N_i - 1
+            else:
+                z_max = N_i
+            z_int = int(np.clip(int(allocation.get(asset, 0)), 0, z_max))
+            if self.log_encoding:
+                for n, q in enumerate(qubits):
+                    bit = (z_int >> n) & 1
+                    c_star[q] = np.clip(float(bit), epsilon, 1.0 - epsilon)
+            else:
+                for n, q in enumerate(qubits):
+                    bit = 1.0 if n < z_int else 0.0
+                    c_star[q] = np.clip(bit, epsilon, 1.0 - epsilon)
+        return 2.0 * np.arcsin(np.sqrt(c_star))
+
+    def _apply_warm_start_mixer(self, beta, thetas):
+        """Apply Eq. (4) of arXiv:2009.10095 exactly per qubit:
+        U_M^{(ws)}(beta) = prod_i R_y(theta_i) R_z(-2 beta) R_y(-theta_i).
+
+        Using qml.qaoa.mixer_layer here is INCORRECT: it falls back to first-order Trotter
+        (ApproxTimeEvolution, n=1), and X_i and Z_i on the same qubit do not commute, so the
+        decomposition is not exact.
+        """
+        for i, theta in enumerate(thetas):
+            qml.RY(-float(theta), wires=i)
+            qml.RZ(-2.0 * beta, wires=i)
+            qml.RY(float(theta), wires=i)
+
+    def _get_probs_pl_warm_start(self, cost_ham_pl, dev, thetas, params):
+        @qml.qnode(dev)
+        def probs_circuit(params):
+            for i, theta in enumerate(thetas):
+                qml.RY(float(theta), wires=i)
+            for layer in range(self.layers):
+                qml.qaoa.cost_layer(params[layer], cost_ham_pl)
+                self._apply_warm_start_mixer(params[self.layers + layer], thetas)
+            return qml.probs(wires=range(self.n_qubits))
+        return np.array(probs_circuit(params))
+
+    def solve_with_qaoa_cma_es_warm_start(self, epsilon=0.25, weights=None, allocation=None):
+        """Continuous warm-start QAOA (Egger, Mareček, Woerner, arXiv:2009.10095, Sec. 2.2 & 3).
+
+        The initial state is R_Y(theta_i)|0> per qubit (Eq. (1) of the paper) where theta_i is
+        derived from the continuous relaxation, and the X-mixer is replaced by the warm-start
+        mixer of Eq. (4) (applied exactly per qubit, NOT via ApproxTimeEvolution). epsilon in
+        [0, 0.5] regularizes the per-qubit bias; at epsilon=0.5 the algorithm reduces to
+        standard QAOA.
+
+        Seed precedence (highest to lowest):
+        - ``allocation``: integer share dict (e.g. from ``solve_with_continuous_variables``,
+          which is budget-feasible). Recommended when budget feasibility matters.
+        - ``weights``: fractional weight dict from the (typically unconstrained) relaxation.
+        - neither: fall back to solving the unconstrained relaxation internally.
+        """
+        maxiter = 800
+        if self.n_qubits > 13:
+            maxiter = 300
+
+        if allocation is not None:
+            thetas = self._thetas_from_allocation(allocation, epsilon)
+        elif weights is not None:
+            thetas = self._thetas_from_weights(weights, epsilon)
+        else:
+            thetas = self._compute_warm_start_thetas(epsilon)
+
+        cost_hamiltonian = self.get_cost_hamiltonian()
+        cost_ham_pl = qml.from_qiskit_op(cost_hamiltonian)
+
+        dev = qml.device('lightning.qubit', wires=self.n_qubits)
+
+        @qml.qnode(dev)
+        def qaoa_circuit(params):
+            for i, theta in enumerate(thetas):
+                qml.RY(float(theta), wires=i)
+            for layer in range(self.layers):
+                qml.qaoa.cost_layer(params[layer], cost_ham_pl)
+                self._apply_warm_start_mixer(params[self.layers + layer], thetas)
+            return qml.expval(cost_ham_pl)
+
+        def objective_function(params):
+            return float(qaoa_circuit(params))
+
+        # Warm-start: start CMA-ES near identity so the initial state is preserved
+        # by the first iterations; sigma0 then governs exploration radius.
+        initial_params = 0.01 * np.random.rand(2 * self.layers)
+
+        es = cma.CMAEvolutionStrategy(initial_params, sigma0=0.1, options={"maxiter": maxiter})
+        result = es.optimize(objective_function)
+
+        optimized_params = result.result.xbest
+        final_expectation_value = objective_function(optimized_params)
+        probs = self._get_probs_pl_warm_start(cost_ham_pl, dev, thetas, optimized_params)
+
+        two_most_probable = np.argsort(probs)[-2:]
+        states_probs = [probs[i] for i in two_most_probable]
+        two_most_probable_states = [int_to_bitstring(i, self.n_qubits) for i in two_most_probable]
+        optimized_portfolios = bitstrings_to_optimized_portfolios(two_most_probable_states, self.assets_to_qubits)
+        result1 = self.satisfy_budget_constraint(optimized_portfolios)
+        objective_values = [float(self.get_objective_value(optimized_portfolios[i])) for i in range(2)]
+        training_history = self.cma_result_to_dict(result.result)
+        return (two_most_probable_states,
+                final_expectation_value,
+                optimized_params,
+                es.result.iterations,
+                states_probs,
+                optimized_portfolios,
+                training_history,
+                objective_values,
+                result1,
+                thetas)
+
     # todo: implement same estimator injection pattern
     def solve_with_qaoa_scipy(self, optimizer='COBYLA'):
         """
