@@ -4,6 +4,9 @@
 
 + Python version: 3.10.x(used python 3.10.20 in this work)
 
+$$
+\vec{A}\cdot \vec{B}
+$$
 
 ## Main files in this repo
 

@@ -34,7 +34,7 @@ with open("experiments_data.json", "r") as f:
 # Order to try: 'COBYLA', 'SLSQP', 'Powell', 'CG', 'Nelder-Mead', 'L-BFGS-B'
 
 classical_optimizer = "CMAES"
-lambda_budget = 0.001
+lambda_budget = 1
 warm_start_epsilon = 0.25
 
 def get_time_str():
