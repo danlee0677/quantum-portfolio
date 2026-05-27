@@ -1,4 +1,6 @@
 
+import itertools
+import math
 import pickle
 import numpy as np
 import scipy
@@ -6,6 +8,28 @@ import scipy
 import pennylane as qml
 from pennylane.tape import QuantumScript, QuantumScriptBatch
 from pennylane.typing import PostprocessingFn
+
+
+def dicke_state_vector(n_qubits, k):
+    """
+    Build the explicit |D_n^k> state vector as a length-2^n numpy array.
+    Wire 0 is the most-significant bit (matches qml.StatePrep convention).
+    """
+    if k < 0 or k > n_qubits:
+        raise ValueError(f"Invalid Dicke params: n={n_qubits}, k={k}")
+    state = np.zeros(2 ** n_qubits, dtype=float)
+    norm = 1.0 / math.sqrt(math.comb(n_qubits, k))
+    for indices in itertools.combinations(range(n_qubits), k):
+        idx = 0
+        for q in indices:
+            idx |= (1 << (n_qubits - 1 - q))
+        state[idx] = norm
+    return state
+
+
+def hamming_weight_indices(n_qubits, k):
+    """Return all basis-state indices whose bitstring has Hamming weight k."""
+    return [i for i in range(2 ** n_qubits) if bin(i).count("1") == k]
 
 def extract_from_latex(latex_source):
         """

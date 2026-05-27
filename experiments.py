@@ -233,11 +233,49 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
         "lambda_budget": lambda_budget
     }
 
+    # Cardinality-selection QAOA: sweep K, classical allocator on the picked subset.
+    cardinality_qaoa_solution = {"per_K": [], "best_K": None}
+    N_assets = portfolio_hubo.num_assets
+    best_post_obj = None
+    for K in range(2, N_assets + 1):
+        print(f"--- Cardinality QAOA: K={K} of N={N_assets} ---")
+        try:
+            card_result = portfolio_hubo.solve_with_qaoa_cardinality(K)
+        except Exception as e:
+            print(f"Cardinality QAOA failed at K={K}: {e}")
+            cardinality_qaoa_solution["per_K"].append({"K": K, "error": str(e)})
+            continue
+        per_K_entry = {
+            "K": card_result["K"],
+            "layers": card_result["layers"],
+            "final_expectation_value": card_result["final_expectation_value"],
+            "selected_indices": list(card_result["selected_indices"]),
+            "selected_stocks": [str(s) for s in card_result["selected_stocks"]],
+            "selection_bitstring": card_result["selection_bitstring"],
+            "raw_top_in_subspace": card_result["raw_top_in_subspace"],
+            "subspace_leakage": card_result["subspace_leakage"],
+            "top_in_subspace_prob": card_result["top_in_subspace_prob"],
+            "iterations": card_result["iterations"],
+            "allocation": {str(k): v for k, v in card_result["allocation"].items()},
+            "realized_budget": card_result["realized_budget"],
+            "leftover_budget": card_result["leftover_budget"],
+            "post_objective": card_result["post_objective"],
+            "infeasible": card_result["infeasible"],
+            "infeasible_reason": card_result["infeasible_reason"],
+            "training_history": card_result["training_history"],
+        }
+        cardinality_qaoa_solution["per_K"].append(per_K_entry)
+        if not card_result["infeasible"] and card_result["post_objective"] is not None:
+            if best_post_obj is None or card_result["post_objective"] > best_post_obj:
+                best_post_obj = card_result["post_objective"]
+                cardinality_qaoa_solution["best_K"] = card_result["K"]
+
     results_for_experiment["hyperparams"] = hyperparams
     results_for_experiment["continuous_variables_solution"] = continuous_variables_solution
     results_for_experiment["continuous_variables_solution_unconstrained"] = continuous_variables_solution_unconstrained
     results_for_experiment["exact_solution"] = exact_solution
     results_for_experiment["qaoa_solution"] = qaoa_solution
+    results_for_experiment["cardinality_qaoa_solution"] = cardinality_qaoa_solution
 
     # Add to existing_results
     existing_results[str(experiment_id)] = results_for_experiment

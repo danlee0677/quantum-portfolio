@@ -1,0 +1,61 @@
+{
+  "meta": {
+    "subcommand": "specs",
+    "experiments_json": "experiments_data.json",
+    "results_json": null,
+    "rederive_k": true,
+    "sweep": false,
+    "max_problems": 1
+  },
+  "static_specs": [
+    {
+      "problem_id": 0,
+      "n_assets": 2,
+      "method": "integer_hubo",
+      "K": null,
+      "n_qubits": 10,
+      "layers": 10,
+      "num_params": 20,
+      "gate_counts": {
+        "Hadamard": 10,
+        "RZ": 3850,
+        "CNOT": 17880,
+        "RX": 100
+      },
+      "gate_sizes": {
+        "1": 3960,
+        "2": 17880
+      },
+      "two_qubit_gate_count": 17880,
+      "depth": 17601,
+      "total_gates": 21840,
+      "unexpected_gates": []
+    },
+    {
+      "problem_id": 0,
+      "n_assets": 2,
+      "method": "cardinality",
+      "K": 2,
+      "n_qubits": 2,
+      "layers": 2,
+      "num_params": 4,
+      "gate_counts": {
+        "RY": 3,
+        "CNOT": 14,
+        "RZ": 10,
+        "Hadamard": 8,
+        "RX": 8
+      },
+      "gate_sizes": {
+        "1": 29,
+        "2": 14
+      },
+      "two_qubit_gate_count": 14,
+      "depth": 36,
+      "total_gates": 43,
+      "unexpected_gates": [
+        "RY"
+      ]
+    }
+  ]
+}
