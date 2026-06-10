@@ -174,3 +174,5 @@ report/
 .claude/
 *.pkl
 *.sh
+research/
+results_old/

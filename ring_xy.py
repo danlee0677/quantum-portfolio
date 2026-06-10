@@ -156,6 +156,62 @@ class RingXYCardinalityQAOA:
                 ham += (coeff/16)*(qml.Identity(q0) - qml.PauliZ(q0)) @ (qml.Identity(q1) - qml.PauliZ(q1)) @ (qml.Identity(q2) - qml.PauliZ(q2)) @ (qml.Identity(q3) - qml.PauliZ(q3))
         self.selection_hamiltonian = normalize_linear_combination(ham)
 
+    def _selection_energy_diagonal(self):
+        """Diagonal of the (normalized) selection Hamiltonian, cached on the instance.
+
+        The selection Hamiltonian is built purely from the moments and does not
+        depend on K (``construct_selection_hubo_bin`` only stores ``selection_K``),
+        so its diagonal is the same across the whole K-sweep and computed once.
+        Entry ``z`` equals the energy of computational-basis state ``z`` in the
+        exact units of ``final_expectation_value`` (both use the normalized
+        Hamiltonian). Diagonal of a diagonal operator, so dense over 2^N <= 32768.
+        """
+        diag = getattr(self, "_selection_diagonal", None)
+        if diag is None:
+            assert getattr(self, "selection_hamiltonian", None) is not None, \
+                "construct_selection_hubo_bin must run before reading the diagonal"
+            sparse = self.selection_hamiltonian.sparse_matrix(wire_order=range(self.num_assets))
+            diag = np.real(np.asarray(sparse.diagonal())).astype(float)
+            self._selection_diagonal = diag
+        return diag
+
+    def _approximation_ratios(self, K, final_expectation_value):
+        """Subspace and global approximation ratios for the given K.
+
+        Two ratios with deliberately *opposite* conventions (see report caveat):
+        - subspace: standard form (final - C_random)/(C_opt - C_random) with
+          C_random = Dicke-state mean, C_opt = subspace ground energy. 1 = optimal.
+        - global: HOPO-parity min-max (final - E_min)/(E_max - E_min) over all
+          2^N states, matching profile.py's integer-HUBO row. 0 = optimal.
+        Raw energies are returned alongside so either convention is recomputable.
+        """
+        N = self.num_assets
+        d = self._selection_energy_diagonal()
+        sub = d[hamming_weight_indices(N, K)]
+
+        E_sub_min = float(sub.min())
+        E_sub_max = float(sub.max())
+        E_dicke_mean = float(sub.mean())  # = <D_n^k| H |D_n^k>, uniform Dicke amplitudes
+        E_glob_min = float(d.min())
+        E_glob_max = float(d.max())
+
+        final = float(final_expectation_value)
+        sub_denom = E_sub_min - E_dicke_mean
+        glob_denom = E_glob_max - E_glob_min
+        # Degenerate K=N (single-state subspace) makes sub_denom ~ 0 -> None.
+        ar_subspace = (final - E_dicke_mean) / sub_denom if abs(sub_denom) > 1e-12 else None
+        ar_global = (final - E_glob_min) / glob_denom if abs(glob_denom) > 1e-12 else None
+
+        return {
+            "approximation_ratio_subspace": ar_subspace,
+            "approximation_ratio_global": ar_global,
+            "selection_energy_min_subspace": E_sub_min,
+            "selection_energy_max_subspace": E_sub_max,
+            "selection_energy_dicke_mean": E_dicke_mean,
+            "selection_energy_global_min": E_glob_min,
+            "selection_energy_global_max": E_glob_max,
+        }
+
     def _slice_problem(self, selected_indices):
         sel_stocks = [self.stocks[i] for i in selected_indices]
         sel_prices = pd.Series({self.stocks[i]: float(self.prices_now[self.stocks[i]]) for i in selected_indices})
@@ -292,11 +348,13 @@ class RingXYCardinalityQAOA:
         selected_stocks = [self.stocks[q] for q in selected_indices]
 
         allocation_info = self._allocate_on_subset(selected_indices)
+        approximation_ratios = self._approximation_ratios(K, final_expectation_value)
 
         return {
             "K": K,
             "layers": sel_layers,
             "final_expectation_value": final_expectation_value,
+            **approximation_ratios,
             "selected_indices": selected_indices,
             "selected_stocks": selected_stocks,
             "selection_bitstring": bitstring,
