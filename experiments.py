@@ -6,6 +6,7 @@ from ring_xy import RingXYCardinalityQAOA
 import os
 import sys
 import argparse
+from datetime import datetime
 from pypfopt.expected_returns import mean_historical_return
 from pypfopt.risk_models import sample_cov
 
@@ -40,15 +41,28 @@ with open("experiments_data.json", "r") as f:
 classical_optimizer = "CMAES"
 lambda_budget = 0.001
 
+# Store all results in results/, with a per-run timestamped filename so that
+# re-running a batch does not overwrite earlier runs.
+results_dir = "results"
+os.makedirs(results_dir, exist_ok=True)
+timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+
 if args.method == "ring_xy":
-    output_file = f"ring_xy_batch_{args.batch_num}.json"
+    output_file = os.path.join(results_dir, f"ring_xy_batch_{args.batch_num}_{timestamp}.json")
     previous_prefix = "ring_xy_batch_"
 else:
-    output_file = f"portfolio_optimization_batch_{classical_optimizer}_{str(lambda_budget)}_{args.batch_num}.json"
-    previous_prefix = f"portfolio_optimization_results_batch_{classical_optimizer}"
+    output_file = os.path.join(
+        results_dir,
+        f"portfolio_optimization_batch_{classical_optimizer}_{str(lambda_budget)}_{args.batch_num}_{timestamp}.json",
+    )
+    previous_prefix = f"portfolio_optimization_batch_{classical_optimizer}"
 
 # Find earlier result files for this method (to skip already-processed experiments)
-previous_output_files = [f for f in os.listdir() if previous_prefix in f]
+previous_output_files = [
+    os.path.join(results_dir, f)
+    for f in os.listdir(results_dir)
+    if f.startswith(previous_prefix)
+]
 
 # Calculate which experiments to process in this batch
 total_experiments = len(experiments)
