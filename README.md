@@ -4,3 +4,6 @@
 2. Python file experiments.py contains the main experiments
 3. Python file coskweness_cokurtosis.py has the functions to compute the higher-order moments
 4. Python file portfolio_higher_moments_classical.py contains the classical baselines
+
+run by 
+```uv run python experiments.py (batch_num) (batch_cnt)```

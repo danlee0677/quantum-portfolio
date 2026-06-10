@@ -169,3 +169,8 @@ cython_debug/
 *.pdf
 .vscode
 *.tex
+report/
+*.json
+.claude/
+*.pkl
+*.sh
