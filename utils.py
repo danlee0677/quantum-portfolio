@@ -101,6 +101,30 @@ def replace_h_rz_h_with_rx(tape: QuantumScript) -> tuple[QuantumScriptBatch, Pos
     return [new_tape], null_postprocessing
 
 
+def decompose_ry(tape: QuantumScript) -> tuple[QuantumScriptBatch, PostprocessingFn]:
+    """Replace each RY(theta) with RZ(-pi/2), RX(theta), RZ(pi/2) (circuit order).
+
+    Exact identity (no global phase): RY(t) = RZ(pi/2) @ RX(t) @ RZ(-pi/2),
+    matching PennyLane's own _ry_to_rz_rx graph-decomposition rule.
+    """
+    new_operations = []
+    for op in tape.operations:
+        if op.name == "RY":
+            w = op.wires[0]
+            new_operations.append(qml.RZ(-np.pi / 2, wires=w))
+            new_operations.append(qml.RX(op.parameters[0], wires=w))
+            new_operations.append(qml.RZ(np.pi / 2, wires=w))
+        else:
+            new_operations.append(op)
+
+    new_tape = tape.copy(operations=new_operations)
+
+    def null_postprocessing(results):
+        return results[0]
+
+    return [new_tape], null_postprocessing
+
+
 def smallest_eigenpairs(A, filename = None):
     """
     Return the smallest eigenvalues and eigenvectors of a matrix A
@@ -141,31 +165,48 @@ def smallest_eigenpairs(A, filename = None):
     return smallest_eigenvalues, smallest_eigenvectors, first_excited_energy, first_excited_state, eigenvalues
 
 def smallest_sparse_eigenpairs(A):
-    
-    # Get the smallest eigenvalues and eigenvectors
-    eigenvalues, eigenvectors = scipy.sparse.linalg.eigsh(A, k=3, which='SA')
-    eigenvalues = np.real(eigenvalues)
-    eigenvectors = np.real(eigenvectors)
-    
-    smallest_eigenvalues = []
-    smallest_eigenvectors = []
-    
-    smallest_eigenvalues.append(eigenvalues[0])
-    smallest_eigenvectors.append(eigenvectors[:, 0])
-    
-    # Check if there are degenerate eigenvalues
-    if eigenvalues[0] == eigenvalues[1]:
-        smallest_eigenvalues.append(eigenvalues[1])
-        smallest_eigenvectors.append(eigenvectors[:, 1])
-    
-    # For each eigenvector make the largest element to be one and others to be zero
-    for i in range(len(smallest_eigenvectors)):
-        smallest_eigenvectors_new = np.zeros_like(smallest_eigenvectors[i])
-        index = np.argmax(smallest_eigenvectors[i])
-        smallest_eigenvectors_new[index] = 1.0
-        smallest_eigenvectors[i] = np.array([int(i) for i in smallest_eigenvectors_new])
-    
-    return smallest_eigenvalues, smallest_eigenvectors, eigenvalues
+    """Smallest eigenpair of the (diagonal) HUBO cost Hamiltonian.
+
+    The cost Hamiltonian is built purely from Identity/PauliZ products, so its
+    matrix is diagonal in the computational basis: the eigenvalues ARE the
+    diagonal entries and the ground state is the basis vector at the minimum.
+    Reading the diagonal is exact and instant, avoiding the pathologically slow
+    `eigsh(..., which='SA')` ARPACK path on 2**n matrices (which effectively
+    hangs for n >= 14).
+
+    Returns (smallest_eigenvalues, smallest_eigenvectors, eigenvalues) with the
+    same contract as before: `eigenvalues` is the full diagonal (the spectrum).
+    A single ground eigenpair is returned (strict parity with the old path, whose
+    float-tie degeneracy check at `eigenvalues[0] == eigenvalues[1]` never fired).
+
+    Raises ValueError if A is not diagonal/real -- that signals a Hamiltonian
+    construction bug, and `solve_exactly` already routes a raise to its
+    `solve_exactly_with_lobpcg` fallback, which converges fine on a diagonal
+    matrix (whereas silently re-running eigsh would just hang again).
+    """
+    diag = np.asarray(A.diagonal()).ravel()  # handles the one implicit-zero diagonal entry
+
+    # Diagonality + real guard: value-based and O(nnz), no tolerance to tune. An
+    # explicit *stored* zero off the diagonal (possible from coefficient
+    # cancellation) does not trip it -- only a nonzero off-diagonal value does.
+    coo = A.tocoo()
+    off = coo.row != coo.col
+    if off.any() and np.abs(coo.data[off]).max() > 0:
+        raise ValueError("cost Hamiltonian matrix is not diagonal; "
+                         "refusing to treat its diagonal as the spectrum")
+    if np.abs(diag.imag).max() > 1e-9:
+        raise ValueError("cost Hamiltonian diagonal has a non-negligible imaginary "
+                         "part; expected a real (Z-only) Hamiltonian")
+    d = np.real(diag)
+
+    # Ground state: single argmin -> one-hot basis vector at the minimum.
+    idx = int(np.argmin(d))
+    onehot = np.zeros_like(d)
+    onehot[idx] = 1.0
+    smallest_eigenvalues = [d[idx]]
+    smallest_eigenvectors = [np.array([int(x) for x in onehot])]
+
+    return smallest_eigenvalues, smallest_eigenvectors, d
 
 
 def bitstring_to_int(bit_string_sample):

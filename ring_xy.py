@@ -20,7 +20,7 @@ import networkx as nx
 import pandas as pd
 import pennylane as qml
 from pennylane import numpy as np
-from pypfopt import EfficientFrontier
+from pypfopt import EfficientFrontier, objective_functions
 from pypfopt.discrete_allocation import DiscreteAllocation
 
 from portfolio_higher_moments_classical import HigherMomentPortfolioOptimizer
@@ -277,6 +277,148 @@ class RingXYCardinalityQAOA:
             "leftover_budget": float(leftover),
             "post_objective": post_obj,
             "infeasible": False,
+        }
+
+    # ------------------------------------------------------------------ #
+    # Classical K-selector (replaces the brute-force K sweep).
+    #
+    # Stage 1: an L1-penalized continuous higher-moment solve localizes a
+    # ballpark cardinality K_hat and ranks assets by |weight|.
+    # Stage 2: a small explicit neighborhood of K around K_hat is scored with
+    # the existing weighted higher-moment objective + discrete allocator
+    # (`_allocate_on_subset`). No QAOA, no subset enumeration -> scales to large
+    # N. The expensive fixed-K QAOA then runs only on the top-ranked K(s).
+    # ------------------------------------------------------------------ #
+    def lasso_localize_K(self, l1_lambdas=None, support_tol=1e-4,
+                         target_lo=0.1, target_hi=0.9, k_min=2):
+        """Localize a ballpark cardinality K_hat and an asset ranking via a
+        short L1-penalty path. Returns ``(k_hat, ranking, support_path)`` where
+        ``ranking`` is a list of asset indices ordered by descending |weight|
+        and ``support_path`` records the support size at each lambda.
+
+        This is a rough localizer, not an exact oracle: the higher-moment
+        objective is non-convex, so the L1 solve only narrows K from [1, N] to a
+        small neighborhood for the explicit scan in ``select_K_classically``.
+        """
+        N = self.num_assets
+        if l1_lambdas is None:
+            # Short geometric path, scaled by the expected-return magnitude so
+            # the penalty bites across problems of different scale.
+            scale = float(np.mean(np.abs(self.expected_returns))) or 1.0
+            l1_lambdas = [c * scale for c in (1e-3, 1e-2, 1e-1, 1.0, 10.0)]
+
+        have_moments = (self.coskewness_tensor is not None
+                        and self.cokurtosis_tensor is not None)
+        support_path = []
+        solutions = []  # (lambda, weights_array, support_size)
+        for lmbda in l1_lambdas:
+            try:
+                if have_moments:
+                    hef = HigherMomentPortfolioOptimizer(
+                        self.stocks, self.expected_returns, self.covariance_matrix,
+                        self.coskewness_tensor, self.cokurtosis_tensor,
+                        risk_aversion=self.risk_aversion)
+                    _, w = hef.optimize_portfolio_with_higher_moments_l1(lmbda)
+                else:
+                    ef = EfficientFrontier(self.expected_returns, self.covariance_matrix)
+                    ef.add_objective(objective_functions.L1_reg, gamma=lmbda)
+                    w_idx = ef.max_quadratic_utility(risk_aversion=self.risk_aversion)
+                    w = np.array([float(w_idx[i]) for i in range(N)])
+            except Exception as e:
+                support_path.append({"lambda": float(lmbda), "support": None, "error": str(e)})
+                continue
+            w = np.asarray(w, dtype=float)
+            wmax = float(np.max(np.abs(w))) if w.size else 0.0
+            thr = support_tol * wmax
+            support = int(np.sum(np.abs(w) > thr)) if wmax > 0 else 0
+            support_path.append({"lambda": float(lmbda), "support": support})
+            solutions.append((float(lmbda), w, support))
+
+        if not solutions:
+            # Total failure across the path: fall back to a uniform ranking and a
+            # mid-range K_hat; the explicit neighborhood scan still does the work.
+            ranking = list(range(N))
+            k_hat = int(min(max(k_min, round(N / 2)), N))
+            return k_hat, ranking, support_path
+
+        # Prefer the sparsest solution whose support fraction lands in the target
+        # band; otherwise pick the support closest to the band midpoint (robust
+        # to the all-zero / all-dense degenerate cases).
+        in_range = [s for s in solutions
+                    if target_lo * N <= s[2] <= target_hi * N and s[2] > 0]
+        if in_range:
+            chosen = min(in_range, key=lambda s: s[2])  # sparsest in range
+        else:
+            target_mid = 0.5 * (target_lo + target_hi) * N
+            nonzero = [s for s in solutions if s[2] > 0]
+            pool = nonzero if nonzero else solutions
+            chosen = min(pool, key=lambda s: abs(s[2] - target_mid))
+
+        _, w_chosen, support_chosen = chosen
+        ranking = [int(i) for i in np.argsort(-np.abs(w_chosen))]
+        if support_chosen > 0:
+            k_hat = support_chosen
+        else:
+            k_hat = int(round(N / 2))
+        k_hat = int(min(max(k_min, k_hat), N))
+        return k_hat, ranking, support_path
+
+    def select_K_classically(self, neighborhood=2, l1_lambdas=None, k_min=2):
+        """Pick the best cardinality K classically (no QAOA).
+
+        Localizes K_hat via ``lasso_localize_K`` then scores an explicit
+        neighborhood ``[K_hat-neighborhood, K_hat+neighborhood]`` (clamped to
+        ``[k_min, N]``) by allocating the top-K assets (by |LASSO weight|) with
+        ``_allocate_on_subset`` and reading its fully-weighted ``post_objective``.
+        Returns ``{k_hat, scan, ranked_K, support_path}`` with ``ranked_K`` the
+        feasible candidate K sorted by classical objective (best first).
+        """
+        N = self.num_assets
+        k_hat, ranking, support_path = self.lasso_localize_K(
+            l1_lambdas=l1_lambdas, k_min=k_min)
+        lo = max(k_min, k_hat - neighborhood)
+        hi = min(N, k_hat + neighborhood)
+
+        scan = []
+        seen = set()
+
+        def score_K(K):
+            top_idx = sorted(ranking[:K])
+            alloc = self._allocate_on_subset(top_idx)
+            return {
+                "K": K,
+                "selected_indices": [int(i) for i in top_idx],
+                "classical_post_objective": alloc["post_objective"],
+                "infeasible": alloc["infeasible"],
+                "infeasible_reason": alloc.get("infeasible_reason"),
+            }
+
+        for K in range(lo, hi + 1):
+            scan.append(score_K(K))
+            seen.add(K)
+
+        feasible = [s for s in scan
+                    if not s["infeasible"] and s["classical_post_objective"] is not None]
+
+        # If nothing in the neighborhood is feasible, widen downward: a smaller K
+        # means a cheaper subset, more likely to fit the budget.
+        K_try = lo - 1
+        while not feasible and K_try >= k_min:
+            if K_try not in seen:
+                s = score_K(K_try)
+                scan.append(s)
+                seen.add(K_try)
+                if not s["infeasible"] and s["classical_post_objective"] is not None:
+                    feasible.append(s)
+            K_try -= 1
+
+        ranked = sorted(feasible, key=lambda s: s["classical_post_objective"], reverse=True)
+        scan.sort(key=lambda s: s["K"])
+        return {
+            "k_hat": int(k_hat),
+            "scan": scan,
+            "ranked_K": [s["K"] for s in ranked],
+            "support_path": support_path,
         }
 
     def build_cardinality_circuit(self, K, device_name="lightning.qubit", layers=None):

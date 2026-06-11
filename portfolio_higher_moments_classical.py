@@ -60,6 +60,29 @@ class HigherMomentPortfolioOptimizer:
         self.weights = dict(zip(self.stocks, result.x))
         self.x = result.x
         return self.weights
+
+
+    def optimize_portfolio_with_higher_moments_l1(self, l1_lambda):
+        """L1-penalized higher-moment solve used as a sparsity localizer.
+
+        Reuses the exact weighted higher-moment objective (`get_objective`) and
+        adds an L1 penalty `l1_lambda * sum(|w|)`. The base objective is
+        non-convex (cubic/quartic terms), so this is a heuristic sparsifier, not
+        a true convex LASSO -- it is only used to get a ballpark cardinality and
+        an asset ranking, never as an exact oracle.
+
+        Returns `(weights_dict, weights_array)`.
+        """
+        base = self.get_objective()
+        def objective(w):
+            return base(w) + l1_lambda * np.sum(np.abs(w))
+        num_assets = len(self.expected_returns)
+        bounds = [(0, 1) for _ in range(num_assets)]
+        w0 = np.ones(num_assets) / num_assets
+        result = minimize(objective, w0, bounds=bounds)
+        self.weights = dict(zip(self.stocks, result.x))
+        self.x = result.x
+        return self.weights, result.x
     
 
     def get_optimal_value(self):

@@ -176,3 +176,7 @@ report/
 *.sh
 research/
 results_old/
+results/
+results_past/
+visualization
+figures/

@@ -1,5 +1,5 @@
 import json
-import yfinance as yf
+from data_provider import fetch_close_prices
 from coskweness_cokurtosis import coskewness, cokurtosis
 from portfolio_hubo_qaoa_light import HigherOrderPortfolioQAOA
 from ring_xy import RingXYCardinalityQAOA
@@ -11,24 +11,42 @@ from pypfopt.expected_returns import mean_historical_return
 from pypfopt.risk_models import sample_cov
 
 # Parse command-line arguments
-parser = argparse.ArgumentParser(description='Run portfolio optimization experiments in batches')
-parser.add_argument('batch_num', type=int, help='Batch number to process (0-indexed)')
-parser.add_argument('total_batches', type=int, help='Total number of batches')
+parser = argparse.ArgumentParser(description='Run a range of portfolio optimization experiments')
+parser.add_argument('start', type=int, help='First experiment id to process (0-based, inclusive)')
+parser.add_argument('end', type=int, help='Last experiment id to process (0-based, inclusive)')
 parser.add_argument('--method', choices=['hopo', 'ring_xy'], default='hopo',
                     help="Which QAOA algorithm to run: 'hopo' (paper integer-HUBO) or "
                          "'ring_xy' (cardinality-selection). Shared classical/exact "
                          "baselines are written either way.")
+parser.add_argument('--k-selector', choices=['lasso', 'sweep', 'both'], default='lasso',
+                    help="(ring_xy only) How to choose the cardinality K. 'lasso': "
+                         "cheap classical LASSO localizer + neighborhood scan, then "
+                         "QAOA on the top-k-hedge K (scales to large N). 'sweep': "
+                         "brute-force QAOA over every K in [k_min, N] (original "
+                         "behavior). 'both': run the full sweep and also record the "
+                         "lasso pick for offline accuracy comparison.")
+parser.add_argument('--k-neighborhood', type=int, default=2,
+                    help="(ring_xy/lasso) Half-width of the K neighborhood scanned "
+                         "classically around the LASSO ballpark K_hat.")
+parser.add_argument('--k-hedge', type=int, default=2,
+                    help="(ring_xy/lasso) Number of top classical K to actually run "
+                         "the fixed-K QAOA on (hedge against a wrong classical pick).")
+parser.add_argument('--k-min', type=int, default=2,
+                    help="(ring_xy) Smallest cardinality K considered (default 2, "
+                         "matching the original sweep's range(2, N+1)).")
 args = parser.parse_args()
-
-# Validate arguments
-if args.batch_num < 0 or args.total_batches <= 0 or args.batch_num >= args.total_batches:
-    print(f"Error: Invalid batch parameters. batch_num must be between 0 and {args.total_batches-1}")
-    sys.exit(1)
 
 # Load experiments data
 experiments = None
 with open("experiments_data.json", "r") as f:
     experiments = list(json.load(f)["data"])
+
+# Validate the requested experiment range (0-based, inclusive on both ends)
+total_experiments = len(experiments)
+if args.start < 0 or args.end < args.start or args.end >= total_experiments:
+    print(f"Error: Invalid experiment range. Require 0 <= start <= end <= {total_experiments-1}, "
+          f"got start={args.start}, end={args.end}")
+    sys.exit(1)
 
 #    The name of the SciPy optimizer to use. Must be one of:
 #    'Nelder-Mead', 'Powell', 'CG', 'BFGS', 'Newton-CG', 'L-BFGS-B',
@@ -41,21 +59,21 @@ with open("experiments_data.json", "r") as f:
 classical_optimizer = "CMAES"
 lambda_budget = 0.001
 
-# Store all results in results/, with a per-run timestamped filename so that
-# re-running a batch does not overwrite earlier runs.
+# Store all results in results/, with a per-run timestamped filename that embeds
+# the experiment range, so re-running a range does not overwrite earlier runs.
 results_dir = "results"
 os.makedirs(results_dir, exist_ok=True)
 timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
 
 if args.method == "ring_xy":
-    output_file = os.path.join(results_dir, f"ring_xy_batch_{args.batch_num}_{timestamp}.json")
-    previous_prefix = "ring_xy_batch_"
+    output_file = os.path.join(results_dir, f"ring_xy_exp_{args.start}_{args.end}_{timestamp}.json")
+    previous_prefix = "ring_xy_exp_"
 else:
     output_file = os.path.join(
         results_dir,
-        f"portfolio_optimization_batch_{classical_optimizer}_{str(lambda_budget)}_{args.batch_num}_{timestamp}.json",
+        f"portfolio_optimization_exp_{classical_optimizer}_{str(lambda_budget)}_{args.start}_{args.end}_{timestamp}.json",
     )
-    previous_prefix = f"portfolio_optimization_batch_{classical_optimizer}"
+    previous_prefix = f"portfolio_optimization_exp_{classical_optimizer}"
 
 # Find earlier result files for this method (to skip already-processed experiments)
 previous_output_files = [
@@ -64,16 +82,11 @@ previous_output_files = [
     if f.startswith(previous_prefix)
 ]
 
-# Calculate which experiments to process in this batch
-total_experiments = len(experiments)
-batch_size = total_experiments // args.total_batches
-remainder = total_experiments % args.total_batches
+# Process the requested inclusive experiment range directly
+start_idx = args.start
+end_idx = args.end + 1  # exclusive upper bound for slicing
 
-# Distribute remainder across batches
-start_idx = args.batch_num * batch_size + min(args.batch_num, remainder)
-end_idx = start_idx + batch_size + (1 if args.batch_num < remainder else 0)
-
-print(f"Processing batch {args.batch_num+1}/{args.total_batches}: experiments {start_idx} to {end_idx-1} (total {end_idx-start_idx})")
+print(f"Processing experiments {args.start} to {args.end} (total {end_idx-start_idx})")
 
 # Load existing results if file exists
 all_existing_results = {}
@@ -106,9 +119,32 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
     budget = experiment["budget"]
     print(f"Budget: {budget}")
 
-    data = yf.download(stocks, start=start, end=end)
-    prices_now = data["Close"].iloc[-1]
-    returns = data["Close"].pct_change(fill_method=None).dropna(how="any")
+    # Fetch with retry so transient Yahoo rate-limiting doesn't masquerade as a
+    # delisting. Genuinely dead tickers (e.g. WBA) never recover and are dropped;
+    # a throttled-but-healthy ticker (AAPL, V, MCD, ...) is retried, not dropped.
+    fetched = fetch_close_prices(stocks, start=start, end=end,
+                                 auto_adjust=False, progress=True)
+    close = fetched.close
+    dropped_tickers = fetched.dropped
+    if dropped_tickers:
+        print(f"Dropping unavailable tickers for experiment {experiment_id}: {dropped_tickers} "
+              f"(delisted={fetched.delisted}, transient/unavailable={fetched.unavailable})")
+    if close.shape[1] < 2:
+        print(f"Skipping experiment {experiment_id}: only {close.shape[1]} valid ticker(s) "
+              f"after dropping {dropped_tickers}")
+        existing_results[str(experiment_id)] = {
+            "error": "insufficient_valid_tickers",
+            "dropped_tickers": dropped_tickers,
+            "delisted": fetched.delisted,
+            "unavailable": fetched.unavailable,
+            "requested_stocks": [str(s) for s in stocks],
+        }
+        with open(output_file, 'w') as f:
+            json.dump(existing_results, f, indent=4)
+        continue
+
+    prices_now = close.iloc[-1]
+    returns = close.pct_change(fill_method=None).dropna(how="any")
     stocks = returns.columns
     numpy_returns = returns.to_numpy()
 
@@ -154,15 +190,16 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
             "left_overs": left_overs
         }
     if True:
+        spectrum_is_partial = False
         try:
             (
-                smallest_eigenvalues, 
-                smallest_bitstrings, 
-                first_excited_energy, 
-                optimized_portfolio, 
+                smallest_eigenvalues,
+                smallest_bitstrings,
+                first_excited_energy,
+                optimized_portfolio,
                 second_optimized_portfolio,
                 eigenvalues,
-                result1, 
+                result1,
                 result2
             ) = portfolio_hubo.solve_exactly()
 
@@ -172,15 +209,18 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
             print("Trying different classical eigenvalue solver")
 
             (
-                smallest_eigenvalues, 
-                smallest_bitstrings, 
-                first_excited_energy, 
-                optimized_portfolio, 
+                smallest_eigenvalues,
+                smallest_bitstrings,
+                first_excited_energy,
+                optimized_portfolio,
                 second_optimized_portfolio,
                 eigenvalues,
-                result1, 
+                result1,
                 result2
             ) = portfolio_hubo.solve_exactly_with_lobpcg()
+            # lobpcg returns only its few smallest eigenvalues, not the full
+            # spectrum, so max(spectrum) is not the true spectral maximum
+            spectrum_is_partial = True
 
         exact_solution = {
             "smallest_eigenvalues": smallest_eigenvalues,
@@ -189,6 +229,7 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
             "optimized_portfolio": optimized_portfolio,
             "second_optimized_portfolio": second_optimized_portfolio,
             "spectrum": eigenvalues,
+            "spectrum_is_partial": spectrum_is_partial,
             "result_with_budget": result1,
             "result_with_budget_excited": result2
         }
@@ -269,7 +310,9 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
         results_for_experiment["qaoa_solution"] = qaoa_solution
 
     else:
-        # Cardinality-selection QAOA: sweep K, classical allocator on the picked subset.
+        # Cardinality-selection QAOA: choose K (classical LASSO selector by
+        # default; brute-force sweep available), then classical allocator on the
+        # picked subset.
         ring_xy_solver = RingXYCardinalityQAOA(stocks=stocks,
                                                prices_now=prices_now,
                                                expected_returns=expected_returns,
@@ -279,18 +322,14 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
                                                cokurtosis_tensor=cokurtosis_tensor,
                                                risk_aversion=risk_aversion)
 
-        cardinality_qaoa_solution = {"per_K": [], "best_K": None}
+        cardinality_qaoa_solution = {"per_K": [], "best_K": None,
+                                     "k_selector": args.k_selector}
         N_assets = ring_xy_solver.num_assets
-        best_post_obj = None
-        for K in range(2, N_assets + 1):
-            print(f"--- Cardinality QAOA: K={K} of N={N_assets} ---")
-            try:
-                card_result = ring_xy_solver.solve_with_qaoa_cardinality(K)
-            except Exception as e:
-                print(f"Cardinality QAOA failed at K={K}: {e}")
-                cardinality_qaoa_solution["per_K"].append({"K": K, "error": str(e)})
-                continue
-            per_K_entry = {
+
+        # Build the per-K result entry by running the (unchanged) fixed-K QAOA.
+        def run_qaoa_at(K):
+            card_result = ring_xy_solver.solve_with_qaoa_cardinality(K)
+            return {
                 "K": card_result["K"],
                 "layers": card_result["layers"],
                 "final_expectation_value": card_result["final_expectation_value"],
@@ -316,11 +355,43 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
                 "infeasible_reason": card_result["infeasible_reason"],
                 "training_history": card_result["training_history"],
             }
+
+        # Decide which K to hand to the expensive QAOA.
+        if args.k_selector in ("lasso", "both"):
+            sel = ring_xy_solver.select_K_classically(
+                neighborhood=args.k_neighborhood, k_min=args.k_min)
+            cardinality_qaoa_solution["k_hat"] = sel["k_hat"]
+            cardinality_qaoa_solution["classical_K_scan"] = sel["scan"]
+            cardinality_qaoa_solution["lasso_support_path"] = sel["support_path"]
+            print(f"--- LASSO localizer: K_hat={sel['k_hat']}, "
+                  f"classical ranking={sel['ranked_K']} ---")
+
+        if args.k_selector == "sweep":
+            K_list = list(range(args.k_min, N_assets + 1))
+        elif args.k_selector == "lasso":
+            K_list = sel["ranked_K"][:args.k_hedge]
+            if not K_list:  # nothing classically feasible -> fall back to k_min
+                K_list = [min(max(args.k_min, 2), N_assets)]
+        else:  # "both": full sweep is the ground truth; record what lasso would pick
+            K_list = list(range(args.k_min, N_assets + 1))
+            cardinality_qaoa_solution["lasso_picked_K"] = sel["ranked_K"][:args.k_hedge]
+
+        cardinality_qaoa_solution["qaoa_K_run"] = list(K_list)
+
+        best_post_obj = None
+        for K in K_list:
+            print(f"--- Cardinality QAOA: K={K} of N={N_assets} ---")
+            try:
+                per_K_entry = run_qaoa_at(K)
+            except Exception as e:
+                print(f"Cardinality QAOA failed at K={K}: {e}")
+                cardinality_qaoa_solution["per_K"].append({"K": K, "error": str(e)})
+                continue
             cardinality_qaoa_solution["per_K"].append(per_K_entry)
-            if not card_result["infeasible"] and card_result["post_objective"] is not None:
-                if best_post_obj is None or card_result["post_objective"] > best_post_obj:
-                    best_post_obj = card_result["post_objective"]
-                    cardinality_qaoa_solution["best_K"] = card_result["K"]
+            if not per_K_entry["infeasible"] and per_K_entry["post_objective"] is not None:
+                if best_post_obj is None or per_K_entry["post_objective"] > best_post_obj:
+                    best_post_obj = per_K_entry["post_objective"]
+                    cardinality_qaoa_solution["best_K"] = per_K_entry["K"]
 
         results_for_experiment["cardinality_qaoa_solution"] = cardinality_qaoa_solution
 
@@ -331,4 +402,4 @@ for i, experiment in enumerate(experiments[start_idx:end_idx]):
     with open(output_file, 'w') as f:
         json.dump(existing_results, f, indent=4)
 
-print(f"Batch {args.batch_num+1}/{args.total_batches} completed. Results saved to {output_file}")
+print(f"Experiments {args.start} to {args.end} completed. Results saved to {output_file}")
