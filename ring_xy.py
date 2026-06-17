@@ -26,6 +26,15 @@ from pypfopt.discrete_allocation import DiscreteAllocation
 from portfolio_higher_moments_classical import HigherMomentPortfolioOptimizer
 from utils import dicke_state_vector, hamming_weight_indices, normalize_linear_combination
 
+# Total-weight floor below which a subset's continuous answer is "hold nothing".
+# In that regime DiscreteAllocation.lp_portfolio is exactly tie-degenerate (each
+# dollar spent raises the deviation term as much as it lowers the leftover term),
+# so its output is an arbitrary LP vertex and must not be trusted. Absolute, not
+# relative to max(weight): max ~ 0 IS the trigger case. Safe bounds: well above
+# scipy's bound-clipping noise (~1e-9) and well below the smallest weight the
+# discrete problem can even represent (min(price)/budget, ~3e-3 here).
+ZERO_WEIGHT_EPS = 1e-6
+
 
 class RingXYCardinalityQAOA:
 
@@ -37,7 +46,8 @@ class RingXYCardinalityQAOA:
                  budget,
                  coskewness_tensor=None,
                  cokurtosis_tensor=None,
-                 risk_aversion=3):
+                 risk_aversion=3,
+                 selection_weighting="budget"):
         # Implementation assumes that stocks and other data are ordered to match.
         # The cardinality method needs only these inputs: no log-encoding qubit
         # map, no budget-penalty construction, no integer HUBO Hamiltonian.
@@ -50,11 +60,20 @@ class RingXYCardinalityQAOA:
         self.cokurtosis_tensor = cokurtosis_tensor
         self.risk_aversion = risk_aversion
         self.num_assets = len(expected_returns)
+        # How the selection HUBO weights a chosen asset (TASK-03):
+        #   "budget" (default): y_i enters at the share count n_i = budget/price_i,
+        #     so selection energy = cost(n .* y) and tracks post-allocation quality
+        #     (K=1 inversion fixed at the source; K>=2 is a principled proxy).
+        #   "unit": the original price-blind y_i in {0,1} score (energy and
+        #     post_objective are not co-monotone; kept for reproducibility).
+        # K-independent on purpose (see _selection_energy_diagonal / TASK-03 note).
+        self.selection_weighting = selection_weighting
 
         assert len(stocks) == len(expected_returns)
         assert len(expected_returns) == len(covariance_matrix)
         assert len(expected_returns) == len(covariance_matrix[0])
         assert risk_aversion > 0
+        assert selection_weighting in ("budget", "unit")
 
     def cma_result_to_dict(self, result):
         """ Converts CMAEvolutionStrategyResult to a pure Python dictionary. """
@@ -98,11 +117,120 @@ class RingXYCardinalityQAOA:
         return -objective_value
 
     # ------------------------------------------------------------------
+    # Classical continuous baselines (shared comparison point for both
+    # methods). Transplanted verbatim from HigherOrderPortfolioQAOA so the
+    # ring-XY runner can write the same baseline WITHOUT building the integer
+    # log-encoded HUBO object — these go straight through
+    # HigherMomentPortfolioOptimizer + DiscreteAllocation, which scale with the
+    # asset count, not the budget-sized qubit encoding.
+    # ------------------------------------------------------------------
+
+    def solve_with_continuous_variables(self):
+        if self.coskewness_tensor is None and self.cokurtosis_tensor is None:
+            ef = EfficientFrontier(self.expected_returns, self.covariance_matrix)
+            weights = ef.max_quadratic_utility(risk_aversion=self.risk_aversion)
+
+            for asset, weight in weights.items():
+                print(f"{self.stocks[asset]}: {weight:.2%}")
+
+            allocator = DiscreteAllocation(weights, self.prices_now, self.budget)
+            allocation, left_overs = allocator.lp_portfolio()
+            print("Left over budget: ", left_overs)
+
+            print("Optimized discrete allocation for mean and variance:")
+            final_allocation = {}
+            for asset, amount in allocation.items():
+                final_allocation[self.stocks[asset]] = amount
+                print(f"{self.stocks[asset]}: {amount}")
+
+            value = self.get_objective_value(final_allocation)
+            print("Maximized utility from continuous mean variance: ", value)
+
+            weights = {self.stocks[asset]: weight for asset, weight in weights.items()}
+
+            return weights, final_allocation, value, left_overs
+
+        else:
+            hef = HigherMomentPortfolioOptimizer(self.stocks,
+                                                 self.expected_returns,
+                                                 self.covariance_matrix,
+                                                 self.coskewness_tensor,
+                                                 self.cokurtosis_tensor,
+                                                 risk_aversion=self.risk_aversion)
+            weights = hef.optimize_portfolio_with_higher_moments()
+
+            print("Optimized Weights (considering variance, skewness and kurtosis):")
+            for asset, weight in weights.items():
+                print(f"{asset}: {weight:.2%}")
+
+            allocation, left_overs = hef.get_discrete_allocation(weights, self.prices_now, self.budget)
+            print("Left over budget: ", left_overs)
+
+            print("Optimized Discrete Allocation:")
+            for asset, amount in allocation.items():
+                print(f"{asset}: {amount}")
+
+            for stock in self.stocks:
+                if stock not in allocation:
+                    allocation[stock] = 0
+
+            value = self.get_objective_value(allocation)
+            print("Maximized utility from continuous higher moments: ", value)
+
+            return weights, allocation, value, left_overs
+
+    def solve_with_continuous_variables_unconstrained(self):
+        if self.coskewness_tensor is None and self.cokurtosis_tensor is None:
+            raise ValueError("Unconstrained optimization is only possible with higher moments")
+        else:
+            hef = HigherMomentPortfolioOptimizer(self.stocks,
+                                                 self.expected_returns,
+                                                 self.covariance_matrix,
+                                                 self.coskewness_tensor,
+                                                 self.cokurtosis_tensor,
+                                                 risk_aversion=self.risk_aversion)
+
+            weights = hef.optimize_portfolio_with_higher_moments_unconstrained()
+
+            print("Optimized Weights with unconstrained classical continuous variable (considering variance, skewness and kurtosis):")
+            for asset, weight in weights.items():
+                print(f"{asset}: {weight:.2%}")
+
+            allocation, left_overs = hef.get_discrete_allocation(weights, self.prices_now, self.budget)
+            print("Left over budget for unconstrained: ", left_overs)
+
+            print("Optimized Discrete Allocation for unconstrained:")
+            for asset, amount in allocation.items():
+                print(f"{asset}: {amount}")
+
+            for stock in self.stocks:
+                if stock not in allocation:
+                    allocation[stock] = 0
+
+            value = self.get_objective_value(allocation)
+            print("Maximized utility from continuous higher moments for unconstrained: ", value)
+
+            return weights, allocation, value, left_overs
+
+    # ------------------------------------------------------------------
     # Cardinality-selection hybrid: y_i ∈ {0,1} HUBO + classical allocator
     # ------------------------------------------------------------------
 
     def construct_selection_hubo_bin(self, K):
-        # Equal-weight selection score over y_i ∈ {0,1}, one qubit per asset.
+        # Selection score over y_i ∈ {0,1}, one qubit per asset.
+        # NOTE (TASK-03): two weightings, chosen by self.selection_weighting:
+        #   "budget" (default): each chosen asset enters at the share count
+        #     n_i = budget/price_i, so this energy equals cost(n .* y) -- the
+        #     portfolio cost at budget-scaled shares. Price-aware and degree-4
+        #     correct, so the energy-minimizing subset tracks post-allocation
+        #     quality: exact at K=1 (single-asset shares are exactly n_i), a
+        #     principled proxy at K>=2 (the allocator distributes non-equally, so
+        #     no fixed-weight HUBO is co-monotone with post_objective there).
+        #   "unit": the original price-blind y_i score, where selection energy and
+        #     post_objective are NOT co-monotone and the energy-min subset can be
+        #     the worst portfolio after allocation.
+        # Either way the pipeline still ranks K / best_K by post_objective (the
+        # K>=2 safety net); see `_approximation_ratios` and `select_K_classically`.
         # Kurtosis coefficient is risk_aversion/24 to match get_objective_value
         # and the classical baseline (not the risk_aversion**2/24 used in
         # construct_cost_hubo_int line 147, which disagrees with both).
@@ -133,6 +261,30 @@ class RingXYCardinalityQAOA:
                             kurt = (self.risk_aversion/24)*self.cokurtosis_tensor[i][j][k][l]
                             hubo_bin[((self.stocks[i], i), (self.stocks[j], j), (self.stocks[k], k), (self.stocks[l], l))] = kurt
 
+        # Budget-weighting (TASK-03): replace y_i -> n_i*y_i with the share count
+        # n_i = budget/price_i, turning this unit-weight score into cost(n .* y).
+        # CRITICAL: scale the *raw* monomial keys here, which carry the term's
+        # degree as tuple multiplicity, *before* the frozenset collapse below. The
+        # i==j covariance key ((s_i,i),(s_i,i)) must pick up n_i**2; the frozenset
+        # then dedupes it to {(s_i,i)} and merges it with the linear term
+        # -mu_i*n_i, yielding exactly the linear+diagonal of cost(n .* y). Scaling
+        # the simplified frozenset instead would apply n_i only once and silently
+        # break every diagonal / repeated-index term.
+        if self.selection_weighting == "budget":
+            n = []
+            for i in range(self.num_assets):
+                p = float(self.prices_now[self.stocks[i]])
+                assert np.isfinite(p) and p > 0, (
+                    f"budget-weighting needs a positive finite price for "
+                    f"{self.stocks[i]}, got {p}"
+                )
+                n.append(self.budget / p)
+            for key in list(hubo_bin):
+                factor = 1.0
+                for (_stock, idx) in key:   # repetition => correct n_i**degree
+                    factor *= n[idx]
+                hubo_bin[key] *= factor
+
         simplified = {}
         for bin_var, coeff in hubo_bin.items():
             key = frozenset(bin_var)
@@ -159,12 +311,14 @@ class RingXYCardinalityQAOA:
     def _selection_energy_diagonal(self):
         """Diagonal of the (normalized) selection Hamiltonian, cached on the instance.
 
-        The selection Hamiltonian is built purely from the moments and does not
-        depend on K (``construct_selection_hubo_bin`` only stores ``selection_K``),
-        so its diagonal is the same across the whole K-sweep and computed once.
-        Entry ``z`` equals the energy of computational-basis state ``z`` in the
-        exact units of ``final_expectation_value`` (both use the normalized
-        Hamiltonian). Diagonal of a diagonal operator, so dense over 2^N <= 32768.
+        The selection Hamiltonian is built from the moments and the fixed
+        ``selection_weighting`` and does NOT depend on K
+        (``construct_selection_hubo_bin`` only stores ``selection_K``), so its
+        diagonal is the same across the whole K-sweep and computed once. Under the
+        default budget-weighting entry ``z`` is cost(n .* z) with n_i =
+        budget/price_i; under unit-weighting it is the price-blind unit-weight
+        energy -- both in the normalized units of ``final_expectation_value``.
+        Diagonal of a diagonal operator, so dense over 2^N <= 32768.
         """
         diag = getattr(self, "_selection_diagonal", None)
         if diag is None:
@@ -184,6 +338,20 @@ class RingXYCardinalityQAOA:
         - global: HOPO-parity min-max (final - E_min)/(E_max - E_min) over all
           2^N states, matching profile.py's integer-HUBO row. 0 = optimal.
         Raw energies are returned alongside so either convention is recomputable.
+
+        IMPORTANT (TASK-03): these are *energy-convergence* ratios over the
+        selection objective. Under the default budget-weighting the objective is
+        cost(n .* y), so at K=1 the energy-min subset IS the best single-asset
+        portfolio (the id-1 inversion below is fixed at the source); but at K>=2
+        budget-weighting is only a proxy (the allocator distributes non-equally),
+        so a high ratio still does not certify post-allocation quality. Under the
+        legacy unit-weighting the gap is worse -- energy and post_objective are not
+        co-monotone at all: e.g. id 1, K=1 selects NKE with
+        approximation_ratio_subspace ~ 0.9999 yet post_objective ~ -136,281 (the
+        worst single asset), while the best single-asset portfolio (TRV, ~ -2,106)
+        is unreachable because unit-weight energy ranks NKE above TRV. Either way,
+        judge portfolio quality by `post_objective` (see `solve_selection_exactly`),
+        never by these ratios.
         """
         N = self.num_assets
         d = self._selection_energy_diagonal()
@@ -250,6 +418,21 @@ class RingXYCardinalityQAOA:
                 w_idx = ef.max_quadratic_utility(risk_aversion=self.risk_aversion)
                 weights = {sel_stocks[k]: float(v) for k, v in w_idx.items()}
 
+            if sum(weights.values()) < ZERO_WEIGHT_EPS:
+                # The optimizer's answer is the empty portfolio; record it
+                # deterministically instead of letting the tie-degenerate LP pick
+                # an arbitrary allocation (see ZERO_WEIGHT_EPS). Empty portfolios
+                # are not admissible benchmark answers (the K=0 exclusion), so
+                # this is infeasible, mirroring min_unit_cost_exceeds_budget.
+                return {
+                    "allocation": {self.stocks[i]: 0 for i in range(self.num_assets)},
+                    "realized_budget": 0.0,
+                    "leftover_budget": float(self.budget),
+                    "post_objective": None,
+                    "infeasible": True,
+                    "infeasible_reason": "zero_weight_portfolio",
+                }
+
             allocator = DiscreteAllocation(weights, sel_prices, self.budget)
             allocation, leftover = allocator.lp_portfolio()
         except Exception as e:
@@ -269,6 +452,20 @@ class RingXYCardinalityQAOA:
             full_alloc[s] = int(amount)
             realized += float(self.prices_now[s]) * int(amount)
 
+        effective_K = sum(1 for v in full_alloc.values() if v != 0)
+        if effective_K == 0:
+            # The LP bought nothing (another arbitrary vertex of the same tie,
+            # or solver inaccuracy). A zero-share "portfolio" must not enter the
+            # best_K / ranked_K comparison as a feasible result.
+            return {
+                "allocation": full_alloc,
+                "realized_budget": 0.0,
+                "leftover_budget": float(self.budget),
+                "post_objective": None,
+                "infeasible": True,
+                "infeasible_reason": "empty_allocation",
+            }
+
         post_obj = float(self.get_objective_value(dict(full_alloc)))
 
         return {
@@ -277,6 +474,7 @@ class RingXYCardinalityQAOA:
             "leftover_budget": float(leftover),
             "post_objective": post_obj,
             "infeasible": False,
+            "effective_K": effective_K,
         }
 
     # ------------------------------------------------------------------ #
@@ -290,7 +488,7 @@ class RingXYCardinalityQAOA:
     # N. The expensive fixed-K QAOA then runs only on the top-ranked K(s).
     # ------------------------------------------------------------------ #
     def lasso_localize_K(self, l1_lambdas=None, support_tol=1e-4,
-                         target_lo=0.1, target_hi=0.9, k_min=2):
+                         target_lo=0.1, target_hi=0.9, k_min=1):
         """Localize a ballpark cardinality K_hat and an asset ranking via a
         short L1-penalty path. Returns ``(k_hat, ranking, support_path)`` where
         ``ranking`` is a list of asset indices ordered by descending |weight|
@@ -363,7 +561,7 @@ class RingXYCardinalityQAOA:
         k_hat = int(min(max(k_min, k_hat), N))
         return k_hat, ranking, support_path
 
-    def select_K_classically(self, neighborhood=2, l1_lambdas=None, k_min=2):
+    def select_K_classically(self, neighborhood=2, l1_lambdas=None, k_min=1):
         """Pick the best cardinality K classically (no QAOA).
 
         Localizes K_hat via ``lasso_localize_K`` then scores an explicit
@@ -371,7 +569,13 @@ class RingXYCardinalityQAOA:
         ``[k_min, N]``) by allocating the top-K assets (by |LASSO weight|) with
         ``_allocate_on_subset`` and reading its fully-weighted ``post_objective``.
         Returns ``{k_hat, scan, ranked_K, support_path}`` with ``ranked_K`` the
-        feasible candidate K sorted by classical objective (best first).
+        feasible candidate K sorted by classical objective (best first); exact
+        score ties are broken toward the K closest to the winning allocation's
+        ``effective_K`` (number of names actually held), then toward smaller K.
+
+        Ranking is by allocated ``post_objective`` (not the unit-weight selection
+        energy) by design: the two are not co-monotone, so the energy proxy is
+        unreliable for portfolio quality (TASK-03; see ``_approximation_ratios``).
         """
         N = self.num_assets
         k_hat, ranking, support_path = self.lasso_localize_K(
@@ -391,6 +595,7 @@ class RingXYCardinalityQAOA:
                 "classical_post_objective": alloc["post_objective"],
                 "infeasible": alloc["infeasible"],
                 "infeasible_reason": alloc.get("infeasible_reason"),
+                "effective_K": alloc.get("effective_K"),
             }
 
         for K in range(lo, hi + 1):
@@ -412,13 +617,220 @@ class RingXYCardinalityQAOA:
                     feasible.append(s)
             K_try -= 1
 
-        ranked = sorted(feasible, key=lambda s: s["classical_post_objective"], reverse=True)
+        # The classical score is computed on the top-K *superset* (the allocator
+        # may hold fewer than K names), so exact ties across the window are
+        # common. Among ties, prefer the K closest to the cardinality the
+        # winning allocation actually holds — the exactly-K QAOA is most likely
+        # to realize the classical score at K=effective_K — then smaller K.
+        # (Previously ties fell back to scan order via sort stability.)
+        ranked = sorted(feasible, key=lambda s: (
+            -s["classical_post_objective"], abs(s["K"] - s["effective_K"]), s["K"]))
         scan.sort(key=lambda s: s["K"])
         return {
             "k_hat": int(k_hat),
             "scan": scan,
             "ranked_K": [s["K"] for s in ranked],
             "support_path": support_path,
+        }
+
+    def solve_selection_exactly(self, k_min=1, enumerate_post_objective=True,
+                                enumeration_max_n=12):
+        """Exact reference for the cardinality-selection problem (no QAOA).
+
+        Symmetric to ``HigherOrderPortfolioQAOA.solve_exactly`` but for the
+        ring-XY formulation. The selection Hamiltonian is K-independent, so its
+        full diagonal over 2^N states (``_selection_energy_diagonal``) is the
+        exact spectrum and is cheap (one qubit per asset, N small). Returns two
+        first-class references:
+
+        - ``energy_optimal``: per K the energy-minimizing selection (the true
+          subspace ground state — what the QAOA tries to find), then the
+          existing classical allocator (``_allocate_on_subset``) on that subset.
+          ``approximation_ratio_subspace`` is 1.0 by construction (it *is* the
+          subspace minimum). ``best_K``/``reference`` pick the feasible per-K
+          entry with the best ``post_objective``. The energy bound
+          ``selection_energy <= QAOA final_expectation_value`` is rigorous; the
+          ``post_objective`` is a downstream quantity and is *not* guaranteed to
+          dominate the QAOA's. Under the default budget-weighting this reflects
+          cost(n .* y), so at K=1 ``energy_optimal.reference`` coincides with
+          ``post_objective_optimal.reference`` (both pick the best single asset);
+          at K>=2 they can still differ -- energy/post_objective co-monotonicity
+          holds only at K=1.
+        - ``post_objective_optimal`` (full subset enumeration over all
+          C(N,K), K>=k_min): the genuine best ``post_objective`` the hybrid
+          pipeline can reach. Because the QAOA's chosen subset at every K is one
+          of these subsets and is scored by the same ``_allocate_on_subset``,
+          ``post_objective_optimal.reference.post_objective`` is a guaranteed
+          upper bound on every QAOA per-K ``post_objective``. Gated by
+          ``enumeration_max_n`` (2^N allocations).
+
+        The empty/K=0 exclusion and all infeasibility rules are inherited from
+        ``_allocate_on_subset``; an infeasible/empty selection can never win
+        ``best_K`` or the ``reference``.
+        """
+        N = self.num_assets
+        k_min = max(1, min(int(k_min), N))
+
+        # Cost guard: the diagonal of a 2^N x 2^N operator is impractical to
+        # materialize for very large N. Never triggers on this dataset (N<=~10).
+        spectrum_is_partial = N > 22
+        if spectrum_is_partial:
+            return {
+                "k_min": k_min,
+                "num_assets": int(N),
+                "spectrum_is_partial": True,
+                "selection_energy_global_min": None,
+                "selection_energy_global_max": None,
+                "global_argmin": None,
+                "energy_optimal": {"per_K": [], "best_K": None, "reference": None},
+                "post_objective_optimal": None,
+            }
+
+        # Build the (K-independent) Hamiltonian once and read its exact diagonal.
+        self.construct_selection_hubo_bin(k_min)
+        d = self._selection_energy_diagonal()
+
+        def decode(z):
+            bitstring = format(int(z), f"0{N}b")
+            sel_idx = [q for q in range(N) if bitstring[q] == "1"]
+            sel_stocks = [str(self.stocks[q]) for q in sel_idx]
+            return bitstring, sel_idx, sel_stocks
+
+        g_min = float(d.min())
+        g_max = float(d.max())
+        z_glob = int(d.argmin())
+        gb, gi, gs = decode(z_glob)
+        global_argmin = {
+            "state_int": z_glob,
+            "selection_bitstring": gb,
+            "hamming_weight": int(bin(z_glob).count("1")),
+            "selected_indices": [int(i) for i in gi],
+            "selected_stocks": gs,
+            "selection_energy": g_min,
+        }
+
+        # --- Energy-optimal reference: per-K subspace ground state + allocation.
+        energy_per_K = []
+        for K in range(k_min, N + 1):
+            idxs = hamming_weight_indices(N, K)
+            sub = d[idxs]
+            z_K = int(idxs[int(sub.argmin())])
+            E_sub_min = float(sub.min())
+            bitstring, sel_idx, sel_stocks = decode(z_K)
+            alloc = self._allocate_on_subset(sel_idx)
+            ratios = self._approximation_ratios(K, E_sub_min)
+            energy_per_K.append({
+                "K": int(K),
+                "selection_energy": E_sub_min,
+                "selection_bitstring": bitstring,
+                "selected_indices": [int(i) for i in sel_idx],
+                "selected_stocks": sel_stocks,
+                **ratios,
+                "allocation": {str(s): int(v) for s, v in alloc["allocation"].items()},
+                "realized_budget": float(alloc["realized_budget"]),
+                "leftover_budget": float(alloc["leftover_budget"]),
+                "post_objective": alloc["post_objective"],
+                "infeasible": bool(alloc["infeasible"]),
+                "infeasible_reason": alloc.get("infeasible_reason"),
+                "effective_K": alloc.get("effective_K"),
+            })
+
+        feasible = [e for e in energy_per_K
+                    if not e["infeasible"] and e["post_objective"] is not None]
+        if feasible:
+            best = sorted(feasible, key=lambda e: (
+                -e["post_objective"], abs(e["K"] - e["effective_K"]), e["K"]))[0]
+            energy_best_K = int(best["K"])
+            energy_reference = dict(best)
+        else:
+            energy_best_K = None
+            energy_reference = None
+
+        energy_optimal = {
+            "per_K": energy_per_K,
+            "best_K": energy_best_K,
+            "reference": energy_reference,
+        }
+
+        # --- Post-objective-optimal reference: best feasible subset over all
+        # C(N,K) (K>=k_min). Guaranteed >= every QAOA per-K post_objective.
+        post_objective_optimal = None
+        if enumerate_post_objective and N <= int(enumeration_max_n):
+            per_K_best = {}
+            per_K_counts = {}  # K -> [n_subsets, n_feasible_subsets]
+            global_best = None
+            for z in range(2 ** N):
+                K = bin(z).count("1")
+                if K < k_min:
+                    continue
+                counts = per_K_counts.setdefault(K, [0, 0])
+                counts[0] += 1
+                bitstring, sel_idx, sel_stocks = decode(z)
+                alloc = self._allocate_on_subset(sel_idx)
+                if alloc["infeasible"] or alloc["post_objective"] is None:
+                    continue
+                counts[1] += 1
+                entry = {
+                    "K": int(K),
+                    "selection_bitstring": bitstring,
+                    "selected_indices": [int(i) for i in sel_idx],
+                    "selected_stocks": sel_stocks,
+                    "selection_energy": float(d[z]),
+                    "allocation": {str(s): int(v) for s, v in alloc["allocation"].items()},
+                    "realized_budget": float(alloc["realized_budget"]),
+                    "leftover_budget": float(alloc["leftover_budget"]),
+                    "post_objective": float(alloc["post_objective"]),
+                    "infeasible": False,
+                    "effective_K": alloc.get("effective_K"),
+                }
+                prev = per_K_best.get(K)
+                if prev is None or entry["post_objective"] > prev["post_objective"]:
+                    per_K_best[K] = entry
+                if global_best is None or entry["post_objective"] > global_best["post_objective"]:
+                    global_best = entry
+
+            post_per_K = []
+            for K in range(k_min, N + 1):
+                counts = per_K_counts.get(K, [0, 0])
+                best_K_entry = per_K_best.get(K)
+                if best_K_entry is not None:
+                    e = dict(best_K_entry)
+                    e["n_subsets"] = int(counts[0])
+                    e["n_feasible_subsets"] = int(counts[1])
+                else:
+                    e = {
+                        "K": int(K),
+                        "selection_bitstring": None,
+                        "selected_indices": [],
+                        "selected_stocks": [],
+                        "selection_energy": None,
+                        "allocation": {},
+                        "realized_budget": 0.0,
+                        "leftover_budget": float(self.budget),
+                        "post_objective": None,
+                        "infeasible": True,
+                        "effective_K": None,
+                        "n_subsets": int(counts[0]),
+                        "n_feasible_subsets": 0,
+                    }
+                post_per_K.append(e)
+
+            post_objective_optimal = {
+                "enumerated": True,
+                "per_K": post_per_K,
+                "best_K": (int(global_best["K"]) if global_best is not None else None),
+                "reference": (dict(global_best) if global_best is not None else None),
+            }
+
+        return {
+            "k_min": k_min,
+            "num_assets": int(N),
+            "spectrum_is_partial": False,
+            "selection_energy_global_min": g_min,
+            "selection_energy_global_max": g_max,
+            "global_argmin": global_argmin,
+            "energy_optimal": energy_optimal,
+            "post_objective_optimal": post_objective_optimal,
         }
 
     def build_cardinality_circuit(self, K, device_name="lightning.qubit", layers=None):
@@ -461,6 +873,17 @@ class RingXYCardinalityQAOA:
         return qaoa_circuit, qaoa_probs_circuit, layers_used, N
 
     def solve_with_qaoa_cardinality(self, K, layers=None, maxiter=None):
+        """Fixed-K ring-XY QAOA selection, then a classical allocation on the
+        chosen K-subset. Returns the selection, the `approximation_ratio_*`
+        energy-convergence metrics, and the allocated `post_objective`.
+
+        NOTE (TASK-03): the returned `approximation_ratio_subspace`/`_global`
+        measure how well the QAOA minimized the *unit-weight* selection energy,
+        NOT portfolio quality -- the two are not co-monotone (see
+        `_approximation_ratios`). Downstream choice of K (best_K in experiments.py,
+        ranked_K in `select_K_classically`) relies on `post_objective`, not these
+        ratios.
+        """
         N = self.num_assets
         assert 1 <= K <= N, f"K={K} must be in [1, N={N}]"
 
@@ -512,4 +935,5 @@ class RingXYCardinalityQAOA:
             "post_objective": allocation_info["post_objective"],
             "infeasible": allocation_info["infeasible"],
             "infeasible_reason": allocation_info.get("infeasible_reason"),
+            "effective_K": allocation_info.get("effective_K"),
         }

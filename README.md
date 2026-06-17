@@ -1,6 +1,6 @@
 ## Main files in this repo
 
-1. The notebook `generate_portfolio_experiments.ipynb` generates random portfolio optimization problems based on the real stock data from yfinance, written to `experiments_data.json`.
+1. The notebook `generate_portfolio_experiments.ipynb` generates random portfolio optimization problems based on the real stock data from yfinance, written to `experiments_data.json`. For a **ring-XY-only** dataset whose problems have ≥7 qubits, use `generate_ring_xy_experiments.py` instead (see "Generating a ring-XY-only dataset" below).
 2. `experiments.py` — the main experiment runner. Selects one of two QAOA algorithms via `--method`.
 3. `portfolio_hubo_qaoa_light.py` — class `HigherOrderPortfolioQAOA`, the **original paper method** (integer-HUBO + raw QAOA, X-mixer, budget penalty). Also holds the shared classical/exact baselines.
 4. `ring_xy.py` — class `RingXYCardinalityQAOA`, the **new cardinality-selection method** (picks K of N stocks with a Dicke initial state + ring XY-mixer, then a classical integer-program allocator on the chosen subset). The cardinality K is chosen by a cheap classical selector (`lasso_localize_K` + `select_K_classically`) so the expensive fixed-K QAOA runs only on the top candidate(s).
@@ -22,6 +22,59 @@ so each output JSON is self-contained.
 All results are written to `results/`. Each run gets its own filename that embeds
 the experiment range **and** a `YYYYMMDD_HHMMSS` timestamp, so re-running a range
 never overwrites an earlier run — older files are kept side by side.
+
+### Choosing the dataset (`--experiments-json`)
+
+`experiments.py` loads its problem definitions from a JSON file (the object's
+`"data"` array). By default it reads `experiments_data.json` (the original
+100-problem set); pass `--experiments-json PATH` to run a different dataset
+without disturbing the default. `profile.py` already accepts the same flag. The
+inclusive `start end` range still indexes 0-based **positionally** into whichever
+file you load.
+
+```bash
+# Run the ring-XY-only dataset (90 problems, ids 0..89) instead of the default
+uv run python experiments.py 0 89 --method ring_xy \
+    --experiments-json experiments_data_ring_xy.json
+```
+
+### Generating a ring-XY-only dataset (`generate_ring_xy_experiments.py`)
+
+The ring XY-mixer circuit uses **one qubit per asset**, so its qubit count is
+simply `N = len(stocks)`. The original `experiments_data.json` was bucketed on
+the *integer-HUBO* qubit count (which log-encodes share counts and so inflates
+the qubit count), leaving every problem there with only 2–6 assets — i.e. nothing
+reaches 7 qubits for the ring-XY method. `generate_ring_xy_experiments.py` builds
+a **separate** dataset bucketed directly on N, so every problem has **N ≥ 7
+assets (≥ 7 ring-XY qubits)**:
+
+```bash
+# Default: N = 7..15, 10 problems each (90 total) -> experiments_data_ring_xy.json
+uv run python generate_ring_xy_experiments.py
+```
+
+It pulls the Dow-30 universe, downloads the 2015–2025 closes once through the
+retry-aware `fetch_close_prices` (so a genuinely-dead ticker like `WBA` is
+dropped up front and every stored problem still has N live tickers when it is
+later run), then for each N samples N distinct stocks and a random
+`budget ∈ [⌈max share price⌉, --budget-cap]`. Entries use the **same schema** as
+the original dataset, with `max_qubits` set to N (the ring-XY qubit count), so
+all downstream tooling reads them unchanged. The write is idempotent: re-running
+only tops up N-buckets that are short of `--per-n`.
+
+Flags: `--out` (default `experiments_data_ring_xy.json`), `--seed` (default 2;
+the original used seed 1), `--n-min` / `--n-max` (default 7 / 15), `--per-n`
+(default 10), `--budget-cap` (default 6000), `--start` / `--end` (default
+`2015-01-01` / `2025-01-01`). If `pytickersymbols` is installed its (possibly
+more current) Dow list is used; otherwise a hardcoded Dow-30 list is used.
+
+The runner's baseline block is **method-aware**, so this dataset runs end-to-end:
+for `--method ring_xy` the exponential *integer-HUBO* `solve_exactly()` is **not**
+run (its log-encoding needs 36+ qubits for a 7-asset problem), so `exact_solution`
+is `null`; instead each entry gets the classical continuous baseline (computed via
+`HigherMomentPortfolioOptimizer`, no integer-HUBO build) plus the ring-XY-native
+`selection_exact_solution` reference. `--method hopo` is unchanged (full
+`exact_solution`).
 
 ### Original pipeline (HOPO + raw QAOA)
 
@@ -48,9 +101,11 @@ uv run python experiments.py 1 4 --method ring_xy
 
 Writes `results/ring_xy_exp_<start>_<end>_<timestamp>.json`
 (e.g. `results/ring_xy_exp_1_4_20260610_153000.json`). Each entry contains the
-same shared baselines plus `cardinality_qaoa_solution`, with the `best_K` (the K
-with the best post-allocation objective) and `per_K` results. It does **not**
-contain `qaoa_solution`.
+shared classical continuous baselines (with `exact_solution: null` — the
+integer-HUBO exact solve is HOPO-only) plus `cardinality_qaoa_solution` and
+`selection_exact_solution` (the ring-XY-native exact, QAOA-free reference; see
+below), with the `best_K` (the K with the best post-allocation objective) and
+`per_K` results. It does **not** contain `qaoa_solution`.
 
 **Choosing the cardinality K.** The number of assets K is no longer brute-forced.
 By default a cheap, purely-classical selector picks K so the expensive fixed-K
@@ -61,18 +116,30 @@ QAOA runs only on the top candidate(s):
 2. **Classical neighborhood scan** — K in `[K̂−w, K̂+w]` is scored by allocating
    the top-K assets with the existing weighted objective + discrete allocator
    (`select_K_classically`). No QAOA and no subset enumeration, so it scales to
-   large N (1000+), unlike the old K = 2..N sweep.
+   large N (1000+), unlike the old K = k_min..N sweep.
 3. **Fixed-K QAOA** — runs only on the top `--k-hedge` classical K; `best_K` is
    the QAOA-run K with the best post-allocation objective (same rule as before).
 
 Relevant flags (all `ring_xy` only):
 
 - `--k-selector {lasso,sweep,both}` (default `lasso`) — `sweep` reproduces the
-  original brute force over K = 2..N; `both` runs the full sweep **and** records
+  original brute force over K = k_min..N; `both` runs the full sweep **and** records
   what `lasso` would have picked (`lasso_picked_K`) for offline accuracy checks.
 - `--k-neighborhood N` (default 2) — half-width of the classical K scan around `K̂`.
 - `--k-hedge N` (default 2) — how many top classical K to actually run QAOA on.
-- `--k-min N` (default 2) — smallest K considered.
+- `--k-min N` (default 1) — smallest K considered (K=1 is a single-asset
+  portfolio; K=0 is excluded because the XY mixer conserves Hamming weight, so
+  the empty selection is a single frozen state with nothing to optimize). The
+  exclusion is also enforced at the allocation level: a subset whose optimal
+  continuous weight is ~0, or whose discrete allocation holds zero shares, is
+  recorded infeasible (`zero_weight_portfolio` / `empty_allocation`) instead of
+  letting the tie-degenerate LP return an arbitrary portfolio. Classical-score
+  ties in the K-selector are broken toward the K closest to the number of names
+  the winning allocation actually holds (`effective_K`).
+- `--exact-enum-max-n N` (default 12) — largest N (assets) for which the exact
+  selection reference (`selection_exact_solution`, see below) also enumerates all
+  C(N,K) subsets to compute `post_objective_optimal`; above it, or with `0`, only
+  the cheap `energy_optimal` reference is built.
 
 ```bash
 # Reproduce the original brute-force K sweep
@@ -113,6 +180,28 @@ carry a wrong ground `optimized_portfolio` (an ARPACK eigenvector-sign bug) and 
 truncated 3-value spectrum; regenerate them.** `verify_hopo_equivalence.py` treats
 such old-format mismatches (`optimized_portfolio`, spectrum max) as expected, not
 code drift.
+
+**Exact cardinality reference (`selection_exact_solution`, ring_xy only).** The
+ring-XY analog of `exact_solution`, built QAOA-free by
+`RingXYCardinalityQAOA.solve_selection_exactly`. The ring-XY selection Hamiltonian
+is diagonal and uses one qubit per asset, so its full 2ᴺ diagonal is the exact
+spectrum and is cheap to enumerate. The baseline stores two references:
+
+- `energy_optimal` — per K, the **energy-minimizing** selection (the true subspace
+  ground state, i.e. what the QAOA is trying to find), run through the same
+  classical allocator; `best_K` / `reference` pick the feasible per-K entry with
+  the best `post_objective`. This is the energy reference for the cardinality
+  approximation ratio (`approximation_ratio_subspace` is 1.0 by construction).
+- `post_objective_optimal` — the best **post-allocation objective** over *all*
+  C(N,K) subsets (full enumeration), a guaranteed upper bound on every QAOA per-K
+  `post_objective`. Gated by `--exact-enum-max-n` (default 12; `0` disables it,
+  leaving only the cheap `energy_optimal` reference).
+
+plus the exact bounds `selection_energy_global_min`/`_max` and the global ground
+selection `global_argmin`. `spectrum_is_partial` is set when N > 22 (the diagonal
+is not materialized). The K=0 / empty-portfolio exclusion is inherited from
+`_allocate_on_subset`, so an infeasible/empty selection can never win `best_K` or
+the reference.
 
 **Unavailable / delisted tickers.** Stock symbols are resolved live from yfinance,
 so a ticker that has since been delisted or renamed (e.g. `WBA`, taken private in
@@ -235,6 +324,17 @@ spectrum (min–max convention, 0 = optimal); cardinality rows add `K`, both
 profiles every K = 2..N instead, and `--rederive-k` recomputes `best_K` live
 rather than reading it from `results/` (both force live runs).
 
+**Fig. 6 comparison fields.** After the per-method rows are built, every row is
+enriched (a post-pass, `compare_enrichment`) for the paper's Fig. 6 (objective vs
+budget utilization): `total_budget`, `budget_util` / `over_budget` (integer-HUBO
+uses a soft budget penalty so it can overspend, `budget_util > 1`; continuous and
+ring-XY are LP-capped), `continuous_objective` / `continuous_budget_util` from the
+stored continuous baseline, and — for ring_xy entries — `reference_objective` /
+`reference_budget_util` from `selection_exact_solution.post_objective_optimal`.
+`--continuous-variant {constrained,unconstrained,both}` (default `constrained`)
+selects which continuous solve is the primary reference series. These fields are
+additive (older JSONs simply lack them).
+
 ## Loading saved results instead of recomputing (`--hopo-source` / `--card-source`)
 
 By default `convergence` recomputes **both** methods live on every run — the
@@ -300,7 +400,18 @@ It takes two independent path flags, one per `profile.py` subcommand:
 - `--specs PATH` — a `profile.py specs` JSON; draws circuit-resource scaling,
   per-problem savings, and the gate-composition figure (plus `specs_summary.csv`).
 - `--convergence PATH` — a `profile.py convergence` JSON; draws the convergence
-  overview, per-problem savings / quality face-off (plus `convergence_summary.csv`).
+  overview and per-problem savings / quality face-off, plus — when the file carries
+  the Fig. 6 enrichment — the budget-utilization comparison against the continuous
+  baseline and the exact reference (`compare_fig6.png`, and the per-method
+  win-rate-vs-continuous `compare_faceoff.png`), and the **benefit-vs-N** figure
+  `benefit_by_n.png` (3 panels vs asset count N: win-rate, relative utility gap
+  `(post − cont)/|cont|`, and the price-weighted **profit** gap
+  `Δ(expected return)/budget`). Benefit magnitudes use problem-external denominators
+  (so the N-trend is interpretable, unlike the endogenous Fig. 6 span); the profit
+  panel needs the return enrichment — present in live runs, or recomputed cheaply from
+  the results JSON (`hyperparams.{stocks,start,end}` → μ + prices, no QAOA), else it
+  degrades to an "unavailable" placeholder. CSV summaries: `convergence_summary.csv`,
+  `compare_summary.csv`, and `benefit_by_n.csv`.
 
 **At least one of the two must be given** — the program refuses to run with no
 input file. Pass both to render every figure in one go. Each file is checked
